@@ -13,13 +13,13 @@
 ;; Number -> Number                              ; signature
 ;; given the length of one side of square, produce the areal
 ;; of a square                                   ; purpose
+;; (define sq n) 0)
 
-
-;; (define area n) 0)                            ; stub
+;; (define sq n) 0)                              ; stub
 
 ;(define (area n)
 ;  (... n))                                      ; template
-(check-expect (area 3) 9)
+(check-expect (area 3) (* 3 3))
 (check-expect (area 3.2) (* 3.2 3.2))
 
 (define (area n)

@@ -1,0 +1,15 @@
+;; The on-key and on-mouse handler function templates are handled specially. The on-key function is templated according to its second argument, a KeyEvent, using the large enumeration rule. The on-mouse function is templated according to its MouseEvent argument, also using the large enumeration rule. So, for example, for a key handler function that has a special behaviour when the space key is pressed but does nothing for any other key event the following would be the template:
+
+(define (handle-key ws ke)
+  (cond [(key=? ke " ") (... ws)]
+        [else 
+         (... ws)]))
+
+
+;; Similarly the template for a mouse handler function that has special behavior for mouse clicks but ignores all other mouse events would be:		 
+
+
+(define (handle-mouse ws x y me)
+  (cond [(mouse=? me "button-down") (... ws x y)]
+        [else
+         (... ws x y)]))

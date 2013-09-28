@@ -1,3 +1,11 @@
-This is the DrRacket README.
+I'm currently enrolled in a massively open online course (MOOC) offered through Coursera entitled, "Introduction to Systematic Program Design, Part 1", a 10-week long course offered by the University of British Columbia.  Check it out:
 
-More content is on the way.
+https://www.coursera.org/course/programdesign
+
+The course uses DrRacket, an IDE for Scheme, one of the most common dialects of Lisp.  Since taking the course I've learned that many universities use Scheme or Lisp when teaching computer science -- it's tough to get my head around, but I find that the functional approach and style of programming is better suited to me than the mainstream, imperative approach.  If I ever get a brain and miraculously become an adequate program developer someday, I'll certainly expand into the imperative domain of languages.  I like the idea of being raised and developed in the functional style/approach, so this is where I plan to stay for awhile.
+
+All of my course files are located here in the (i2spd) repository.  You'll see that it's not possible to simply view my *.rkt source files because DrRacket is needed to open them -- this is a deliberate design decision by the DrRacket development team.  DrRacket is an IDE with teaching as a focus, and as such, files are encoded when a person chooses to use one of the teaching languages.  We're using BSL, the beginning student language.
+
+One could choose to simply use the Racket language and save their files as plain text, which I currently did for an exercise from the book, "The Little Schemer".  I saved the file with the standard Scheme *.scm extension (which is why GitHub lists my second language as Scheme).
+
+Cheers, and if you haven't explored the world of Lisp and Scheme, I'd recommend at least giving them a look.  It's a pretty fascinating world. :-)

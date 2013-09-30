@@ -4,4 +4,18 @@
 (require 2htdp/image)
 (require 2htdp/universe)
 
-;; HtDW_Compound_growing-grass.rkt
+;; P3_Compound-and-HtDW_growing-grass.rkt
+;; =========
+;; CONSTANTS
+(define WIDTH  400)
+(define HEIGHT 300)
+(define MTS (empty-scene WIDTH HEIGHT))
+;; !!! -- add SPEED?
+
+;; ================
+;; DATA DEFINITIONS
+
+
+
+;; =========
+;; FUNCTIONS

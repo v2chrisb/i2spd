@@ -7,13 +7,25 @@
 ;; P3_Compound-and-HtDW_growing-grass.rkt
 ;; =========
 ;; CONSTANTS
-(define WIDTH  400)
-(define HEIGHT 300)
+(define WIDTH  150)
+(define HEIGHT 100)
 (define MTS (empty-scene WIDTH HEIGHT))
+(define GS (rectangle 5 20 "solid" "dark green"))
+(define GM (rectangle 5 30 "solid" "dark green"))
+(define GL (rectangle 5 45 "solid" "dark green"))
 ;; !!! -- add SPEED?
 
 ;; ================
 ;; DATA DEFINITIONS
+;; Grassx is Number
+;; interp. the x-position of the grass blade in screen coordinates
+(define G1 0)              ; left edge
+(define G2 (/ 2 WIDTH))    ; middle
+(define G3 WIDTH)          ; right edge
+
+;#
+(define (fn-for-grass g)
+  (... g))
 
 
 

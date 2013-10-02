@@ -27,7 +27,5 @@
 (define (fn-for-grass g)
   (... g))
 
-
-
 ;; =========
 ;; FUNCTIONS

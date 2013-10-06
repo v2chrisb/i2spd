@@ -1,0 +1,14 @@
+;; Signature
+;; =========
+
+
+;; Purpose
+;; =======
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+
+
+;; Template & Inventory
+;; ====================

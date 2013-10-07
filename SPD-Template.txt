@@ -1,6 +1,6 @@
 ;; *HtDD* -- establishes the represent/interpret relationship between information and data
-;; Structure Def (Compound Data)
-;; =============================
+;; Structure Definition (Compound Data)
+;; ====================================
 
 
 ;; Type Comment
@@ -18,6 +18,9 @@
 ;; Template for a one argument function
 ;; ====================================
 
+
+;; Template Rules Used:
+;; ====================
 
 
 ;; *HtDF*

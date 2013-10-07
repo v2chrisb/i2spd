@@ -1,4 +1,27 @@
-;; Signature
+;; *HtDD* -- establishes the represent/interpret relationship between information and data
+;; Structure Def (Compound Data)
+;; =============================
+
+
+;; Type Comment
+;; ============
+
+
+;; Interpretation
+;; ==============
+
+
+;; Examples
+;; ========
+
+
+;; Template for a one argument function
+;; ====================================
+
+
+
+;; *HtDF*
+; Signature
 ;; =========
 
 
@@ -12,3 +35,5 @@
 
 ;; Template & Inventory
 ;; ====================
+
+

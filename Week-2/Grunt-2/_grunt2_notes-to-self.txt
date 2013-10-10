@@ -1,0 +1,10 @@
+You just started this approach of taking notes to self.  The very top of this note is
+a place for listing important status items, like what problem you left-off at.
+
+===== 10/10 @ 0556 =====
+Completed HtDD P2, building demolish.  Went well. Allotted 20 mins. & finished in 17 mins.
+Skipping HtDD P3 becuase I don't have enough time to complete before work.
+HtDD P4 is 8 mins; completed in 7 mins., however, you rushed it and should have referred to
+  the HtDD page on enumerations wherein the structure used in the cond -- string=? -- is
+  clearly shown.  You stumbled by using pass? instead of string=?.  
+Signing-off for this morning after doing a git commit...

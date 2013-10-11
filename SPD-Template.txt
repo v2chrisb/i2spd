@@ -1,4 +1,4 @@
-;; *HtDD* -- establishes the represent/interpret relationship between information and data
+;; *HtDD*: establish represent/interpret relation btwn info. & data
 ;; Structure Definition (Compound Data)
 ;; ====================================
 

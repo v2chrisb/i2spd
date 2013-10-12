@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Wiki - Compound Module | Introduction to Systematic Program Design - Part 1</title>
+<link rel="stylesheet" href="https://dt5zaw6a98blc.cloudfront.net/site-static/595ddfeac34ca20b470b491885b1acad3564b90f/css/spark.main.css">
+<link rel="stylesheet" href="https://www.coursera.org/maestro/api/course/971286/course.css">
+<link rel="icon" href="https://spark-public.s3.amazonaws.com/programdesign/static/images/favicon.ico">
+<style type="text/css"> .coursera-reporter-link { display:inline-block;} </style><script type="text/javascript" src="./3b-Compound_files/MathJax.js"></script><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -1px -1px 1px -1px; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+    <a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#course-page-content" class="hidden">Skip Navigation</a>
+    <div class="hidden">
+        This page features MathJax technology to render mathematical formulae.
+        If you are using a screen reader, please visit <a href="http://www.dessci.com/en/products/mathplayer/">MathPlayer</a> to download the plugin for your browser. Please note that this is an Internet Explorer-only plugin at this time.
+    </div>
+
+    <h1 class="hidden">Introduction to Systematic Program Design - Part 1</h1>
+
+    <script type="text/javascript" async="" src="./3b-Compound_files/204.min.js"></script><script type="text/javascript" async="" src="./3b-Compound_files/ga.js"></script><script>window.onerror = function(message, url, lineNum) {
+
+  // First check the URL and line number of the error
+  url = url || window.location.href;
+  // 99% of the time, errors without line numbers arent due to our code,
+  // they are due to third party plugins and browser extensions
+  if (lineNum === undefined || lineNum == null) return;
+  
+  // Now figure out the actual error message
+  // If it's an event, as triggered in several browsers
+  if (message.target && message.type) {
+    message = message.type;
+  }
+  if (!message.indexOf) {
+    message = 'Non-string, non-event error: ' + (typeof message);
+  }
+  
+  var errorDescrip = {
+    message: message,
+    script: url,
+    line: lineNum,
+    url: document.URL
+  }
+  
+  var err = {
+    key: 'page.error.javascript', 
+    value: errorDescrip
+  }
+  
+  window._204 = window._204 || [];
+  window._204.push(err);
+  
+  window._gaq = window._gaq || [];
+  window._gaq.push(err);
+}</script>
+
+<div class="course-topbar container-fluid" role="banner">
+
+    <div class="row-fluid">
+
+        <div class="span3">
+          <a href="https://www.coursera.org/" class="course-topbar-logo" data-if-linkable="add-referrer"></a>
+        </div>
+
+        <div class="course-topbar-nav-container span9" style="float:right;">
+            <h2 class="hidden">Top Navigation Bar</h2>
+
+            <ul class="course-topbar-nav-list">
+                <li class="course-topbar-nav-list-item">
+                  <a href="https://www.coursera.org/courses" data-if-linkable="add-referrer">Courses</a>
+                </li>
+
+                
+                <li class="course-topbar-nav-list-item" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" aria-owns="course-topbar-my" data-popup="#course-topbar-my" data-popup-bind-open="mouseenter" data-popup-close="" style="cursor:pointer;" data-popup-direction="se">
+                                        <a data-user-id="1216070">
+                        Christopher Edward Beattie                        <i class="icon-caret-down"></i>
+                    </a>
+                </li>
+
+                            </ul>
+        </div>
+    </div>
+
+    <div id="course-topbar-aboutus" class="course-topbar-sublist">
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/about/jobs" target="_new" data-if-linkable="add-referrer">Jobs</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/about/team" target="_new" data-if-linkable="add-referrer">Team</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/about/contact" target="_new" data-if-linkable="add-referrer">Contact Us</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/about/" target="_new" data-if-linkable="add-referrer">About Us</a>
+    </div>
+
+    <div id="course-topbar-my" class="course-topbar-sublist">
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/" target="_new">My Courses</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/account/profile" target="_new">Profile</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/account/records" target="_new">Course Records</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/account/settings" target="_new">Settings</a>
+                <a class="course-topbar-sublist-item" href="https://class.coursera.org/programdesign-002/class/preferences">Course Preferences</a>
+        <a class="course-topbar-sublist-item" href="https://class.coursera.org/programdesign-002/auth/logout">Sign Out</a>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="course-topbanner-wrapper">
+  <div class="course-topbanner">
+    <div class="course-topbanner-university-logo">
+      <a href="https://www.coursera.org/ubc" class="coursera-university-color" target="_blank" data-if-linkable="add-referrer" title="https://www.coursera.org/ubc">
+        <img src="./3b-Compound_files/university_logo" alt="ubc">
+      </a>
+    </div>
+
+    
+    <h1 class="course-topbanner-header">
+      <a class="course-topbanner-name coursera-university-color" href="https://class.coursera.org/programdesign-002/class/index" data-if-linkable="modal-lock">
+        Introduction to Systematic Program Design - Part 1      </a>
+      <br>
+      <span class="course-topbanner-instructor" style="">
+        by  Gregor  Kiczales      </span>
+    </h1>
+
+  </div>
+</div>
+
+        <div class="container-fluid" style="position:relative;">
+        <div class="row-fluid">
+            <div id="course-page-sidebar" role="navigation">
+                <div class="course-navbar-container">
+	<a href="https://class.coursera.org/programdesign-002/class/index">
+	<img src="./3b-Compound_files/logo" style="width: 205px;height: 116px;margin: -15px 0px 8px 1px; box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);" alt="Course Home Page">
+	</a>
+
+
+<h2 class="hidden">Side Navigation Bar</h2>
+<ul class="course-navbar-list">
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/class/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Announcements							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=CourseInformation" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Course Information							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=ToDoWellinThisCourse" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				To Do Well in This Course							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/forum/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Discussion Forums							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/quiz/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Quizzes							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/human_grading/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Peer Graded Problems							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+					<h3>Reference</h3>
+			</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=DesignRecipes" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Design Recipes							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=Syllabus" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Syllabus							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=Language" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Language							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=StyleRules" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Style Rules							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=Glossary" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Glossary							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+					<h3>Modules</h3>
+			</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				1a Beginning Student Language							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				1b How to Design Functions							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDDModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				2 How to Design Data							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDWModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				3a How to Design Worlds							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item active">
+								<a href="./3b-Compound_files/3b-Compound.htm" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				3b Compound							<span class="course-navbar-selected-marker">(selected)</span></a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=SelfRefModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				4a Self Reference							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=RefModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				4b Reference 							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=NatModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				5a Naturals							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=HelpersModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				5b Helpers							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSTsModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				6a Binary Search Trees							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=MutualRefModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				6b Mutual Reference							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+					<h3>Additional Resources</h3>
+			</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=AllProblems" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				All Problems							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=AllLectures" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				All Lectures							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/lecture/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				All Lectures (Classic)							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="http://www.ccs.neu.edu/home/matthias/HtDP2e/" target="_blank" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				HtDP/2e Book				<span class="icon-share"></span>			</a>
+						</li>
+	
+	
+		<li class="course-navbar-item">
+		<a href="https://share.coursera.org/wiki/index.php/programdesign:Main" target="_blank" class="coursera-university-color" title="Open course wiki in new window">
+			Course Wiki
+			<span class="icon-share"></span>
+		</a>
+	</li>
+		
+		<li class="course-navbar-item">
+		<a href="http://www.meetup.com/Coursera/" target="_blank" class="coursera-university-color">
+			Join a Meetup
+			<span class="icon-share"></span>
+		</a>
+	</li>
+	
+    </ul>
+
+<ul style="list-style-type:none;margin-left: 10px;">
+  <li><a href="http://help.coursera.org/" class="coursera-university-color" target="_blank" title="Open help articles in new window"><i class="icon-question-sign"></i> Help Articles</a></li>
+</ul>
+
+<ul style="list-style-type:none;margin-left: 10px;">
+		<li><a href="https://class.coursera.org/programdesign-002/forum/list?forum_id=10000" class="coursera-university-color"><i class="icon-comments"></i> Course Materials Errors</a></li>
+	<li><a href="https://class.coursera.org/programdesign-002/forum/list?forum_id=10001" class="coursera-university-color"><i class="icon-comments"></i> Technical Issues</a></li>
+
+</ul>
+
+</div>
+            </div>
+            <div id="course-page-content" role="main">
+                                
+
+<h2 class="course-page-header">
+    Compound Module    <a class="coursera-reporter-link" title="Click here if you&#39;re experiencing technical problems or found errors in the course materials." target="_blank" href="https://class.coursera.org/programdesign-002/help/pages?url=https%3A%2F%2Fclass.coursera.org%2Fprogramdesign-002%2Fwiki%2Fview%3Fpage%3DCompoundModule">
+      Help
+    </a>
+    <a data-coursera-admin-helpwidget-link="" rel="help" href="https://class.coursera.org/mooc/help/pages/setup" title="Course Page Setup" style="display:none;">Learn more.</a>
+</h2>
+
+<div id="internal_html_page_content">
+
+<script src="./3b-Compound_files/tablesort.js" type="text/javascript"></script><script src="./3b-Compound_files/displayTable2.js" type="text/javascript"></script><script src="./3b-Compound_files/problemObjects2.js" type="text/javascript"></script><script src="./3b-Compound_files/lectureObjects2.js" type="text/javascript"></script><p>
+  In this module you will also learn how to design compound data
+  definitions to represent information that consists of two or more
+  naturally connected values, as well as how to use such data as a
+  world state in HtDW problems
+</p>
+
+<p>
+  NOTE: Several of the videos this module are quite long. That is
+  because they work through the entire process of designing an
+  interactive program. As a result, much of what the videos cover is
+  not new. Instead it is HtDF and HtDD problems you already know how
+  to do. We suggest that you use these videos as a kind of TA tutorial
+  hours - try to work the problem on your own and check in with the
+  video now and then to see how your solution compares to ours.</p>
+
+<p>
+  The material in this module should take <strong>approximately 6-7
+  hours</strong> of dedicated time to complete, including working
+  along with the lecture videos, doing the practice problems, doing
+  the homework problems and the short quiz.</p>
+
+<h3>Learning Goals</h3>
+
+<ul>
+<li>Be able to identify domain information that should be
+    represented as compound data.
+    </li>
+    <li>Be able to read and write <tt>define-struct</tt> definitions.
+    </li>
+    <li>Be able to design world programs that use compound world
+    state.</li>
+      
+</ul>
+<h3>Lecture Videos, Notes and Starter Files</h3>
+
+<div id="lectures"><table border="1" width="90%" style="border: 1px solid rgb(0, 0, 0); padding: 5px; text-align: left; vertical-align: top; max-width: 90%;" id="fd-table-1"><thead><tr><th class="sortable fd-column-0" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Topic
+”">Topic
+</a><span></span></th><th class="sortable fd-column-1" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Length 
+(mm:ss)
+”">Length 
+(mm:ss)
+</a><span></span></th><th class="sortable fd-column-2" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Starter File
+”">Starter File
+</a><span></span></th><th class="sortable fd-column-3" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Downloads
+”">Downloads
+</a><span></span></th></tr></thead><tbody><tr><td><a title="Compound - define-struct" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=99" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=99">Compound - define-struct</a><br><div><p>A new mechanism from the BSL language allows us to build multi-part                                       (or compound) values and later to desconstruct the compound values to                                       get the individual values back.</p></div></td><td align="center"><div>5:27</div></td><td align="center"><div><i>none</i></div></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/notes/compound/compound-defstruct.rkt" title="Notes (rkt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Notes (rkt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=99" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/in-video-quizzes/compound-define-struct.pdf" title="In Video Quizzes (pdf)"><div><i class="icon-file"></i></div><div><div class="hidden">In Video Quizzes (pdf)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=99_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=99_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr><tr><td><a title="Compound - Compound Data Definitions" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=81" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=81">Compound - Compound Data Definitions</a><br><div><p>How to form compound data definitions using the HtDD recipe.</p></div></td><td align="center"><div>6:19</div></td><td align="center"><a href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/compound-starter.rkt" title="compound-starter.rkt"><div>compound-starter.rkt</div></a></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/notes/compound/compound-defstruct.rkt" title="Notes (rkt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Notes (rkt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=81" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/in-video-quizzes/compound-data-def.pdf" title="In Video Quizzes (pdf)"><div><i class="icon-file"></i></div><div><div class="hidden">In Video Quizzes (pdf)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=81_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=81_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr><tr><td><a title="Compound - HtDW With Compound Data" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=95" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=95">Compound - HtDW With Compound Data</a><br><div><p>This is a <strong>very long video</strong>. That is because it goes step-by-step through the development of a                                        world program with compound world state. In that sense much of <strong>the video is like TA office hours</strong> -                                        you can work through the problemm on your own consulting the video now and then to compare your                                        solution to ours.                                       Part of the video goes into more detail on how to handle the geometry of keeping moving elements                                       inside the screen, which is an area that students often ask about.                                       Another part introduces helper functions.</p></div></td><td align="center"><div>29:35</div></td><td align="center"><a href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/cowabunga-starter.rkt" title="cowabunga-starter.rkt"><div>cowabunga-starter.rkt</div></a></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/notes/compound/compound-htdw.rkt" title="Notes (rkt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Notes (rkt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=95" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=95_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=95_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr></tbody></table></div>
+<script>
+    displayLectureTable('lectures', 'Compound');
+</script><h3>Lecture Problems</h3>
+<div id="lectureProblems"><table border="1" width="90%" style="border: 1px solid rgb(0, 0, 0); padding: 5px; text-align: left; vertical-align: top; max-width: 90%;" id="fd-table-2"><thead><tr><th class="sortable fd-column-0" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Module Kind #
+”">Module Kind #
+</a><span></span></th><th class="sortable fd-column-1" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Assignment
+”">Assignment
+</a><span></span></th><th class="sortable fd-column-2" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Duration
+”">Duration
+</a><span></span></th><th class="sortable-sortImage fd-column-3" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Difficulty
+”">Difficulty
+</a><span></span></th><th class="sortable fd-column-4" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Code Files
+”">Code Files
+</a><span></span></th><th class="sortable fd-column-5" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Requires
+Lecture
+”">Requires
+Lecture
+</a><span></span></th></tr></thead><tbody><tr><td align="center"><div>Compound L3</div></td><td>A cow that wanders back and forth across the screen.</td><td align="center"><div>120 min.</div></td><td align="center"><img title="Difficulty" src="./3b-Compound_files/2_blue_square.svg" height="18" width="18"></td><td align="left"><a title="Cowabunga" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/cowabunga-starter.rkt">cowabunga-starter.rkt</a><br><a title="Cowabunga" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/cowabunga-v0.rkt">cowabunga-v0.rkt</a><br><a title="Cowabunga" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/cowabunga-v1.rkt">cowabunga-v1.rkt</a><br><a title="Cowabunga" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/cowabunga-v2.rkt">cowabunga-v2.rkt</a><br><a title="Cowabunga" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/cowabunga-v3.rkt">cowabunga-v3.rkt</a><br><a title="Cowabunga" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/cowabunga-v4.rkt">cowabunga-v4.rkt</a><br><a title="Cowabunga" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/cowabunga-v5.rkt">cowabunga-v5.rkt</a><br><a title="Cowabunga" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/cowabunga-v6.rkt">cowabunga-v6.rkt</a></td><td align="center">Compound-htdw</td></tr></tbody></table></div>
+<script>
+    displayProblemTable('lectureProblems', 'Compound', 'Lecture');
+</script><h3>Practice Problems</h3>
+<div id="practiceProblems"><table border="1" width="90%" style="border: 1px solid rgb(0, 0, 0); padding: 5px; text-align: left; vertical-align: top; max-width: 90%;" id="fd-table-3"><thead><tr><th class="sortable fd-column-0" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Module Kind #
+”">Module Kind #
+</a><span></span></th><th class="sortable fd-column-1" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Assignment
+”">Assignment
+</a><span></span></th><th class="sortable fd-column-2" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Duration
+”">Duration
+</a><span></span></th><th class="sortable-sortImage fd-column-3" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Difficulty
+”">Difficulty
+</a><span></span></th><th class="sortable fd-column-4" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Code Files
+”">Code Files
+</a><span></span></th><th class="sortable fd-column-5" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Requires
+Lecture
+”">Requires
+Lecture
+</a><span></span></th></tr></thead><tbody><tr><td align="center"><div>Compound P1</div></td><td>Design a compound data definition to represent students, and a function to monitor their allergies.</td><td align="center"><div>25 min.</div></td><td align="center"><img title="Difficulty" src="./3b-Compound_files/2_blue_square.svg" height="18" width="18"></td><td align="left"><a title="Student" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/student-starter.rkt">student-starter.rkt</a><br><a title="Student" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/student-solution.rkt">student-solution.rkt</a></td><td align="center">Compound - dd</td></tr><tr><td align="center"><div>Compound P2</div></td><td>Design a compound data definition to represent trips, and a function to compare their lengths.</td><td align="center"><div>25 min.</div></td><td align="center"><img title="Difficulty" src="./3b-Compound_files/2_blue_square.svg" height="18" width="18"></td><td align="left"><a title="Trip" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/trip-starter.rkt">trip-starter.rkt</a><br><a title="Trip" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/trip-solution.rkt">trip-solution.rkt</a></td><td align="center">Compound - dd</td></tr><tr><td align="center"><div>Compound P3</div></td><td>Design a world to represent grass that grows and is replanted.</td><td align="center"><div>80 min.</div></td><td align="center"><img title="Difficulty" src="./3b-Compound_files/3_black_diamond.png" height="23" width="23"></td><td align="left"><a title="Growing Grass" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/growing-grass-starter.rkt">growing-grass-starter.rkt</a><br><a title="Growing Grass" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/growing-grass-solution.rkt">growing-grass-solution.rkt</a></td><td align="center">Compound - htdw</td></tr><tr><td align="center"><div>Compound P4</div></td><td>Design a world where the mouse position is displayed at the mouse cursor.</td><td align="center"><div>50 min.</div></td><td align="center"><img title="Difficulty" src="./3b-Compound_files/2_blue_square.svg" height="18" width="18"></td><td align="left"><a title="Mouse Tracker" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/tracker-starter.rkt">tracker-starter.rkt</a><br><a title="Mouse Tracker" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/tracker-solution.rkt">tracker-solution.rkt</a></td><td align="center">Compound - htdw</td></tr><tr><td align="center"><div>Compound P5</div></td><td>Design a world where a lambda rolls back and forth across the screen.</td><td align="center"><div>100 min.</div></td><td align="center"><img title="Difficulty" src="./3b-Compound_files/3_black_diamond.png" height="23" width="23"></td><td align="left"><a title="Rolling Lambda" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/rolling-lambda-starter.rkt">rolling-lambda-starter.rkt</a><br><a title="Rolling Lambda" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/rolling-lambda-solution.rkt">rolling-lambda-solution.rkt</a></td><td align="center">Compound - htdw</td></tr><tr><td align="center"><div>Compound P6</div></td><td>Write down the evaluation steps for an expression that has compound data.</td><td align="center"><div>5 min.</div></td><td align="center"><img title="Difficulty" src="./3b-Compound_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Compound Evaluation Starter" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/compound-evaluation-starter.rkt">compound-evaluation-starter.rkt</a><br><a title="Compound Evaluation Starter" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/compound-evaluation-solution.rkt">compound-evaluation-solution.rkt</a></td><td align="center">Compound - dd</td></tr><tr><td align="center"><div>Compound P7</div></td><td>Design an animation of throwing a water balloon.</td><td align="center"><div>90 min.</div></td><td align="center"><img title="Difficulty" src="./3b-Compound_files/3_black_diamond.png" height="23" width="23"></td><td align="left"><a title="Water Balloon" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/water-balloon-starter.rkt">water-balloon-starter.rkt</a><br><a title="Water Balloon" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/water-balloon-solution.rkt">water-balloon-solution.rkt</a></td><td align="center">Compound - htdw</td></tr></tbody></table></div>
+<script>
+    displayProblemTable('practiceProblems', 'Compound', 'Practice');
+</script><h3>Homework Problems</h3>
+<div id="homeworkProblems"><table border="1" width="90%" style="border: 1px solid rgb(0, 0, 0); padding: 5px; text-align: left; vertical-align: top; max-width: 90%;" id="fd-table-4"><thead><tr><th class="sortable fd-column-0" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Module Kind #
+”">Module Kind #
+</a><span></span></th><th class="sortable fd-column-1" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Assignment
+”">Assignment
+</a><span></span></th><th class="sortable fd-column-2" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Duration
+”">Duration
+</a><span></span></th><th class="sortable-sortImage fd-column-3" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Difficulty
+”">Difficulty
+</a><span></span></th><th class="sortable fd-column-4" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Code Files
+”">Code Files
+</a><span></span></th><th class="sortable fd-column-5" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule#" class="fdTableSortTrigger" title="Sort on “Requires
+Lecture
+”">Requires
+Lecture
+</a><span></span></th></tr></thead><tbody><tr><td align="center"><div>Compound H1</div></td><td>Design a compound data definition to represent movies, and a function to compare their release dates.</td><td align="center"><div>25 min.</div></td><td align="center"><img title="Difficulty" src="./3b-Compound_files/2_blue_square.svg" height="18" width="18"></td><td align="left"><a title="Movie" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/movie-starter.rkt">movie-starter.rkt</a><br><a title="Movie" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/movie-solution.rkt">movie-solution.rkt</a></td><td align="center">Compound - dd</td></tr><tr><td align="center"><div>Compound H2</div></td><td>Design a world to represent a growing and rotating red box.</td><td align="center"><div>80 min.</div></td><td align="center"><img title="Difficulty" src="./3b-Compound_files/3_black_diamond.png" height="23" width="23"></td><td align="left"><a title="Spinning" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/spinning-starter.rkt">spinning-starter.rkt</a><br><a title="Spinning" href="https://spark-public.s3.amazonaws.com/programdesign/starters/compound/spinning-solution.rkt">spinning-solution.rkt</a></td><td align="center">Compound - htdw</td></tr></tbody></table></div>
+<script>
+    displayProblemTable('homeworkProblems', 'Compound', 'Homework');
+</script><h3>Module Quiz</h3>
+Be sure to complete the homework problems before you do the module quiz. The quiz itself can be found on the&nbsp;<a href="https://class.coursera.org/programdesign-002/quiz/index" title="Link: ../quiz/index">All Quizzes</a> page.
+
+<h3>Tips for Success</h3>
+
+<p>Be patient and take the time to be sure you work through several complete HtDW and Compound problems. They are longer, so it will take time, but you will need this material for the project and for next module's work, and it will also help you cement your
+    understanding of prior modules.</p>
+<p>This module more of you should begin to see that the design method is helping you organize and simplify your work on larger problems. Some of you may still feel you could do these problems 'in your head', but please follow the recipe anyways.</p>
+
+<div class="inpage-video-modal" data-modal-overlay-class="inpage-video-overlay" data-modal-position="absolute">
+    <div style="position:absolute;top:-25px;right:0px;color:white;cursor:pointer;" data-modal-close="">
+        Close
+    </div>
+</div>
+
+<style type="text/css">
+    .inpage-video-modal {                                
+       width: 960px;                                     
+       height: 610px;  
+       display: none;      
+    }
+      
+    .inpage-video-overlay {
+       background: black;
+       opacity: 0.75;
+       filter:alpha(opacity=75);  
+    }
+</style>
+</div>
+<hr>
+<div>
+    <div style="float:left">
+    	    	    </div>
+    <div style="float:right;text-align:right;font-size:10px;">
+    	Created Thu 29 Aug 2013  6:40 PM EDT (UTC -0400)<br>
+    	Last Modified Mon 16 Sep 2013  3:25 PM EDT (UTC -0400)    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+        
+    
+    <script src="./3b-Compound_files/spark.js"></script>
+
+<script>window.onerror = function(message, url, lineNum) {
+
+  // First check the URL and line number of the error
+  url = url || window.location.href;
+  // 99% of the time, errors without line numbers arent due to our code,
+  // they are due to third party plugins and browser extensions
+  if (lineNum === undefined || lineNum == null) return;
+  
+  // Now figure out the actual error message
+  // If it's an event, as triggered in several browsers
+  if (message.target && message.type) {
+    message = message.type;
+  }
+  if (!message.indexOf) {
+    message = 'Non-string, non-event error: ' + (typeof message);
+  }
+  
+  var errorDescrip = {
+    message: message,
+    script: url,
+    line: lineNum,
+    url: document.URL
+  }
+  
+  var err = {
+    key: 'page.error.javascript', 
+    value: errorDescrip
+  }
+  
+  window._204 = window._204 || [];
+  window._204.push(err);
+  
+  window._gaq = window._gaq || [];
+  window._gaq.push(err);
+}</script>
+<script type="text/javascript">
+    // SET UP THE MULTITRACKER
+        window.logger = window.Log({level:"error"});
+        var parts = location.host.split(".");
+    while(parts.length > 2) { parts.shift(); }
+
+    window.multitracker = window.MultiTracker({logger:window.logger});
+    window.multitracker.register('204', window._204 = window._204 || []);
+    window.multitracker.register('ga', window._gaq = window._gaq || [], 'google');
+
+    // SET UP GA and 204
+    window._gaq.push(['_setAccount', 'UA-28377374-1']);
+    window._gaq.push(['_setDomainName', 'coursera.org']);
+    window._gaq.push(['_setAllowLinker', true]);  
+    window._gaq.push(['_trackPageview']);
+    
+    // configure 204 with the following settings
+    window._204.push(["client", "spark"]);
+    window._204.push(["user", 1216070]);
+    window._204.push(["domain", "." + parts.join(".")]);
+
+    // set off the first event
+    window._204.push({key:"pageview", val:{}});
+
+    // override our multitracker queues with the ga queue when it is ready
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    
+      ga.onload = ga.onreadystatechange = function() {
+          ga.onreadystatechange = ga.onload = null;
+          window.multitracker.get('ga').queue = window._gaq;
+      };
+    })();
+
+    // override our multitracker queues with the 204 queue when it is ready
+    (function() {
+      var a = document.createElement('script'); a.type = 'text/javascript'; a.async = true;
+      a.src = 'https://eventing.coursera.org/204.min.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(a, s);
+      a.onload = a.onreadystatechange = function() {
+          a.onreadystatechange = a.onload = null;
+          window.multitracker.get('204').queue = window._204;
+      };
+    })();
+</script>
+
+<script>
+  // Set up shared AB testing object
+  (function() {
+    window.ab = {};
+
+    // we want to share the 204 session cookie with the AB session cookie...
+    var sessionId = AB.makeSession("__204u", {expires:356, domain:"." + location.host});
+        var debug = false;
+    
+    window.ab.user = window.AB(1216070, "user", {debug:debug, tracker:window.multitracker, logger:window.logger});
+    window.ab.session = window.AB(sessionId, "session", {debug:debug, tracker:window.multitracker, logger:window.logger});
+
+    if(window.CourseraABExperiments.user) {
+        window.ab.user.addExperiments(window.CourseraABExperiments.user);
+        window.ab.user.runExperimentsOn("body");
+    }
+
+    if(window.CourseraABExperiments.session) {
+        window.ab.session.addExperiments(window.CourseraABExperiments.session);
+        window.ab.session.runExperimentsOn("body");
+    }
+  })();
+</script>
+
+
+    <script>
+      // Set up help widget
+      (function() {
+        $("[data-helpwidget]").each(function() {
+            window.HelpWidget(this, {tracker: window.multitracker});
+        });
+       })();
+
+        $("[data-readme]").each(function() {
+            window.ReadMe(this);
+        });
+    </script>
+
+    <script src="./3b-Compound_files/modal_focus.js" type="text/javascript"></script>
+    <script src="./3b-Compound_files/get_query_parameters.js" type="text/javascript"></script>
+    <script src="./3b-Compound_files/signature_track.js" type="text/javascript"></script>
+    <script src="./3b-Compound_files/item_list.js" type="text/javascript"></script>
+    <script src="./3b-Compound_files/navbar.js" type="text/javascript"></script>
+
+    
+    <script>
+     // Set up help widget
+      (function() {
+        $("[data-helpwidget]").each(function() {
+            window.HelpWidget(this, {tracker: window.multitracker});
+        });
+       })();
+    </script>
+
+        <script>
+    (function() {
+        $("<style type='text/css'> .coursera-reporter-link { display:inline-block;} </style>").appendTo("head");
+    })();
+    </script>
+    
+    <script type="text/x-mathjax-config;executed=true">
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  
+  styleSheets: [],
+  styles: {},
+
+  jax: ["input/TeX"],
+  
+  extensions: ["tex2jax.js"],
+
+  preJax: null,
+  postJax: null,
+
+  preRemoveClass: "MathJax_Preview",
+
+  showProcessingMessages: true,
+
+  messageStyle: "none",
+  
+  displayAlign: "center",
+  displayIndent: "0em",
+  
+  delayStartupUntil: "none",
+
+  skipStartupTypeset: false,
+  
+  elements: [],
+  
+  tex2jax: {
+	    inlineMath: [
+	                 ['$$','$$'],      // uncomment this for standard TeX math delimiters
+	                 ['\\(','\\)']
+	                 ],
+
+	                 displayMath: [
+	                 ['\\[','\\]']
+	                 ],
+
+    skipTags: ["script","noscript","style","textarea","pre","code"],
+    ignoreClass: "tex2jax_ignore",
+    processClass: "tex2jax_process",
+    processEscapes: false,
+    processEnvironments: true,
+    preview: "TeX"
+    
+  },
+  
+  mml2jax: {
+    preview: "alttext"
+    
+  },
+  
+  jsMath2jax: {
+    preview: "TeX"
+    
+  },
+
+  TeX: {
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    Macros: {},
+
+    extensions: ["AMSmath.js", "AMSsymbols.js"]
+    
+  },
+
+  //============================================================================
+  //
+  //  These parameters control the MathML inupt jax.
+  //
+  MathML: {
+    //
+    //  This specifies whether to use TeX spacing or MathML spacing when the
+    //  HTML-CSS output jax is used.
+    //
+    useMathMLspacing: false
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the HTML-CSS output jax.
+  //
+  "HTML-CSS": {
+    
+    scale: 100,
+    
+    availableFonts: ["STIX","TeX"],
+    
+    preferredFont: "TeX",
+    
+    webFont: "TeX",
+    
+    imageFont: "TeX",
+    
+    undefinedFamily: "STIXGeneral,'Arial Unicode MS',serif",
+      
+    showMathMenu: true,
+
+    styles: {},
+    
+    tooltip: {
+      delayPost: 600,          // milliseconds delay before tooltip is posted after mouseover
+      delayClear: 600,         // milliseconds delay before tooltip is cleared after mouseout
+      offsetX: 10, offsetY: 5  // pixels to offset tooltip from mouse position
+    }
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the NativeMML output jax.
+  //
+  NativeMML: {
+
+    scale: 100,
+
+    showMathMenu: true,
+    showMathMenuMSIE: true,
+
+    styles: {}
+  },
+  
+  MathMenu: {
+    delay: 400,
+    
+    helpURL: "http://www.mathjax.org/help/user/",
+
+    showRenderer: true,
+    showFontMenu: false,
+    showContext:  false,
+
+    windowSettings: {
+      status: "no", toolbar: "no", locationbar: "no", menubar: "no",
+      directories: "no", personalbar: "no", resizable: "yes", scrollbars: "yes",
+      width: 100, height: 50
+    },
+    
+    styles: {}
+    
+  },
+
+  MMLorHTML: {
+    prefer: {
+      MSIE:    "MML",
+      Firefox: "MML",
+      Opera:   "HTML",
+      other:   "HTML"
+    }
+  }
+});
+</script>
+<script type="text/javascript">
+(function () {
+
+  function loadMathJax() {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://duqnjvq4jwr55.cloudfront.net/2.1/MathJax.js";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  }
+
+  window.loadOrRefreshMathJax = function(domId) {
+    if (window.MathJax) {
+      if (domId) {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, domId]);
+      } else {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+      }
+    } else {
+      loadMathJax();
+    }
+  }
+})();
+</script>
+    <script type="text/javascript">
+        var site_base_url = "https:\/\/www.coursera.org\/";
+        var site_static_asset_url = "https:\/\/dt5zaw6a98blc.cloudfront.net\/site-static\/";
+        var spark_class_short_name = "programdesign";
+        var spark_class_id = 971286;
+        var spark_class_url = "\/programdesign-002";
+        var spark_signature_url = "https:\/\/class.coursera.org\/programdesign-002\/signature\/";
+
+        var course_strings_name = "Introduction to Systematic Program Design - Part 1";
+        var student_full_name = "Christopher Edward Beattie";
+    </script>
+
+    
+<script type="text/javascript">$(function() { loadOrRefreshMathJax();})</script>
+<script src="./3b-Compound_files/textbook_wiki.js"></script>
+
+
+
+
+</body></html>

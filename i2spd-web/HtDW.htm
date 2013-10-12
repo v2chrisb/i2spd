@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://class.coursera.org/programdesign-002/wiki/view?page=HtDWorlds -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Wiki - HtD Worlds | Introduction to Systematic Program Design - Part 1</title>
+<link rel="stylesheet" href="https://dt5zaw6a98blc.cloudfront.net/site-static/595ddfeac34ca20b470b491885b1acad3564b90f/css/spark.main.css">
+<link rel="stylesheet" href="https://www.coursera.org/maestro/api/course/971286/course.css">
+<link rel="icon" href="https://spark-public.s3.amazonaws.com/programdesign/static/images/favicon.ico">
+<style type="text/css"> .coursera-reporter-link { display:inline-block;} </style><script type="text/javascript" src="./HtDW_files/MathJax.js"></script><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -1px -1px 1px -1px; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+    <a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDWorlds#course-page-content" class="hidden">Skip Navigation</a>
+    <div class="hidden">
+        This page features MathJax technology to render mathematical formulae.
+        If you are using a screen reader, please visit <a href="http://www.dessci.com/en/products/mathplayer/">MathPlayer</a> to download the plugin for your browser. Please note that this is an Internet Explorer-only plugin at this time.
+    </div>
+
+    <h1 class="hidden">Introduction to Systematic Program Design - Part 1</h1>
+
+    <script type="text/javascript" async="" src="./HtDW_files/204.min.js"></script><script type="text/javascript" async="" src="./HtDW_files/ga.js"></script><script>window.onerror = function(message, url, lineNum) {
+
+  // First check the URL and line number of the error
+  url = url || window.location.href;
+  // 99% of the time, errors without line numbers arent due to our code,
+  // they are due to third party plugins and browser extensions
+  if (lineNum === undefined || lineNum == null) return;
+  
+  // Now figure out the actual error message
+  // If it's an event, as triggered in several browsers
+  if (message.target && message.type) {
+    message = message.type;
+  }
+  if (!message.indexOf) {
+    message = 'Non-string, non-event error: ' + (typeof message);
+  }
+  
+  var errorDescrip = {
+    message: message,
+    script: url,
+    line: lineNum,
+    url: document.URL
+  }
+  
+  var err = {
+    key: 'page.error.javascript', 
+    value: errorDescrip
+  }
+  
+  window._204 = window._204 || [];
+  window._204.push(err);
+  
+  window._gaq = window._gaq || [];
+  window._gaq.push(err);
+}</script>
+
+<div class="course-topbar container-fluid" role="banner">
+
+    <div class="row-fluid">
+
+        <div class="span3">
+          <a href="https://www.coursera.org/" class="course-topbar-logo" data-if-linkable="add-referrer"></a>
+        </div>
+
+        <div class="course-topbar-nav-container span9" style="float:right;">
+            <h2 class="hidden">Top Navigation Bar</h2>
+
+            <ul class="course-topbar-nav-list">
+                <li class="course-topbar-nav-list-item">
+                  <a href="https://www.coursera.org/courses" data-if-linkable="add-referrer">Courses</a>
+                </li>
+
+                
+                <li class="course-topbar-nav-list-item" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" aria-owns="course-topbar-my" data-popup="#course-topbar-my" data-popup-bind-open="mouseenter" data-popup-close="" style="cursor:pointer;" data-popup-direction="se">
+                                        <a data-user-id="1216070">
+                        Christopher Edward Beattie                        <i class="icon-caret-down"></i>
+                    </a>
+                </li>
+
+                            </ul>
+        </div>
+    </div>
+
+    <div id="course-topbar-aboutus" class="course-topbar-sublist">
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/about/jobs" target="_new" data-if-linkable="add-referrer">Jobs</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/about/team" target="_new" data-if-linkable="add-referrer">Team</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/about/contact" target="_new" data-if-linkable="add-referrer">Contact Us</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/about/" target="_new" data-if-linkable="add-referrer">About Us</a>
+    </div>
+
+    <div id="course-topbar-my" class="course-topbar-sublist">
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/" target="_new">My Courses</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/account/profile" target="_new">Profile</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/account/records" target="_new">Course Records</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/account/settings" target="_new">Settings</a>
+                <a class="course-topbar-sublist-item" href="https://class.coursera.org/programdesign-002/class/preferences">Course Preferences</a>
+        <a class="course-topbar-sublist-item" href="https://class.coursera.org/programdesign-002/auth/logout">Sign Out</a>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="course-topbanner-wrapper">
+  <div class="course-topbanner">
+    <div class="course-topbanner-university-logo">
+      <a href="https://www.coursera.org/ubc" class="coursera-university-color" target="_blank" data-if-linkable="add-referrer" title="https://www.coursera.org/ubc">
+        <img src="./HtDW_files/university_logo" alt="ubc">
+      </a>
+    </div>
+
+    
+    <h1 class="course-topbanner-header">
+      <a class="course-topbanner-name coursera-university-color" href="https://class.coursera.org/programdesign-002/class/index" data-if-linkable="modal-lock">
+        Introduction to Systematic Program Design - Part 1      </a>
+      <br>
+      <span class="course-topbanner-instructor" style="">
+        by  Gregor  Kiczales      </span>
+    </h1>
+
+  </div>
+</div>
+
+        <div class="container-fluid" style="position:relative;">
+        <div class="row-fluid">
+            <div id="course-page-sidebar" role="navigation">
+                <div class="course-navbar-container">
+	<a href="https://class.coursera.org/programdesign-002/class/index">
+	<img src="./HtDW_files/logo" style="width: 205px;height: 116px;margin: -15px 0px 8px 1px; box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);" alt="Course Home Page">
+	</a>
+
+
+<h2 class="hidden">Side Navigation Bar</h2>
+<ul class="course-navbar-list">
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/class/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Announcements							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=CourseInformation" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Course Information							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=ToDoWellinThisCourse" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				To Do Well in This Course							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/forum/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Discussion Forums							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/quiz/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Quizzes							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/human_grading/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Peer Graded Problems							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+					<h3>Reference</h3>
+			</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=DesignRecipes" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Design Recipes							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=Syllabus" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Syllabus							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=Language" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Language							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=StyleRules" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Style Rules							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=Glossary" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Glossary							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+					<h3>Modules</h3>
+			</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				1a Beginning Student Language							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				1b How to Design Functions							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDDModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				2 How to Design Data							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDWModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				3a How to Design Worlds							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				3b Compound							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=SelfRefModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				4a Self Reference							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=RefModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				4b Reference 							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=NatModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				5a Naturals							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=HelpersModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				5b Helpers							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSTsModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				6a Binary Search Trees							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=MutualRefModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				6b Mutual Reference							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+					<h3>Additional Resources</h3>
+			</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=AllProblems" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				All Problems							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=AllLectures" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				All Lectures							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/lecture/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				All Lectures (Classic)							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="http://www.ccs.neu.edu/home/matthias/HtDP2e/" target="_blank" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				HtDP/2e Book				<span class="icon-share"></span>			</a>
+						</li>
+	
+	
+		<li class="course-navbar-item">
+		<a href="https://share.coursera.org/wiki/index.php/programdesign:Main" target="_blank" class="coursera-university-color" title="Open course wiki in new window">
+			Course Wiki
+			<span class="icon-share"></span>
+		</a>
+	</li>
+		
+		<li class="course-navbar-item">
+		<a href="http://www.meetup.com/Coursera/" target="_blank" class="coursera-university-color">
+			Join a Meetup
+			<span class="icon-share"></span>
+		</a>
+	</li>
+	
+    </ul>
+
+<ul style="list-style-type:none;margin-left: 10px;">
+  <li><a href="http://help.coursera.org/" class="coursera-university-color" target="_blank" title="Open help articles in new window"><i class="icon-question-sign"></i> Help Articles</a></li>
+</ul>
+
+<ul style="list-style-type:none;margin-left: 10px;">
+		<li><a href="https://class.coursera.org/programdesign-002/forum/list?forum_id=10000" class="coursera-university-color"><i class="icon-comments"></i> Course Materials Errors</a></li>
+	<li><a href="https://class.coursera.org/programdesign-002/forum/list?forum_id=10001" class="coursera-university-color"><i class="icon-comments"></i> Technical Issues</a></li>
+
+</ul>
+
+</div>
+            </div>
+            <div id="course-page-content" role="main">
+                                
+
+<h2 class="course-page-header">
+    HtD Worlds    <a class="coursera-reporter-link" title="Click here if you&#39;re experiencing technical problems or found errors in the course materials." target="_blank" href="https://class.coursera.org/programdesign-002/help/pages?url=https%3A%2F%2Fclass.coursera.org%2Fprogramdesign-002%2Fwiki%2Fview%3Fpage%3DHtDWorlds">
+      Help
+    </a>
+    <a data-coursera-admin-helpwidget-link="" rel="help" href="https://class.coursera.org/mooc/help/pages/setup" title="Course Page Setup" style="display:none;">Learn more.</a>
+</h2>
+
+<div id="internal_html_page_content">
+
+<p>The How to Design Worlds process provides guidance for designing interactive world programs using <tt>big-bang</tt>. While some elements of the process are tailored to <tt>big-bang</tt>, the process can also be adapted to the design of other interactive
+    programs. The wish-list technique can be used in any multi-function program.</p>
+<table summary="Steps of the HtDW Recipe." border="1" cellpadding="5" style="border: 1px solid rgb(0, 0, 0);
+              padding: 5px; 
+	      text-align: left;
+	      horizontal-align: left; 
+	      vertical-align: top;
+	      max-width: 90%"><tbody><tr style="text-align: left;">
+<td>
+                <p>World program design is divided into two phases, each of which has sub-parts:</p>
+                <ol>
+<li>Domain analysis (use a piece of paper!)</li>
+                    <ol>
+<li>Sketch
+                            <emph>program scenarios</emph>
+</li>
+                        <li>Identify
+                            <emph>constant information</emph>
+</li>
+                        <li>Identify
+                            <emph>changing information</emph>
+</li>
+                        <li>Identify
+                            <emph>big-bang options</emph>
+</li>
+                    </ol>
+<li>Build the actual program</li>
+                    <ol>
+<li>Constants (based on 1.2 above)</li>
+                        <li>Data definitions (based on 1.3 above)</li>
+                        <li>Functions</li>
+                        <ol>
+<li>main first (based on 1.3, 1.4 and 2.2 above)</li>
+                            <li>
+                                <emph>wish list entries</emph>for
+                                <emph>big-bang handlers</emph>
+</li>
+                        </ol>
+<li>Work through wish list until done</li>
+                    </ol>
+</ol>
+</td>
+        </tr></tbody></table>
+<h4>Phase 1: Domain Analysis</h4>
+
+<p>Do a domain analysis by hand-drawing three or more pictures of what the world program will look like at different stages when it is running.</p>
+<p>Use this picture to identify constant information such as the height and width of screen, color of the background, the background image itself, the length of a firework's fuse, the image for a moving cat and so on.</p>
+<p>Also identify changing information such as the position of a firework, the color of a light, the number in countdown etc.</p>
+<p>Identify which <tt>big-bang</tt> options the program needs.</p>
+<table summary="big-bang options." border="1" cellpadding="5" style="border: 1px solid rgb(0, 0, 0);
+              padding: 5px; 
+	      text-align: left;
+	      horizontal-align: left; 
+	      vertical-align: top;
+	      max-width: 90%">
+<thead><tr>
+<th>If your program needs to:</th>
+            <th>Then it needs this option:</th>
+        </tr></thead>
+<tbody>
+<tr>
+<td>change as time goes by (nearly all do)</td>
+            <td>
+<tt>on-tick</tt>
+            </td>
+        </tr>
+<tr>
+<td>display something (nearly all do)</td>
+            <td>
+<tt>to-draw</tt>
+            </td>
+        </tr>
+<tr>
+<td>change in response to key presses</td>
+            <td>
+<tt>on-key</tt>
+            </td>
+        </tr>
+<tr>
+<td>change in response to mouse activity</td>
+            <td>
+<tt>on-mouse</tt>
+            </td>
+        </tr>
+<tr>
+<td>stop automatically</td>
+            <td>
+<tt>stop-when</tt>
+            </td>
+        </tr>
+</tbody>
+</table>
+<p>(There are several more options to <tt>big-bang</tt>. Look in the DrRacket help desk under <tt>big-bang</tt> for a complete list.)</p>
+
+<h4>Phase 2: Building the actual program</h4>
+
+<p>Structure the actual program in four parts:</p>
+<ol>
+<li>Requires followed by one line summary of program's behavior</li>
+    <li>Constants</li>
+    <li>Data definitions</li>
+    <li>Functions</li>
+</ol>
+<p>The program should begin with whatever require declarations are required. For a program using <tt>big-bang</tt> this is usually a require for <tt>2htdp/universe</tt> to get <tt>big-bang</tt> itself and a require for <tt>2htdp/image</tt> to get useful image primitives.
+    This is followed by a <u>short</u> summary of the program's behavior (ideally 1 line).</p>
+<p>The next section of the file should define constants. These will typically come directly from the domain analysis.</p>
+<p>This is followed by data definitions. The data definitions describe how the world state — the changing information identified during the analysis — will be represented as data in the program. Simple world programs may have just a single data definition.
+    More complex world programs have a number of data definitions.</p>
+<p>The functions section should begin with the <tt>main</tt> function which uses <tt>big-bang</tt> with the appropriate options identified during the analysis. After that put the more important functions first followed by the less important helpers. Keep groups
+    of closely related functions together.</p>
+
+<h5>Template for a World Program</h5>
+
+<p>A useful template for a world program, including a template for the main function and wish list entries for tick-handler and to-draw handler is as follows. To use this template replace WS with the appropriate type for your changing world state. You may
+    want to give the handler functions more descriptive names and you should definitely give them all a more descriptive purpose.
+</p>
+<pre>(require 2htdp/image)
+(require 2htdp/universe)
+
+;; My world program  (make this more specific)
+
+;; =================
+;; Constants:
+
+
+;; =================
+;; Data definitions:
+
+;; WS is ... (give WS a better name)
+
+
+
+;; =================
+;; Functions:
+
+;; WS -&gt; WS
+;; start the world with ...
+;; <no tests="" for="" main="" functions="">
+(define (main ws)
+  (big-bang ws                   ; WS
+            (on-tick   tock)     ; WS -&gt; WS
+            (to-draw   render)   ; WS -&gt; Image
+            (stop-when ...)      ; WS -&gt; Boolean
+            (on-mouse  ...)      ; WS Integer Integer MouseEvent -&gt; WS
+            (on-key    ...)))    ; WS KeyEvent -&gt; WS
+
+;; WS -&gt; WS
+;; produce the next ...
+;; !!!
+(define (tock ws) ...)
+
+
+;; WS -&gt; Image
+;; render ... 
+;; !!!
+(define (render ws) ...)
+</no></pre>
+
+<p>Depending on which other big-bang options you are using you would also end up with wish list entries for those handlers. So, at an early stage a world program might look like this:</p>
+<pre>(require 2htdp/universe)
+(require 2htdp/image)
+
+;; A cat that walks across the screen.
+
+;; Constants:
+
+(define WIDTH  200)
+(define HEIGHT 200)
+
+(define CAT-IMG (circle 10 "solid" "red")) ; a not very attractive cat
+
+(define MTS (empty-scene WIDTH HEIGHT))
+
+
+;; Data definitions:
+
+;; Cat is Number
+;; interp. x coordinate of cat (in screen coordinates)
+(define C1 1)
+(define C2 30)
+
+#;
+(define (fn-for-cat c)
+  (... c))
+
+
+;; Functions:
+
+;; Cat -&gt; Cat
+;; start the world with initial state c, for example: (main 0)
+(define (main c)
+  (big-bang c                         ; Cat
+            (on-tick   tock)          ; Cat -&gt; Cat
+            (to-draw   render)))      ; Cat -&gt; Image
+
+;; Cat -&gt; Cat
+;; Produce cat at next position
+;!!!
+(define (tock c) 1)  ;stub
+
+;; Cat -&gt; Image
+;; produce image with CAT-IMG placed on MTS at proper x, y position
+; !!!
+(define (render c) MTS)
+
+</pre>
+
+<p>Note that we are maintaining a
+    <emph>wish list</emph>of functions that need to be designed. The way to maintain the wish list is to just write a signature, purpose and stub for each wished-for function, also label the
+    <emph>wish list entry</emph>with <tt>!!!</tt> or some other marker that is easy to search for. That will help you find your unfilled wishes later.</p>
+<p>Forming wish list entries this way is enough for <tt>main</tt> (or other functions that call a wished for function) to be defined without error. But of course <tt>main</tt> (and other such functions) will not run properly until the wished for functions are
+    actually completely designed.</p>
+<p>As you design the program remember to run early and run often. The sooner you can run the program after writing anything the sooner you can find any small mistakes that might be in it. Fixing the small mistakes earlier makes it easier to find any harder
+    mistakes later.</p>
+
+<h5>Key and Mouse Handlers</h5>
+
+<p>The <tt>on-key</tt> and <tt>on-mouse</tt> handler function templates are handled specially. The <tt>on-key</tt> function is templated according to its second argument, a <tt>KeyEvent</tt>, using the large enumeration rule. The <tt>on-mouse</tt> function is templated
+    according to its <tt>MouseEvent</tt> argument, also using the large enumeration rule. So, for example, for a key handler function that has a special behaviour when the space key is pressed but does nothing for any other key event the following would
+    be the template:</p>
+<pre>(define (handle-key ws ke)
+  (cond [(key=? ke " ") (... ws)]
+        [else 
+         (... ws)]))
+</pre>
+
+<p>Similarly the template for a mouse handler function that has special behavior for mouse clicks but ignores all other mouse events would be:</p>
+<pre>(define (handle-mouse ws x y me)
+  (cond [(mouse=? me "button-down") (... ws x y)]
+        [else
+         (... ws x y)]))
+</pre>
+
+<p>For more information on the <tt>KeyEvent</tt>
+    and <tt>MouseEvent</tt> large enumerations see the DrRacket help desk.</p>
+</div>
+<hr>
+<div>
+    <div style="float:left">
+    	    	    </div>
+    <div style="float:right;text-align:right;font-size:10px;">
+    	Created Thu 21 Feb 2013  2:08 PM EST (UTC -0500)<br>
+    	Last Modified Fri 20 Sep 2013 12:06 AM EDT (UTC -0400)    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+        
+    
+    <script src="./HtDW_files/spark.js"></script>
+
+<script>window.onerror = function(message, url, lineNum) {
+
+  // First check the URL and line number of the error
+  url = url || window.location.href;
+  // 99% of the time, errors without line numbers arent due to our code,
+  // they are due to third party plugins and browser extensions
+  if (lineNum === undefined || lineNum == null) return;
+  
+  // Now figure out the actual error message
+  // If it's an event, as triggered in several browsers
+  if (message.target && message.type) {
+    message = message.type;
+  }
+  if (!message.indexOf) {
+    message = 'Non-string, non-event error: ' + (typeof message);
+  }
+  
+  var errorDescrip = {
+    message: message,
+    script: url,
+    line: lineNum,
+    url: document.URL
+  }
+  
+  var err = {
+    key: 'page.error.javascript', 
+    value: errorDescrip
+  }
+  
+  window._204 = window._204 || [];
+  window._204.push(err);
+  
+  window._gaq = window._gaq || [];
+  window._gaq.push(err);
+}</script>
+<script type="text/javascript">
+    // SET UP THE MULTITRACKER
+        window.logger = window.Log({level:"error"});
+        var parts = location.host.split(".");
+    while(parts.length > 2) { parts.shift(); }
+
+    window.multitracker = window.MultiTracker({logger:window.logger});
+    window.multitracker.register('204', window._204 = window._204 || []);
+    window.multitracker.register('ga', window._gaq = window._gaq || [], 'google');
+
+    // SET UP GA and 204
+    window._gaq.push(['_setAccount', 'UA-28377374-1']);
+    window._gaq.push(['_setDomainName', 'coursera.org']);
+    window._gaq.push(['_setAllowLinker', true]);  
+    window._gaq.push(['_trackPageview']);
+    
+    // configure 204 with the following settings
+    window._204.push(["client", "spark"]);
+    window._204.push(["user", 1216070]);
+    window._204.push(["domain", "." + parts.join(".")]);
+
+    // set off the first event
+    window._204.push({key:"pageview", val:{}});
+
+    // override our multitracker queues with the ga queue when it is ready
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    
+      ga.onload = ga.onreadystatechange = function() {
+          ga.onreadystatechange = ga.onload = null;
+          window.multitracker.get('ga').queue = window._gaq;
+      };
+    })();
+
+    // override our multitracker queues with the 204 queue when it is ready
+    (function() {
+      var a = document.createElement('script'); a.type = 'text/javascript'; a.async = true;
+      a.src = 'https://eventing.coursera.org/204.min.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(a, s);
+      a.onload = a.onreadystatechange = function() {
+          a.onreadystatechange = a.onload = null;
+          window.multitracker.get('204').queue = window._204;
+      };
+    })();
+</script>
+
+<script>
+  // Set up shared AB testing object
+  (function() {
+    window.ab = {};
+
+    // we want to share the 204 session cookie with the AB session cookie...
+    var sessionId = AB.makeSession("__204u", {expires:356, domain:"." + location.host});
+        var debug = false;
+    
+    window.ab.user = window.AB(1216070, "user", {debug:debug, tracker:window.multitracker, logger:window.logger});
+    window.ab.session = window.AB(sessionId, "session", {debug:debug, tracker:window.multitracker, logger:window.logger});
+
+    if(window.CourseraABExperiments.user) {
+        window.ab.user.addExperiments(window.CourseraABExperiments.user);
+        window.ab.user.runExperimentsOn("body");
+    }
+
+    if(window.CourseraABExperiments.session) {
+        window.ab.session.addExperiments(window.CourseraABExperiments.session);
+        window.ab.session.runExperimentsOn("body");
+    }
+  })();
+</script>
+
+
+    <script>
+      // Set up help widget
+      (function() {
+        $("[data-helpwidget]").each(function() {
+            window.HelpWidget(this, {tracker: window.multitracker});
+        });
+       })();
+
+        $("[data-readme]").each(function() {
+            window.ReadMe(this);
+        });
+    </script>
+
+    <script src="./HtDW_files/modal_focus.js" type="text/javascript"></script>
+    <script src="./HtDW_files/get_query_parameters.js" type="text/javascript"></script>
+    <script src="./HtDW_files/signature_track.js" type="text/javascript"></script>
+    <script src="./HtDW_files/item_list.js" type="text/javascript"></script>
+    <script src="./HtDW_files/navbar.js" type="text/javascript"></script>
+
+    
+    <script>
+     // Set up help widget
+      (function() {
+        $("[data-helpwidget]").each(function() {
+            window.HelpWidget(this, {tracker: window.multitracker});
+        });
+       })();
+    </script>
+
+        <script>
+    (function() {
+        $("<style type='text/css'> .coursera-reporter-link { display:inline-block;} </style>").appendTo("head");
+    })();
+    </script>
+    
+    <script type="text/x-mathjax-config;executed=true">
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  
+  styleSheets: [],
+  styles: {},
+
+  jax: ["input/TeX"],
+  
+  extensions: ["tex2jax.js"],
+
+  preJax: null,
+  postJax: null,
+
+  preRemoveClass: "MathJax_Preview",
+
+  showProcessingMessages: true,
+
+  messageStyle: "none",
+  
+  displayAlign: "center",
+  displayIndent: "0em",
+  
+  delayStartupUntil: "none",
+
+  skipStartupTypeset: false,
+  
+  elements: [],
+  
+  tex2jax: {
+	    inlineMath: [
+	                 ['$$','$$'],      // uncomment this for standard TeX math delimiters
+	                 ['\\(','\\)']
+	                 ],
+
+	                 displayMath: [
+	                 ['\\[','\\]']
+	                 ],
+
+    skipTags: ["script","noscript","style","textarea","pre","code"],
+    ignoreClass: "tex2jax_ignore",
+    processClass: "tex2jax_process",
+    processEscapes: false,
+    processEnvironments: true,
+    preview: "TeX"
+    
+  },
+  
+  mml2jax: {
+    preview: "alttext"
+    
+  },
+  
+  jsMath2jax: {
+    preview: "TeX"
+    
+  },
+
+  TeX: {
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    Macros: {},
+
+    extensions: ["AMSmath.js", "AMSsymbols.js"]
+    
+  },
+
+  //============================================================================
+  //
+  //  These parameters control the MathML inupt jax.
+  //
+  MathML: {
+    //
+    //  This specifies whether to use TeX spacing or MathML spacing when the
+    //  HTML-CSS output jax is used.
+    //
+    useMathMLspacing: false
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the HTML-CSS output jax.
+  //
+  "HTML-CSS": {
+    
+    scale: 100,
+    
+    availableFonts: ["STIX","TeX"],
+    
+    preferredFont: "TeX",
+    
+    webFont: "TeX",
+    
+    imageFont: "TeX",
+    
+    undefinedFamily: "STIXGeneral,'Arial Unicode MS',serif",
+      
+    showMathMenu: true,
+
+    styles: {},
+    
+    tooltip: {
+      delayPost: 600,          // milliseconds delay before tooltip is posted after mouseover
+      delayClear: 600,         // milliseconds delay before tooltip is cleared after mouseout
+      offsetX: 10, offsetY: 5  // pixels to offset tooltip from mouse position
+    }
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the NativeMML output jax.
+  //
+  NativeMML: {
+
+    scale: 100,
+
+    showMathMenu: true,
+    showMathMenuMSIE: true,
+
+    styles: {}
+  },
+  
+  MathMenu: {
+    delay: 400,
+    
+    helpURL: "http://www.mathjax.org/help/user/",
+
+    showRenderer: true,
+    showFontMenu: false,
+    showContext:  false,
+
+    windowSettings: {
+      status: "no", toolbar: "no", locationbar: "no", menubar: "no",
+      directories: "no", personalbar: "no", resizable: "yes", scrollbars: "yes",
+      width: 100, height: 50
+    },
+    
+    styles: {}
+    
+  },
+
+  MMLorHTML: {
+    prefer: {
+      MSIE:    "MML",
+      Firefox: "MML",
+      Opera:   "HTML",
+      other:   "HTML"
+    }
+  }
+});
+</script>
+<script type="text/javascript">
+(function () {
+
+  function loadMathJax() {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://duqnjvq4jwr55.cloudfront.net/2.1/MathJax.js";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  }
+
+  window.loadOrRefreshMathJax = function(domId) {
+    if (window.MathJax) {
+      if (domId) {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, domId]);
+      } else {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+      }
+    } else {
+      loadMathJax();
+    }
+  }
+})();
+</script>
+    <script type="text/javascript">
+        var site_base_url = "https:\/\/www.coursera.org\/";
+        var site_static_asset_url = "https:\/\/dt5zaw6a98blc.cloudfront.net\/site-static\/";
+        var spark_class_short_name = "programdesign";
+        var spark_class_id = 971286;
+        var spark_class_url = "\/programdesign-002";
+        var spark_signature_url = "https:\/\/class.coursera.org\/programdesign-002\/signature\/";
+
+        var course_strings_name = "Introduction to Systematic Program Design - Part 1";
+        var student_full_name = "Christopher Edward Beattie";
+    </script>
+
+    
+<script type="text/javascript">$(function() { loadOrRefreshMathJax();})</script>
+<script src="./HtDW_files/textbook_wiki.js"></script>
+
+
+
+
+</body></html>

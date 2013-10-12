@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Wiki - How to Design Functions Module | Introduction to Systematic Program Design - Part 1</title>
+<link rel="stylesheet" href="https://dt5zaw6a98blc.cloudfront.net/site-static/595ddfeac34ca20b470b491885b1acad3564b90f/css/spark.main.css">
+<link rel="stylesheet" href="https://www.coursera.org/maestro/api/course/971286/course.css">
+<link rel="icon" href="https://spark-public.s3.amazonaws.com/programdesign/static/images/favicon.ico">
+<style type="text/css"> .coursera-reporter-link { display:inline-block;} </style><script type="text/javascript" src="./1b-HtDF-Module_files/MathJax.js"></script><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -1px -1px 1px -1px; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+    <a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#course-page-content" class="hidden">Skip Navigation</a>
+    <div class="hidden">
+        This page features MathJax technology to render mathematical formulae.
+        If you are using a screen reader, please visit <a href="http://www.dessci.com/en/products/mathplayer/">MathPlayer</a> to download the plugin for your browser. Please note that this is an Internet Explorer-only plugin at this time.
+    </div>
+
+    <h1 class="hidden">Introduction to Systematic Program Design - Part 1</h1>
+
+    <script type="text/javascript" async="" src="./1b-HtDF-Module_files/204.min.js"></script><script type="text/javascript" async="" src="./1b-HtDF-Module_files/ga.js"></script><script>window.onerror = function(message, url, lineNum) {
+
+  // First check the URL and line number of the error
+  url = url || window.location.href;
+  // 99% of the time, errors without line numbers arent due to our code,
+  // they are due to third party plugins and browser extensions
+  if (lineNum === undefined || lineNum == null) return;
+  
+  // Now figure out the actual error message
+  // If it's an event, as triggered in several browsers
+  if (message.target && message.type) {
+    message = message.type;
+  }
+  if (!message.indexOf) {
+    message = 'Non-string, non-event error: ' + (typeof message);
+  }
+  
+  var errorDescrip = {
+    message: message,
+    script: url,
+    line: lineNum,
+    url: document.URL
+  }
+  
+  var err = {
+    key: 'page.error.javascript', 
+    value: errorDescrip
+  }
+  
+  window._204 = window._204 || [];
+  window._204.push(err);
+  
+  window._gaq = window._gaq || [];
+  window._gaq.push(err);
+}</script>
+
+<div class="course-topbar container-fluid" role="banner">
+
+    <div class="row-fluid">
+
+        <div class="span3">
+          <a href="https://www.coursera.org/" class="course-topbar-logo" data-if-linkable="add-referrer"></a>
+        </div>
+
+        <div class="course-topbar-nav-container span9" style="float:right;">
+            <h2 class="hidden">Top Navigation Bar</h2>
+
+            <ul class="course-topbar-nav-list">
+                <li class="course-topbar-nav-list-item">
+                  <a href="https://www.coursera.org/courses" data-if-linkable="add-referrer">Courses</a>
+                </li>
+
+                
+                <li class="course-topbar-nav-list-item" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" aria-owns="course-topbar-my" data-popup="#course-topbar-my" data-popup-bind-open="mouseenter" data-popup-close="" style="cursor:pointer;" data-popup-direction="se">
+                                        <a data-user-id="1216070">
+                        Christopher Edward Beattie                        <i class="icon-caret-down"></i>
+                    </a>
+                </li>
+
+                            </ul>
+        </div>
+    </div>
+
+    <div id="course-topbar-aboutus" class="course-topbar-sublist">
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/about/jobs" target="_new" data-if-linkable="add-referrer">Jobs</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/about/team" target="_new" data-if-linkable="add-referrer">Team</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/about/contact" target="_new" data-if-linkable="add-referrer">Contact Us</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/about/" target="_new" data-if-linkable="add-referrer">About Us</a>
+    </div>
+
+    <div id="course-topbar-my" class="course-topbar-sublist">
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/" target="_new">My Courses</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/account/profile" target="_new">Profile</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/account/records" target="_new">Course Records</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/account/settings" target="_new">Settings</a>
+                <a class="course-topbar-sublist-item" href="https://class.coursera.org/programdesign-002/class/preferences">Course Preferences</a>
+        <a class="course-topbar-sublist-item" href="https://class.coursera.org/programdesign-002/auth/logout">Sign Out</a>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="course-topbanner-wrapper">
+  <div class="course-topbanner">
+    <div class="course-topbanner-university-logo">
+      <a href="https://www.coursera.org/ubc" class="coursera-university-color" target="_blank" data-if-linkable="add-referrer" title="https://www.coursera.org/ubc">
+        <img src="./1b-HtDF-Module_files/university_logo" alt="ubc">
+      </a>
+    </div>
+
+    
+    <h1 class="course-topbanner-header">
+      <a class="course-topbanner-name coursera-university-color" href="https://class.coursera.org/programdesign-002/class/index" data-if-linkable="modal-lock">
+        Introduction to Systematic Program Design - Part 1      </a>
+      <br>
+      <span class="course-topbanner-instructor" style="">
+        by  Gregor  Kiczales      </span>
+    </h1>
+
+  </div>
+</div>
+
+        <div class="container-fluid" style="position:relative;">
+        <div class="row-fluid">
+            <div id="course-page-sidebar" role="navigation">
+                <div class="course-navbar-container">
+	<a href="https://class.coursera.org/programdesign-002/class/index">
+	<img src="./1b-HtDF-Module_files/logo" style="width: 205px;height: 116px;margin: -15px 0px 8px 1px; box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);" alt="Course Home Page">
+	</a>
+
+
+<h2 class="hidden">Side Navigation Bar</h2>
+<ul class="course-navbar-list">
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/class/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Announcements							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=CourseInformation" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Course Information							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=ToDoWellinThisCourse" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				To Do Well in This Course							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/forum/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Discussion Forums							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/quiz/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Quizzes							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/human_grading/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Peer Graded Problems							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+					<h3>Reference</h3>
+			</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=DesignRecipes" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Design Recipes							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=Syllabus" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Syllabus							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=Language" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Language							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=StyleRules" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Style Rules							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=Glossary" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Glossary							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+					<h3>Modules</h3>
+			</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				1a Beginning Student Language							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item active">
+								<a href="./1b-HtDF-Module_files/1b-HtDF-Module.htm" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				1b How to Design Functions							<span class="course-navbar-selected-marker">(selected)</span></a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDDModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				2 How to Design Data							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDWModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				3a How to Design Worlds							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				3b Compound							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=SelfRefModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				4a Self Reference							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=RefModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				4b Reference 							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=NatModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				5a Naturals							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=HelpersModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				5b Helpers							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSTsModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				6a Binary Search Trees							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=MutualRefModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				6b Mutual Reference							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+					<h3>Additional Resources</h3>
+			</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=AllProblems" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				All Problems							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=AllLectures" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				All Lectures							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/lecture/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				All Lectures (Classic)							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="http://www.ccs.neu.edu/home/matthias/HtDP2e/" target="_blank" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				HtDP/2e Book				<span class="icon-share"></span>			</a>
+						</li>
+	
+	
+		<li class="course-navbar-item">
+		<a href="https://share.coursera.org/wiki/index.php/programdesign:Main" target="_blank" class="coursera-university-color" title="Open course wiki in new window">
+			Course Wiki
+			<span class="icon-share"></span>
+		</a>
+	</li>
+		
+		<li class="course-navbar-item">
+		<a href="http://www.meetup.com/Coursera/" target="_blank" class="coursera-university-color">
+			Join a Meetup
+			<span class="icon-share"></span>
+		</a>
+	</li>
+	
+    </ul>
+
+<ul style="list-style-type:none;margin-left: 10px;">
+  <li><a href="http://help.coursera.org/" class="coursera-university-color" target="_blank" title="Open help articles in new window"><i class="icon-question-sign"></i> Help Articles</a></li>
+</ul>
+
+<ul style="list-style-type:none;margin-left: 10px;">
+		<li><a href="https://class.coursera.org/programdesign-002/forum/list?forum_id=10000" class="coursera-university-color"><i class="icon-comments"></i> Course Materials Errors</a></li>
+	<li><a href="https://class.coursera.org/programdesign-002/forum/list?forum_id=10001" class="coursera-university-color"><i class="icon-comments"></i> Technical Issues</a></li>
+
+</ul>
+
+</div>
+            </div>
+            <div id="course-page-content" role="main">
+                                
+
+<h2 class="course-page-header">
+    How to Design Functions Module    <a class="coursera-reporter-link" title="Click here if you&#39;re experiencing technical problems or found errors in the course materials." target="_blank" href="https://class.coursera.org/programdesign-002/help/pages?url=https%3A%2F%2Fclass.coursera.org%2Fprogramdesign-002%2Fwiki%2Fview%3Fpage%3DHtDFModule">
+      Help
+    </a>
+    <a data-coursera-admin-helpwidget-link="" rel="help" href="https://class.coursera.org/mooc/help/pages/setup" title="Course Page Setup" style="display:none;">Learn more.</a>
+</h2>
+
+<div id="internal_html_page_content">
+
+<script src="./1b-HtDF-Module_files/tablesort.js" type="text/javascript"></script><script src="./1b-HtDF-Module_files/displayTable2.js" type="text/javascript"></script><script src="./1b-HtDF-Module_files/problemObjects2.js" type="text/javascript"></script><script src="./1b-HtDF-Module_files/lectureObjects2.js" type="text/javascript"></script><p>
+    This module is where this course starts to differ from other introductory programming courses and this should be new material for everyone - we are going to start to learn the design method. We repeat the advice that this is material you <strong>learn by
+  doing</strong>: type along with the video, do the practice problems, do the homework problems.
+</p>
+
+<p>
+    The material in this module should take <strong>approximately 4-5
+  hours</strong> of dedicated time to complete, including working along with the lecture videos, doing the practice problems, doing the homework problems and the short quiz.
+</p>
+
+<p>
+    NOTE: This course has more video minutes than some other courses, but that does not mean that it has more material. Because this course teaches a <strong>design method</strong>, much of the video material consists of the instructor working through
+    a complete problem step-by-step. As a result, in most of the videos at least part of the material is essentially review, with new points interspersed. The alternative would be to have videos that jump right into the middle of a problem to address
+    only new material. But our prior students have told us that these videos are much more useful since they show complete solutions and clearly show how new material integrates with old material.
+</p>
+
+<h3>Learning Goals</h3>
+
+<ul>
+<li>
+        Be able to use the How to Design Functions (
+        <a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFunctions" title="Link: /programdesign-002/wiki/view?page=HtDFunctions">HtDF</a>) recipe to design functions that operate on primitive data.
+    </li>
+</ul>
+<h3>Lecture Videos, Transcripts and Starter Files</h3>
+
+<div id="lectures"><table border="1" width="90%" style="border: 1px solid rgb(0, 0, 0); padding: 5px; text-align: left; vertical-align: top; max-width: 90%;" id="fd-table-1"><thead><tr><th class="sortable fd-column-0" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Topic
+”">Topic
+</a><span></span></th><th class="sortable fd-column-1" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Length 
+(mm:ss)
+”">Length 
+(mm:ss)
+</a><span></span></th><th class="sortable fd-column-2" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Starter File
+”">Starter File
+</a><span></span></th><th class="sortable fd-column-3" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Downloads
+”">Downloads
+</a><span></span></th></tr></thead><tbody><tr><td><a title="HtDF - Full Speed HtDF Recipe" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=37" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=37">HtDF - Full Speed HtDF Recipe</a><br><div><p>Now we get to the heart of the course - a first quick                              demonstration of the How to Design Functions Recipe                              (<a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFunctions">HtDF recipe</a>).</p></div></td><td align="center"><div>8:47</div></td><td align="center"><a href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/double-starter.rkt" title="double-starter.rkt"><div>double-starter.rkt</div></a></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/notes/htdf/htdf-notes.rkt" title="Notes (rkt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Notes (rkt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=37" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/in-video-quizzes/htdf-full.pdf" title="In Video Quizzes (pdf)"><div><i class="icon-file"></i></div><div><div class="hidden">In Video Quizzes (pdf)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=37_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=37_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr><tr><td><a title="HtDF - Slow Motion HtDF Recipe" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=39" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=39">HtDF - Slow Motion HtDF Recipe</a><br><div><p>A slower presentation and discussion of the How to Design Functions Recipe                              (<a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFunctions">HtDF recipe</a>).</p>                              <p><i>NOTE: Be sure to watch the BSL - Using the Stepper lecture before you watch this one.</i></p></div></td><td align="center"><div>11:22</div></td><td align="center"><a href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/double-starter.rkt" title="double-starter.rkt"><div>double-starter.rkt</div></a></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/notes/htdf/htdf-notes.rkt" title="Notes (rkt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Notes (rkt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=39" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/in-video-quizzes/htdf-slow.pdf" title="In Video Quizzes (pdf)"><div><i class="icon-file"></i></div><div><div class="hidden">In Video Quizzes (pdf)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=39_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=39_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr><tr><td align="left" colspan="4"><div><p>The next 4 video lectures are short examples of using the                              the <a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFunctions">HtDF recipe</a>.                              Each video is partly review of the HtDF recipe, but each video also elaborates                              on how to use the recipe, including points on:</p>                              <ul>                                    <li>writing signatures and purpose statements</li>                                    <li>how many tests a function should have</li>                                    <li>what to do when tests fail</li>                                    <li>what to do when your understanding of the purpose changes part way through the design</li>                              </ul>                              <p>                                We recommend that you work through the problems along with the                                video. Get the starter file, work one step of the recipe,                                watch that on video, then work the next step of the recipe,                                watch that and so on. Remember, you can't learn program                                design by watching -- you have to do it!                              </p></div></td></tr><tr><td><a title="HtDF - Examples - yell!" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=27" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=27">HtDF - Examples - yell!</a><br><div><p>A detailed example of using the HtDF recipe to design a simple function operating on                                  a string. This is a good chance for you to practice the material from the previous two lectures.</p>.</div></td><td align="center"><div>3:31</div></td><td align="center"><a href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/yell-starter.rkt" title="yell-starter.rkt"><div>yell-starter.rkt</div></a></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/notes/htdf/htdf-notes.rkt" title="Notes (rkt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Notes (rkt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=27" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/in-video-quizzes/htdf-yell.pdf" title="In Video Quizzes (pdf)"><div><i class="icon-file"></i></div><div><div class="hidden">In Video Quizzes (pdf)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=27_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=27_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr><tr><td><a title="HtDF - Examples - area" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=29" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=29">HtDF - Examples - area</a><br><div><p>In this example of using the HtDF recipe, you can see                                       what it's like to have an incorrect test as well a case                                       of having to copy part of the template.</p>.</div></td><td align="center"><div>5:02</div></td><td align="center"><a href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/area-starter.rkt" title="area-starter.rkt"><div>area-starter.rkt</div></a></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/notes/htdf/htdf-notes.rkt" title="Notes (rkt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Notes (rkt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=29" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/in-video-quizzes/htdf-area.pdf" title="In Video Quizzes (pdf)"><div><i class="icon-file"></i></div><div><div class="hidden">In Video Quizzes (pdf)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=29_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=29_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr><tr><td><a title="HtDF - Examples - image-area" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=33" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=33">HtDF - Examples - image-area</a><br><div><p>Another HtDF example, including a discussion of when and why                                     it makes sense to vary the order of the steps in the HtDF recipe.</p>.</div></td><td align="center"><div>5:59</div></td><td align="center"><a href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/image-area-starter.rkt" title="image-area-starter.rkt"><div>image-area-starter.rkt</div></a></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/notes/htdf/htdf-notes.rkt" title="Notes (rkt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Notes (rkt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=33" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=33_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=33_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr><tr><td><a title="HtDF - Examples - tall" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=31" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=31">HtDF - Examples - tall</a><br><div><p>An HtDF example in which the problem statement is less specific                                     about what is needed. We also talk more about the number of tests                                     a function requires.</p>.</div></td><td align="center"><div>11:18</div></td><td align="center"><a href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/tall-starter.rkt" title="tall-starter.rkt"><div>tall-starter.rkt</div></a></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/notes/htdf/htdf-notes.rkt" title="Notes (rkt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Notes (rkt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=31" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=31_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=31_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr></tbody></table></div>
+
+<script>
+    displayLectureTable('lectures', 'HtDF');
+</script><h3>Lecture Problems</h3>Includes intermediary versions of problems done in lecture, as well as solutions.
+<br><div id="lectureProblems"><table border="1" width="90%" style="border: 1px solid rgb(0, 0, 0); padding: 5px; text-align: left; vertical-align: top; max-width: 90%;" id="fd-table-2"><thead><tr><th class="sortable fd-column-0" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Module Kind #
+”">Module Kind #
+</a><span></span></th><th class="sortable fd-column-1" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Assignment
+”">Assignment
+</a><span></span></th><th class="sortable fd-column-2" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Duration
+”">Duration
+</a><span></span></th><th class="sortable-sortImage fd-column-3" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Difficulty
+”">Difficulty
+</a><span></span></th><th class="sortable fd-column-4" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Code Files
+”">Code Files
+</a><span></span></th><th class="sortable fd-column-5" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Requires
+Lecture
+”">Requires
+Lecture
+</a><span></span></th></tr></thead><tbody><tr><td align="center"><div>HtDF L1</div></td><td>Design a function to yell!</td><td align="center"><div>7 min.</div></td><td align="center"><img title="Difficulty" src="./1b-HtDF-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Yell" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/yell-starter.rkt">yell-starter.rkt</a><br><a title="Yell" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/yell-solution.rkt">yell-solution.rkt</a></td><td align="center">HtDF - yell</td></tr><tr><td align="center"><div>HtDF L2</div></td><td>Design a function to calculate the area of a square.</td><td align="center"><div>8 min.</div></td><td align="center"><img title="Difficulty" src="./1b-HtDF-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Area" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/area-starter.rkt">area-starter.rkt</a><br><a title="Area" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/area-solution.rkt">area-solution.rkt</a></td><td align="center">HtDF - area</td></tr><tr><td align="center"><div>HtDF L3</div></td><td>Design a function to calculate the area of an image.</td><td align="center"><div>8 min.</div></td><td align="center"><img title="Difficulty" src="./1b-HtDF-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Image Area" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/image-area-starter.rkt">image-area-starter.rkt</a><br><a title="Image Area" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/image-area-solution.rkt">image-area-solution.rkt</a></td><td align="center">HtDF - img-area</td></tr><tr><td align="center"><div>HtDF L4</div></td><td>Design a function to determine if an image is tall.</td><td align="center"><div>10 min.</div></td><td align="center"><img title="Difficulty" src="./1b-HtDF-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Tall" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/tall-starter.rkt">tall-starter.rkt</a><br><a title="Tall" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/tall-solution.rkt">tall-solution.rkt</a></td><td align="center">HtDF - tall</td></tr></tbody></table></div>
+
+
+<script>
+    displayProblemTable('lectureProblems', 'HtDF', 'Lecture');
+</script><h3>Practice Problems</h3>
+
+<div id="practiceProblems"><table border="1" width="90%" style="border: 1px solid rgb(0, 0, 0); padding: 5px; text-align: left; vertical-align: top; max-width: 90%;" id="fd-table-3"><thead><tr><th class="sortable fd-column-0" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Module Kind #
+”">Module Kind #
+</a><span></span></th><th class="sortable fd-column-1" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Assignment
+”">Assignment
+</a><span></span></th><th class="sortable fd-column-2" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Duration
+”">Duration
+</a><span></span></th><th class="sortable-sortImage fd-column-3" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Difficulty
+”">Difficulty
+</a><span></span></th><th class="sortable fd-column-4" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Code Files
+”">Code Files
+</a><span></span></th><th class="sortable fd-column-5" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Requires
+Lecture
+”">Requires
+Lecture
+</a><span></span></th></tr></thead><tbody><tr><td align="center"><div>HtDF P1</div></td><td>Design a function to summon items.</td><td align="center"><div>10 min.</div></td><td align="center"><img title="Difficulty" src="./1b-HtDF-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Summon" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/summon-starter.rkt">summon-starter.rkt</a><br><a title="Summon" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/summon-solution.rkt">summon-solution.rkt</a></td><td align="center">HtDF - full</td></tr><tr><td align="center"><div>HtDF P2</div></td><td>Design a function to check if length of a string is less than 5.</td><td align="center"><div>10 min.</div></td><td align="center"><img title="Difficulty" src="./1b-HtDF-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Less Than 5" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/less-than-five-starter.rkt">less-than-five-starter.rkt</a><br><a title="Less Than 5" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/less-than-five-solution.rkt">less-than-five-solution.rkt</a></td><td align="center">HtDF - full</td></tr><tr><td align="center"><div>HtDF P3</div></td><td>Design a function to put a box around a given image.</td><td align="center"><div>15 min.</div></td><td align="center"><img title="Difficulty" src="./1b-HtDF-Module_files/2_blue_square.svg" height="18" width="18"></td><td align="left"><a title="Boxify" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/boxify-starter.rkt">boxify-starter.rkt</a><br><a title="Boxify" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/boxify-solution.rkt">boxify-solution.rkt</a></td><td align="center">HtDF - full</td></tr><tr><td align="center"><div>HtDF P4</div></td><td>Write more than one stub for a function given its signature and purpose.</td><td align="center"><div>5 min.</div></td><td align="center"><img title="Difficulty" src="./1b-HtDF-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Pluralize Stubs" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/pluralize-stubs-starter.rkt">pluralize-stubs-starter.rkt</a><br><a title="Pluralize Stubs" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/pluralize-stubs-solution.rkt">pluralize-stubs-solution.rkt</a></td><td align="center">HtDF - full</td></tr><tr><td align="center"><div>HtDF P5</div></td><td>Design a function to produce a blue solid triangle of a given size.</td><td align="center"><div>10 min.</div></td><td align="center"><img title="Difficulty" src="./1b-HtDF-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Blue Triangle" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/blue-triangle-starter.rkt">blue-triangle-starter.rkt</a><br><a title="Blue Triangle" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/blue-triangle-solution.rkt">blue-triangle-solution.rkt</a></td><td align="center">HtDF - full</td></tr><tr><td align="center"><div>HtDF P6</div></td><td>Fix the error(s) in a function that doubles a given number.</td><td align="center"><div>7 min.</div></td><td align="center"><img title="Difficulty" src="./1b-HtDF-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Double Error" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/double-error-starter.rkt">double-error-starter.rkt</a><br><a title="Double Error" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/double-error-solution.rkt">double-error-solution.rkt</a></td><td align="center">HtDF - full</td></tr></tbody></table></div>
+
+<script>
+    displayProblemTable('practiceProblems', 'HtDF', 'Practice');
+</script><h3>Homework Problems</h3>
+
+<div id="homeworkProblems"><table border="1" width="90%" style="border: 1px solid rgb(0, 0, 0); padding: 5px; text-align: left; vertical-align: top; max-width: 90%;" id="fd-table-4"><thead><tr><th class="sortable fd-column-0" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Module Kind #
+”">Module Kind #
+</a><span></span></th><th class="sortable fd-column-1" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Assignment
+”">Assignment
+</a><span></span></th><th class="sortable fd-column-2" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Duration
+”">Duration
+</a><span></span></th><th class="sortable-sortImage fd-column-3" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Difficulty
+”">Difficulty
+</a><span></span></th><th class="sortable fd-column-4" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Code Files
+”">Code Files
+</a><span></span></th><th class="sortable fd-column-5" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule#" class="fdTableSortTrigger" title="Sort on “Requires
+Lecture
+”">Requires
+Lecture
+</a><span></span></th></tr></thead><tbody><tr><td align="center"><div>HtDF H1</div></td><td>Design a function to create a square based on the given colour.</td><td align="center"><div>10 min.</div></td><td align="center"><img title="Difficulty" src="./1b-HtDF-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Make Box" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/make-box-starter.rkt">make-box-starter.rkt</a><br><a title="Make Box" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/make-box-solution.rkt">make-box-solution.rkt</a></td><td align="center">HtDF - full</td></tr><tr><td align="center"><div>HtDF H2</div></td><td>Design a function to produce a question by adding "?" to the end of a given string.</td><td align="center"><div>10 min.</div></td><td align="center"><img title="Difficulty" src="./1b-HtDF-Module_files/2_blue_square.svg" height="18" width="18"></td><td align="left"><a title="Ensure Question" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/ensure-question-starter.rkt">ensure-question-starter.rkt</a><br><a title="Ensure Question" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/ensure-question-solution.rkt">ensure-question-solution.rkt</a></td><td align="center">HtDF - full</td></tr><tr><td align="center"><div>HtDF H3</div></td><td>Design a function to calculate the distance between two points.</td><td align="center"><div>20 min.</div></td><td align="center"><img title="Difficulty" src="./1b-HtDF-Module_files/3_black_diamond.png" height="23" width="23"></td><td align="left"><a title="Cartesian" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/cartesian-starter.rkt">cartesian-starter.rkt</a><br><a title="Cartesian" href="https://spark-public.s3.amazonaws.com/programdesign/starters/htdf/cartesian-solution.rkt">cartesian-solution.rkt</a></td><td align="center">HtDF - full</td></tr></tbody></table></div>
+
+<script>
+    displayProblemTable('homeworkProblems', 'HtDF', 'Homework');
+</script><h3>Module Quiz</h3>
+Be sure to complete the homework problems before you do the module quiz. The quiz itself can be found on the&nbsp;<a href="https://class.coursera.org/programdesign-002/quiz/index" title="Link: ../quiz/index">All Quizzes</a> page.
+
+
+<h3>Tips for Success</h3>
+<p>General tips for doing well in this course can be found on the <a href="https://class.coursera.org/programdesign-002/wiki/view?page=ToDoWellinThisCourse" title="Link: view?page=ToDoWellinThisCourse">To Do Well in This
+Course</a> page. But here are a few suggestions specific to this module:
+
+</p>
+<ul>
+<li>
+        At first the HtDF recipe may either seem like overkill, or overwhelming. You may suspect that these functions could be designed more quickly without the recipe. You are right! But please take the time to learn the recipe now. It will pay you back later
+        by making really hard problems much easier to solve.
+    </li>
+
+    <li>
+        If at any point in time you don't know what to do, ask yourself: What step of the recipe am I at? What am I supposed to be writing now? And where am I supposed to look to get help with that?
+    </li>
+
+    <li>
+        If the above doesn't work, and you get stuck on a problem for more than 5 minutes, try to find a similar problem and see what happened at the corresponding point in that design.
+    </li>
+
+    <li>Also take advantage of the discussion forums to ask questions. There are many thousands of students in this course. If you post a question on the <a href="https://class.coursera.org/programdesign-002/forum/index" title="Link: /programdesign-002/forum/index">Discussion Forums</a>
+        you will often be able to get help from another student. In addition, posting there will enable the course staff (instructor and TAs) to help you.</li>
+
+</ul>
+<div class="inpage-video-modal" data-modal-overlay-class="inpage-video-overlay" data-modal-position="absolute">
+    <div style="position:absolute;top:-25px;right:0px;color:white;cursor:pointer;" data-modal-close="">
+        Close
+    </div>
+</div>
+
+<style type="text/css">
+    .inpage-video-modal {                                
+       width: 960px;                                     
+       height: 610px;  
+       display: none;      
+    }
+      
+    .inpage-video-overlay {
+       background: black;
+       opacity: 0.75;
+       filter:alpha(opacity=75);  
+    }
+</style>
+</div>
+<hr>
+<div>
+    <div style="float:left">
+    	    	    </div>
+    <div style="float:right;text-align:right;font-size:10px;">
+    	Created Thu 22 Aug 2013 11:03 PM EDT (UTC -0400)<br>
+    	Last Modified Wed  4 Sep 2013  8:06 PM EDT (UTC -0400)    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+        
+    
+    <script src="./1b-HtDF-Module_files/spark.js"></script>
+
+<script>window.onerror = function(message, url, lineNum) {
+
+  // First check the URL and line number of the error
+  url = url || window.location.href;
+  // 99% of the time, errors without line numbers arent due to our code,
+  // they are due to third party plugins and browser extensions
+  if (lineNum === undefined || lineNum == null) return;
+  
+  // Now figure out the actual error message
+  // If it's an event, as triggered in several browsers
+  if (message.target && message.type) {
+    message = message.type;
+  }
+  if (!message.indexOf) {
+    message = 'Non-string, non-event error: ' + (typeof message);
+  }
+  
+  var errorDescrip = {
+    message: message,
+    script: url,
+    line: lineNum,
+    url: document.URL
+  }
+  
+  var err = {
+    key: 'page.error.javascript', 
+    value: errorDescrip
+  }
+  
+  window._204 = window._204 || [];
+  window._204.push(err);
+  
+  window._gaq = window._gaq || [];
+  window._gaq.push(err);
+}</script>
+<script type="text/javascript">
+    // SET UP THE MULTITRACKER
+        window.logger = window.Log({level:"error"});
+        var parts = location.host.split(".");
+    while(parts.length > 2) { parts.shift(); }
+
+    window.multitracker = window.MultiTracker({logger:window.logger});
+    window.multitracker.register('204', window._204 = window._204 || []);
+    window.multitracker.register('ga', window._gaq = window._gaq || [], 'google');
+
+    // SET UP GA and 204
+    window._gaq.push(['_setAccount', 'UA-28377374-1']);
+    window._gaq.push(['_setDomainName', 'coursera.org']);
+    window._gaq.push(['_setAllowLinker', true]);  
+    window._gaq.push(['_trackPageview']);
+    
+    // configure 204 with the following settings
+    window._204.push(["client", "spark"]);
+    window._204.push(["user", 1216070]);
+    window._204.push(["domain", "." + parts.join(".")]);
+
+    // set off the first event
+    window._204.push({key:"pageview", val:{}});
+
+    // override our multitracker queues with the ga queue when it is ready
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    
+      ga.onload = ga.onreadystatechange = function() {
+          ga.onreadystatechange = ga.onload = null;
+          window.multitracker.get('ga').queue = window._gaq;
+      };
+    })();
+
+    // override our multitracker queues with the 204 queue when it is ready
+    (function() {
+      var a = document.createElement('script'); a.type = 'text/javascript'; a.async = true;
+      a.src = 'https://eventing.coursera.org/204.min.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(a, s);
+      a.onload = a.onreadystatechange = function() {
+          a.onreadystatechange = a.onload = null;
+          window.multitracker.get('204').queue = window._204;
+      };
+    })();
+</script>
+
+<script>
+  // Set up shared AB testing object
+  (function() {
+    window.ab = {};
+
+    // we want to share the 204 session cookie with the AB session cookie...
+    var sessionId = AB.makeSession("__204u", {expires:356, domain:"." + location.host});
+        var debug = false;
+    
+    window.ab.user = window.AB(1216070, "user", {debug:debug, tracker:window.multitracker, logger:window.logger});
+    window.ab.session = window.AB(sessionId, "session", {debug:debug, tracker:window.multitracker, logger:window.logger});
+
+    if(window.CourseraABExperiments.user) {
+        window.ab.user.addExperiments(window.CourseraABExperiments.user);
+        window.ab.user.runExperimentsOn("body");
+    }
+
+    if(window.CourseraABExperiments.session) {
+        window.ab.session.addExperiments(window.CourseraABExperiments.session);
+        window.ab.session.runExperimentsOn("body");
+    }
+  })();
+</script>
+
+
+    <script>
+      // Set up help widget
+      (function() {
+        $("[data-helpwidget]").each(function() {
+            window.HelpWidget(this, {tracker: window.multitracker});
+        });
+       })();
+
+        $("[data-readme]").each(function() {
+            window.ReadMe(this);
+        });
+    </script>
+
+    <script src="./1b-HtDF-Module_files/modal_focus.js" type="text/javascript"></script>
+    <script src="./1b-HtDF-Module_files/get_query_parameters.js" type="text/javascript"></script>
+    <script src="./1b-HtDF-Module_files/signature_track.js" type="text/javascript"></script>
+    <script src="./1b-HtDF-Module_files/item_list.js" type="text/javascript"></script>
+    <script src="./1b-HtDF-Module_files/navbar.js" type="text/javascript"></script>
+
+    
+    <script>
+     // Set up help widget
+      (function() {
+        $("[data-helpwidget]").each(function() {
+            window.HelpWidget(this, {tracker: window.multitracker});
+        });
+       })();
+    </script>
+
+        <script>
+    (function() {
+        $("<style type='text/css'> .coursera-reporter-link { display:inline-block;} </style>").appendTo("head");
+    })();
+    </script>
+    
+    <script type="text/x-mathjax-config;executed=true">
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  
+  styleSheets: [],
+  styles: {},
+
+  jax: ["input/TeX"],
+  
+  extensions: ["tex2jax.js"],
+
+  preJax: null,
+  postJax: null,
+
+  preRemoveClass: "MathJax_Preview",
+
+  showProcessingMessages: true,
+
+  messageStyle: "none",
+  
+  displayAlign: "center",
+  displayIndent: "0em",
+  
+  delayStartupUntil: "none",
+
+  skipStartupTypeset: false,
+  
+  elements: [],
+  
+  tex2jax: {
+	    inlineMath: [
+	                 ['$$','$$'],      // uncomment this for standard TeX math delimiters
+	                 ['\\(','\\)']
+	                 ],
+
+	                 displayMath: [
+	                 ['\\[','\\]']
+	                 ],
+
+    skipTags: ["script","noscript","style","textarea","pre","code"],
+    ignoreClass: "tex2jax_ignore",
+    processClass: "tex2jax_process",
+    processEscapes: false,
+    processEnvironments: true,
+    preview: "TeX"
+    
+  },
+  
+  mml2jax: {
+    preview: "alttext"
+    
+  },
+  
+  jsMath2jax: {
+    preview: "TeX"
+    
+  },
+
+  TeX: {
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    Macros: {},
+
+    extensions: ["AMSmath.js", "AMSsymbols.js"]
+    
+  },
+
+  //============================================================================
+  //
+  //  These parameters control the MathML inupt jax.
+  //
+  MathML: {
+    //
+    //  This specifies whether to use TeX spacing or MathML spacing when the
+    //  HTML-CSS output jax is used.
+    //
+    useMathMLspacing: false
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the HTML-CSS output jax.
+  //
+  "HTML-CSS": {
+    
+    scale: 100,
+    
+    availableFonts: ["STIX","TeX"],
+    
+    preferredFont: "TeX",
+    
+    webFont: "TeX",
+    
+    imageFont: "TeX",
+    
+    undefinedFamily: "STIXGeneral,'Arial Unicode MS',serif",
+      
+    showMathMenu: true,
+
+    styles: {},
+    
+    tooltip: {
+      delayPost: 600,          // milliseconds delay before tooltip is posted after mouseover
+      delayClear: 600,         // milliseconds delay before tooltip is cleared after mouseout
+      offsetX: 10, offsetY: 5  // pixels to offset tooltip from mouse position
+    }
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the NativeMML output jax.
+  //
+  NativeMML: {
+
+    scale: 100,
+
+    showMathMenu: true,
+    showMathMenuMSIE: true,
+
+    styles: {}
+  },
+  
+  MathMenu: {
+    delay: 400,
+    
+    helpURL: "http://www.mathjax.org/help/user/",
+
+    showRenderer: true,
+    showFontMenu: false,
+    showContext:  false,
+
+    windowSettings: {
+      status: "no", toolbar: "no", locationbar: "no", menubar: "no",
+      directories: "no", personalbar: "no", resizable: "yes", scrollbars: "yes",
+      width: 100, height: 50
+    },
+    
+    styles: {}
+    
+  },
+
+  MMLorHTML: {
+    prefer: {
+      MSIE:    "MML",
+      Firefox: "MML",
+      Opera:   "HTML",
+      other:   "HTML"
+    }
+  }
+});
+</script>
+<script type="text/javascript">
+(function () {
+
+  function loadMathJax() {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://duqnjvq4jwr55.cloudfront.net/2.1/MathJax.js";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  }
+
+  window.loadOrRefreshMathJax = function(domId) {
+    if (window.MathJax) {
+      if (domId) {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, domId]);
+      } else {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+      }
+    } else {
+      loadMathJax();
+    }
+  }
+})();
+</script>
+    <script type="text/javascript">
+        var site_base_url = "https:\/\/www.coursera.org\/";
+        var site_static_asset_url = "https:\/\/dt5zaw6a98blc.cloudfront.net\/site-static\/";
+        var spark_class_short_name = "programdesign";
+        var spark_class_id = 971286;
+        var spark_class_url = "\/programdesign-002";
+        var spark_signature_url = "https:\/\/class.coursera.org\/programdesign-002\/signature\/";
+
+        var course_strings_name = "Introduction to Systematic Program Design - Part 1";
+        var student_full_name = "Christopher Edward Beattie";
+    </script>
+
+    
+<script type="text/javascript">$(function() { loadOrRefreshMathJax();})</script>
+<script src="./1b-HtDF-Module_files/textbook_wiki.js"></script>
+
+
+
+
+</body></html>

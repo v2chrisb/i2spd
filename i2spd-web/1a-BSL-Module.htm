@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Wiki - Beginning Student Language Module | Introduction to Systematic Program Design - Part 1</title>
+<link rel="stylesheet" href="https://dt5zaw6a98blc.cloudfront.net/site-static/595ddfeac34ca20b470b491885b1acad3564b90f/css/spark.main.css">
+<link rel="stylesheet" href="https://www.coursera.org/maestro/api/course/971286/course.css">
+<link rel="icon" href="https://spark-public.s3.amazonaws.com/programdesign/static/images/favicon.ico">
+<style type="text/css"> .coursera-reporter-link { display:inline-block;} </style><script type="text/javascript" src="./1a-BSL-Module_files/MathJax.js"></script><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -1px -1px 1px -1px; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+    <a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule#course-page-content" class="hidden">Skip Navigation</a>
+    <div class="hidden">
+        This page features MathJax technology to render mathematical formulae.
+        If you are using a screen reader, please visit <a href="http://www.dessci.com/en/products/mathplayer/">MathPlayer</a> to download the plugin for your browser. Please note that this is an Internet Explorer-only plugin at this time.
+    </div>
+
+    <h1 class="hidden">Introduction to Systematic Program Design - Part 1</h1>
+
+    <script type="text/javascript" async="" src="./1a-BSL-Module_files/204.min.js"></script><script type="text/javascript" async="" src="./1a-BSL-Module_files/ga.js"></script><script>window.onerror = function(message, url, lineNum) {
+
+  // First check the URL and line number of the error
+  url = url || window.location.href;
+  // 99% of the time, errors without line numbers arent due to our code,
+  // they are due to third party plugins and browser extensions
+  if (lineNum === undefined || lineNum == null) return;
+  
+  // Now figure out the actual error message
+  // If it's an event, as triggered in several browsers
+  if (message.target && message.type) {
+    message = message.type;
+  }
+  if (!message.indexOf) {
+    message = 'Non-string, non-event error: ' + (typeof message);
+  }
+  
+  var errorDescrip = {
+    message: message,
+    script: url,
+    line: lineNum,
+    url: document.URL
+  }
+  
+  var err = {
+    key: 'page.error.javascript', 
+    value: errorDescrip
+  }
+  
+  window._204 = window._204 || [];
+  window._204.push(err);
+  
+  window._gaq = window._gaq || [];
+  window._gaq.push(err);
+}</script>
+
+<div class="course-topbar container-fluid" role="banner">
+
+    <div class="row-fluid">
+
+        <div class="span3">
+          <a href="https://www.coursera.org/" class="course-topbar-logo" data-if-linkable="add-referrer"></a>
+        </div>
+
+        <div class="course-topbar-nav-container span9" style="float:right;">
+            <h2 class="hidden">Top Navigation Bar</h2>
+
+            <ul class="course-topbar-nav-list">
+                <li class="course-topbar-nav-list-item">
+                  <a href="https://www.coursera.org/courses" data-if-linkable="add-referrer">Courses</a>
+                </li>
+
+                
+                <li class="course-topbar-nav-list-item" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" aria-owns="course-topbar-my" data-popup="#course-topbar-my" data-popup-bind-open="mouseenter" data-popup-close="" style="cursor:pointer;" data-popup-direction="se">
+                                        <a data-user-id="1216070">
+                        Christopher Edward Beattie                        <i class="icon-caret-down"></i>
+                    </a>
+                </li>
+
+                            </ul>
+        </div>
+    </div>
+
+    <div id="course-topbar-aboutus" class="course-topbar-sublist">
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/about/jobs" target="_new" data-if-linkable="add-referrer">Jobs</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/about/team" target="_new" data-if-linkable="add-referrer">Team</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/about/contact" target="_new" data-if-linkable="add-referrer">Contact Us</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/about/" target="_new" data-if-linkable="add-referrer">About Us</a>
+    </div>
+
+    <div id="course-topbar-my" class="course-topbar-sublist">
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/" target="_new">My Courses</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/account/profile" target="_new">Profile</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/account/records" target="_new">Course Records</a>
+        <a class="course-topbar-sublist-item" href="https://www.coursera.org/account/settings" target="_new">Settings</a>
+                <a class="course-topbar-sublist-item" href="https://class.coursera.org/programdesign-002/class/preferences">Course Preferences</a>
+        <a class="course-topbar-sublist-item" href="https://class.coursera.org/programdesign-002/auth/logout">Sign Out</a>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="course-topbanner-wrapper">
+  <div class="course-topbanner">
+    <div class="course-topbanner-university-logo">
+      <a href="https://www.coursera.org/ubc" class="coursera-university-color" target="_blank" data-if-linkable="add-referrer" title="https://www.coursera.org/ubc">
+        <img src="./1a-BSL-Module_files/university_logo" alt="ubc">
+      </a>
+    </div>
+
+    
+    <h1 class="course-topbanner-header">
+      <a class="course-topbanner-name coursera-university-color" href="https://class.coursera.org/programdesign-002/class/index" data-if-linkable="modal-lock">
+        Introduction to Systematic Program Design - Part 1      </a>
+      <br>
+      <span class="course-topbanner-instructor" style="">
+        by  Gregor  Kiczales      </span>
+    </h1>
+
+  </div>
+</div>
+
+        <div class="container-fluid" style="position:relative;">
+        <div class="row-fluid">
+            <div id="course-page-sidebar" role="navigation">
+                <div class="course-navbar-container">
+	<a href="https://class.coursera.org/programdesign-002/class/index">
+	<img src="./1a-BSL-Module_files/logo" style="width: 205px;height: 116px;margin: -15px 0px 8px 1px; box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);" alt="Course Home Page">
+	</a>
+
+
+<h2 class="hidden">Side Navigation Bar</h2>
+<ul class="course-navbar-list">
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/class/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Announcements							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=CourseInformation" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Course Information							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=ToDoWellinThisCourse" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				To Do Well in This Course							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/forum/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Discussion Forums							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/quiz/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Quizzes							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/human_grading/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Peer Graded Problems							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+					<h3>Reference</h3>
+			</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=DesignRecipes" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Design Recipes							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=Syllabus" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Syllabus							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=Language" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Language							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=StyleRules" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Style Rules							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=Glossary" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				Glossary							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+					<h3>Modules</h3>
+			</li>
+	
+		
+	<li class="course-navbar-item active">
+								<a href="./1a-BSL-Module_files/1a-BSL-Module.htm" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				1a Beginning Student Language							<span class="course-navbar-selected-marker">(selected)</span></a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDFModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				1b How to Design Functions							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDDModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				2 How to Design Data							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=HtDWModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				3a How to Design Worlds							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=CompoundModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				3b Compound							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=SelfRefModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				4a Self Reference							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=RefModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				4b Reference 							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=NatModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				5a Naturals							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=HelpersModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				5b Helpers							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSTsModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				6a Binary Search Trees							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=MutualRefModule" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				6b Mutual Reference							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+					<h3>Additional Resources</h3>
+			</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=AllProblems" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				All Problems							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/wiki/view?page=AllLectures" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				All Lectures							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="https://class.coursera.org/programdesign-002/lecture/index" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				All Lectures (Classic)							</a>
+						</li>
+	
+		
+	<li class="course-navbar-item">
+								<a href="http://www.ccs.neu.edu/home/matthias/HtDP2e/" target="_blank" data-if-linkable="modal-lock,gray,lock-icon" class="coursera-university-color">
+				
+				HtDP/2e Book				<span class="icon-share"></span>			</a>
+						</li>
+	
+	
+		<li class="course-navbar-item">
+		<a href="https://share.coursera.org/wiki/index.php/programdesign:Main" target="_blank" class="coursera-university-color" title="Open course wiki in new window">
+			Course Wiki
+			<span class="icon-share"></span>
+		</a>
+	</li>
+		
+		<li class="course-navbar-item">
+		<a href="http://www.meetup.com/Coursera/" target="_blank" class="coursera-university-color">
+			Join a Meetup
+			<span class="icon-share"></span>
+		</a>
+	</li>
+	
+    </ul>
+
+<ul style="list-style-type:none;margin-left: 10px;">
+  <li><a href="http://help.coursera.org/" class="coursera-university-color" target="_blank" title="Open help articles in new window"><i class="icon-question-sign"></i> Help Articles</a></li>
+</ul>
+
+<ul style="list-style-type:none;margin-left: 10px;">
+		<li><a href="https://class.coursera.org/programdesign-002/forum/list?forum_id=10000" class="coursera-university-color"><i class="icon-comments"></i> Course Materials Errors</a></li>
+	<li><a href="https://class.coursera.org/programdesign-002/forum/list?forum_id=10001" class="coursera-university-color"><i class="icon-comments"></i> Technical Issues</a></li>
+
+</ul>
+
+</div>
+            </div>
+            <div id="course-page-content" role="main">
+                                
+
+<h2 class="course-page-header">
+    Beginning Student Language Module    <a class="coursera-reporter-link" title="Click here if you&#39;re experiencing technical problems or found errors in the course materials." target="_blank" href="https://class.coursera.org/programdesign-002/help/pages?url=https%3A%2F%2Fclass.coursera.org%2Fprogramdesign-002%2Fwiki%2Fview%3Fpage%3DBSLModule">
+      Help
+    </a>
+    <a data-coursera-admin-helpwidget-link="" rel="help" href="https://class.coursera.org/mooc/help/pages/setup" title="Course Page Setup" style="display:none;">Learn more.</a>
+</h2>
+
+<div id="internal_html_page_content">
+
+<script src="./1a-BSL-Module_files/tablesort.js" type="text/javascript"></script><script src="./1a-BSL-Module_files/displayTable2.js" type="text/javascript"></script><script src="./1a-BSL-Module_files/problemObjects2.js" type="text/javascript"></script><script src="./1a-BSL-Module_files/lectureObjects2.js" type="text/javascript"></script><p>
+    This page provides a complete description of the material for the first module of the course including: topics and learning goals; descriptions of all videos; practice and homework problems; as well as specific tips for how to do well with this module's
+    material. Each module of the course will have a similar page and you can access them all from the navigation bar to the left.
+</p>
+
+<p>
+    This focus of this module is learning the Beginning Student Language (BSL) that we will be using in Part 1 of Systematic Program Design. For students who have already programmed this module may seem too easy – but be careful! Be sure to learn <strong>this programming
+  language</strong>. While this language forms the conceptual core of nearly every programming language you might have used, it is also different in important ways. Take the time to go through this material carefully.
+</p>
+
+<p>
+    Students who have never programmed before -- and these students are the primary audience for the course -- this module may take more time. The videos this module are paced so that you can learn the basic mechanisms of the teaching language we will be
+    using. The videos go through not just the language but also the tools we will be using. Please avoid the temptation to skim this material.
+</p>
+
+<p>
+    The material in this module should take <strong>approximately 4-5
+    hours</strong> of dedicated time to complete, including working along with the lecture videos, doing the practice problems, doing the homework problems and the short quiz.
+</p>
+
+<h3>Learning Goals</h3>
+
+<ul>
+<li>Be able to write expressions that operate on primitive data including numbers, strings, images and booleans.</li>
+    <li>Be able to write constant and function definitions.</li>
+    <li>Be able to write out the step-by-step evaluation of simple expressions including function calls.</li>
+    <li>Be able to use the stepper to automatically step through the evaluation of an expression.</li>
+</ul>
+<div id="lectures"><table border="1" width="90%" style="border: 1px solid rgb(0, 0, 0); padding: 5px; text-align: left; vertical-align: top; max-width: 90%;" id="fd-table-1"><thead><tr><th class="sortable fd-column-0" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule#" class="fdTableSortTrigger" title="Sort on “Topic
+”">Topic
+</a><span></span></th><th class="sortable fd-column-1" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule#" class="fdTableSortTrigger" title="Sort on “Length 
+(mm:ss)
+”">Length 
+(mm:ss)
+</a><span></span></th><th class="sortable fd-column-2" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule#" class="fdTableSortTrigger" title="Sort on “Starter File
+”">Starter File
+</a><span></span></th><th class="sortable fd-column-3" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule#" class="fdTableSortTrigger" title="Sort on “Downloads
+”">Downloads
+</a><span></span></th></tr></thead><tbody><tr><td><a title="BSL - Introduction" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=111" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=111">BSL - Introduction</a><br><div><p>Motivation and goals of the                                    course. How and why this course differs from other                                    introductory programming courses.</p></div></td><td align="center"><div>5:33</div></td><td align="center"><div><i>none</i></div></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/notes/bsl/bsl-introduction.rkt" title="Notes (rkt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Notes (rkt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=111" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=111_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=111_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr><tr><td><a title="BSL - How to Study" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=225" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=225">BSL - How to Study</a><br><div><p>A introductory navigation through the course website, and some advice on studying.</p></div></td><td align="center"><div>6:52</div></td><td align="center"><div><i>none</i></div></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/notes/bsl/bsl-introduction.rkt" title="Notes (rkt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Notes (rkt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=225" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=225_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=225_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr><tr><td><a title="BSL - Expressions" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=41" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=41">BSL - Expressions</a><br><div><p>DrRacket, numbers, forming expressions that operate on numbers.</p>                                    <p><i>NOTE: Before starting this lecture                                    <a href="http://racket-lang.org/download">download the latest version of DrRacket</a>,                                    install the download on your computer and then start the <strong>DrRacket</strong> application.</i></p></div></td><td align="center"><div>8:30</div></td><td align="center"><a href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/pythag-starter.rkt" title="pythag-starter.rkt"><div>pythag-starter.rkt</div></a></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/notes/bsl/bsl-expressions-to-constant-defs.rkt" title="Notes (rkt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Notes (rkt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=41" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/in-video-quizzes/bsl-exprs.pdf" title="In Video Quizzes (pdf)"><div><i class="icon-file"></i></div><div><div class="hidden">In Video Quizzes (pdf)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=41_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=41_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr><tr><td><a title="BSL - Evaluation" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=43" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=43">BSL - Evaluation</a><br><div><p>Rules for evaluating primitive call expressions.</p></div></td><td align="center"><div>6:56</div></td><td align="center"><div><i>none</i></div></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/notes/bsl/bsl-expressions-to-constant-defs.rkt" title="Notes (rkt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Notes (rkt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=43" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/in-video-quizzes/bsl-eval.pdf" title="In Video Quizzes (pdf)"><div><i class="icon-file"></i></div><div><div class="hidden">In Video Quizzes (pdf)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=43_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=43_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr><tr><td><a title="BSL - Strings and Images" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=45" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=45">BSL - Strings and Images</a><br><div><p>String and image values. Primitives that operate on strings and images.</p></div></td><td align="center"><div>11:28</div></td><td align="center"><div><i>none</i></div></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/notes/bsl/bsl-expressions-to-constant-defs.rkt" title="Notes (rkt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Notes (rkt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=45" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/in-video-quizzes/bsl-strs-imgs.pdf" title="In Video Quizzes (pdf)"><div><i class="icon-file"></i></div><div><div class="hidden">In Video Quizzes (pdf)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=45_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=45_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr><tr><td><a title="BSL - Constant Definitions" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=47" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=47">BSL - Constant Definitions</a><br><div><p>Constant definitions, forming constant definitions and rules for evaluating constants.</p></div></td><td align="center"><div>6:15</div></td><td align="center"><div><i>none</i></div></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/notes/bsl/bsl-expressions-to-constant-defs.rkt" title="Notes (rkt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Notes (rkt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=47" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/in-video-quizzes/bsl-const-def.pdf" title="In Video Quizzes (pdf)"><div><i class="icon-file"></i></div><div><div class="hidden">In Video Quizzes (pdf)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=47_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=47_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr><tr><td><a title="BSL - Pacing and Doing Well in the Course" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=221" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=221">BSL - Pacing and Doing Well in the Course</a><br><div><p>On the pacing of the course, and reminders of how to do well.</p></div></td><td align="center"><div>1:15</div></td><td align="center"><div><i>none</i></div></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=221" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=221_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=221_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr><tr><td><a title="BSL - Function Definitions" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=49" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=49">BSL - Function Definitions</a><br><div><p>Function definitions, forming function definitions and rules for evaluating function calls.</p></div></td><td align="center"><div>11:01</div></td><td align="center"><a href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/function-definitions-starter.rkt" title="function-definitions-starter.rkt"><div>function-definitions-starter.rkt</div></a></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/notes/bsl/bsl-function-defs.rkt" title="Notes (rkt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Notes (rkt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=49" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/in-video-quizzes/bsl-fun-def.pdf" title="In Video Quizzes (pdf)"><div><i class="icon-file"></i></div><div><div class="hidden">In Video Quizzes (pdf)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=49_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=49_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr><tr><td><a title="BSL - Booleans and if Expressions" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=51" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=51">BSL - Booleans and if Expressions</a><br><div><p>Boolean Values. Forming if expressions and rules for evaluating if expressions.</p>                                                           <p>This video is particularly long because it includes a                              detailed step-by-step evaluation example. You may want to skim                              that example and come back to it later.</p></div></td><td align="center"><div>14:02</div></td><td align="center"><div><i>none</i></div></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/notes/bsl/bsl-booleans.rkt" title="Notes (rkt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Notes (rkt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=51" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/in-video-quizzes/bsl-bool-if-exprs.pdf" title="In Video Quizzes (pdf)"><div><i class="icon-file"></i></div><div><div class="hidden">In Video Quizzes (pdf)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=51_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=51_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr><tr><td><a title="BSL - Using the Stepper" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=79" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=79">BSL - Using the Stepper</a><br><div><p>Using the Dr. Racket stepper to walk through                                       the evaluation of an expression one step at a time.</p></div></td><td align="center"><div>5:36</div></td><td align="center"><a href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/stepper-starter.rkt" title="stepper-starter.rkt"><div>stepper-starter.rkt</div></a></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=79" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=79_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=79_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr><tr><td><a title="BSL - Discovering Primitives" href="https://class.coursera.org/programdesign-002/lecture/view?lecture_id=35" data-modal=".inpage-video-modal" data-modal-iframe="../lecture/view?lecture_id=35">BSL - Discovering Primitives</a><br><div><p>How to discover primitives beyond those covered in lecture.</p>                                    <p><i>Watch this lecture some time this week or next, but after lecture 1d.</i></p></div></td><td align="center"><div>5:25</div></td><td align="center"><div><i>none</i></div></td><td align="center"><div class="course-lecture-item-resource"><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/download.mp4?lecture_id=35" title="Video (mp4)"><div><i class="icon-download-alt resource"></i></div><div><div class="hidden">Video (mp4)</div></div></a><a target="_new" href="https://spark-public.s3.amazonaws.com/programdesign/in-video-quizzes/bsl-disc-prim.pdf" title="In Video Quizzes (pdf)"><div><i class="icon-file"></i></div><div><div class="hidden">In Video Quizzes (pdf)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=35_en&format=txt" title="Transcript (txt)"><div><i class="icon-align-justify"></i></div><div><div class="hidden">Transcript (txt)</div></div></a><a target="_new" href="https://class.coursera.org/programdesign-002/lecture/subtitles?q=35_en&format=srt" title="Subtitles (srt)"><div><i class="icon-list"></i></div><div><div class="hidden">Subtitles (srt)</div></div></a></div></td></tr></tbody></table></div>
+<script>
+    displayLectureTable('lectures', 'BSL');
+</script><h3>Practice Problems</h3>
+
+<p>
+    These problems can help you practice the material in this module. We recommend that you do as many as you need to in order to become comfortable with the material before going on to the homework problems. Solutions are provided for practice problems,
+    but <strong>do not look at the solution until you have made a solid
+  effort to solve the problem on your own</strong>. Looking at the solution before trying to solve the problem will deprive you of most of the learning you would get from trying to solve the problem on your own.
+</p>
+
+<div id="practiceProblems"><table border="1" width="90%" style="border: 1px solid rgb(0, 0, 0); padding: 5px; text-align: left; vertical-align: top; max-width: 90%;" id="fd-table-2"><thead><tr><th class="sortable fd-column-0" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule#" class="fdTableSortTrigger" title="Sort on “Module Kind #
+”">Module Kind #
+</a><span></span></th><th class="sortable fd-column-1" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule#" class="fdTableSortTrigger" title="Sort on “Assignment
+”">Assignment
+</a><span></span></th><th class="sortable fd-column-2" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule#" class="fdTableSortTrigger" title="Sort on “Duration
+”">Duration
+</a><span></span></th><th class="sortable-sortImage fd-column-3" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule#" class="fdTableSortTrigger" title="Sort on “Difficulty
+”">Difficulty
+</a><span></span></th><th class="sortable fd-column-4" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule#" class="fdTableSortTrigger" title="Sort on “Code Files
+”">Code Files
+</a><span></span></th><th class="sortable fd-column-5" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule#" class="fdTableSortTrigger" title="Sort on “Requires
+Lecture
+”">Requires
+Lecture
+</a><span></span></th></tr></thead><tbody><tr><td align="center"><div>BSL P1</div></td><td>Write more arithmetic expressions.</td><td align="center"><div>5 min.</div></td><td align="center"><img title="Difficulty" src="./1a-BSL-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="More Arithmetic Expression" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/more-arithmetic-expression-starter.rkt">more-arithmetic-expression-starter.rkt</a><br><a title="More Arithmetic Expression" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/more-arithmetic-expression-solution.rkt">more-arithmetic-expression-solution.rkt</a></td><td align="center">BSL - exprs</td></tr><tr><td align="center"><div>BSL P2</div></td><td>Write out the step-by-step evaluation of expressions involving calls to primitives.</td><td align="center"><div>8 min.</div></td><td align="center"><img title="Difficulty" src="./1a-BSL-Module_files/2_blue_square.svg" height="18" width="18"></td><td align="left"><a title="Primitives Evaluation" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/evaluation-prims-starter.rkt">evaluation-prims-starter.rkt</a><br><a title="Primitives Evaluation" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/evaluation-prims-solution.rkt">evaluation-prims-solution.rkt</a></td><td align="center">BSL - eval</td></tr><tr><td align="center"><div>BSL P3</div></td><td>Create an image using image composition primitives.</td><td align="center"><div>5 min.</div></td><td align="center"><img title="Difficulty" src="./1a-BSL-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Tile" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/tile-starter.rkt">tile-starter.rkt</a><br><a title="Tile" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/tile-solution.rkt">tile-solution.rkt</a></td><td align="center">BSL - strs-imgs</td></tr><tr><td align="center"><div>BSL P4</div></td><td>Write expressions to operate on strings using primitives.</td><td align="center"><div>8 min.</div></td><td align="center"><img title="Difficulty" src="./1a-BSL-Module_files/2_blue_square.svg" height="18" width="18"></td><td align="left"><a title="Glue" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/glue-starter.rkt">glue-starter.rkt</a><br><a title="Glue" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/glue-solution.rkt">glue-solution.rkt</a></td><td align="center">BSL - strs-imgs</td></tr><tr><td align="center"><div>BSL P5</div></td><td>Write expressions to operate on booleans using primitives.</td><td align="center"><div>7 min.</div></td><td align="center"><img title="Difficulty" src="./1a-BSL-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Compare Images" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/compare-images-starter.rkt">compare-images-starter.rkt</a><br><a title="Compare Images" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/compare-images-solution.rkt">compare-images-solution.rkt</a></td><td align="center">BSL - bools-if-exprs</td></tr><tr><td align="center"><div>BSL P6</div></td><td>Step by step evaluation of a call to a function that calls a number primitive in its body.</td><td align="center"><div>7 min.</div></td><td align="center"><img title="Difficulty" src="./1a-BSL-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="More Foo Evaluation" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/more-foo-evaluation-starter.rkt">more-foo-evaluation-starter.rkt</a><br><a title="More Foo Evaluation" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/more-foo-evaluation-solution.rkt">more-foo-evaluation-solution.rkt</a></td><td align="center">BSL - stepper</td></tr><tr><td align="center"><div>BSL P7</div></td><td>Step by step evaluation of a call to a function that calls a string primitive in its body.</td><td align="center"><div>7 min.</div></td><td align="center"><img title="Difficulty" src="./1a-BSL-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Even More Foo Evaluation" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/even-more-foo-evaluation-starter.rkt">even-more-foo-evaluation-starter.rkt</a><br><a title="Even More Foo Evaluation" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/even-more-foo-evaluation-solution.rkt">even-more-foo-evaluation-solution.rkt</a></td><td align="center">BSL - stepper</td></tr><tr><td align="center"><div>BSL P8</div></td><td>Write expression to produce background image of Canadian flag.</td><td align="center"><div>5 min.</div></td><td align="center"><img title="Difficulty" src="./1a-BSL-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Canadian Flag Background" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/cflag-starter.rkt">cflag-starter.rkt</a><br><a title="Canadian Flag Background" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/cflag-solution.rkt">cflag-solution.rkt</a></td><td align="center">BSL - strs-imgs</td></tr><tr><td align="center"><div>BSL P9</div></td><td>Write even more arithmetic expressions.</td><td align="center"><div>5 min.</div></td><td align="center"><img title="Difficulty" src="./1a-BSL-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Even More Arithmetic Expression" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/even-more-arithmetic-expression-starter.rkt">even-more-arithmetic-expression-starter.rkt</a><br><a title="Even More Arithmetic Expression" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/even-more-arithmetic-expression-solution.rkt">even-more-arithmetic-expression-solution.rkt</a></td><td align="center">BSL - exprs</td></tr><tr><td align="center"><div>BSL P10</div></td><td>Write an expression that operates on images using image primitives.</td><td align="center"><div>5 min.</div></td><td align="center"><img title="Difficulty" src="./1a-BSL-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Triangles" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/triangle-starter.rkt">triangle-starter.rkt</a><br><a title="Triangles" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/triangle-solution.rkt">triangle-solution.rkt</a></td><td align="center">BSL - strs-imgs</td></tr><tr><td align="center"><div>BSL P11</div></td><td>Step by step evaluation of a call to a function that has an if expression in its body.</td><td align="center"><div>7 min.</div></td><td align="center"><img title="Difficulty" src="./1a-BSL-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Bobble Evaluation" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/bobble-evaluation-starter.rkt">bobble-evaluation-starter.rkt</a><br><a title="Bobble Evaluation" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/bobble-evaluation-solution.rkt">bobble-evaluation-solution.rkt</a></td><td align="center">BSL - stepper</td></tr><tr><td align="center"><div>BSL P12</div></td><td>Fix the error(s) in a call to an image primitive.</td><td align="center"><div>5 min.</div></td><td align="center"><img title="Difficulty" src="./1a-BSL-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Debug Expression" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/debug-rectangle-starter.rkt">debug-rectangle-starter.rkt</a><br><a title="Debug Expression" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/debug-rectangle-solution.rkt">debug-rectangle-solution.rkt</a></td><td align="center">BSL - strs-imgs</td></tr></tbody></table></div>
+<script>
+    displayProblemTable('practiceProblems', 'BSL', 'Practice');
+</script><h3>Homework Problems</h3>
+
+<p>
+    You should complete these homework problems every module. You are encouraged to work with other students on these problems, but note two important rules: (1) Do not discuss the problem solutions on the forums; it is ok to use the forum to clarify the
+    problem, but don't talk about how to solve it. (2) You must do the quiz entirely on your own.
+</p>
+
+<div id="homeworkProblems"><table border="1" width="90%" style="border: 1px solid rgb(0, 0, 0); padding: 5px; text-align: left; vertical-align: top; max-width: 90%;" id="fd-table-3"><thead><tr><th class="sortable fd-column-0" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule#" class="fdTableSortTrigger" title="Sort on “Module Kind #
+”">Module Kind #
+</a><span></span></th><th class="sortable fd-column-1" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule#" class="fdTableSortTrigger" title="Sort on “Assignment
+”">Assignment
+</a><span></span></th><th class="sortable fd-column-2" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule#" class="fdTableSortTrigger" title="Sort on “Duration
+”">Duration
+</a><span></span></th><th class="sortable-sortImage fd-column-3" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule#" class="fdTableSortTrigger" title="Sort on “Difficulty
+”">Difficulty
+</a><span></span></th><th class="sortable fd-column-4" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule#" class="fdTableSortTrigger" title="Sort on “Code Files
+”">Code Files
+</a><span></span></th><th class="sortable fd-column-5" rowspan="1" colspan="1" align="center"><a href="https://class.coursera.org/programdesign-002/wiki/view?page=BSLModule#" class="fdTableSortTrigger" title="Sort on “Requires
+Lecture
+”">Requires
+Lecture
+</a><span></span></th></tr></thead><tbody><tr><td align="center"><div>BSL H1</div></td><td>Write an arithmetic expression.</td><td align="center"><div>5 min.</div></td><td align="center"><img title="Difficulty" src="./1a-BSL-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Arithmetic Expression" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/arithmetic-expression-starter.rkt">arithmetic-expression-starter.rkt</a><br><a title="Arithmetic Expression" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/arithmetic-expression-solution.rkt">arithmetic-expression-solution.rkt</a></td><td align="center">BSL - exprs</td></tr><tr><td align="center"><div>BSL H2</div></td><td>Write an expression that operates on images using image primitives.</td><td align="center"><div>10 min.</div></td><td align="center"><img title="Difficulty" src="./1a-BSL-Module_files/1_green_circle.svg" height="23" width="23"></td><td align="left"><a title="Overlay" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/overlay-starter.rkt">overlay-starter.rkt</a><br><a title="Overlay" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/overlay-solution.rkt">overlay-solution.rkt</a></td><td align="center">BSL - strs-imgs</td></tr><tr><td align="center"><div>BSL H3</div></td><td>Step by step evaluation of a call to a function that has an if expression in its body.</td><td align="center"><div>15 min.</div></td><td align="center"><img title="Difficulty" src="./1a-BSL-Module_files/2_blue_square.svg" height="18" width="18"></td><td align="left"><a title="Foo Evaluation" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/foo-evaluation-starter.rkt">foo-evaluation-starter.rkt</a><br><a title="Foo Evaluation" href="https://spark-public.s3.amazonaws.com/programdesign/starters/bsl/foo-evaluation-solution.rkt">foo-evaluation-solution.rkt</a></td><td align="center">BSL - stepper</td></tr></tbody></table></div>
+<script>
+    displayProblemTable('homeworkProblems', 'BSL', 'Homework');
+</script><h3>Module Quiz</h3>
+
+<p>
+    Each module you will be asked to do an online quiz based directly on the material for the module. The quiz is designed to assess your understanding of the assigned homework problems — or more specifically of what you needed to understand to complete the
+    homework problems. <strong>You should complete the assigned homework
+  problems before trying the quiz</strong>. Please do not discuss quiz solutions on the discussion forums before they are due. You will have two attempts and a total of 24 hours to complete the quiz. Because the quiz is based on your mastery of the homework
+    you should be sure to <strong>complete the homework problems
+  before</strong>  <a href="https://class.coursera.org/programdesign-002/quiz/index">starting on the quiz</a>.
+</p>
+
+<h3>Tips for Success</h3>
+
+<p>
+    General tips for doing well in this course can be found on the <a href="https://class.coursera.org/programdesign-002/wiki/view?page=ToDoWellinThisCourse" title="Link:
+      view?page=ToDoWellinThisCourse">To Do Well in This Course</a>
+    page. The most important of these is that this is material that you <strong>learn by doing</strong>. Don't just watch the videos. You have to practice, practice, practice. So try typing along in Dr. Racket as you watch the video. Or, once the video
+    is complete try to duplicate the work done in the video on your own. Definitely do the practice problems as well as the homework problems.
+</p>
+
+<p>
+    Also be sure to use your fellow students and the course staff as resources in helping you when you need it. Use the forums for asking questions.</p>
+
+
+<div class="inpage-video-modal" data-modal-overlay-class="inpage-video-overlay" data-modal-position="absolute">
+    <div style="position:absolute;top:-25px;right:0px;color:white;cursor:pointer;" data-modal-close="">
+        Close
+    </div>
+</div>
+<style type="text/css">
+    .inpage-video-modal {                                
+      width: 960px;                                     
+      height: 610px;  
+      display: none;      
+      }
+      
+      .inpage-video-overlay {
+      background: black;
+      opacity: 0.75;
+      filter:alpha(opacity=75);  
+      }
+</style>
+</div>
+<hr>
+<div>
+    <div style="float:left">
+    	    	    </div>
+    <div style="float:right;text-align:right;font-size:10px;">
+    	Created Fri 23 Aug 2013 12:06 AM EDT (UTC -0400)<br>
+    	Last Modified Thu 29 Aug 2013  7:06 PM EDT (UTC -0400)    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+        
+    
+    <script src="./1a-BSL-Module_files/spark.js"></script>
+
+<script>window.onerror = function(message, url, lineNum) {
+
+  // First check the URL and line number of the error
+  url = url || window.location.href;
+  // 99% of the time, errors without line numbers arent due to our code,
+  // they are due to third party plugins and browser extensions
+  if (lineNum === undefined || lineNum == null) return;
+  
+  // Now figure out the actual error message
+  // If it's an event, as triggered in several browsers
+  if (message.target && message.type) {
+    message = message.type;
+  }
+  if (!message.indexOf) {
+    message = 'Non-string, non-event error: ' + (typeof message);
+  }
+  
+  var errorDescrip = {
+    message: message,
+    script: url,
+    line: lineNum,
+    url: document.URL
+  }
+  
+  var err = {
+    key: 'page.error.javascript', 
+    value: errorDescrip
+  }
+  
+  window._204 = window._204 || [];
+  window._204.push(err);
+  
+  window._gaq = window._gaq || [];
+  window._gaq.push(err);
+}</script>
+<script type="text/javascript">
+    // SET UP THE MULTITRACKER
+        window.logger = window.Log({level:"error"});
+        var parts = location.host.split(".");
+    while(parts.length > 2) { parts.shift(); }
+
+    window.multitracker = window.MultiTracker({logger:window.logger});
+    window.multitracker.register('204', window._204 = window._204 || []);
+    window.multitracker.register('ga', window._gaq = window._gaq || [], 'google');
+
+    // SET UP GA and 204
+    window._gaq.push(['_setAccount', 'UA-28377374-1']);
+    window._gaq.push(['_setDomainName', 'coursera.org']);
+    window._gaq.push(['_setAllowLinker', true]);  
+    window._gaq.push(['_trackPageview']);
+    
+    // configure 204 with the following settings
+    window._204.push(["client", "spark"]);
+    window._204.push(["user", 1216070]);
+    window._204.push(["domain", "." + parts.join(".")]);
+
+    // set off the first event
+    window._204.push({key:"pageview", val:{}});
+
+    // override our multitracker queues with the ga queue when it is ready
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    
+      ga.onload = ga.onreadystatechange = function() {
+          ga.onreadystatechange = ga.onload = null;
+          window.multitracker.get('ga').queue = window._gaq;
+      };
+    })();
+
+    // override our multitracker queues with the 204 queue when it is ready
+    (function() {
+      var a = document.createElement('script'); a.type = 'text/javascript'; a.async = true;
+      a.src = 'https://eventing.coursera.org/204.min.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(a, s);
+      a.onload = a.onreadystatechange = function() {
+          a.onreadystatechange = a.onload = null;
+          window.multitracker.get('204').queue = window._204;
+      };
+    })();
+</script>
+
+<script>
+  // Set up shared AB testing object
+  (function() {
+    window.ab = {};
+
+    // we want to share the 204 session cookie with the AB session cookie...
+    var sessionId = AB.makeSession("__204u", {expires:356, domain:"." + location.host});
+        var debug = false;
+    
+    window.ab.user = window.AB(1216070, "user", {debug:debug, tracker:window.multitracker, logger:window.logger});
+    window.ab.session = window.AB(sessionId, "session", {debug:debug, tracker:window.multitracker, logger:window.logger});
+
+    if(window.CourseraABExperiments.user) {
+        window.ab.user.addExperiments(window.CourseraABExperiments.user);
+        window.ab.user.runExperimentsOn("body");
+    }
+
+    if(window.CourseraABExperiments.session) {
+        window.ab.session.addExperiments(window.CourseraABExperiments.session);
+        window.ab.session.runExperimentsOn("body");
+    }
+  })();
+</script>
+
+
+    <script>
+      // Set up help widget
+      (function() {
+        $("[data-helpwidget]").each(function() {
+            window.HelpWidget(this, {tracker: window.multitracker});
+        });
+       })();
+
+        $("[data-readme]").each(function() {
+            window.ReadMe(this);
+        });
+    </script>
+
+    <script src="./1a-BSL-Module_files/modal_focus.js" type="text/javascript"></script>
+    <script src="./1a-BSL-Module_files/get_query_parameters.js" type="text/javascript"></script>
+    <script src="./1a-BSL-Module_files/signature_track.js" type="text/javascript"></script>
+    <script src="./1a-BSL-Module_files/item_list.js" type="text/javascript"></script>
+    <script src="./1a-BSL-Module_files/navbar.js" type="text/javascript"></script>
+
+    
+    <script>
+     // Set up help widget
+      (function() {
+        $("[data-helpwidget]").each(function() {
+            window.HelpWidget(this, {tracker: window.multitracker});
+        });
+       })();
+    </script>
+
+        <script>
+    (function() {
+        $("<style type='text/css'> .coursera-reporter-link { display:inline-block;} </style>").appendTo("head");
+    })();
+    </script>
+    
+    <script type="text/x-mathjax-config;executed=true">
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  
+  styleSheets: [],
+  styles: {},
+
+  jax: ["input/TeX"],
+  
+  extensions: ["tex2jax.js"],
+
+  preJax: null,
+  postJax: null,
+
+  preRemoveClass: "MathJax_Preview",
+
+  showProcessingMessages: true,
+
+  messageStyle: "none",
+  
+  displayAlign: "center",
+  displayIndent: "0em",
+  
+  delayStartupUntil: "none",
+
+  skipStartupTypeset: false,
+  
+  elements: [],
+  
+  tex2jax: {
+	    inlineMath: [
+	                 ['$$','$$'],      // uncomment this for standard TeX math delimiters
+	                 ['\\(','\\)']
+	                 ],
+
+	                 displayMath: [
+	                 ['\\[','\\]']
+	                 ],
+
+    skipTags: ["script","noscript","style","textarea","pre","code"],
+    ignoreClass: "tex2jax_ignore",
+    processClass: "tex2jax_process",
+    processEscapes: false,
+    processEnvironments: true,
+    preview: "TeX"
+    
+  },
+  
+  mml2jax: {
+    preview: "alttext"
+    
+  },
+  
+  jsMath2jax: {
+    preview: "TeX"
+    
+  },
+
+  TeX: {
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    Macros: {},
+
+    extensions: ["AMSmath.js", "AMSsymbols.js"]
+    
+  },
+
+  //============================================================================
+  //
+  //  These parameters control the MathML inupt jax.
+  //
+  MathML: {
+    //
+    //  This specifies whether to use TeX spacing or MathML spacing when the
+    //  HTML-CSS output jax is used.
+    //
+    useMathMLspacing: false
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the HTML-CSS output jax.
+  //
+  "HTML-CSS": {
+    
+    scale: 100,
+    
+    availableFonts: ["STIX","TeX"],
+    
+    preferredFont: "TeX",
+    
+    webFont: "TeX",
+    
+    imageFont: "TeX",
+    
+    undefinedFamily: "STIXGeneral,'Arial Unicode MS',serif",
+      
+    showMathMenu: true,
+
+    styles: {},
+    
+    tooltip: {
+      delayPost: 600,          // milliseconds delay before tooltip is posted after mouseover
+      delayClear: 600,         // milliseconds delay before tooltip is cleared after mouseout
+      offsetX: 10, offsetY: 5  // pixels to offset tooltip from mouse position
+    }
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the NativeMML output jax.
+  //
+  NativeMML: {
+
+    scale: 100,
+
+    showMathMenu: true,
+    showMathMenuMSIE: true,
+
+    styles: {}
+  },
+  
+  MathMenu: {
+    delay: 400,
+    
+    helpURL: "http://www.mathjax.org/help/user/",
+
+    showRenderer: true,
+    showFontMenu: false,
+    showContext:  false,
+
+    windowSettings: {
+      status: "no", toolbar: "no", locationbar: "no", menubar: "no",
+      directories: "no", personalbar: "no", resizable: "yes", scrollbars: "yes",
+      width: 100, height: 50
+    },
+    
+    styles: {}
+    
+  },
+
+  MMLorHTML: {
+    prefer: {
+      MSIE:    "MML",
+      Firefox: "MML",
+      Opera:   "HTML",
+      other:   "HTML"
+    }
+  }
+});
+</script>
+<script type="text/javascript">
+(function () {
+
+  function loadMathJax() {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://duqnjvq4jwr55.cloudfront.net/2.1/MathJax.js";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  }
+
+  window.loadOrRefreshMathJax = function(domId) {
+    if (window.MathJax) {
+      if (domId) {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, domId]);
+      } else {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+      }
+    } else {
+      loadMathJax();
+    }
+  }
+})();
+</script>
+    <script type="text/javascript">
+        var site_base_url = "https:\/\/www.coursera.org\/";
+        var site_static_asset_url = "https:\/\/dt5zaw6a98blc.cloudfront.net\/site-static\/";
+        var spark_class_short_name = "programdesign";
+        var spark_class_id = 971286;
+        var spark_class_url = "\/programdesign-002";
+        var spark_signature_url = "https:\/\/class.coursera.org\/programdesign-002\/signature\/";
+
+        var course_strings_name = "Introduction to Systematic Program Design - Part 1";
+        var student_full_name = "Christopher Edward Beattie";
+    </script>
+
+    
+<script type="text/javascript">$(function() { loadOrRefreshMathJax();})</script>
+<script src="./1a-BSL-Module_files/textbook_wiki.js"></script>
+
+
+
+
+</body></html>

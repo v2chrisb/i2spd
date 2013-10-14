@@ -1,3 +1,18 @@
 Important notes to self go here at the top. 
 
-===== 10/13 =====
+===== 10/14 morning session; start @ 0510, finish @ 0625 =====
+
+I'll soon see if Im wrong about this but it's going to take awhile to really
+understand this material well.
+
+At 0615, stopped. Need to view "HtDW - Working through the Wish List" next where
+you'll fill-in the helper functions, which are marked with the !!! characters.
+
+There are three (3) signatures in the function part of the program:
+
+Cat -> Cat    ; for starting the big bang world
+Cat -> Cat    ; to advance the image one pixel to the right
+Cat -> Image  ; to render the cat image at the appropriate place
+
+Each signature has a purpose to explain what's happening & why it's needed.
+These concepts are making a little more sense now that I re-did weeks 1 & 2.

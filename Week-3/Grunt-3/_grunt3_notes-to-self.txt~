@@ -1,4 +1,37 @@
-Important notes to self go here at the top. 
+Week-3: HtDW.  Important notes to self go here at the top. 
+
+===== 10/15 morning session; start @ 0530, finish @ 0625 =====
+Stopped at 0625. Next to view is Improving a World Program - Add SPEED.
+
+(define (main c)
+  (big-bang c                         ; Cat
+            (on-tick   advance-cat)   ; Cat -> Cat
+            (to-draw   render)))      ; Cat -> Image
+       
+The code above bears some discussion because lessons were learned this time
+around.
+
+Cat
+---
+The variable c is the Cat position.  If you start the program with (main 125),
+the Cat starts at x-position 125.  Note, too, that when we invoke big-bang we
+must tell it where the Cat, c, is.
+
+Cat -> Cat
+----------
+(define (advance-cat c)
+  (+ c 1))
+Once we know this position, c, on-tick can use the advance-cat function: recall
+that advance-cat takes a cat and produces a cat, i.e., Cat -> Cat. We advance
+Cat by adding some value to c, (+ c 1) in this case, and produce a new value of
+c.
+
+Cat -> Image
+------------
+(define (render c)
+   (place-image CAT-IMG c CTR-Y MTS))
+The render function will also use c as the location it places CAT-IMG using the
+place-image primitive.
 
 ===== 10/14 morning session; start @ 0510, finish @ 0625 =====
 

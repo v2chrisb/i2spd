@@ -1,5 +1,51 @@
 Week-3: HtDW.  Important notes to self go here at the top. 
 
+**===== 10/17 morning session; start @ 0518, finish @ 0630 =====**
+
+HtDW videos done. It's time to do the first practice problem: add a mouse
+handler to reset the position of the moving cat.
+
+First, refer to the HtDW worlds example code and look at the stub code for
+big-bang's on-mouse primitive. Take the stub signature:
+
+WS Integer Integer MouseEvent -> WS
+
+Change it to: Cat Integer Integer MouseEvent -> Cat
+
+Insert the new data definition 1) in the new big-bang entry on-mouse and 2) as
+the signature for the new function you'll write called handle-mouse.
+
+I think I'm having an "aha!" moment about a correlation between the structure &
+information contained in the FIRST part of the signature and the variables used
+in the actual function.
+
+For the handle-mouse function, the signature is:
+
+Cat Integer Integer MouseEvent -> Cat
+
+...and the function variables are:
+
+c x y me
+
+...where c is the cat x-coord, x & y must be the location of the mouse click on
+MTS, and me is the actual mouse event.  NOTICE that Cat in the signature
+corresponds with c in the variables, Integer corresponds with x, Integer corr-
+esponds with y, and MouseEvent corresponds with me.
+
+OK, during the writing of the function stub and the first check-expect I made
+reference to DrRacket's Help Desk and searched on MouseEvent and learned that
+"button down" is part of the MouseEvent data definition (enumeration) so I used
+the string "button down" for one of the check-expect variables, and the test
+passed.  So, I have a functioning stub and test. Now copy the mouse handler
+stub code at the bottom of the HtDW page into your code.
+
+LESSON: you set out thinking that the purpose of the exercise was to reset the
+cat back to 0 with the "button down", but the Prof wanted you to make the cat
+move to x-coord of where the "button down" event occurred.
+
+Tomorrow (Friday) you animate the design of the traffic light again.
+
+
 **===== 10/16 morning session; start @ 0605, finish @ 0705 =====**
 
 Adding SPEED. The analysis -- the picture we drew with constant, changing, and
@@ -21,11 +67,11 @@ the signature.  The template signature was WS KeyEvent -> WS.
 You paused the video and tried to change the signature before the prof. When you
 did you erroneously changed it to:  Cat Keyevent -> Image. Your error was to 
 think that the cat key event imposed itself, or impacted, the image when, in
-fact, the cat key event impacts the cat, which number that represents the x
+fact, the cat key event impacts the cat, that number which represents the x
 position of the cat image in screen coordinates (see data definition).
 
-White box testing is discussed.
-
+White box testing is discussed. Done with HtDW videos.  Do the two problems
+next, then it's on to Compound data definitions.
 
 **===== 10/15 morning session; start @ 0530, finish @ 0625 =====**
 Stopped at 0625. Next to view is Improving a World Program - Add SPEED.

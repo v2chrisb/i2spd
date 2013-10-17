@@ -1,6 +1,33 @@
 Week-3: HtDW.  Important notes to self go here at the top. 
 
-===== 10/15 morning session; start @ 0530, finish @ 0625 =====
+**===== 10/16 morning session; start @ 0605, finish @ 0705 =====**
+
+Adding SPEED. The analysis -- the picture we drew with constant, changing, and
+big-bang info. -- is a model of the program (with less detail) that we can use
+to plan our work by marking-up (this) paper copy.  Make the structure of the 
+program match the analysis. Tweak the analysis then tweak the program.
+
+The cat's SPEED was an unidentified constant.
+
+Now add a key handler, the on-key option to big-bang, and template a function
+that operates on a large enumeration, which is useful for on-key and on-mouse
+handlers. In this case, press the spacebar and have the cat reset to the left
+side of the screen.
+
+When you brought the on-key handler code over from the HtDW template recipe, it
+was necessary to modify the stub code:  name the handler (handle-key) and change
+the signature.  The template signature was WS KeyEvent -> WS.
+
+You paused the video and tried to change the signature before the prof. When you
+did you erroneously changed it to:  Cat Keyevent -> Image. Your error was to 
+think that the cat key event imposed itself, or impacted, the image when, in
+fact, the cat key event impacts the cat, which number that represents the x
+position of the cat image in screen coordinates (see data definition).
+
+White box testing is discussed.
+
+
+**===== 10/15 morning session; start @ 0530, finish @ 0625 =====**
 Stopped at 0625. Next to view is Improving a World Program - Add SPEED.
 
 (define (main c)
@@ -33,7 +60,7 @@ Cat -> Image
 The render function will also use c as the location it places CAT-IMG using the
 place-image primitive.
 
-===== 10/14 morning session; start @ 0510, finish @ 0625 =====
+**===== 10/14 morning session; start @ 0510, finish @ 0625 =====**
 
 I'll soon see if Im wrong about this but it's going to take awhile to really
 understand this material well.

@@ -45,7 +45,6 @@ move to x-coord of where the "button down" event occurred.
 
 Tomorrow (Friday) you animate the design of the traffic light again.
 
-
 **===== 10/16 morning session; start @ 0605, finish @ 0705 =====**
 
 Adding SPEED. The analysis -- the picture we drew with constant, changing, and

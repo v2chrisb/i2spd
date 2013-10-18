@@ -1,42 +1,84 @@
-You just started this approach of taking notes to self.  The very top of this note is a place for listing important status items, like what problem you left-off at.
+Important notes to self go here at the top. As of 10/12, you're done with the
+re-do of week-2. Moving on to HtDW and Compound in week-3.
 
 ===== 10/12 =====
-##1711 to xxxx (time committed will be intermittent)
+##1711 to 1847 (time committed will be intermittent)
 
-Nung-poo is taking a nap & Jen is cooking so I'll work on the oatmeal problem, which
-is HtDD H1, an itemization.  Finished at 1847. On to module 3a, HtDW.
+Nung-poo is taking a nap & Jen is cooking so I'll work on the oatmeal problem, 
+which is HtDD H1, an itemization.  Finished at 1847. On to module 3a, HtDW.  I
+leave the oatmeal exercise feeling a bit mixed about using the correct data
+definition for the given problem.  The Prof, for example, said we'd need two
+data definitions for the breakfast (oatmeal) problem and it seems both were
+supposed to be itemizations, but I felt like I was forcing an itemization
+definition for OatmealTemp.
+
+Recall that OatmealTemp defines possible oatmeal temps, 71C being perfect.  I
+certainly want to deal with numbers here and I can imagine the temperatures for
+food being between 0C (freezing) and 100C (water boiling). Why use an
+itemization data definition here?  Why force a "one of" data classification?
+The 0-100C temperature range worked nicely, so I used and interval. I'd like to
+know the disadvantages of my approach. I guess the only way to find out would be
+to make a post, which I probably won't do.
+
+I also used the conditional syntax & approach from the steepness problem (which
+can be seen 12 lines down from here), although it needed to be slightly changed
+to deal with the =71C temperature being perfect.
 
 ##0436 to 0651 (2 hours, 15 mins)##
 
-Up early!  Doing HtDD P7 which appears to need two data definitions, an interval and an enumeration.  Took 1 hour and 15 minutes (allotted 35 minutes) and I had to look at the solution.  There was a use of "and" and comparisons that was beyond anything I had ever done so I needed some help.  These examples will prove helpful in the future, especially the comparison operators.
+Up early!  Doing HtDD P7 which appears to need two data definitions, an interval
+and an enumeration.  Took 1 hour and 15 minutes (allotted 35 minutes) and I had
+to look at the solution.  There was a use of "and" and comparisons that was
+beyond anything I had ever done so I needed some help.
+These examples will prove helpful in the future, especially the comparison
+operators.
 
 (define (fn-for-hillgrade h)
   (cond [(and (<= 0 h) (< h  3)) (... h)]
         [(and (<= 3 h) (< h  7)) (... h)]
         [(and (<= 7 h) (< h 10)) (... h)]))
 		
-I don't think there is such a thing as => or >= in Racket.  Also, here's a Prof's note that is more salient now:
+I don't think there is such a thing as => or >= in Racket.  Also, here's a
+Prof's note that is more salient now:
 
-Remember that data definitions (or data designs) and function designs are different. So, for example, while both have examples, function examples are wrapped in check-expect and show how the function is supposed to run. Data examples are defined as constants using define and show how the data definition represents domain information. Try not to confuse the two.
+"Remember that data definitions (or data designs) and function designs are 
+different. So, for example, while both have examples, function examples are
+wrapped in check-expect and show how the function is supposed to run. Data
+examples are defined as constants using define and show how the data definition
+represents domain information. Try not to confuse the two.
 
 At 0611, started on HtDD H2, direction; finished at 0619.
-At 0626, started on HtDD H3, dinner; finished at 0643. Checking Prof's answer and taking notes.
+At 0626, started on HtDD H3, dinner; finished at 0643. Checking Prof's answer
+and taking notes.
 
-See the solution for dinners and note the differences between your solution and the Prof's solution.  Yours works, but did you go about it in an "OK" fashion?
+See the solution for dinners and note the differences between your solution
+and the Prof's solution.  Yours works, but did you go about it in an "OK" way?
 
 ===== 10/11 =====
 ##0530 to 0627 (1 hour)##
-Starting @ 0530. Start with HtDD P3 only to learn that you already did it. You overwrote your file with a new template which allowed you to use git's checkout command for the first time to revert back to the original.
+Starting @ 0530. Start with HtDD P3 only to learn that you already did it. You
+overwrote your file with a new template which allowed you to use git's checkout
+command for the first time to revert back to the original.
 
-Did HtDD P5. Style is important! How would you enforce a style on 3-tier projects? How might you use SPD templates with another language, like PHP?
+Did HtDD P5. Style is important! How would you enforce a style on 3-tier 
+projects? How might you use SPD templates with another language, like PHP?
 
-Started HtDD P6 at 0558; finished at 0623. Went 5 minutes over but the exercise went quite well. I really feel like I'm beginning to "get it" and I'm now sure I made the right decision to stop in week 3 and start all over again at week 1.  I had to slow down, but now I feel like I'm absorbing the material.  I also am beginning to see what the Prof. meant when he said that you're always working on a piece of the overall problem at a time. Now that I'm "getting it", there is a better flow of work occurring.
+Started HtDD P6 at 0558; finished at 0623. Went 5 minutes over but the exercise
+went quite well. I really feel like I'm beginning to "get it" and I'm now sure
+I made the right decision to stop in week 3 and start all over again at week 1.
+I had to slow down, but now I feel like I'm absorbing the material.  I also am
+beginning to see what the Prof. meant when he said that you're always working on
+a piece of the overall problem at a time. Now that I'm "getting it", there is a
+better flow of work occurring.
 
 Hope to get more time in this evening...nope.  In bed before 2100, but...
 
 ===== 10/10 @ 0556 =====
-Completed HtDD P2, building demolish.  Went well. Allotted 20 mins. & finished in 17 mins.
-Skipping HtDD P3 because I don't have enough time to complete before work.
-HtDD P4 is 8 mins; completed in 7 mins., however, you rushed it and should have referred to
-  the HtDD page on enumerations wherein the structure used in the cond -- string=? -- is clearly shown.  You stumbled by using pass? instead of string=?.  
+Completed HtDD P2, building demolish.  Went well. Allotted 20 mins. & finished
+in 17 mins. Skipping HtDD P3 because I don't have enough time to complete before
+work. HtDD P4 is 8 mins; completed in 7 mins., however, you rushed it and should
+have referred to the HtDD page on enumerations wherein the structure used in the
+cond -- string=? -- is clearly shown.  You stumbled by using pass? instead of
+string=?.
+
 Signing-off for this morning after doing a git commit...

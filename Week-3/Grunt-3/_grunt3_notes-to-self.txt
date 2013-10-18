@@ -1,5 +1,41 @@
 Week-3: HtDW.  Important notes to self go here at the top. 
 
+**===== 10/18 morning session; start @ 0511, finish @ 0607 =====**
+
+The brain is a little off this morning. Last night my nose was running and eyes
+watering. This morning a slight sniffle but lacking focus.  Pressing on but the
+head is a bit cloudy...
+
+Traffic light. I solved this before but in a very different way than the Prof.
+I used CONSTANTS much differently than he did. I think I'll really study his
+solution file and the ways he uses CONSTANTS to see if I can make sense of it
+all. This will probably take a couple of study days, but remember, after this
+is compound statements -- that's where you decided to go back and re-do
+everything in HtDF and HtDD.
+
+Here's an example of how my thoughts worked in September:
+
+;; - black case
+(define LIGHT_RECT (rectangle 40 110 "solid" "black"_)
+
+;; - outlined circles
+(define R_OUTL (circle 15 "outline" "red")
+
+;; - solid circles
+(define R_SOLID (circle 15 "solid" "red")
+
+This is very different than the Prof's approach. He defines:
+
+(define RADUIUS 20)   ; of each light
+(define SPACING  6)   ; space between and beside lights
+
+And proceeds with using RADIUS and SPACING liberally, e.g.:
+
+(define BACKGROUND (rectangle (+ (* 2 SPACING) (* 2 RADIUS))
+                              (+ (* 4 SPACING) (* 6 RADIUS))
+                              "solid"
+                              "black"))
+
 **===== 10/17 morning session; start @ 0518, finish @ 0630 =====**
 
 HtDW videos done. It's time to do the first practice problem: add a mouse
@@ -44,6 +80,7 @@ cat back to 0 with the "button down", but the Prof wanted you to make the cat
 move to x-coord of where the "button down" event occurred.
 
 Tomorrow (Friday) you animate the design of the traffic light again.
+
 
 **===== 10/16 morning session; start @ 0605, finish @ 0705 =====**
 

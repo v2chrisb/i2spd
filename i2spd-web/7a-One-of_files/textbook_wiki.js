@@ -1,0 +1,1 @@
+$(function(){var e="Wiki Textbook Open",t="/textbook/api";$('a[href*="'+t+'"]').on("click",function(){var t=$(this).attr("href"),i=t.match(/textbook\/api\/(\d*)/m);if(i.length>=2){var n=i[1];window.multitracker.push([e,n])}})});

@@ -1,8 +1,0 @@
-How to Design Worlds:
-http://world.cs.brown.edu/
-
-How to Design Programs, 2nd Edition:
-http://www.ccs.neu.edu/home/matthias/HtDP2e/
-
-The SICP book (Abelson & Sussman):
-http://sicpebook.wordpress.com/

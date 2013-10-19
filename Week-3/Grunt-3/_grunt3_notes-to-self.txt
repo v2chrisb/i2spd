@@ -1,5 +1,60 @@
 Week-3: HtDW.  Important notes to self go here at the top. 
 
+**===== 10/19 morning session; start @ 1045, finish @ 1145 =====**
+
+Quick summary: in my old method of solving this problem I "hard wired" all of
+the shape sizes and spacing, making it inflexible.  The Prof's solution shows
+the value of using constants -- even as arguments for primitive parameters --
+to gain flexibility.
+
+Still a bit sick. DANGER WILL ROBINSON! You're at that place where you have the
+desire to switch focus to Microsoft Project -- DON'T! You're at that tipping
+point and you need to hunker down and keep pressing forward.  You must complete
+this course. Once you do, then you can decide what's next.
+
+Traffic light problem: study the solution, as you mentioned in yesterday's note,
+and understand the Prof's approach to solving the problem. Journal what you
+learn, here. Code the solution. Then on to Compound Data Defs.
+
+OK. Some key BSL primitive information to know & keep in mind as I move forward
+trying to understand things:
+
+(rectangle width height mode color)
+(square side-len mode color)
+
+Now, the Prof's code again so we can talk about it...
+
+(define RADIUS 20)    ; of each light
+(define SPACING 6)    ; space between and beside lights
+
+(define BACKGROUND (rectangle (+ (* 2 SPACING) (* 2 RADIUS))
+                              (+ (* 4 SPACING) (* 6 RADIUS))
+                              "solid"
+                              "black"))
+
+(define SPACE (square SPACING "solid" "black"))
+                              
+So, why define the constant SPACING? Why not just use the number 6 for all
+instances of the constant SPACING, and get on with it? Ah. The answer is
+flexibility in changing your traffic light to a scale that you like.
+
+First, as a test, you removed the SPACING constant and replaced it (in the
+places shown in the code above) with the number 6. These are the only places
+SPACING shows up in all of the code. I used DrRacket's "Check Syntax" to make 
+sure the constant wasn't used somewhere further down in the program. The code
+worked fine with the number 6 replacement test.
+
+Next I played with the value of the constant SPACING, that is, I changed it from
+6 to 12 and noted how the spacing changed *and* the black rectangle scaled
+nicely.  Scaling would not be flexible with static values.
+
+The constant SPACE is used ALOT; notice it uses SPACING as the square's side-len
+variable for the square primitive.  A square of side-len 6 is pretty small, but
+remember, the little black square is used in conjunction with BSL's overlay and
+above primitives -- the little square is, at least in my thinking right now,
+like padding.  Stopping here and will revisit this in more detail during the
+next study session (tonight).
+
 **===== 10/18 morning session; start @ 0511, finish @ 0607 =====**
 
 The brain is a little off this morning. Last night my nose was running and eyes
@@ -26,7 +81,7 @@ Here's an example of how my thoughts worked in September:
 
 This is very different than the Prof's approach. He defines:
 
-(define RADUIUS 20)   ; of each light
+(define RADIUS 20)   ; of each light
 (define SPACING  6)   ; space between and beside lights
 
 And proceeds with using RADIUS and SPACING liberally, e.g.:

@@ -1,4 +1,43 @@
-Week-3: HtDW.  Important notes to self go here at the top. 
+Week-3a: HtDW.  Important notes to self go here at the top. 
+
+**===== 10/22 morning session; start @ 0505, finish @ 0542 =====**
+
+You did nothing on Sunday, slept late on Monday and in bed early Monday night.
+This is the second time this type of thing happened with your studies. Make the 
+correction and move on.
+
+Look at main() and the use of big-bang().
+
+Starting with on-tick, this is what happens in the program over time. In this
+case, the light color changes, hence the name "next-color" is used for the
+function. Next-color uses a conditional and an enumeration for the three color
+states of the light.
+
+Next is big-bang's to-draw for which the render-light function is written. Look
+at the code:
+
+(define (render-light l)
+  BACKGROUND)
+
+(define (render-light l)
+  (cond [(string=? l "red")    RON]
+        [(string=? l "yellow") YON]
+        [(string=? l "green")  GON]))
+        
+HEY! Both render-light and next-color use the argument l, that is, the only
+argument in the program *and* the very argument passed to the program when it's
+run, i.e. (main "red").
+
+For on-tick next-color, if l is "red" and a tick occurs, the function runs, goes
+to the condition clause with "red" and returns "green".
+
+Then render-light takes the same l from the start of the program, which, to
+clarify is still "red", runs and enters its condition clause, and renders
+the appropriate solid colored light against the BACKGROUND.
+
+Time passes, as a result the on-tick function of big-bang is invoked to act, and
+the cycle starts over. I feel OK with the way this program works. I will move
+on to compound data definitions.
 
 **===== 10/19 morning session; start @ 1045, finish @ 1145 =====**
 

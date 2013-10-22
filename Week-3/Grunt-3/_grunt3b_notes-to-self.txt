@@ -1,0 +1,34 @@
+Week-3b: Compound.  Important notes to self go here at the top. 
+
+**===== 10/22 morning session; start @ 0542, finish @ xxxx =====**
+
+You just finished analyzing the traffic light solution from 0505 to 0542. Now
+it's on to designing compound data definitions (to represent information that
+consists of two or more naturally connected values).
+
+Watching the three videos now. During the second video at 4:23 the Prof. talks
+about how the data driven template for compound data definitions is interpreted.
+Have a look at the example used in the HtDD page:
+
+(define-struct ball (x y))
+;; Ball is (make-ball Number Number)
+;; interp. a ball at position x, y 
+
+(define BALL-1 (make-ball 6 10))
+
+#;
+(define (fn-for-ball b)
+  (... (ball-x b)     ;Number
+       (ball-y b)))   ;Number
+;; Template rules used:
+;;  - compound: 2 fields
+
+You'll only get through watching the first two videos this morning; the last
+video is 30 minutes long and the cowabunga! problem will take awhile to really
+digest. This topic also have a good number of exercises with it -- it seems
+important that you gain a firm understanding of this. Look back and see how much
+better you feel about your understanding of data definitions and functions after
+making the 3+ week investment in doing the topics all over again, slowly and 
+deliberately.
+
+Press on! :-)

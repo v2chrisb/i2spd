@@ -1,6 +1,13 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
-**===== 10/22 morning session; start @ 0542, finish @ xxxx =====**
+**===== 10/23 morning session; start @ 0515, finish @ 0549 =====**
+
+I have to leave for Randolph by 0645 so I'll have to adjust accordingly.
+
+Have another look at 8:45 and on in the last video (cowabunga). You need to 
+start working on some problems and get out of video watching mode.
+
+**===== 10/22 morning session; start @ 0505, finish @ 0627 =====**
 
 You just finished analyzing the traffic light solution from 0505 to 0542. Now
 it's on to designing compound data definitions (to represent information that

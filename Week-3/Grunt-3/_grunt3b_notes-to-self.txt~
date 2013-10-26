@@ -1,21 +1,5 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
-**===== 10/25 evening session; start @ 2105, finish @ 2135 =====**
-
-Hooray! You're off of your lazy butt and you're working on CS like your said you
-would!
-
-Trying the student compound data definition problem. The "grade" is throwing me
-off a bit because I wanted to put grade[1, 12] in the structure definition, but
-it doesn't belong here.
-
-When you got to the examples section of the HtDD template you weren't sure how
-to create a good example, i.e. you forgot about the need for make-student.
-
-Just starting the function now and my brain is getting hazy. Take a break.
-
-
-
 **===== 10/25 morning session; start @ 0510, finish @ 0617 =====**
 
 Started by reviewing cowabunga code in the steps laid out by the Prof. Getting
@@ -37,7 +21,7 @@ need to use the make-student compound data definition, like so:
 
 (check-expect (add-student? (make-student "Bob" 5 true)) true)
 
-You were stuck and decided to not spend much time figuring out the actual
+You were stuck and decided to not spend much time figurung out the actual
 structure of the function. There is a need to use "and" to qualify the condition
 needed for a student to be marked as being in the correct grade range *and*
 having an allergy.

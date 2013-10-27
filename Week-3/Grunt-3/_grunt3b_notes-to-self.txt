@@ -1,5 +1,27 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
+**===== 10/26 evening session; start @ 2200, finish @ xxxx =====**
+
+World Series is on. Boston losing 2-1 in the top of the 6th.
+
+Look at the problem B definition. It implies, I think, the use of an *and*
+statment, i.e. "if the student has allergies *and* is in a qualifying grade,
+their name should be added to a special list."
+
+Overall it went OK your second time around, however, you were tempted to do the
+following when writing the function:
+
+(define (add-student? s)
+  (and (<= (student-grade s) 6)
+         (student-allergies? s) true))
+         
+This is wrong. The 'true' doesn't belong on the last line -- it should be
+deleted.
+
+The problems coming-up this week look formidable. You're still in a bit of a
+lazy mood with regard to coding. Hang in there and press onward!
+
+
 **===== 10/25 evening session; start @ 2105, finish @ 2135 =====**
 
 Hooray! You're off of your lazy butt and you're working on CS like your said you
@@ -13,8 +35,6 @@ When you got to the examples section of the HtDD template you weren't sure how
 to create a good example, i.e. you forgot about the need for make-student.
 
 Just starting the function now and my brain is getting hazy. Take a break.
-
-
 
 **===== 10/25 morning session; start @ 0510, finish @ 0617 =====**
 

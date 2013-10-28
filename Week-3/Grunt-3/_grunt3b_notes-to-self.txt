@@ -1,6 +1,49 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
-**===== 10/26 evening session; start @ 2200, finish @ xxxx =====**
+**===== 10/28 evening session; start @ 0448, finish @  0627**
+
+Up early. You MUST change now. You are showing your pattern again. This is the 
+time that you MUST get through, so do it.
+
+Your first thought when looking at the data definition problem was that there's
+a trick question here because it looks too simple.
+
+The tricky part comes at the Signature, i.e. Trip Trip -> Trip
+
+You're supposed to compare two trips and return the trip with the longest
+duration.
+
+Done with the trip solution at 0536, roughly 45 minutes. It's worth noting that
+although you didn't grasp the syntax & structure of the 'if' statement right
+away, you did implement it without too much trouble. Here it is for reference:
+
+(define (longer-trip t1 t2)
+  (if (> (trip-duration t1) (trip-duration t2))
+         t1
+         t2))
+         
+It's also worth noting that the Prof. mentions on the HtDD page for compounds
+that it's often useful to have numerous examples. In this trip problem I had
+three and it saved me from typing out the 'make-trip' with all of the needed
+parameters for each check-expect. It also made it easier to run the program,
+i.e. (longer-trip T1 T2).
+
+Starting the next problem (after a short break) at 0557. The rest of the
+problems involve HtDW.
+
+Starting tracker.rkt, a HtDW program that displays the current mouse (x,y).
+
+Watched Prof. at 22mins in the third lecture (because of notes in notebook)
+where he speaks of helper functions and he clarifies that each function should
+perform only one (1) task. He exhorts us to look out for places to use 
+separate functions.
+
+A better study day, but you still need to work to junk out of your habits and
+attitude. You're also feeling a bit intimidated by the programs you'll need to
+solve, but as the Prof. mentioned, it's critical to get a grasp on designing
+worlds well in order to complete the exercises that are coming soon.
+
+**===== 10/26 evening session; start @ 2200, finish @ 2230 =====**
 
 World Series is on. Boston losing 2-1 in the top of the 6th.
 
@@ -20,7 +63,6 @@ deleted.
 
 The problems coming-up this week look formidable. You're still in a bit of a
 lazy mood with regard to coding. Hang in there and press onward!
-
 
 **===== 10/25 evening session; start @ 2105, finish @ 2135 =====**
 

@@ -1,5 +1,33 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
+**===== 10/30 morning session; start @ 0533, finish @ 0627**
+
+Had to sleep a little more this morning. Watched a fascinating presentation
+about Coq last night (forwarded to me by Peter).
+
+For the first time yesterday I made my first real contact with the Dr. Racket
+documentation, which is "both bogus and sad" but, whatever. The lesson here is
+that if you are going to learn to program then it will be very important and you
+will spend a good amount of time reading a variety of documentation. That said,
+I'm starting this morning by reading the 32 pages of section 2.4 of the
+TeachPack -- "Worlds and the Universe: universe.rkt". This immediately referred
+me to the Prologue, which I'm now reading.
+
+Notes from reading:
+
++ a primitive is also called a built-in
++ to compute is to determine the value of expressions
++ values can be numbers, strings and even images in BSL
+
+The notation you learned in school is utterly misleading, i.e. y = x * x
+
+(define (y x) (* x x ))
+
+The define says "consider y a function". Seeing this made my understanding of
+what a function is in Dr. Racket a little more concrete today. It's good that
+I'm stopping to do some reading. Signing-off for now but hope to find some time
+in Randolph to do some reading, too.
+
 **===== 10/29 morning session; start @ 0448, finish @ 0617**
 
 Keep going. Yesterday during work and in the evening you had some thoughts

@@ -1,6 +1,41 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
-**===== 10/28 evening session; start @ 0448, finish @  0627**
+**===== 10/29 morning session; start @ 0448, finish @ 0617**
+
+Keep going. Yesterday during work and in the evening you had some thoughts
+about this mouse tracking program:
+
++ a mouse click is an event that can trigger something
++ the trigger can be used to capture input
++ the input captured will be the mouse (x,y) coord.
++ these instantaneous (x,y) coord's will become the program output
+
+Good, now get a piece of paper and map-out your program (but get your coffee
+first).
+
+0500: Philippines (Bunsoy) called. Lolo Shano passed away. I'll always recall
+him as a kind and gentle man. God bless you, Lolo. May your soul rest in the 
+peace of our Lord and King, Jesus Christ. Blessed Mother, please pray for Lolo.
+
+Thinking about what numeric type to use I finally found the base type/numeric
+type reference in Dr. Racket:  (1) Type Reference (1.1) Base Types. Given the
+list provided in the reference, Natural falls right before the Negative-Integer.
+I'll start by using Natural with this problem.
+
+*NOTE*: you should have started by referring to the HtDW recipe to follow the
+steps there, however, you started with the data definitions. This isn't the end
+of the world because the order you executed was only one step off, i.e. you
+should have defined constants after sketching the program scenario. Identifying
+constants (from my sketch) now.
+
+OK, I'm at a point where I'm not 100% sure what the next best step is *and* it's
+almost the end of my study time. I do know this: I should read section 2.4 in
+the help.  It explains "Worlds and the Universe".  Section 2.4.4.1 has a good
+example of a state machine using a door as an example.
+
+Signing-off at 0616, doing my Git commit, and making some oatmeal.
+
+**===== 10/2 morning session; start @ 0448, finish @ 0627**
 
 Up early. You MUST change now. You are showing your pattern again. This is the 
 time that you MUST get through, so do it.
@@ -28,7 +63,7 @@ three and it saved me from typing out the 'make-trip' with all of the needed
 parameters for each check-expect. It also made it easier to run the program,
 i.e. (longer-trip T1 T2).
 
-Starting the next problem (after a short break) at 0557. The rest of the
+Starting the next problem (after a short break) at 0557; the rest of the
 problems involve HtDW.
 
 Starting tracker.rkt, a HtDW program that displays the current mouse (x,y).
@@ -38,10 +73,11 @@ where he speaks of helper functions and he clarifies that each function should
 perform only one (1) task. He exhorts us to look out for places to use 
 separate functions.
 
-A better study day, but you still need to work to junk out of your habits and
+A better study day, but you still need to work the junk out of your habits and
 attitude. You're also feeling a bit intimidated by the programs you'll need to
 solve, but as the Prof. mentioned, it's critical to get a grasp on designing
-worlds well in order to complete the exercises that are coming soon.
+worlds well in order to complete the exercises that are coming in the weeks to
+follow.
 
 **===== 10/26 evening session; start @ 2200, finish @ 2230 =====**
 

@@ -1,1 +1,0 @@
-function get_query_parameters(e){var t,i,n,s={};i=e.slice(e.indexOf("?")+1),n=i.split("&");for(var r=0;n.length>r;r++)t=n[r].split("="),s[t[0]]=t[1];return s}function get_js_query_parameters(){var e=document.getElementsByTagName("script"),t=e[e.length-1],i=t.src;return get_query_parameters(i)}

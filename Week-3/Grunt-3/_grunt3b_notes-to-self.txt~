@@ -1,5 +1,76 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
+**===== 11/1 morning session; start @ 0555, finish @ 0629**
+
+All Saints! Thanks be to God for His Saints, especially Mary, Queen of Saints!
+
+Up late, but it's really (kind of) OK because I did spend time yesterday sfter-
+noon reading/scanning section 2.4 in the teachpack documentation and even
+tried the UFO example function. I learned that the only mandatory clause of a
+big-bang description is to-draw -- I recall unknowingly struggling with this
+recently.
+
+A teachpack extends the set of procedures that are built into a language in
+DrRacket. For example, a teachpack might extend the Beginning Student language
+with a procedure for playing sounds.
+
+A tool extends the set of utilities within the DrRacket environment. For
+example, DrRacket’s Check Syntax button starts a syntax-checking tool.
+
+http://docs.racket-lang.org/guide/modules.html
+
+Done exploring documentation for this morning. I'm not going to commit right now
+*because* I want to be sure I do work this evening. Back to the examples in the
+prologue.
+
+**===== 10/31 morning session; start @ 0501, finish @ 0625**
+
+Reading in Randolph didn't happen so this morning is yet more reading (starting
+in the prologue in section 1.2).
+
+Notice: the function used for the rocket example -- y = x * x -- has the rocket
+DESCENDING because y ccordinates are measured DOWNWARDS, not upwards.
+
+Point from the notes: functions provide a rather economic way of computing lots
+of interesting values with a single expression. Indeed, programs are functions,
+and once you understand functions well, you know almost everything there is
+about programming.
+
+(define (FunctionName InputName) BodyExpression)
+
+Above is a function definition - the keyword 'define' distinguishes it from an
+expression. A function definition consists of three pieces: two names and an
+expression.
+
+(FunctionName ArgumentExpression)
+
+Above is a function application. The first part tells Dr. Racket which function
+you wish to use. The second part is the input to which you wish to apply the
+function.
+
+Now consider (define (FunctionName InputName) BodyExpression) using these:
+
+(define (y x) (* x x ))  ; the first example
+
+Here the FunctionName is y; the InputName is x; BodyExpression is (* x x).
+
+Now a little more complex...
+
+(define (create-rocket-scene height)
+    (place-image <rocket pic> 50 height (empty-scene 100 100)))
+
+FunctionName is create-rocket-scene.
+InputName is height.
+BodyExpression is (place-image <rocket pic> 50 height (empty-scene 100 100)))
+
+Here the 50 is the x coord. If you change it to say, 25, the rocket moves to the
+left in the scene. Height is the y coord -- the smaller the number, the closer
+the rocket will be to the top of the scene.
+
+Getting time to sign-off. You sent yourself an e-mail about this topic so you
+can look at it throughout the day. It's really important that you have a solid
+understanding about this subject matter. You need to be confident with it, too.
+
 **===== 10/30 morning session; start @ 0533, finish @ 0627**
 
 Had to sleep a little more this morning. Watched a fascinating presentation
@@ -9,9 +80,10 @@ For the first time yesterday I made my first real contact with the Dr. Racket
 documentation, which is "both bogus and sad" but, whatever. The lesson here is
 that if you are going to learn to program then it will be very important and you
 will spend a good amount of time reading a variety of documentation. That said,
-I'm starting this morning by reading the 32 pages of section 2.4 of the
-TeachPack -- "Worlds and the Universe: universe.rkt". This immediately referred
-me to the Prologue, which I'm now reading.
+I'm starting this morning by reading the HtDP2e prologue. Another section that
+seems to have content I should consider reading is TeachPack -- "Worlds and the
+Universe: universe.rkt". This immediately referred me to the prologue, which I'm
+now reading.
 
 Notes from reading:
 

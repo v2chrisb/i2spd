@@ -1,10 +1,23 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
+**===== 11/2 evening session; start @ 2257, finish @ 2311**
+
+Clocks back an hour tonight! Late for study, but must study! :-)
+
+You've read the docs for a couple of days, now let's get back to that mouse
+tracker program.
+
+The problem states, "Design a world program that displays the current (x, y)
+position of the mouse at that current position: as the mouse moves, the 
+numbers in the (x, y) display changes and its position changes."
+
+Back to the TeachPacks documentation, section 2.4.3, Interactions.
+
 **===== 11/1 morning session; start @ 0555, finish @ 0629**
 
 All Saints! Thanks be to God for His Saints, especially Mary, Queen of Saints!
 
-Up late, but it's really (kind of) OK because I did spend time yesterday sfter-
+Up late, but it's really (kind of) OK because I did spend time yesterday after-
 noon reading/scanning section 2.4 in the teachpack documentation and even
 tried the UFO example function. I learned that the only mandatory clause of a
 big-bang description is to-draw -- I recall unknowingly struggling with this

@@ -1,10 +1,21 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
+**===== 11/4 morning session; start @ 0533, finish @ 0629**
+
+Read-up again on MouseEvent. I need to understand how the documentation 
+explains, and how to use, the procdures and syntax.
+
+Started to write a scenario on paper and from this exercise noticed that I had
+a misconception about how the program worked. I initially thought that the x y
+coordinates would be display when the user *clicked* a location on the empty
+scene, but that is wrong. The coordinates are constantly displayed as soon as
+the mouse cursor enters the empty scene.
+
 **===== 11/3 morning session; start @ 0625, finish @ 0737**
 
 Changed structure name from mpoint to mouse-position for clarity purposes.
 
-Reviewing Compund Structures chapter in the HtDP online book.
+Reviewing Compound Structures chapter in the HtDP online book.
 
 http://www.htdp.org/2003-09-26/Book/curriculum-Z-H-9.html#node_fig_Temp_35
 

@@ -1,6 +1,28 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
-**===== 11/5 morning session; start @ 0519, finish @ 06yy**
+**===== 11/6 morning session; start @ 0452, finish @ 0601**
+
+Have to be on the road to Randolph by 0655 this morning...
+
+Look at this Racket Help Desk entry in the 2htdp/image documentation for 'text'
+
+    (text string font-size color) -> image?
+       string : string?
+       font-size : (and/c integer? (<=/c 1 255))
+       color : image-color?
+       
+Constructs an image that draws the given string, using the font size & color.
+Example:
+
+     (text "Hello" 24 "olive")
+     
+This is beginning to help me see how to understand a documentation reference
+like: and/c integer?
+
+Using your pencil & pens, rewrite your domain analysis taking into account some
+of the things you've learned recently. Doing this now until it's time to stop.
+
+**===== 11/5 morning session; start @ 0519, finish @ 0624**
 
 I spoke to Peter quickly and told him that I'd bring the TeachPack document,
 section 2.4, with me to lunch today.

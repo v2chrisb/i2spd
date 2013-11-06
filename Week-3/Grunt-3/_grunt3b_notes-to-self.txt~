@@ -1,9 +1,47 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
+**===== 11/5 morning session; start @ 0519, finish @ 06yy**
+
+I spoke to Peter quickly and told him that I'd bring the TeachPack document,
+section 2.4, with me to lunch today.
+
+2.4.2 says that the simplest kind of animated world is a time-based simulation,
+which is a series of images. If the programmer's task is to supply a function
+that creates an image for each natural number and hands this function to the
+teachpack to display the simulation,
+
+(animate create-image) -> natural-number/c
+   create-image : (-> natural-number/c scene?)
+   
+opens a canvas and starts a clock that ticks at 28 times per second.
+
+I need to understand what that /c means -- what is it's significance.
+
+In my mouse-tracker program, I just noticed that I forgot to do the template
+rules used, i.e.,
+
+;; Template rules used:
+;;  - compound: 2 fields
+
+Now, think about this part of big-bang:
+
+(on-mouse handle-mouse)))  ; MPosition MouseEvent -> MPosition
+
+Which, in the Prof's code, translates to:
+
+(define (handle-mouse p x y me)
+  (cond [(mouse=? me "move") (make-position x y)]
+        [else p])
+        
+The comment MPosition MouseEvent -> MPosition is handled in the code with the
+variables: p x y me, where p is the initial MPosition, x y are arguments to
+MouseEvent (which is part of universe TeachPack library), and me is the last
+MPosition.
+
 **===== 11/4 morning session; start @ 0533, finish @ 0629**
 
 Read-up again on MouseEvent. I need to understand how the documentation 
-explains, and how to use, the procdures and syntax.
+explains, and how to use, the procedures and syntax.
 
 Started to write a scenario on paper and from this exercise noticed that I had
 a misconception about how the program worked. I initially thought that the x y

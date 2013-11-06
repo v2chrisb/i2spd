@@ -2040,7 +2040,7 @@
 0 0 -1 -1 2 1 #"\0"
 0 -1 1 #"\0"
 1.0 0 -1 -1 -1 -1 3 -1 0 0 0 0 0 0 0.0 0.0 0.0 0.0 0.0 0.0 255 165 0 0 0
-0 -1 -1           0 414 0 4 3 85
+0 -1 -1           0 413 0 4 3 85
 (
  #";; The first three lines of this file were inserted by DrRacket. The"
  #"y record metadata"
@@ -2184,7 +2184,7 @@
 0 0 23 3 1 #" "
 0 0 14 3 9 #"TEXT-SIZE"
 0 0 23 3 1 #" "
-0 0 20 3 2 #"20"
+0 0 20 3 2 #"14"
 0 0 23 3 1 #")"
 0 0 23 29 1 #"\n"
 0 0 23 3 1 #"("
@@ -2300,9 +2300,11 @@
 0 0 23 29 1 #"\n"
 0 0 17 3 23 #";; Position -> Position"
 0 0 23 29 1 #"\n"
-0 0 17 3 53 #";; called to start the mouse tracker, call with (main"
-0 0 17 3 21 #" (make-position 0 0))"
-0 0 23 29 1 #"\n"
+0 0 17 3 74
+(
+ #";; called to start the mouse tracker, call with (main (make-position"
+ #" 0 0))"
+) 0 0 23 29 1 #"\n"
 0 0 17 3 29 #";; no tests for main function"
 0 0 23 29 1 #"\n"
 0 0 23 3 1 #"("

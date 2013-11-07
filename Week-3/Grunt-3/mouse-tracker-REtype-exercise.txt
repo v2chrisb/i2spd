@@ -1,0 +1,63 @@
+(require 2htdp/image)
+(require 2htdp/universe)
+
+;; Display the current mouse position, at the mouse position.
+
+;; == CONSTANTS ==
+
+(define WIDTH  400)
+(define HEIGHT 400)
+
+(define TEXT-SIZE 15)
+(define TEXT-COLOR "blue")
+
+(define MTS (empty-scene WIDTH HEIGHT))
+
+;; == DATA DEFINITIONS ==
+
+(define-struct postion (x y))
+;; Position is (make-position Integer Integer)
+;; interp. position of mouse in pixels
+
+(define P1 (make-position 0 0))          ; upper right
+(define P2 (make-position WIDTH HEIGHT)) ; lower right
+#;
+(define (fn-for-position)
+   (... (position-x p)  ; Integer
+        (position-y p)  ; Integer
+
+;; Template rules used:
+;;   -compound: 2 fields
+
+;; == FUNCTIONS ==
+
+;; Position -> Position
+;; called to start the mouse tracker, call with (main (make-position 0 0))
+;; no tests for main function
+
+(define (main p)
+  (big-bang p
+            (to-draw  render)        ; Position -> Image
+			(on-mouse handle-mouse)  ; Position MouseEvent -> Position
+
+;; Position -> Image
+;; render current position at the position itself
+
+(check-expect (render (make-position 110 33))
+              (place-image (text "(110, 33)" TEXT-SIZE TEXT-COLOR) 110 33 MTS))
+
+; (define (render c) MTS)  ;Stub
+
+(define (render p)
+   (place-image (text (string-append "("
+                                     (number->string (position-x p))
+									 ", "
+									 (number->string (position-y p))
+									 ")")
+							TEXT-SIZE
+							TEXT-COLOR)
+						(position-x p)
+						(position-y p)
+						MTS))
+
+;; Position MouseEvent -> Position

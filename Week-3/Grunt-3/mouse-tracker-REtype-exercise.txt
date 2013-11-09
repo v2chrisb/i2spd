@@ -15,7 +15,7 @@
 
 ;; == DATA DEFINITIONS ==
 
-(define-struct postion (x y))
+(define-struct position (x y))
 ;; Position is (make-position Integer Integer)
 ;; interp. position of mouse in pixels
 
@@ -23,8 +23,8 @@
 (define P2 (make-position WIDTH HEIGHT)) ; lower right
 #;
 (define (fn-for-position)
-   (... (position-x p)  ; Integer
-        (position-y p)  ; Integer
+  (... (position-x p)   ;Integer
+       (position-y p))) ;Integer
 
 ;; Template rules used:
 ;;   -compound: 2 fields
@@ -37,11 +37,13 @@
 
 (define (main p)
   (big-bang p
-            (to-draw  render)        ; Position -> Image
-			(on-mouse handle-mouse)  ; Position MouseEvent -> Position
+            (to-draw  render)          ; Position -> Image
+		    (on-mouse handle-mouse)))  ; Position MouseEvent -> Position
 
 ;; Position -> Image
 ;; render current position at the position itself
+;; render -- in this case -- means to translate the number of the x y coords.
+;; to their equivalent strings and enclose them with parenthesis, e.g. (110, 33)
 
 (check-expect (render (make-position 110 33))
               (place-image (text "(110, 33)" TEXT-SIZE TEXT-COLOR) 110 33 MTS))
@@ -61,3 +63,23 @@
 						MTS))
 
 ;; Position MouseEvent -> Position
+;; changes current position world state to current mouse position
+;; ah! the comment above is saying that Position is the *current* world state,
+;; that is, the current WS that we start with. So, the Position world state is 
+;; composed (my own use of the word) with MouseEvent to create a new WS with the
+;; name Position. The WS of Position is transformed: it starts in one state and
+;; is composed with something else to make a new form of itself.
+
+(check-expect (handle-mouse (make-position 20 30) 3 4 "button-down")
+  (make-position 20 30))
+  
+(check-expect (handle-mouse (make-position 20 30) 3 4 "move")
+  (make-position 3 4))
+  
+; (define handle-mouse p me) p) ; Stub
+
+;<template according to MouseEvent>
+
+(define (handle-mouse p x y me)
+  (cond [(mouse=? me "move") (make-position x y)]
+        [else p]))

@@ -1,5 +1,16 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
+**===== 11/6 morning session; start @ 0601, finish @ 0628**
+
+Early to bed, late to study. I needed some sleep, though. Definitely.
+
+Domain analysis is rewritten and looks much better. Yesterday you had the
+thought that you'd simply type-in the mouse tracker solution for muscle memory
+purposes. Do that now since you only have another 20 minutes of study time.
+
+Left off with only 10 lines of code to rewrite, but this will be a good starting
+point for your next study session.
+
 **===== 11/6 morning session; start @ 0452, finish @ 0601**
 
 Have to be on the road to Randolph by 0655 this morning...
@@ -17,7 +28,7 @@ Example:
      (text "Hello" 24 "olive")
      
 This is beginning to help me see how to understand a documentation reference
-like: and/c integer?
+like: and/c integer? but why do they use the lower case 'c'?
 
 Using your pencil & pens, rewrite your domain analysis taking into account some
 of the things you've learned recently. Doing this now until it's time to stop.

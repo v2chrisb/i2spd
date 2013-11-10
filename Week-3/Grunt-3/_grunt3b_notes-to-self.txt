@@ -1,6 +1,25 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
-**===== 11/9 morning session; start @ 0544, finish @ xxxx**
+**===== 11/10 morning session; start @ 0624, finish @ 0752**
+
+Yesterday was good in a couple of ways. The notes for my study of HtDP were of 
+a kind that was better than normal *and* during the day I decided to stay away
+from the computer and open a math book (Precalc: Functions). I want to allot
+< 30 minutes a day, consistently, to review with the thought that I can also
+solve select word problems from my math text with Racket.
+
+QUIZZES: for some (good) reason I decided to think about taking some quizzes
+this morning 1) to test my understanding to a certain point and 2) to get them
+recorded for future use.
+
+PROJECTS: I need to save the assignments for the peer graded projects, too, so
+I did that this morning.
+
+Nung Poo is awake so the studying stops. Not much in the way of content this
+morning but I did get to take two quizzes (HtDW and Compound) and did well on
+both.
+
+**===== 11/9 morning session; start @ 0544, finish @ 0714**
 
 So, have a look at this code:
 
@@ -32,7 +51,8 @@ more instruction buried in the solution files.
 
 Again, looking at the code above, there is another lesson in the use of the
 place-image (section 2.3.4 in the HtDP/2e Teachpack documentation) pre-defined
-function. This is a much more complex use of place-image than I've seen to date.
+function. This is a much more complex use of place-image than I've seen to date
+and it's a good example from which to learn.
 
 The lesson here -- from yet another angle -- is that to learn a language one
 must spend time in the documentation and in the actual code to learn the myriad
@@ -100,7 +120,6 @@ called with 0.
 
 (define (double n)  0)  ; this is the stub
 |----------------|
-
 
 **===== 11/8 -- a bust =====**
 

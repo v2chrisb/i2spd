@@ -1,6 +1,110 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
-**===== 11/6 morning session; start @ 0601, finish @ 0628**
+**===== 11/9 morning session; start @ 0544, finish @ 0714**
+
+So, have a look at this code:
+
+(define (render p)
+   (place-image (text (string-append "("
+                                      (number->string (position-x p))
+                                      ", "
+                                      (number->string (position-y p))
+                                       ")")
+                                       
+                            TEXT-SIZE
+                            TEXT-COLOR)
+                        (position-x p)
+                        (position-y p)
+                         MTS))
+                         
+Note the line with the number->string; note that you hadn't seen this before
+nor would you have known -- without checking the answer or perhaps talking to
+your classmates -- about this BSL pre-defined function.
+
+Some more interesting pre-defined functions from section 1.4 of the BSL notes:
+
+gcd, imag-part, inexact->exact, e (Euler's number)
+
+My approach with these more difficult world and compound problems has been to
+say to myself, "work on this problem without looking at the solution to see if
+you can do it on your own." I don't think this is working because there is yet
+more instruction buried in the solution files.
+
+Again, looking at the code above, there is another lesson in the use of the
+place-image (section 2.3.4 in the HtDP/2e Teachpack documentation) pre-defined
+function. This is a much more complex use of place-image than I've seen to date
+and it's a good example from which to learn.
+
+The lesson here -- from yet another angle -- is that to learn a language one
+must spend time in the documentation and in the actual code to learn the myriad
+of ways and approaches possible to solve the problem at hand.
+
+Below are notes I made in my REType exercise text file.
+
+;; Position MouseEvent -> Position
+;; changes current position world state to current mouse position
+;; ah! the comment above is saying that Position is the *current* world state,
+;; that is, the current WS that we start with. So, the Position world state is 
+;; composed (my own use of the word) with MouseEvent to create a new WS with the
+;; name Position. The WS of Position is transformed: it starts in one state and
+;; is composed with something else to make a new form of itself.
+
+There is something going on here that I need to really understand. MouseEvent is
+part of the HtDP/2e Teachpack "universe.rkt" and Position is the compound data
+structure we created in the data definitions, i.e.
+
+(define-struct position (x y))
+
+We use this 'position' compound data structure in the signature, purpose and
+stub section of our function section, like so:
+
+Position -> Position
+
+We want to consume a Position -- which is (define-struct position (x y)) -- and
+produce a Position, a value of the exact same type with the exact same data
+structure.
+
+But what if we do this:  Position MouseEvent -> Position
+
+We know Position data is structured like so:  (define-struct position (x y))
+We know MouseEvent data is structured like so:
+
+MouseEvent: (one-of/c "button-down" "button-up" "drag" "move" "enter" "leave")
+
+Does this mean that we 'compose' the two data types and end up with a new
+composition of Position? Let's take a look at the Prof's STUB function for
+handle-mouse:
+
+; (define handle-mouse p me) p) ; Stub
+
+In the stub, 'p' is the variable for Position and 'me' is the variable for
+MouseEvent, both inputs to the handle-mouse function; they produce a 'p'
+which is a Position. But that right-most 'p' in the function is now a
+composition of 'p' and 'me' -- it's a newly composed kind of 'p'. Yes?
+
+|----------------|
+As the Prof. says in the HtDF course reference material:
+
+A signature has the type of each argument, separated by spaces, followed by ->,
+followed by the type of result. So a function that consumes an image and
+produces a number would have the signature Image -> Number.
+
+Note that the stub is a syntactically complete function definition that produces
+a value of the right type. If the type is Number it is common to use 0, if the
+type is String it is common to use "a" and so on. The value will not, in 
+general, match the purpose statement. In the example below the stub produces 0,
+which is a Number, but only matches the purpose when double happens to be
+called with 0.
+
+;; Number -> Number
+;; produces n times 2
+
+(define (double n)  0)  ; this is the stub
+|----------------|
+
+**===== 11/8 -- a bust =====**
+
+**===== 11/7 morning session; start @ 0601, finish @ 0628**
 
 Early to bed, late to study. I needed some sleep, though. Definitely.
 

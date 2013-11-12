@@ -1,5 +1,38 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
+**===== 11/12 morning session; start @ 0507, finish @ 0626**
+
+Starting the day by reading "Inputs and Output" in the HtDP-2 Prologue.
+
+Here is what you learned in this section. Functions are useful because they can
+process lots of data in a short time. You can launch a function by hand on a few
+select inputs to ensure it produces the proper outputs. This is called testing a
+function. Or, DrRacket can launch a function on lots of inputs with the help of
+some libraries; when you do that, you are running the function. Naturally,
+DrRacket can launch functions when you press a key on your keyboard or when you
+manipulate the mouse of your computer. Whatever triggers a function application
+isn’t important, but do keep in mind that (simple) programs are just functions.
+
+Now reading the next section, "Many Ways to Compute".
+
+(require 2htdp/image)
+(require 2htdp/universe)
+
+(define (create-rocket-scene-v2 height)
+  (cond
+    [(<= height 100)
+     (place-image . 50 height (empty-scene 100 100))]
+    
+    [(> height 100)
+     (place-image . 50 100 (empty-scene 100 100))]))
+     
+In the last part of the condition clause notice that rather than using the 
+height variable the y-coordinate is set to 100. Because of this, the image can't
+pass y=100 in the scene.
+
+Packing it in for this morning. You left off in the Prologue at Figure 1:
+Landing a rocket (version 2).
+
 **===== 11/11 morning session; start @ 0528, finish @ 0628**
 
 The blade of grass is back! I'm moving-on from the mouse tracker aasignment to
@@ -18,7 +51,7 @@ courses *(Coursera & EdX). I won't consider myself indoctrinated into the world
 of software -- even at a very primitive level -- until this entire course is
 "under my belt" and I feel confident with the subject matter.
 
-Per the HtDW I have a sketch for "growing-grass" that shows preliminary
+Per the HtDW recipe, I have a sketch for "growing-grass" that shows preliminary
 constant, changing and big-bang stages of the program.
 
 For your next study session, first thing, go back and read the section entitled,

@@ -1,5 +1,39 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
+**===== 11/14 morning session; start @ 0536, finish @ 0623**
+
+Images have a center point and, when place-image adds an image to a scene, it
+uses this center point as if it were the image which explains why the rocket
+image is halfway "underground" when the scene animation stops.
+
+The function image-height can be used; image-height is like + is to numbers.
+
+NOTE: the 3-tildes (~~~) in the following example are a placeholder for the
+actual image used in the code. This code works by substituting the rocket image
+everywhere you encounter (~~~):
+
+(require 2htdp/image)
+(require 2htdp/universe)
+
+(define SHEIGHT 300)
+;; SHEIGHT stands for scene height
+(define SWIDTH  100)
+;; SWIDTH stands for scene width
+(define MTS (empty-scene SWIDTH SHEIGHT))
+
+(define RTG (- 100 (/ (image-height ~~~) 2)))
+;; RTG is an acronym for RocketTouchesGround
+
+(define (crs3 height)
+  (cond
+    [(<= height RTG)
+     (place-image ~~~ 50 height MTS)]
+    [(> height RTG)
+     (place-image ~~~ 50 RTG MTS)]))
+     
+Start your next study session at the "One Program, Many Definitions" section of
+the Prologue.
+
 **===== 11/13 evening session; start @ 2210, finish @ 2233**
 
 I wasn't able to study this morning so here I am at 2210. This morning I did,

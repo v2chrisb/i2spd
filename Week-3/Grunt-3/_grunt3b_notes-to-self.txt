@@ -1,5 +1,13 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
+**===== 11/13 evening session; start @ 2210, finish @ 2233**
+
+I wasn't able to study this morning so here I am at 2210. This morning I did,
+however, spend 15 minutes in a Precalculus book looking at the "Functions"
+chapter. My hope is to get at least 15-30 minutes a day to touch mathematics.
+
+Read about using the image-height function. Pick-up here tomorrow.
+
 **===== 11/12 morning session; start @ 0507, finish @ 0626**
 
 Starting the day by reading "Inputs and Output" in the HtDP-2 Prologue.

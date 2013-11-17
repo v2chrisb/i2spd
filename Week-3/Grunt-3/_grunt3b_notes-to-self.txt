@@ -1,5 +1,85 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
+**===== 11/17 morning session; start @ 0647, finish @ 0738**
+
+I didn't get to studying yesterday partly because I spent an hour putting
+together another writing assigment for my niece. It's OK -- press on!
+
+I'm in the "One More Definition" section of the Prologue where the author(s)
+speak of deceleration.  A text editor is bit clunky for this, but:
+
+d(t) = v * t - 1/2 * a * t^2
+
+That is, if v is the speed of the object and a is the deceleration -- change of
+speed -- then the object travels d miles (or meters or pixels or whatever) in
+t seconds.
+
+Using function notation tells everyone immediately that the computation of d
+depends on t and that v and a are constants.
+
+This line from the text jumped out at you!  With regard to changing our 
+program's input -- currently height -- to time, and considering that the animate
+function actually applies its functions to the number of clock ticks that have
+passed since it was first called and not the height of the rocket image,
+CLEARLY t -- short for time -- would be much better than height. Now, on to the
+line that jumped out at you:
+
+[T]his small change to the definition also clarifies that this program doesn’t
+compute how far the rocket has traveled in the given time; it uses the time as
+if it were a distance.
+
+There's a concept for you! Thanks again to Peter. :-)
+
+Stopping here because I hear little footsteps in the house. With any luck I'll
+get to this again later today.
+
+**===== 11/15 morning session; start @ 0425, finish @ 0542**
+
+Peter made an interesting comment yesterday, i.e. in his teaching experience he
+notes that students struggle with grasping the *concept* at hand. Many seem
+to get the literal sense of the topic at hand but struggle with the concept.
+I'd say I do the same. I'll try to be mindful of this going forward, and with
+any luck, it could change some of the ways in which I approach problems.
+
+Another quick little note: I just saw the UBC course graphic in a different
+light this morning. The graphic shows INFORMATION --> DATA and under the arrow
+from information to data is the word STRUCTURE. This is a core concept in the
+course and was first introduced back in week 2, "How to Design Data". Hey!
+Look at that! You picked-up on a concept, and really, not by looking for one
+consciuosly.
+
+OK -- I loaded the code snippet below, inserted the rocket image where the three
+tildes are, and now the rocket stops 1/3 of the way down the scene. Find out
+why.
+
+When you change the constant SHEIGHT from 300 to 100 the rocket stops where it's
+supposed to in the scene.
+
+I copied the code from the book, changed the scene height from 100 to 300, and
+the same thing happens. Yesterday it worked fine! What's going on?
+
+Aha! :-) Happy moment...
+
+Look at your code sample below and notice that the constant definition for RTG
+uses a constant of 100, and as such, the rocket touches ground at y equals 100
+minus image-height. Change the constant 100 to SHEIGHT and you're all set. :-)
+
+The lesson speaks of constants, which I'm comfortable with. However one 
+constant I didn't pick-up that I should have is the rocket image itself. Note
+how your code has three rocket images? Why not use only one image with a ROCKET
+constant? I'll do that now, i.e. I'm adding the constant to the code below and
+removing the instances where I used three tildes ~~~ as the image placeholder.
+
+Another concept note: you were looking at the variable 'height' with a bit of
+a confused eyeball when you started anew in the code this morning. This variable
+is used for instantaneous position of the ROCKET.
+
+NOTE: the code below was refactored a number of times this morning *and* you
+just renamed the function crs5 from crs3.
+
+OK -- I have to stop now and spend some time on Mariah's essay. Start next
+study session at "One More Definition", which speaks to deceleration.
+
 **===== 11/14 morning session; start @ 0536, finish @ 0623**
 
 Images have a center point and, when place-image adds an image to a scene, it
@@ -10,26 +90,31 @@ The function image-height can be used; image-height is like + is to numbers.
 
 NOTE: the 3-tildes (~~~) in the following example are a placeholder for the
 actual image used in the code. This code works by substituting the rocket image
-everywhere you encounter (~~~):
+everywhere you encounter (~~~): <changed on 11/15 when ROCKET is made constant>
+Now there is only one instance of ~~~ in this code that will need to be changed
+when loading it into DrRacket.
 
 (require 2htdp/image)
 (require 2htdp/universe)
 
-(define SHEIGHT 300)
-;; SHEIGHT stands for scene height
-(define SWIDTH  100)
-;; SWIDTH stands for scene width
+(define ROCKET .)
+(define ROCKET-X 50)  ;; 50 was a magic number so we give it a constant
+(define SHEIGHT 300)  ;; SHEIGHT stands for scene height
+
+(define SWIDTH  100)  ;; SWIDTH stands for scene width 
 (define MTS (empty-scene SWIDTH SHEIGHT))
 
-(define RTG (- 100 (/ (image-height ~~~) 2)))
-;; RTG is an acronym for RocketTouchesGround
+(define RTG (- SHEIGHT (/ (image-height ROCKET) 2)))
+                      ;; RTG is an acronym for RocketTouchesGround
 
-(define (crs3 height)
+(define (crs5 height)
   (cond
-    [(<= height RTG)
-     (place-image ~~~ 50 height MTS)]
-    [(> height RTG)
-     (place-image ~~~ 50 RTG MTS)]))
+    [(<= height RTG)  ;; rocket's instantaneous height is less than
+                      ;; or equal to the rocket touching the ground
+     (place-image ROCKET ROCKET-X height MTS)]
+    [(> height RTG)   ;; rocket's instaneous height is greater than
+                      ;; the point of the rocket touching the ground
+     (place-image ROCKET ROCKET-X RTG MTS)]))
      
 Start your next study session at the "One Program, Many Definitions" section of
 the Prologue.

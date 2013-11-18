@@ -1,12 +1,45 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
+**===== 11/17 morning session; start @ 0647, finish @ 0738**
+
+I didn't get to studying yesterday partly because I spent an hour putting
+together another writing assigment for my niece. It's OK -- press on!
+
+I'm in the "One More Definition" section of the Prologue where the author(s)
+speak of deceleration.  A text editor is bit clunky for this, but:
+
+d(t) = v * t - 1/2 * a * t^2
+
+That is, if v is the speed of the object and a is the deceleration -- change of
+speed -- then the object travels d miles (or meters or pixels or whatever) in
+t seconds.
+
+Using function notation tells everyone immediately that the computation of d
+depends on t and that v and a are constants.
+
+This line from the text jumped out at you!  With regard to changing our 
+program's input -- currently height -- to time, and considering that the animate
+function actually applies its functions to the number of clock ticks that have
+passed since it was first called and not the height of the rocket image,
+CLEARLY t -- short for time -- would be much better than height. Now, on to the
+line that jumped out at you:
+
+[T]his small change to the definition also clarifies that this program doesn’t
+compute how far the rocket has traveled in the given time; it uses the time as
+if it were a distance.
+
+There's a concept for you! Thanks again to Peter. :-)
+
+Stopping here because I hear little footsteps in the house. With any luck I'll
+get to this again later today.
+
 **===== 11/15 morning session; start @ 0425, finish @ 0542**
 
 Peter made an interesting comment yesterday, i.e. in his teaching experience he
-notes that students struggle with grasping the *concept* at hand. Many are
-seem to get the literal sense of the topic at hand but struggle with the
-concept. I'd say I do the same. I'll try to be mindful of this going forward, 
-and with any luck, it could change some of the ways I approach problems.
+notes that students struggle with grasping the *concept* at hand. Many seem
+to get the literal sense of the topic at hand but struggle with the concept.
+I'd say I do the same. I'll try to be mindful of this going forward, and with
+any luck, it could change some of the ways in which I approach problems.
 
 Another quick little note: I just saw the UBC course graphic in a different
 light this morning. The graphic shows INFORMATION --> DATA and under the arrow

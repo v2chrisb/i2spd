@@ -1,5 +1,43 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
+**===== 11/18 morning session; start @ 0546, finish @ 0630**
+
+The computation of distance depends on time.
+
+Typing in and studying the final example in the Prologue. Remember that a good
+programmer designs programs. A bad programmer tinkers until it seems to work.
+
+The code below works.
+
+(require 2htdp/image)
+(require 2htdp/universe)
+
+;; properties of the world
+(define SWIDTH  100)
+(define SHEIGHT 300)
+
+;; properties of the descending rocket
+(define VELOCITY 20)
+(define DECELERATION 1)
+
+;; various other constandts
+(define ROCKET ~~~)
+(define MTS (empty-scene SWIDTH SHEIGHT))
+(define ROCKET-CENTER-TO-BOTTOM
+  (- SHEIGHT (/ (image-height ROCKET) 2)))
+(define ROCKET-X-COORD 50)
+
+;; functions
+(define (crs6 t)
+  (cond
+    [(<= (distance t) ROCKET-CENTER-TO-BOTTOM)
+      (place-image ROCKET ROCKET-X-COORD (distance t) MTS)]
+    [(> (distance t) ROCKET-CENTER-TO-BOTTOM)
+      (place-image ROCKET ROCKET-X-COORD ROCKET-CENTER-TO-BOTTOM MTS)]))
+    
+(define (distance t)
+  (- (* VELOCITY t) (* 1/2 DECELERATION (sqrt t))))
+
 **===== 11/17 morning session; start @ 0647, finish @ 0738**
 
 I didn't get to studying yesterday partly because I spent an hour putting

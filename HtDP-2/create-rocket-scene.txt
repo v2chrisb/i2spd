@@ -1,0 +1,28 @@
+(require 2htdp/image)
+(require 2htdp/universe)
+
+;; properties of the world
+(define SWIDTH  100)
+(define SHEIGHT 300)
+
+;; properties of the descending rocket
+(define VELOCITY 20)
+(define DECELERATION 1)
+
+;; various other constants
+(define ROCKET ~~~)
+(define MTS (empty-scene SWIDTH SHEIGHT))
+(define ROCKET-CENTER-TO-BOTTOM
+  (- SHEIGHT (/ (image-height ROCKET) 2)))
+(define ROCKET-X-COORD 50)
+
+;; functions
+(define (crs6 t)
+  (cond
+    [(<= (distance t) ROCKET-CENTER-TO-BOTTOM)
+      (place-image ROCKET ROCKET-X-COORD (distance t) MTS)]
+    [(> (distance t) ROCKET-CENTER-TO-BOTTOM)
+      (place-image ROCKET ROCKET-X-COORD ROCKET-CENTER-TO-BOTTOM MTS)]))
+    
+(define (distance t)
+  (- (* VELOCITY t) (* 1/2 DECELERATION (sqrt t))))

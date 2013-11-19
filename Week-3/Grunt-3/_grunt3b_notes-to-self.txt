@@ -1,5 +1,32 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
+**===== 11/19 morning session; start @ 0556, finish @ 0yyy**
+
+d(t) in math = (distance t) in Racket.
+
+The math:
+
+d(t) = v * t - 1/2 * a * t^2
+
+The Racket:
+
+(define (distance t)
+  (- (* VELOCITY t) (* 1/2 DECELERATION (sqrt t))))
+
+As you become a true blue programmer you will find out that programs consist of
+many function definitions and many constant definitions. You will also see that
+functions refer to each other all the time. What you really need to practice is
+to organize such collections of definitions so that you can read them easily
+even months after completion.
+
+OK -- so it seem you're going to go do the book now! That should take a few
+months! Don't be linear, though. You should come back to the i2spd course at
+strategic times to either compare methods for teaching a topic or to revisit
+the problems. Maybe you'll do the book and the course in parallel -- a nice
+utopian thought. :-)
+
+Hey! This document is 787 lines long & started on 10/22/2013. Press on! :-)
+
 **===== 11/18 morning session; start @ 0546, finish @ 0630**
 
 The computation of distance depends on time.
@@ -20,7 +47,7 @@ The code below works.
 (define VELOCITY 20)
 (define DECELERATION 1)
 
-;; various other constandts
+;; various other constants
 (define ROCKET ~~~)
 (define MTS (empty-scene SWIDTH SHEIGHT))
 (define ROCKET-CENTER-TO-BOTTOM

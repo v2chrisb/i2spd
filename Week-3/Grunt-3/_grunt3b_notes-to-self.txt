@@ -1,6 +1,16 @@
 Week-3b: Compound.  Important notes to self go here at the top. 
 
-**===== 11/19 morning session; start @ 0556, finish @ 0yyy**
+**===== 11/20 morning session; start @ 0555, finish @ 0605**
+
+Up really early this morning but had to spend a big chunk of time catching-up
+from being on the road all day yesterday in RC (TAACCCT "GroundWorks").
+
+I should be able to get to the arithmetic exercises this evening and I should
+also be able to move through them at a fair clip. I don't, however, want to be
+hasty with the material because I can already see there are some good concept
+lessons here.
+
+**===== 11/19 morning session; start @ 0556, finish @ 0630**
 
 d(t) in math = (distance t) in Racket.
 

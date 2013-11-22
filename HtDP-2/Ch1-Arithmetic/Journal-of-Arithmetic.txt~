@@ -1,3 +1,36 @@
+**===== 11/22 morning session; start @ 0540, finish @ 0630**
+
+ Add the following two lines to the definitions area:
+ 
+(define str "helloworld")
+(define i 5)
+
+Then create an expression using string primitives that adds "_" at position i.
+In general this means the resulting string is longer than the original one;
+here the expected result is "hello_world".
+
+**===== 11/21 morning session; start @ 0531, finish @ 0630**
+
+Comments: remember that DrRacket counts from 0, not 1. This became apparent
+again when you played with the string-ith function. Stopped @ 1.3 "Mixing It Up"
+
+Ex 1: compute the distance of some specific Cartesian point (x,y) from the
+origin (0,0).
+
+(define x 3)
+(define y 4)
+
+(sqrt (+ (sqr x) (sqr y)))
+
+Ex 2: use string primitives to create an expression that concatenates prefix and
+suffix and adds "_" between them. When you run this program, you will see
+"hello_world" in the interactions area.
+
+(define prefix "hello")
+(define suffix "world")
+
+(string-append prefix "_" suffix)
+
 **===== 11/20 morning session; start @ 0555, finish @ 0605**
 
 Starting an entirely new journal on an entirely new course of study, that is,

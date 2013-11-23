@@ -11,6 +11,14 @@ Create an expression that counts the number of pixels in the image. See exercise
 (size-in-pixels pict) -- wrong!
 =========================
 
+---IMAGE OPERATIONS (THERE ARE 3) USED HERE ---
+(#2): image properties
+
+***NOTES TO SELF***
+You went on a mad search to find a function that counted pixels when you should
+have realized the concept to apply to meet the need. The cat image is contained
+within a RECTANGLE. Just calculate the area of the rectangle and the number of 
+pixels are within (since pixels are the unit measure of an image).
 
 <<=CODE==>> My response:
 > (* (image-height cat) (image-width cat))

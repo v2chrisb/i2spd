@@ -5,10 +5,19 @@ Use the picture primitives to create the image of a simple automobile.
 
 
 ==DOCUMENTATION LESSONS==
-
+Anchor point! You skimmed over this part of the book thinking you already knew it -- slow down!
 =========================
 
->
+---IMAGE OPERATIONS (THERE ARE 3) USED HERE ---
+overlay/xy
+---
+
+(require 2htdp/image)
+
+(overlay/xy 
+            (rectangle 35 15 "solid" "purple")
+            -12 10
+            (rectangle 60 20 "solid" "orange"))
 
 
 <<=CODE==>> My response:

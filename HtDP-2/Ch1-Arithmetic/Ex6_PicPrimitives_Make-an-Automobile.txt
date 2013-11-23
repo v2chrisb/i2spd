@@ -1,0 +1,15 @@
+Exercise #6
+
+EXERCISE DESCRIPTION
+Use the picture primitives to create the image of a simple automobile.
+
+
+==DOCUMENTATION LESSONS==
+
+=========================
+
+>
+
+
+<<=CODE==>> My response:
+

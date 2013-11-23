@@ -1,0 +1,20 @@
+Exercise 3. Add the following two lines to the definitions area:
+
+(define str "helloworld")
+(define i 5)
+
+Then create an expression using string primitives that adds "_" at position i. In general this means the resulting string is longer than the original one; here the expected result is "hello_world".
+
+*NOTES*: looking at string-join. Is there a string insert? Also substring. Checking string-replace.
+
+> (substring str 0 i)
+"hello"
+> (substring str i 10)
+"world"
+> (string-append (substring str 0 i) "_")
+"hello_"
+> (string-append (string-append (substring str 0 i) "_") "world")
+"hello_world"
+
+<<=CODE==>> My response:
+(string-append (string-append (substring str 0 i) "_") (substring str i 10))

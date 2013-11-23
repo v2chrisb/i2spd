@@ -1,6 +1,11 @@
 **===== 11/22 morning session; start @ 0540, finish @ 0630**
 
- Add the following two lines to the definitions area:
+Remember to save each of your exercise solutions as a Racket file in 
+C:\Users\v2chrisb\Documents\GitHub\i2spd\HtDP-2\Ch1-Arithmetic.
+
+This is exercise #3.
+
+Add the following two lines to the definitions area:
  
 (define str "helloworld")
 (define i 5)

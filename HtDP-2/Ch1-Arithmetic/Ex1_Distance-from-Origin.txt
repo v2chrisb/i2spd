@@ -1,0 +1,8 @@
+Exercise 1. The direct goal of this exercise is to create an expression that computes the distance of some specific Cartesian point (x,y) from the origin (0,0). The indirect goal is to introduce some basic programming habits, especially the use of the interactions area to develop expressions.
+
+<<=CODE==>> My response:
+
+(define x 3)
+(define y 4)
+
+(sqrt (+ (sqr x) (sqr y)))

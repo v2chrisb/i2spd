@@ -1,3 +1,25 @@
+**===== 11/22 evening session; start @ 1940, finish @ 2013**
+                       again@; start @ 2100, finish @ 2230
+
+Finished exercise #3, which really forced me to think hard about the order of
+evaluation and the result. The answer is:
+
+(string-append (string-append (substring str 0 i) "_") (substring str i 10))
+
+Exercise #4 answer, or change i to any valid number place in the string.
+
+(string-ith str i)
+
+IMAGES -- 3 flavors of image primitive operations:
+ 1. Creation of basic images,
+ 2. Image properties (image-height & image-width), and
+ 3. Functions that compose images (overlay, place-image, add-line etc.)
+ 
+Exercise #5: after adding the (define cat ~) line to the definitions area,
+create an expression that counts the number of pixels in the image.
+
+Left off on exercise #6.
+
 **===== 11/22 morning session; start @ 0540, finish @ 0630**
 
 Remember to save each of your exercise solutions as a Racket file in 

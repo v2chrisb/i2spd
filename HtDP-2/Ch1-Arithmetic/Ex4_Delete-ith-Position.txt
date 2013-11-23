@@ -1,0 +1,16 @@
+Exercise 3. Add the following two lines to the definitions area:
+
+(define str "helloworld")
+(define i 5)
+
+Use the same setup as in exercise 3. Then create an expression that deletes the ith position from str. Clearly this expression creates a shorter string than the given one; contemplate which values you may choose for i.
+
+==DOCUMENTATION LESSONS==
+(string-ith s i): extracts the ith l-letter from the string
+=========================
+
+> (string-ith str i)
+"w"
+
+<<=CODE==>> My response:
+(string-ith str i)

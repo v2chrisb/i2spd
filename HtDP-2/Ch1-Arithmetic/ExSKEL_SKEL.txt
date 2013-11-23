@@ -1,0 +1,16 @@
+Exercise X. yyyy
+
+(define zzz ~)
+
+EXERCISE DESCRIPTION
+
+
+==DOCUMENTATION LESSONS==
+
+=========================
+
+>
+
+
+<<=CODE==>> My response:
+

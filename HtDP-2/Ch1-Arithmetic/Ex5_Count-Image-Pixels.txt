@@ -1,0 +1,17 @@
+Exercise 5. Add the following two lines to the definitions area:
+
+(define cat ~)
+This is the cat used in the documentation.
+
+The tilde (~) in the actual program is an image of a cat.
+
+Create an expression that counts the number of pixels in the image. See exercise 1 for how to create expressions in DrRacket.
+
+==DOCUMENTATION LESSONS==
+(size-in-pixels pict) -- wrong!
+=========================
+
+
+<<=CODE==>> My response:
+> (* (image-height cat) (image-width cat))
+8775

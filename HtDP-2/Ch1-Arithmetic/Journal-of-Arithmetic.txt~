@@ -1,3 +1,47 @@
+**===== 11/23 morning session; start @ 0625, finish @ 0720**
+
+Yesterday was great. I think I was able to get almost 3 hours of study time. I 
+am also thanking myself for stopping the i2spd course and committing to this
+book. Off to Mass this morning NLT 0740.
+
+You went on a mad search to find a function that counted pixels when you should
+have realized the concept to apply to meet the need. The cat image is contained
+within a RECTANGLE. Just calculate the area of the rectangle and the number of 
+pixels are within (since pixels are the unit measure of an image).
+
+One thing this book is making me do that I didn't do in the MOOC is to get
+familiar with the language DOCUMENTATION. It's interesting to note that I also
+changed my work approach. I use Notepad++ to scratch important notes about the
+exercise I'm working on, but the book inspired a different way approach to
+programming than the MOOC did.
+
+I need to make a very basic image of an automobile using knowledge of the 3
+flavors of image primitives. Last night I tinkered but I missed some key
+information in the book -- ANCHOR POINT. Slow down and read!
+
+Anchor points relate to the 3rd kind of image primitive: functions that compose
+images.
+
+CONCEPT: each image is like a photograph, that is, aa rectangle of pixels and
+one of these pixels is an implicit anchor point. When you use an image primitive
+to compose two images, the composition happens with respect to the anchor
+points, unless you specify some other point explicitly.
+
+For static images...
+
+<overlay> - uses CENTER as ANCHOR.
+<overlay/xy> - ANCHOR with respect to image CENTER, shifts 2nd image by x
+  pixels to the right and y pixels down.
+<overlay/align> - accepts two strings that shift the anchor point(s) to other
+  parts of the rectangles.
+  
+For image processing in the way of animated scenes & games..
+
+<empty-scene>
+<place-image>
+<add-line>
+
+
 **===== 11/22 evening session; start @ 1940, finish @ 2013**
                        again@; start @ 2100, finish @ 2230
 

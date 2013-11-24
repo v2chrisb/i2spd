@@ -1,3 +1,24 @@
+**===== 11/24 morning session; start @ 0530, finish @ 0640**
+
+Shane and Katie are home!
+
+Learning documentation takes time! It turns out that overlay/xy is not the
+correct primitive. You searched on 'overlay' and noticed the 'above' primitive.
+
+It gets better -- I recall thinking yesterday how I would compose the function
+of "this function inside of that function inside of that function", but the
+book showed me today to RECALL that you can name parts of your code as a 
+function definition, like:
+
+(underlay/xy wheels
+            -10 -20
+            car-frame)
+       
+This puts a new light on the concept of building upon functions.
+
+There is 'overlay' and 'underlay' and building on functions. Completed exercise
+#6 and now moving-on to #7.
+
 **===== 11/23 morning session; start @ 0625, finish @ 0720**
 
 Yesterday was great. I think I was able to get almost 3 hours of study time. I 

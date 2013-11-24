@@ -9,16 +9,21 @@ Anchor point! You skimmed over this part of the book thinking you already knew i
 =========================
 
 ---IMAGE OPERATIONS (THERE ARE 3) USED HERE ---
-overlay/xy
+underlay/xy
 ---
-
-(require 2htdp/image)
-
-(overlay/xy 
-            (rectangle 35 15 "solid" "purple")
-            -12 10
-            (rectangle 60 20 "solid" "orange"))
-
 
 <<=CODE==>> My response:
 
+(require 2htdp/image)
+
+(define car-frame
+(above (rectangle 30 10 "solid" "orange")
+       (rectangle 50 15 "solid" "orange")))
+
+(define wheels
+  (beside (circle 8 "solid" "navy")
+          (circle 8 "solid" "navy")))
+
+(underlay/xy wheels
+            -10 -20
+            car-frame)

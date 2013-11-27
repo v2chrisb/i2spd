@@ -1,6 +1,4 @@
-Exercise X. yyyy
-
-(define zzz ~)
+Exercise X.
 
 EXERCISE DESCRIPTION
 

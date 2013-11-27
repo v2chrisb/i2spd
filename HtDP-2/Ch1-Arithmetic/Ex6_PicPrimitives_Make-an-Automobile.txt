@@ -8,7 +8,7 @@ Use the picture primitives to create the image of a simple automobile.
 Anchor point! You skimmed over this part of the book thinking you already knew it -- slow down!
 =========================
 
----IMAGE OPERATIONS (THERE ARE 3) USED HERE ---
+---IMAGE OPERATIONS USED HERE ---
 underlay/xy
 ---
 

@@ -1,3 +1,37 @@
+**===== 11/27 morning session; start @ 0630, finish @ 0800**
+
+Wow! Did I really miss two days of studying?! Well, Shane and Katie were home
+and the family had a great time together. Deo Gratias. It's a good thing I got
+almost 3 hours of study time in on 11/22. :-)
+
+Working on exercise #7 and taking notes within the exercise file.
+
+Much more tinkering with using functions with other functions -- very cool. I'm
+beginning to sense a need to loop, though. For instance, what if I want my ship
+to be on top of water? I played with putting four light blue circles together,
+like so:
+
+(define 2c
+ (overlay/xy
+   (circle 20 "solid" "lightblue")
+   20 0
+   (circle 20 "solid" "lightblue")))
+
+(define 3c
+  (overlay/xy 2c
+    20 0
+    2c))
+
+(define 4c
+  (overlay/xy 3c
+    20 0
+    3c))
+    
+Although it's fun to use one function to serve another, there is repetition here
+that makes me believe there is a better way.
+
+Time to pack it in -- Aaron's awake and it's 0800.
+
 **===== 11/24 morning session; start @ 0530, finish @ 0640**
 
 Shane and Katie are home!
@@ -10,9 +44,22 @@ of "this function inside of that function inside of that function", but the
 book showed me today to RECALL that you can name parts of your code as a 
 function definition, like:
 
+(define car-frame
+(above (rectangle 30 10 "solid" "orange")
+       (rectangle 50 15 "solid" "orange")))
+
+(define wheels
+  (beside (circle 8 "solid" "navy")
+          (circle 8 "solid" "navy")))
+
 (underlay/xy wheels
             -10 -20
             car-frame)
+
+So, underlay the result from wheels on the result of car-frame. Cool!
+            
+Changing the value of -10 moves the wheels left-right.
+Changing the value of -20 moves the wheels up-down.
        
 This puts a new light on the concept of building upon functions.
 

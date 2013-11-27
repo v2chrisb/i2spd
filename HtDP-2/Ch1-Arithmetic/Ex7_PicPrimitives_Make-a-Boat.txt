@@ -1,0 +1,42 @@
+Exercise #7.
+
+EXERCISE DESCRIPTION
+Use the picture primitives to create the image of a simple boat.
+
+==DOCUMENTATION LESSONS==
+Play with triangles given known sides and angles.
+=========================
+
+==THOUGHTS==
+The concept of combining functions is really starting to make sense.
+
+<<=CODE==>> My response:
+
+(require 2htdp/image)
+
+(define left-hull
+  (overlay/xy
+  (square 35 "solid" "black")
+  -40 -3.5
+  (triangle/sss 45 70 80 "solid" "black")))
+
+(define right-hull
+  (triangle/sss 70 45 80 "solid" "black"))
+
+(define composed-hull
+  (overlay/xy right-hull
+    -35 0
+     left-hull))
+
+(define superstructure
+  (polygon (list (make-posn 0 0)
+                 (make-posn -10 20)
+                 (make-posn 60 0)
+                 (make-posn -10 -20))
+           "solid"
+           "black"))
+
+(define ship
+  (underlay/xy superstructure
+     -28 20
+     composed-hull))

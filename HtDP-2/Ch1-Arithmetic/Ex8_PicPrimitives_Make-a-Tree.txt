@@ -1,0 +1,27 @@
+Exercise 8: Use the picture primitives to create the image of a simple tree.
+
+==DOCUMENTATION LESSONS==
+Although I'm sure there's more than one way to do this assignment, the documentation has a good example of an overlay/offset
+=========================
+
+==THOUGHTS==
+This didn't take long and these exercises really showed how to use functions to simplify things.
+============
+
+<<=CODE==>> My response:
+(require 2htdp/image)
+
+(define leaves
+(overlay/offset
+   (overlay/offset (circle 30 'solid (color 0 150 0 127))
+                   26 0
+                   (circle 30 'solid (color 0 150 0 127)))
+   0 26
+   (circle 30 'solid (color 0 150 0 127))))
+
+(define trunk
+(rectangle 20 60 "solid" "brown"))
+
+(underlay/xy trunk
+            -30 -45
+            leaves)

@@ -1,14 +1,15 @@
 Exercise X.
 
-EXERCISE DESCRIPTION
-
 
 ==DOCUMENTATION LESSONS==
 
 =========================
 
->
+
+==THOUGHTS==
+
+============
+
 
 
 <<=CODE==>> My response:
-

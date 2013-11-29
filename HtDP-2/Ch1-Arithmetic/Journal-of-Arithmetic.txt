@@ -1,3 +1,37 @@
+**===== 11/28 evening session; start @ 2039, finish @ 2347**
+
+Your journaling is now happening in both your exercise assignments and here. Get
+in the habit of checking both places before starting your work.
+
+The tree assignment only took a few minutes. You started by copying code from
+the documentation -- overlay/offset. Notice how the authors used overlay/offset
+in a nested way:
+
+(overlay/offset
+   (overlay/offset (circle 30 'solid (color 0 150 0 127))
+                   26 0
+                   (circle 30 'solid (color 0 150 0 127)))
+   0 26
+   (circle 30 'solid (color 0 150 0 127))))
+   
+They could have named one of the overlay/offsets to simplify things (at least,
+that's how my mind is working right now).
+
+2100: ready for exercise 9: stopping for Steelers/Ravens game. :-)
+2147: halftime. Continue on to exercise 9.
+2159: back to the game. Made progress on exercise 9.
+2340: Ravens win 22-20. Crazy game.
+2347: to bed. The wife is chatting...
+
+You see that it can be easy for one to make a mistake with booleans. You came
+back from the game and saw that one of your answers was incorrect.  Here's the
+correct answer to the problem that you originally had answered incorrectly:
+
+> (or b1 false)
+true
+
+Time to go to bed.
+
 **===== 11/27 morning session; start @ 0630, finish @ 0800**
 
 Wow! Did I really miss two days of studying?! Well, Shane and Katie were home
@@ -6,7 +40,7 @@ almost 3 hours of study time in on 11/22. :-)
 
 Working on exercise #7 and taking notes within the exercise file.
 
-Much more tinkering with using functions with other functions -- very cool. I'm
+Much more tinkering using functions with other functions -- very cool. I'm
 beginning to sense a need to loop, though. For instance, what if I want my ship
 to be on top of water? I played with putting four light blue circles together,
 like so:

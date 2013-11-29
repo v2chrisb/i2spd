@@ -8,6 +8,9 @@ Use the picture primitives to create the image of a simple automobile.
 Anchor point! You skimmed over this part of the book thinking you already knew it -- slow down!
 =========================
 
+==THOUGHTS==
+The concept of combining functions is starting to become more clear. Also, you did quite a bit of "fudging" when trying to get the wheels to be in the proper location.
+
 ---IMAGE OPERATIONS USED HERE ---
 underlay/xy
 ---

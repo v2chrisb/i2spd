@@ -1,0 +1,39 @@
+Exercise 9: Add the following two lines to the definitions area of DrRacket:
+
+(define b1 true)
+(define b2 false)
+
+Create an expression that computes whether b1 is false or b2 is true. So in this particular case, the answer is false. (Why?)
+
+
+==DOCUMENTATION LESSONS==
+boolean 'or' answers are almost always TRUE
+boolean 'and' answers are almost always FALSE
+boolean 'not' simply negates one argument
+=========================
+
+> (or b1 false)
+true
+
+> (and b1 false)
+false
+
+> (not b1)
+false
+
+> (or b2 false)
+false
+
+> (and b2 false)
+false
+
+> (not b2)
+true
+
+==THOUGHTS==
+Pretty simple bit I can see how one could become easily confused.
+Hah! You had the first one wrong but after returning from the game, you saw the problem and corrected it.
+============
+
+
+<<=CODE==>> My response:

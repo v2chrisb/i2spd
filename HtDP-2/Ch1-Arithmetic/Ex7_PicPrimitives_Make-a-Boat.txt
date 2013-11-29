@@ -4,7 +4,7 @@ EXERCISE DESCRIPTION
 Use the picture primitives to create the image of a simple boat.
 
 ==DOCUMENTATION LESSONS==
-Play with triangles given known sides and angles.
+Play with triangles given known sides and angles. As Peter mentioned yesterday, many students are averse to digging-in and reading the documentation. One must love to read and write documentation! :-)
 =========================
 
 ==THOUGHTS==
@@ -29,6 +29,7 @@ The concept of combining functions is really starting to make sense.
      left-hull))
 
 (define superstructure
+;; The polygon code below is from the documentation.
   (polygon (list (make-posn 0 0)
                  (make-posn -10 20)
                  (make-posn 60 0)

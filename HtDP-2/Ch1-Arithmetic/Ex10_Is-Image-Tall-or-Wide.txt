@@ -1,0 +1,33 @@
+Exercise 10: Add the following line to the definitions area:
+
+(define cat ~)
+
+Create an expression that computes whether the image is "tall" or "wide". An image should be labeled "tall" if its height is larger or equal to its width; otherwise it is "wide".
+
+==DOCUMENTATION LESSONS==
+
+=========================
+
+
+==THOUGHTS==
+I had to refer back to exercise 5 to recall the image-height and image-width functions.
+
+> (if (>= 7 6) "2nd" "3rd")
+"2nd"
+
+This shows that when the boolean evaluates TRUE, the 2nd expression is evaluated.
+
+============
+
+
+
+<<=CODE==>> My response:
+
+(require 2htdp/image)
+
+(define cat ~)
+
+(define cat-h (image-height cat))
+(define cat-w (image-width cat))
+
+(if (>= cat-h cat-w) "tall" "wide")

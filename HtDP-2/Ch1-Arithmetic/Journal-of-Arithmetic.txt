@@ -1,3 +1,29 @@
+**===== 11/29 morning session; start @ 0729, finish @ 0757**
+
+A good deal of narrative note taking exists within the answer file for exercise
+9; be sure to have a look there. On to exercise 10 which is under the section
+(1.6) title, "Mixing it Up With Booleans".
+
+Notable concept and thought:
+
+The word “if” is followed by three expressions, separated by blank spaces (that
+includes tabs, line breaks, etc).
+
+(define x 2)
+(if (= x 0) 0 (/ 1 x))
+
+The first expression is always evaluated; its result must be boolean.
+  => in this case, FALSE.
+  
+If the result of the first expression is true, the 2nd expression is evaluated.
+Otherwise the third expression.
+  => in this case, the 3rd expression wins: (/ 1 2) = 0.5
+
+
+
+0757 [38 mins.]: little footsteps in the house. Break.
+2226/start -- 2300/fin [xx mins.]
+
 **===== 11/28 evening session; start @ 2039, finish @ 2347**
 
 Your journaling is now happening in both your exercise assignments and here. Get
@@ -17,18 +43,18 @@ in a nested way:
 They could have named one of the overlay/offsets to simplify things (at least,
 that's how my mind is working right now).
 
-2100: ready for exercise 9: stopping for Steelers/Ravens game. :-)
-2147: halftime. Continue on to exercise 9.
-2159: back to the game. Made progress on exercise 9.
-2340: Ravens win 22-20. Crazy game.
-2347: to bed. The wife is chatting...
-
 You see that it can be easy for one to make a mistake with booleans. You came
 back from the game and saw that one of your answers was incorrect.  Here's the
 correct answer to the problem that you originally had answered incorrectly:
 
 > (or b1 false)
 true
+
+2100: ready for exercise 9: stopping for Steelers/Ravens game. :-)
+2147: halftime. Continue on to exercise 9.
+2159: back to the game. Made progress on exercise 9.
+2340: Ravens win 22-20. Crazy game.
+2347: to bed. The wife is chatting...
 
 Time to go to bed.
 

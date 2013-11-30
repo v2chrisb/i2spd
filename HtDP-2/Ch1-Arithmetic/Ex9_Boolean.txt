@@ -12,6 +12,21 @@ boolean 'and' answers are almost always FALSE
 boolean 'not' simply negates one argument
 =========================
 
+
+==THOUGHTS==
+Pretty simple bit I can see how one could become easily confused.
+Hah! You had the first one wrong but after returning from the game, you saw the problem and corrected it.
+
+The question is confusing to me so I broke-down the words, in particular, whether.
+
+whether - conjunction - used to introduce the first of two or more alternatives.
+
+1st alternative: b1 is false
+2nd alternative: b2 is true
+
+Why? As stated and as given in the problem, b1 is true and b2 is false. The alternatives given are contradictions to this -- like a boolean 'not'. I also worked-out all alternatives for b1 and b2 below.
+============
+
 > (or b1 false)
 true
 
@@ -29,11 +44,6 @@ false
 
 > (not b2)
 true
-
-==THOUGHTS==
-Pretty simple bit I can see how one could become easily confused.
-Hah! You had the first one wrong but after returning from the game, you saw the problem and corrected it.
-============
 
 
 <<=CODE==>> My response:

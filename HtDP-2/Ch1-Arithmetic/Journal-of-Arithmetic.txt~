@@ -1,4 +1,28 @@
-**===== 11/29 morning session; start @ 0729, finish @ yyyy**
+**===== 11/30 morning session; start @ 1644, finish @ 1744**
+
+For exercise 10 it's necessary to use image-height and image-width and compare
+them to determine if the image is tall or wide. I defined three functions:
+
+(define cat ~)
+(define cat-h (image-height cat))
+(define cat-w (image-width cat))
+
+This works fine with the following if statement:
+
+(if (>= cat-h cat-w) "tall" "wide")
+
+*But*, I haven't been able to successfully write the if statement by replacing
+the cat-h and cat-w functions with their actual "meat" -- I keep getting errors.
+
+Exercise 10 has a second part: create an expression that computes whether a
+picture is "tall", "wide", or "square". Although they haven't discussed COND
+statements, I used on to solve this problem.
+
+(cond [(> cat-h cat-w) "tall"]
+      [(> cat-w cat-h) "wide"]
+      [else "square"])
+
+**===== 11/29 morning session; start @ 0729, finish @ 0757**
 
 A good deal of narrative note taking exists within the answer file for exercise
 9; be sure to have a look there. On to exercise 10 which is under the section
@@ -12,9 +36,15 @@ includes tabs, line breaks, etc).
 (define x 2)
 (if (= x 0) 0 (/ 1 x))
 
-
+The first expression is always evaluated; its result must be boolean.
+  => in this case, FALSE.
+  
+If the result of the first expression is true, the 2nd expression is evaluated.
+Otherwise the third expression.
+  => in this case, the 3rd expression wins: (/ 1 2) = 0.5
 
 0757 [38 mins.]: little footsteps in the house. Break.
+2226/start -- 2310/fin [44 mins.]
 
 **===== 11/28 evening session; start @ 2039, finish @ 2347**
 

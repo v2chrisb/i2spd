@@ -1,0 +1,38 @@
+Exercise 11: Add the following line to the definitions area of DrRacket:
+
+(define in "hello")
+
+Then create an expression that converts whatever in represents to a number. For a string, it determines how long the string is; for an image, it uses the area; for a number, it decrements the number, unless it is already 0 or negative; for true it uses 10 and for false 20.
+
+
+==DOCUMENTATION LESSONS==
+(string-length); (string?)
+(image-height) and (image-width); (image?)
+(number?)
+
+=========================
+
+
+==THOUGHTS==
+
+============
+
+
+
+<<=CODE==>> My response:
+
+;; START IMAGE SOLUTION
+(define in 10)
+
+(if (image? in) 
+   (* (image-height in) (image-width in))
+   "not an image")
+;; END IMAGE SOLUTION
+
+;; START STRING SOLUTION
+(define in "yada")
+
+(if (string? in) 
+   (string-length in)
+   "not a string")
+;; END STRING SOLUTION

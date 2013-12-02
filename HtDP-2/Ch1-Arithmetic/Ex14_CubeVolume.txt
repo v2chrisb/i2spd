@@ -1,0 +1,25 @@
+Exercise 14: Define the function cube-volume, which accepts the length of a side of a cube and computes its volume. If you have time, consider defining cube-surface, too.
+
+
+==DOCUMENTATION LESSONS==
+Check the sqr function in the Racket documentation:  (sqr x)
+=========================
+
+
+==THOUGHTS==
+Volume of a cube = x^3.
+Surface of a cube = 6a^2.
+
+Step 1 (per the last lesson) is to work-out the expression in DrRacket's interaction area.
+Step 2 is to write the function header.
+============
+
+
+<<=CODE==>> My response:
+;; For the volume of a cube.
+(define (cube-volume x)
+   (sqr x))
+   
+;; For the surface area of a cube.
+(define (cube-surface x)
+  (* (sqr x) 6))   

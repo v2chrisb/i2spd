@@ -1,0 +1,26 @@
+Exercise 13: Define a function that consumes two numbers, x and y, and that computes the distance of point (x,y) to the origin.
+
+In exercise 1 you developed the right-hand side for this function. All you really need to do is add a function header. Remember this idea in case you are ever stuck with a function. Use the recipe of exercise 1 to develop the expression in the interactions area, and then write down the function definition.
+
+
+==DOCUMENTATION LESSONS==
+From the text: the variables in a function header, i.e., the variables that follow the function name, are placeholders for unknown pieces of data in the function body.
+=========================
+
+
+==THOUGHTS==
+Ah, so exercise 1 was developing the expression (in DrRacket's interaction area):
+
+(define x 3)
+(define y 4)
+
+(sqrt (+ (sqr x) (sqr y)))
+
+And once the expression works properly, write a function definition.
+============
+
+
+<<=CODE==>> My response:
+
+(define (distance-to-origin x y)
+  (sqrt (+ (sqr x) (sqr y))))

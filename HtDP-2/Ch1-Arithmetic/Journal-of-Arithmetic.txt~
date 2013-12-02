@@ -21,6 +21,15 @@ statements, I used on to solve this problem.
 (cond [(> cat-h cat-w) "tall"]
       [(> cat-w cat-h) "wide"]
       [else "square"])
+      
+This satisfies -- in a pale sort of way -- the exercise requirements, but what
+if the image is a circle?
+      
+2235/start -- 2330/fin [55 mins.]
+
+Worked on exercise 11. The first two parts of the problem are fairly easy but
+the last part is harder, especially if I'm limited to using if statements. See 
+my exercise 11 code for notes.
 
 **===== 11/29 morning session; start @ 0729, finish @ 0757**
 

@@ -1,3 +1,9 @@
+**===== 12/1 evening; start @ 2146, finish @ 2210**
+
+Most of today I read the next section, "Functions and Programs". I experimented
+a little (as the reading suggested) by entering some of the examples. I wrote
+some notes on the paper I printed-out.
+
 **===== 11/30 morning session; start @ 1644, finish @ 1744**
 
 For exercise 10 it's necessary to use image-height and image-width and compare
@@ -22,11 +28,14 @@ statements, I used on to solve this problem.
       [(> cat-w cat-h) "wide"]
       [else "square"])
       
+This satisfies -- in a pale sort of way -- the exercise requirements, but what
+if the image is a circle?
+      
 2235/start -- 2330/fin [55 mins.]
 
 Worked on exercise 11. The first two parts of the problem are fairly easy but
-the last part is harder, especially if I'm limited to if statements. See my
-exercise 11 code for notes.
+the last part is harder, especially if I'm limited to using if statements. See 
+my exercise 11 code for notes.
 
 **===== 11/29 morning session; start @ 0729, finish @ 0757**
 

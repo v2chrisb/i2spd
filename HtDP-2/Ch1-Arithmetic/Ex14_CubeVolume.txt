@@ -3,6 +3,7 @@ Exercise 14: Define the function cube-volume, which accepts the length of a side
 
 ==DOCUMENTATION LESSONS==
 Check the sqr function in the Racket documentation:  (sqr x)
+There isn't a cube function built-in.
 =========================
 
 
@@ -18,8 +19,17 @@ Step 2 is to write the function header.
 <<=CODE==>> My response:
 ;; For the volume of a cube.
 (define (cube-volume x)
-   (sqr x))
+   (* x x x))
+   
+;; OR
+(define (cube-volume x)
+   (* (sqr x) x))
+
    
 ;; For the surface area of a cube.
 (define (cube-surface x)
-  (* (sqr x) 6))   
+  (* (sqr x) 6))
+  
+;; OR
+(define (cube-surface x)
+  (* (* x x) 6))

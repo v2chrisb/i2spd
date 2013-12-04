@@ -2,14 +2,37 @@ Exercise 16: Define the function string-last, which extracts the last character 
 
 
 ==DOCUMENTATION LESSONS==
-
+string-length and string-ith
 =========================
 
 
 ==THOUGHTS==
+string-length tells us string size and string-ith extracts the ith 1-letter substring from a string.
 
+First get the string-length of some word:
+
+(define (slen x)
+  (string-length x))
+  
+Take the result of slen and decrement it by 1; remember that string counts begin at zero (0):
+
+(define (slen-minus1 x)
+  (- (slen x) 1))
+  
+Finally, create the string-last function using both slen and slen-minus1:
+
+(define (string-last x)
+  (string-ith x (slen-minus1 x)))
 ============
 
 
-
 <<=CODE==>> My response:
+
+(define (slen x)
+  (string-length x))
+
+(define (slen-minus1 x)
+  (- (slen x) 1))
+
+(define (string-last x)
+  (string-ith x (slen-minus1 x)))

@@ -1,0 +1,51 @@
+Exercise 17: Define the function bool-imply. It consumes two Boolean values, call them b1 and b2. The answer of the function is true if b1 is false or b2 is true. Note: Logicians call this Boolean operation implication and often use the symbol =>, pronounced “implies,” for this purpose. While BSL could define a function with this name, we avoid that name because it is too similar to the comparison operations for numbers <= and >=, and it would thus easily be confused. See exercise 9.
+
+
+==DOCUMENTATION LESSONS==
+Exercise 9 explains or and not.
+
+or checks whether any of the given Boolean values is true:
+
+    > (or true true)
+    true
+	
+    > (or true false)
+    true
+	
+    > (or false true)
+    true
+	
+    > (or false false)
+    false
+
+and checks whether all of the given Boolean values are true:
+
+    > (and true true)
+    true
+	
+    > (and true false)
+    false
+	
+    > (and false true)
+    false
+	
+    > (and false false)
+    false
+
+not always picks the Boolean that isn’t given:
+
+    > (not true)
+    false
+	
+    > (not false)
+    true
+=========================
+
+
+==THOUGHTS==
+
+============
+
+
+
+<<=CODE==>> My response:

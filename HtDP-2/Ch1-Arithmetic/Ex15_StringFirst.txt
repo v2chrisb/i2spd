@@ -1,0 +1,18 @@
+Exercise 15: Define the function string-first, which extracts the first character from a non-empty string. Don’t worry about empty strings.
+
+
+==DOCUMENTATION LESSONS==
+string-ith
+=========================
+
+
+==THOUGHTS==
+You overwrote this file with all of it's notes last night and had to rewrite it again this morning.
+============
+
+
+
+<<=CODE==>> My response:
+
+(define (string-first x)
+  (string-ith x 0))

@@ -1,0 +1,23 @@
+Exercise 18: Define the function image-area, which counts the number of pixels in a given image. See exercise 5 for ideas.
+
+
+==DOCUMENTATION LESSONS==
+Nothing new.
+=========================
+
+
+==THOUGHTS==
+Just taking exercise 5 and making a function out of it.
+============
+
+
+
+<<=CODE==>> My response:
+
+(require 2htdp/image)
+
+(define cat ~)
+(define dog ~)
+
+(define (image-area x)
+  (* (image-height x) (image-width x)))

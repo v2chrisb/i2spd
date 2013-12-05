@@ -43,9 +43,15 @@ not always picks the Boolean that isn’t given:
 
 
 ==THOUGHTS==
-
+I spent almost an hour on this silly problem yet the answer is quite simple.
 ============
 
 
 
 <<=CODE==>> My response:
+
+(define B1 false)
+(define B2 true)
+
+(define (bool-imply x y)
+   (or x y))

@@ -1,0 +1,35 @@
+Exercise 10: Define the function image-classify, which consumes an image and produces "tall" if the image is taller than it is wide, "wide" if it is wider than it is tall, or "square" if its width and height are the same. See exercise 10 for ideas. 
+
+
+==DOCUMENTATION LESSONS==
+Still need to use (require 2htdp/image)
+=========================
+
+
+==THOUGHTS==
+I'm confused as to how the authors expect one to arrive at the third answer option -- i.e. "square" -- when only 'if' statements have been covered thus far. I can easily see how to solve it with 'cond'.
+============
+
+
+
+<<=CODE==>> My response:
+
+;; Only two options: "wide" or "tall"
+(require 2htdp/image)
+
+(define cat .)
+(define dog .)
+
+(define (image-classify x)
+  (if (> (image-height x) (image-width x)) "tall" "wide"))
+  
+;; For the three options
+(require 2htdp/image)
+
+(define cat .)
+(define dog .)
+
+(define (image-classify x)
+  (cond [(> (image-height x) (image-width x)) "tall"]
+        [(< (image-height x) (image-width x)) "wide"]
+        [else "square"]))

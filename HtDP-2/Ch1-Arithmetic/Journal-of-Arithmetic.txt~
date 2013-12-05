@@ -1,3 +1,13 @@
+**===== 12/4 evening; start @ 0529, finish @ 0629**
+
+Start with exercise 16. You had to create two functions prior to creating the
+third and final function that gives back the last character of any string taken
+as input. This exercise further illustrates and strengthens the concept of
+taking the output of one function and using it as input for another function.
+
+Got a start on exercise 17 but must stop for work. Maybe we'll get back to this
+tonight...
+
 **===== 12/3 evening; start @ 2050, finish @ 2100**
 
 I initially botched the cube function by using the sqr function only. See the

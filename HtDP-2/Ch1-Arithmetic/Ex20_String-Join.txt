@@ -1,0 +1,29 @@
+Exercise 20: Define the function string-join, which consumes two strings and appends them with "_" in between. See exercise 2 for ideas.
+
+
+==DOCUMENTATION LESSONS==
+Nothing new. You can look at string-append.
+=========================
+
+
+==THOUGHTS==
+We're yet again asked to take a problem we did in the past (in this case exercise 2) and define a function.  So, here's the result of exercise 2:
+
+(define prefix "hello")
+(define suffix "world")
+
+(string-append prefix "_" suffix)
+============
+
+
+
+<<=CODE==>> My response:
+
+(define prefix "hello")
+(define suffix "world")
+
+(define (string-join x)
+   (string-append prefix x suffix))
+   
+;; To make this work, type the following into DrRacket
+;; > (string-join "_")

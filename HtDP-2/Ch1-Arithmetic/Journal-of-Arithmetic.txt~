@@ -1,4 +1,25 @@
-**===== 12/4 evening; start @ 0529, finish @ 0629**
+**===== 12/5 morning; start @ 0527, finish @ 0628**
+
+Still on exercize 17. I may have overthought this because, in total, I spent
+probably 45 minutes on it. I'll restate the problem and my proposed solution
+here both are also contained in my exercise notes.
+
+Ex 17: Define the function bool-imply. It consumes two Boolean values, call them
+b1 and b2. The answer of the function is true if b1 is false or b2 is true.
+
+(define B1 false)
+(define B2 true)
+
+(define (bool-imply x y)
+   (or x y))
+   
+Exercise 18 went quickly; I took exercise 5 and made a function out of it.
+
+Exercise 19 was similar in that I simply had to "build-up" exercise 10. I was
+faced with that same problem of "how do you deal with three options with only
+an 'if' statement?" I used a 'cond' for the three option solution.
+
+**===== 12/4 morning; start @ 0529, finish @ 0629**
 
 Start with exercise 16. You had to create two functions prior to creating the
 third and final function that gives back the last character of any string taken

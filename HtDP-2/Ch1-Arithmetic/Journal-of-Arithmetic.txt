@@ -1,3 +1,19 @@
+**===== 12/6 morning; start @ 0602, finish @ 0628**
+
+Up late again chatting with the wife, so a late start. Tired, groggy. Must
+study! Must be a programmer some day! :-)
+
+Exercise 20 is (yet again) taking a previous exercise and making a function out
+of it.
+
+To make the new string-join function work it's necessary to use a variable (in 
+this case 'x') and pass a string of "_" to your new function. You bumbled with
+this for 1-2 minutes.
+
+Exercise 21 is next. I just read it and leaves me thinking that some good
+concepts will be learned here. I'll definitely have to get to this tonight. I do
+plan to share this one with Peter, though. Signing-off for now...
+
 **===== 12/5 morning; start @ 0527, finish @ 0628**
 
 Still on exercize 17. I may have overthought this because, in total, I spent

@@ -1,0 +1,15 @@
+Exercise 21: Define the function string-insert, which consumes a string and a number i and which inserts "_" at the ith position of the string. Assume i is a number between 0 and the length of the given string (inclusive). See exercise 3 for ideas. Also ponder the question how string-insert ought to cope with empty strings.
+
+
+==DOCUMENTATION LESSONS==
+
+=========================
+
+
+==THOUGHTS==
+
+============
+
+
+
+<<=CODE==>> My response:

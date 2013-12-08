@@ -1,0 +1,23 @@
+Exercise 22: Define the function string-delete, which consumes a string and a number i and which deletes the ith position from str. Assume i is a number between 0 (inclusive) and the length of the given string (exclusive). See exercise 4 for ideas. Can string-delete deal with empty strings?
+
+
+==DOCUMENTATION LESSONS==
+string-ith, substring, string-length
+=========================
+
+
+==THOUGHTS==
+;; for [phase#1], this works...
+(define (string-delete s n)
+   (if (= (string-length s) 0) "empty string!!"
+          (string-append (substring s 0 n) (substring s (+ n 1) 9))))
+
+;; get rid of the number 9 in the last substring command
+============
+
+<<=CODE==>> My response:
+;; this DOES deal with empty strings
+(define (string-delete s n)
+   (if (= (string-length s) 0) "empty string!!"
+          (string-append
+            (substring s 0 n) (substring s (+ n 1) (string-length s)))))

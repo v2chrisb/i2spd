@@ -1,15 +1,58 @@
 Exercise 21: Define the function string-insert, which consumes a string and a number i and which inserts "_" at the ith position of the string. Assume i is a number between 0 and the length of the given string (inclusive). See exercise 3 for ideas. Also ponder the question how string-insert ought to cope with empty strings.
 
-
 ==DOCUMENTATION LESSONS==
-
+substring, string-length, string-append
 =========================
 
+==COPING WITH EMPTY STRINGS==
+;; [step#1] when simply run our new function as follows...
+> (string-insert "" 0 0)
+"_"
+
+;; [step#2] we don't get an error but we do get just the underscore character.
+;; So, tinkering around in DrRacket...
+
+(define x "")
+   (if (= (string-length x) 0) "true" "false")
+
+;; [step#3] evaluates to "true"
+
+;; [step#4] now incorporate the 'if' statement
+
+(define (string-insert s n1)
+   (if (= (string-length s) 0)
+      "empty string!"
+         (string-append (string-append (substring s 0 n1) "_")
+            (substring s n1))))
+=============================
 
 ==THOUGHTS==
+;; start [step #1] to develop incrementally, i.e. work with substring
+> (substring s 0 n)
+"pla"
 
+> (substring s 3 7)
+"stic"
+
+;; further [step #2], develop with string-insert & string-append
+(define (string-insert s n)
+  (string-append (string-append (substring s 0 n) "_")
+        (substring s n 7)))
+		
+> (string-insert "plastic" 3)
+"pla_stic"
+
+;; finally [step#3], take note that you need a 3rd variable and integrate it
+(define (string-insert s n1 n2)
+  (string-append (string-append (substring s 0 n1) "_")
+        (substring s n1 n2))
+
+> (string-insert "plastic" 3 7)
+"pla_stic"
 ============
 
-
-
 <<=CODE==>> My response:
+
+(define (string-insert s n1 n2)
+  (string-append (string-append (substring s 0 n1) "_")
+        (substring s n1 n2)))

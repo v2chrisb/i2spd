@@ -1,0 +1,46 @@
+Exercise 23: Our solution to the sample problem contains several constants in the middle of functions. As One Program, Many Definitions already points out, it is best to give names to such constants so that future readers understand where these numbers come from. Collect all definitions in DrRacket’s definitions area and change them so that all magic numbers are refactored into constant definitions.
+
+
+==DOCUMENTATION LESSONS==
+
+=========================
+
+
+==THOUGHTS==
+Identify constants in the sample problem (theatre scenario):
+
+[15]:    +/- change in attendance with each +/- change in ticket price
+[$0.10]: +/- change in ticket price
+[120]:   baseline average attendance
+[$180]:  fixed costs per performance
+[$0.04]: variable expense cost per attendee
+
+So, the code with constants looks like this:
+(define BASELINE_TICKET_PRICE              5)
+(define ATTENDANCE_CHANGE                 15)
+(define TICKET_PRICE_CHANGE             0.10)
+(define VAR_EXPENSE_PER_ATTENDEE        0.04)
+(define AVERAGE_ATTENDANCE               120)
+(define FIXED_EXPENSE_PER_PERFORMANCE    180)
+============
+
+
+<<=CODE==>> My response:
+(define ATTENDANCE_CHANGE                 15)
+(define TICKET_PRICE_CHANGE             0.10)
+(define VAR_EXPENSE_PER_ATTENDEE        0.04)
+(define AVERAGE_ATTENDANCE               120)
+(define FIXED_EXPENSE_PER_PERFORMANCE    180)
+
+(define (attendees ticket-price)
+  (- AVERAGE_ATTENDANCE (* (- ticket-price 5.0) (/ ATTENDANCE_CHANGE TICKET_PRICE_CHANGE))))
+
+(define (revenue ticket-price)
+  (* ticket-price (attendees ticket-price)))
+
+(define (cost ticket-price)
+  (+ FIXED_EXPENSE_PER_PERFORMANCE (* VAR_EXPENSE_PER_ATTENDEE (attendees ticket-price))))
+
+(define (profit ticket-price)
+  (- (revenue ticket-price)
+     (cost ticket-price)))

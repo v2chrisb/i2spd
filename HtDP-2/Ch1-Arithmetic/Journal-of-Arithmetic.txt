@@ -1,3 +1,34 @@
+**===== 12/9 evening; start @ 2214, finish @ yyyy** = zz
+
+Yesterday I spent a good deal of time reading the sample problem regarding the
+monopolistic theatre owner. I also spent a little bit of time in the Simply
+Scheme textbook (both yesterday and today).
+
+
+
+**===== 12/8 morning; start @ 0851, finish @ 0908** = 17
+
+Feast of the Immaculate Conception! Thanks be to God for Our Lady, the Blessed
+Virgin Mary! :-)
+
+Section 2.2, Composing Functions. Slogan -- DEFINE ONE FUNCTION PER TASK.
+
+I'll work through the sample problem with the movie theatre revenue/expense
+conundrum.
+
+(define (attendees ticket-price)
+  (- 120 (* (- ticket-price 5.0) (/ 15 0.1))))
+
+(define (revenue ticket-price)
+  (* ticket-price (attendees ticket-price)))
+
+(define (cost ticket-price)
+  (+ 180 (* 0.04 (attendees ticket-price))))
+
+(define (profit ticket-price)
+  (- (revenue ticket-price)
+     (cost ticket-price)))
+
 **===== 12/7 morning; start @ 0621, finish @ 0700** = 49
                               1420, finish @ 1511** = 51
                               1520, finish @ 1531** = 11

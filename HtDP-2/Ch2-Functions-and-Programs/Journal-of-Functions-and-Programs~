@@ -1,10 +1,43 @@
-**===== 12/9 evening; start @ 2214, finish @ yyyy** = zz
+**===== 12/9 evening; start @ 2214, finish @ 2248** = 34
 
 Yesterday I spent a good deal of time reading the sample problem regarding the
 monopolistic theatre owner. I also spent a little bit of time in the Simply
 Scheme textbook (both yesterday and today).
 
+Performed some directory and file housekeeping and made a commit to Github.
 
+Best profit using this calculation is a ticket price of $2.90; profit $1064.10.
+
+Identify constants in the sample problem (theatre scenario):
+
+[15]:    +/- change in attendance with each +/- change in ticket price
+[$0.10]: +/- change in ticket price
+[120]:   baseline average attendance
+[$180]:  fixed costs per performance
+[$0.04]: variable expense cost per attendee
+
+So, the code with constants looks like this:
+
+(define BASELINE_TICKET_PRICE              5)
+(define ATTENDANCE_CHANGE                 15)
+(define TICKET_PRICE_CHANGE             0.10)
+(define VAR_EXPENSE_PER_ATTENDEE        0.04)
+(define AVERAGE_ATTENDANCE               120)
+(define FIXED_EXPENSE_PER_PERFORMANCE    180)
+
+(define (attendees ticket-price)
+  (- AVERAGE_ATTENDANCE (* (- ticket-price BASELINE_TICKET_PRICE)
+                           (/ ATTENDANCE_CHANGE TICKET_PRICE_CHANGE))))
+
+(define (revenue ticket-price)
+  (* ticket-price (attendees ticket-price)))
+
+(define (cost ticket-price)
+  (+ FIXED_EXPENSE_PER_PERFORMANCE (* VAR_EXPENSE_PER_ATTENDEE (attendees ticket-price))))
+
+(define (profit ticket-price)
+  (- (revenue ticket-price)
+     (cost ticket-price)))
 
 **===== 12/8 morning; start @ 0851, finish @ 0908** = 17
 

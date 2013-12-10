@@ -1,0 +1,19 @@
+Exercise 25: After studying the costs of a show, the owner discovered several ways of lowering the cost. As a result of his improvements, he no longer has a fixed cost. He now simply pays $1.50 per attendee.
+
+Modify both programs to reflect this change. When the programs are modified, test them again with ticket prices of $3, $4, and $5 and compare the results.
+
+This will be for program #2.
+
+
+==DOCUMENTATION LESSONS==
+
+=========================
+
+
+==THOUGHTS==
+
+============
+
+
+
+<<=CODE==>> My response:

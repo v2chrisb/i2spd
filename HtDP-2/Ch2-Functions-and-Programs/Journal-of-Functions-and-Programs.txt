@@ -1,4 +1,14 @@
+**===== 12/10 morning; start @ 0554, finish @ 0644** = 50
+
+Notes are in the code. Finished exercise 24. Tinkered with exercise 25, mostly
+part #1. The second part will take some time to step through the code and 
+understand exactly where the changes need to be made. Of course, the lesson the
+authors are teaching here is that the first code example with well defined
+CONSTANTS is much easier to change and understand where changes need to be made.
+The second code example is cryptic.
+
 **===== 12/9 evening; start @ 2214, finish @ 2248** = 34
+                              1420, finish @ 1440** = 20
 
 Yesterday I spent a good deal of time reading the sample problem regarding the
 monopolistic theatre owner. I also spent a little bit of time in the Simply

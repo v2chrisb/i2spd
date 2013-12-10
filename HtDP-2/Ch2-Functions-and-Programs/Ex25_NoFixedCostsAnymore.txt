@@ -1,0 +1,50 @@
+Exercise 25: After studying the costs of a show, the owner discovered several ways of lowering the cost. As a result of his improvements, he no longer has a fixed cost. He now simply pays $1.50 per attendee.
+
+Modify both programs to reflect this change. When the programs are modified, test them again with ticket prices of $3, $4, and $5 and compare the results.
+
+This will be for program #1.
+
+
+==DOCUMENTATION LESSONS==
+No new documentation searches needed for this program.
+=========================
+
+
+==THOUGHTS==
+When I simply set fixed expenses PER_PERFORMANCE to 0:
+> (profit 2.9)
+1244.1
+
+When I made the change to expenses PER_ATTENDEE to 1.5, i.e.
+
+(+ (* AVERAGE_ATTENDANCE FIXED_EXPENSE_PER_ATTENDEE)
+
+> (profit 2.9)
+1064.1
+
+This is the exact same number as the original scenario with $180 fixed expense per performance. Need to systematically play with profit scenarios.
+============
+
+
+<<=CODE==>> My response:
+(define BASELINE_TICKET_PRICE              5)
+(define ATTENDANCE_CHANGE                 15)
+(define TICKET_PRICE_CHANGE             0.10)
+(define VAR_EXPENSE_PER_ATTENDEE        0.04)
+(define AVERAGE_ATTENDANCE               120)
+(define FIXED_EXPENSE_PER_ATTENDEE       1.5)
+
+(define (attendees ticket-price)
+  (- AVERAGE_ATTENDANCE (* (- ticket-price BASELINE_TICKET_PRICE)
+                           (/ ATTENDANCE_CHANGE TICKET_PRICE_CHANGE))))
+
+(define (revenue ticket-price)
+  (* ticket-price (attendees ticket-price)))
+
+(define (cost ticket-price)
+  (+ (* AVERAGE_ATTENDANCE FIXED_EXPENSE_PER_ATTENDEE) 
+     (* VAR_EXPENSE_PER_ATTENDEE (attendees ticket-price))))
+
+(define (profit ticket-price)
+  (- (revenue ticket-price)
+     (cost ticket-price)))

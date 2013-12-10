@@ -4,8 +4,6 @@ Yesterday I spent a good deal of time reading the sample problem regarding the
 monopolistic theatre owner. I also spent a little bit of time in the Simply
 Scheme textbook (both yesterday and today).
 
-
-
 **===== 12/8 morning; start @ 0851, finish @ 0908** = 17
 
 Feast of the Immaculate Conception! Thanks be to God for Our Lady, the Blessed
@@ -36,7 +34,7 @@ conundrum.
                               1830, finish @ 1850** = 20
                               2130, finish @ 2200** = 30
 
-Pearl Harbor day.  A moment to remember those who lost their lives that day.
+Pearl Harbor day. A moment to remember those who lost their lives that day.
 
 Once again, at the start, you bumbled on the basic function layout but here is
 how it begins to develop:
@@ -60,7 +58,7 @@ study! Must be a programmer some day! :-)
 Exercise 20 is (yet again) taking a previous exercise and making a function out
 of it.
 
-To make the new string-join function work it's necessary to use a variable (in 
+To make the new string-join function work it's necessary to use a variable (in
 this case 'x') and pass a string of "_" to your new function. You bumbled with
 this for 1-2 minutes.
 
@@ -107,7 +105,7 @@ functions.
 
 See notes in exercise 15; you're using string-ith.
 
-Leaving off at exercise 16.  Pick it back up tomorrow morning...
+Leaving off at exercise 16. Pick it back up tomorrow morning...
 
 Start again at 2153; end at 2247, but watched Rush on YouTube for a bit. :-)
 
@@ -116,8 +114,8 @@ Long, crazy, mind-filling day.
 **===== 12/2 morning; start @ 0554, finish @ 0633**
 
 Starting on exercise 13 which refers back to the first exercise in this section.
-The main lesson here is that one should use DrRacket's interaction area to 
-develop expressions. Once the expression works properly, write the function 
+The main lesson here is that one should use DrRacket's interaction area to
+develop expressions. Once the expression works properly, write the function
 header.
 
 Exercise 14. See the notes within the actual exercise.
@@ -158,7 +156,7 @@ if the image is a circle?
 2235/start -- 2330/fin [55 mins.]
 
 Worked on exercise 11. The first two parts of the problem are fairly easy but
-the last part is harder, especially if I'm limited to using if statements. See 
+the last part is harder, especially if I'm limited to using if statements. See
 my exercise 11 code for notes.
 
 **===== 11/29 morning session; start @ 0729, finish @ 0757**
@@ -205,7 +203,7 @@ They could have named one of the overlay/offsets to simplify things (at least,
 that's how my mind is working right now).
 
 You see that it can be easy for one to make a mistake with booleans. You came
-back from the game and saw that one of your answers was incorrect.  Here's the
+back from the game and saw that one of your answers was incorrect. Here's the
 correct answer to the problem that you originally had answered incorrectly:
 
 > (or b1 false)
@@ -262,7 +260,7 @@ correct primitive. You searched on 'overlay' and noticed the 'above' primitive.
 
 It gets better -- I recall thinking yesterday how I would compose the function
 of "this function inside of that function inside of that function", but the
-book showed me today to RECALL that you can name parts of your code as a 
+book showed me today to RECALL that you can name parts of your code as a
 function definition, like:
 
 (define car-frame
@@ -289,13 +287,13 @@ There is 'overlay' and 'underlay' and building on functions. Completed exercise
 
 **===== 11/23 morning session; start @ 0625, finish @ 0720**
 
-Yesterday was great. I think I was able to get almost 3 hours of study time. I 
+Yesterday was great. I think I was able to get almost 3 hours of study time. I
 am also thanking myself for stopping the i2spd course and committing to this
 book. Off to Mass this morning NLT 0740.
 
 You went on a mad search to find a function that counted pixels when you should
 have realized the concept to apply to meet the need. The cat image is contained
-within a RECTANGLE. Just calculate the area of the rectangle and the number of 
+within a RECTANGLE. Just calculate the area of the rectangle and the number of
 pixels are within (since pixels are the unit measure of an image).
 
 One thing this book is making me do that I didn't do in the MOOC is to get
@@ -355,7 +353,7 @@ Left off on exercise #6.
 
 **===== 11/22 morning session; start @ 0540, finish @ 0630**
 
-Remember to save each of your exercise solutions as a Racket file in 
+Remember to save each of your exercise solutions as a Racket file in
 C:\Users\v2chrisb\Documents\GitHub\i2spd\HtDP-2\Ch1-Arithmetic.
 
 This is exercise #3.
@@ -394,7 +392,7 @@ suffix and adds "_" between them. When you run this program, you will see
 **===== 11/20 morning session; start @ 0555, finish @ 0605**
 
 Starting an entirely new journal on an entirely new course of study, that is,
-I'm leaving the UBC course for awhile with the hope of strengthening my 
+I'm leaving the UBC course for awhile with the hope of strengthening my
 programming foundation here in the How to Design Programs 2 book.
 
 Up really early this morning but had to spend a big chunk of time catching-up

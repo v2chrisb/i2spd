@@ -1,0 +1,46 @@
+Exercise 26: Define constants for the price optimization program so that the price sensitivity of attendance (15 people for every 10 cents) becomes a computed constant. 
+
+
+==DOCUMENTATION LESSONS==
+No new documentation searches and/or lessons.
+=========================
+
+
+==THOUGHTS==
+[15]:    +/- change in attendance with each +/- change in ticket price
+[$0.10]: +/- change in ticket price
+
+First look at how this is used in calculations; it's an easy change and is commented below.
+
+Calculations remain consistent, i.e. the profit for a $2.90 ticket price stays exactly the same. One could imagine conducting more rigorous testing.
+
+> (profit 2.9)
+1064.1
+============
+
+
+<<=CODE==>> My response:
+
+(define BASELINE_TICKET_PRICE              5)
+;; the two constants below will be combined into a computed constant
+;; known as PRICE_SENSITIVITY
+(define ATTENDANCE_CHANGE                 15)
+(define TICKET_PRICE_CHANGE             0.10)
+(define PRICE_SENSITIVITY (/ ATTENDANCE_CHANGE TICKET_PRICE_CHANGE))
+(define VAR_EXPENSE_PER_ATTENDEE        0.04)
+(define AVERAGE_ATTENDANCE               120)
+(define FIXED_EXPENSE_PER_PERFORMANCE    180)
+
+(define (attendees ticket-price)
+  (- AVERAGE_ATTENDANCE (* (- ticket-price BASELINE_TICKET_PRICE)
+                           PRICE_SENSITIVITY)))
+
+(define (revenue ticket-price)
+  (* ticket-price (attendees ticket-price)))
+
+(define (cost ticket-price)
+  (+ FIXED_EXPENSE_PER_PERFORMANCE (* VAR_EXPENSE_PER_ATTENDEE (attendees ticket-price))))
+
+(define (profit ticket-price)
+  (- (revenue ticket-price)
+     (cost ticket-price)))

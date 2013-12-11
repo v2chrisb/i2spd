@@ -1,21 +1,3 @@
-**===== 12/11 morning; start @ 0600, finish @ 0635** = 35
-
-I really did start at exactly 0600. Starting 2.3 Global Constants. I've also
-been reading/scanning the similar topics in the Simply Scheme text.
-
-A new slogan, so there are now two slogans that I'll enumerate here:
-
-1. DEFINE ONE FUNCTION PER TASK.
-2. INTRODUCE DEFINITIONS FOR ALL CONSTANTS MENTIONED IN A PROBLEM STATEMENT.
-
-Exercise 26 completed. On to section 2.4, Programs.
-
-"The appearance of an input is an event."
-
-The text doesn't mention it explictly but it seems I'll be using:
-
-(require 2htdp/batch-io)
-
 **===== 12/10 morning; start @ 0554, finish @ 0644** = 50
 
 Notes are in the code. Finished exercise 24. Tinkered with exercise 25, mostly

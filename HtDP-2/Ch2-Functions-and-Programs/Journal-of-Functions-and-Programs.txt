@@ -1,3 +1,25 @@
+**===== 12/12 morning; start @ 0602, finish @ 0657** = 55
+
+Our Lady of Guadalupe! Thanks be to God for our Blessed Mother and may she pray
+for us this and every day.
+
+The main function is singled out to compose other functions.
+
+There are two distinct kinds of programs: batch and interactive. The appearance
+of an input in an interactive program is known as an event.
+
+Hey! DrRacket saves files in C:\Users\v2chrisb. I created a folder named 'htdp'
+there, i.e. C:\Users\v2chrisb\htdp
+
+I was able to save a file in C:\Users\v2chrisb\htdp like so:
+
+(write-file "htdp/sample.dat" "214")
+
+*Note* -- if you use a backslash DrRacket barks at you. Use the forward slash.
+
+Stopped for this morning. To get back to where you left off, enter the following
+in the browser search: we can now launch convert:
+
 **===== 12/11 morning; start @ 0600, finish @ 0635** = 35
 
 I really did start at exactly 0600. Starting 2.3 Global Constants. I've also

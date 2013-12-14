@@ -1,0 +1,37 @@
+Exercise X.
+
+
+==DOCUMENTATION LESSONS==
+
+=========================
+
+
+==THOUGHTS==
+;; Consider a program for filling in letter templates. It consumes the first and last ;; name of the addressee, an opening with the letter body, and a closing:
+(define (letter fst lst signature-name)
+  (string-append
+    (opening fst)
+    "\n\n"
+    (body fst lst)
+    "\n\n"
+    (closing signature-name)))
+ 
+(define (opening fst)
+  (string-append "Dear " fst ","))
+ 
+(define (body fst lst)
+  (string-append
+   "We have discovered that all people with the last name " "\n"
+   lst " have won our lottery. So, " fst ", " "\n"
+   "hurry and pick up your prize."))
+ 
+(define (closing signature-name)
+  (string-append
+   "Sincerely,"
+   "\n\n"
+   signature-name))
+============
+
+
+
+<<=CODE==>> My response:

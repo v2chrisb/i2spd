@@ -1,3 +1,15 @@
+**===== 12/14 evening; start @ 2115, finish @ 2135** = 20
+
+(require 2htdp/batch-io)
+(require 2htdp/universe)
+(require 2htdp/image)
+
+Starting at exercise 27. My head isn't in it after 20 minutes so I'm taking a
+break.
+
+Back at it. Read and tinkered for another 15 minutes. Do exercise 27 in the 
+morning when you're focused.
+
 **===== 12/13 evening; start @ 2115, finish @ 2210** = 55
 
 Think about this section of the text: "Once we have the conversion formula in 

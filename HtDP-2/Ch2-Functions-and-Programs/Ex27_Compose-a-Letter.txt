@@ -33,13 +33,15 @@ Note: Once you understand Programming With Lists, you will be able to use other 
 
 
 ==THOUGHTS==
-;; Consider a program for filling in letter templates. It consumes the first and last name of the addressee, an opening with the letter body, and a closing:
+;; Only the function inputs should be in the files, i.e. the names.
+
+(require 2htdp/batch-io)
 
 (define (main in-fst in-lst in-signature out)
   (write-file out
-              (letter (read-file "htdp/in-fst")
-                      (read-file "htdp/in-last")
-                      (read-file "htdp/in-signature"))))
+              (letter (read-file in-fst)
+                      (read-file in-lst)
+                      (read-file in-signature))))
 
 (define (letter fst lst signature-name)
   (string-append

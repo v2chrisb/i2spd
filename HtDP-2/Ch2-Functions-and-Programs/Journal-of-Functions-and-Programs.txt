@@ -1,3 +1,10 @@
+**===== 12/16 morning; start @ 0600, finish @ 0631** = 31
+
+Putting the letter program through the write-file function formats it. Still
+stuck but at least realized that only the strings themselves should be in the
+files, not the funtions.
+
+
 **===== 12/15 morning; start @ 0650, finish @ 0740** = 50
 
 About 6-8" of powder snow out there and it's still COLD. :-)
@@ -15,9 +22,12 @@ In the past I wrote to a file in C:\Users\v2chrisb\htdp like so:
 ...
 (write-file "htdp/sample.dat" "214")
 
-You'll need something similar as you work through this read-file case. The
-exercise notes are in a place where it's starting to come together. The kids
-will be up soon and I need to shovel, so stopping for now...
+You'll need something similar as you work through this read-file case -- also
+write your output file here. The exercise notes are in a place where it's
+starting to come together. The kids will be up soon and I need to shovel, so
+stopping for now...
+
+Read and tossed and turned with silly problem throughout the afternoon.
 
 
 **===== 12/14 evening; start @ 2115, finish @ 2135** = 20

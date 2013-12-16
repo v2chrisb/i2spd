@@ -1,4 +1,28 @@
+**===== 12/15 morning; start @ 0650, finish @ 0740** = 50
+
+About 6-8" of powder snow out there and it's still COLD. :-)
+
+Piecing together exercise 27, and that's the sense I get is that it looks like
+a programmer needs to get used to calling pieces of code in from other places
+as the project(s) get bigger. I created three files in C:\Users\v2chrisb\htdp,
+i.e. 1) in-fst, 2) in-last, 3) in-signature.
+
+Recall your write-file lesson, i.e.:
+
+In the past I wrote to a file in C:\Users\v2chrisb\htdp like so:
+
+(require 2htdp/batch-io)
+...
+(write-file "htdp/sample.dat" "214")
+
+You'll need something similar as you work through this read-file case -- also
+write your output file here. The exercise notes are in a place where it's
+starting to come together. The kids will be up soon and I need to shovel, so
+stopping for now...
+
+
 **===== 12/14 evening; start @ 2115, finish @ 2135** = 20
+                               2230, finish @ 2145** = 15
 
 (require 2htdp/batch-io)
 (require 2htdp/universe)
@@ -17,7 +41,6 @@ BSL, creating the main function means *composing* f2c with existing primitive
 functions."
 
 'stdout lets us view a result before we write it to a file.
-
 
 
 **===== 12/12 morning; start @ 0602, finish @ 0657** = 55
@@ -42,6 +65,7 @@ I was able to save a file in C:\Users\v2chrisb\htdp like so:
 Stopped for this morning. To get back to where you left off, enter the following
 in the browser search: we can now launch convert:
 
+
 **===== 12/11 morning; start @ 0600, finish @ 0635** = 35
 
 I really did start at exactly 0600. Starting 2.3 Global Constants. I've also
@@ -59,6 +83,7 @@ Exercise 26 completed. On to section 2.4, Programs.
 The text doesn't mention it explictly but it seems I'll be using:
 
 (require 2htdp/batch-io)
+
 
 **===== 12/10 morning; start @ 0554, finish @ 0644** = 50
 

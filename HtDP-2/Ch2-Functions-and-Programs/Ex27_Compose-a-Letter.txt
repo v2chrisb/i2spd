@@ -33,7 +33,7 @@ Note: Once you understand Programming With Lists, you will be able to use other 
 
 
 ==THOUGHTS==
-;; Only the function inputs should be in the files, i.e. the names.
+;; Only the function inputs should be in the files, i.e. the names used in the letter. You put the functions themselves in there before.
 
 (require 2htdp/batch-io)
 

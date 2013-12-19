@@ -1,8 +1,36 @@
+**===== 12/17 morning; start @ 0500, finish @ 0540** = 40
+
+Nung Poo's birthday! Up at 0435 but many little tasks to do this morning before
+starting.
+
+(write-file "out" (number->string (f2c 212)))
+
+Finally, this works (remember f2c is defined in the definitions area).
+
+(write-file "out" (number->string (f2c (string->number (read-file "in")))))
+
+This works, too. It seems like this problem is lasting forever! I have to sign
+off now and get to Randolph.
+
+(require 2htdp/batch-io)
+
+(define (convert in out)
+  (write-file "out"
+    (number->string
+      (f2c
+        (string->number
+          (read-file "in"))))))
+
+(define (f2c f)
+  (* 5/9 (- f 32)))
+
+
 **===== 12/16 morning; start @ 0600, finish @ 0631** = 31
 
 Putting the letter program through the write-file function formats it. Still
 stuck but at least realized that only the strings themselves should be in the
-files, not the funtions.
+files, not the funtions. Only the function inputs should be in the files, i.e.
+the names used in the letter. You put the functions themselves in there before.
 
 
 **===== 12/15 morning; start @ 0650, finish @ 0740** = 50

@@ -1,3 +1,18 @@
+**===== 12/18 evening; start @ 2200, finish @ 2220** = 20
+
+How come this program doesn't just run? The function has all it needs; no user
+input is required. After all, this is the batch programming lesson!
+
+Doh! Run the convert function like so!
+
+(convert "in" "out")
+
+I wasn't using the QUOTE MARKS!!! Days on end because of quote marks. There are
+times I think programming is cruel. :-)
+
+Pack it in, celebrate, and get up tomorrow and get to work on exercise #28!
+
+
 **===== 12/17 morning; start @ 0500, finish @ 0540** = 40
 
 Nung Poo's birthday! Up at 0435 but many little tasks to do this morning before

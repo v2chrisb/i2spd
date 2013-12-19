@@ -1,0 +1,24 @@
+Exercise 28: Most people no longer use desktop computers to run applications but cell phones, tablets, and their cars’ information control screens. Soon people will use wearable computers in the form of intelligent glasses, clothes, and sports gear. In the somewhat more distant future, people may come with built-in bio computers that directly interact with body functions. Think of ten different forms of events that software applications on such computers will have to deal with.
+
+
+==DOCUMENTATION LESSONS==
+
+=========================
+
+
+==THOUGHTS==
+No code needed here.
+
+Example of events from the text: people mostly interact with desktop applications via a keyboard and a mouse generating input events such as key presses or mouse clicks. Furthermore, interactive programs can also react to computer-generated events, for example, clock ticks or the arrival of a message from some other computer.
+
+1. Intelligent glasses: voice command inputs, like the IBM commercial.
+2. Intelligent clothes: moisture sensor input.
+3. Intelligent clothes: temperature sensor input.
+4. Intelligent helmet: air pressure sensor input.
+5. Intelligent helmet: temperature sensor input.
+
+
+============
+
+
+<<=CODE==>> My response:

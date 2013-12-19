@@ -33,15 +33,20 @@ Note: Once you understand Programming With Lists, you will be able to use other 
 
 
 ==THOUGHTS==
-;; Only the function inputs should be in the files, i.e. the names used in the letter. You put the functions themselves in there before.
+Only the function inputs should be in the files, i.e. the names used in the letter. You put the functions themselves in there before.
+
+Big point: when actually running the program it must be executed like so and you'll see DrRacket echo "out" to the screen.
+
+> (main "in-fst" "in-last" "in-signature" "out")
+"out"
+
+
+============
+
+
+<<=CODE==>> My response:
 
 (require 2htdp/batch-io)
-
-(define (main in-fst in-lst in-signature out)
-  (write-file out
-              (letter (read-file in-fst)
-                      (read-file in-lst)
-                      (read-file in-signature))))
 
 (define (letter fst lst signature-name)
   (string-append
@@ -65,7 +70,9 @@ Note: Once you understand Programming With Lists, you will be able to use other 
    "Sincerely,"
    "\n\n"
    signature-name))
-============
 
-
-<<=CODE==>> My response:
+(define (main in-fst in-lst in-signature out)
+  (write-file out
+              (letter (read-file in-fst)
+                      (read-file in-lst)
+                      (read-file in-signature))))

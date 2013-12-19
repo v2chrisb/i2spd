@@ -1,3 +1,26 @@
+**===== 12/19 evening; start @ 0540, finish @ 0640** = 60
+
+Able to run the letter program (which is actually exercise 27). See the exercise
+file for details, but once again, all four function arguments had to be quoted:
+
+(main "in-fst" "in-last" "in-signature" "out")
+
+On to 2.4.2 Interactive Programs.
+
+When a user presses a key on the keyboard, the operating system runs a function
+that processes key strokes. We say that the key stroke is a key event, and the
+function is an event handler. In the same vein, the operating system runs an
+event handler for clock ticks, for mouse actions, and so on. Conversely, after
+an event handler is done with its work, the operating system may have to change
+the image on the screen, ring a bell, or print a document. To accomplish these
+tasks, it also runs functions that translate the operating system’s data into
+sounds, images, and actions on the printer.
+
+To make a general-purpose computer work on these radically different tasks,
+different programs install different event handlers. That is, a rocket launching
+program uses one kind of function to deal with clock ticks while an oven’s
+service functions uses a different kind.
+
 **===== 12/18 evening; start @ 2200, finish @ 2220** = 20
 
 How come this program doesn't just run? The function has all it needs; no user

@@ -1,33 +1,15 @@
 Introduction to Systematic Program Design
 =========================================
 
-I'm currently enrolled in a massively open online course (MOOC) offered through
-Coursera entitled "[Introduction to Systematic Program Design, Part
-1](https://www.coursera.org/course/programdesign)". It is a 10-week long course
-provided by the University of British Columbia.
+I recently worked through a massively open online course (MOOC) offered through Coursera entitled "[Introduction to Systematic Program Design, Part
+1](https://www.coursera.org/course/programdesign)". It is a 10-week long course provided by the University of British Columbia. I got through the first three weeks and felt that I hadn't grasped the material, so I went back to day #1 and started over. In a nutshell, I spent 8 weeks doing the first three weeks. When I found myself in week 3 again, I decided I'd stop working on the course and instead start working through the text that inspired the course, page by page. That's what I'm doing now.
 
-The course uses DrRacket, an IDE for Scheme, one of the most common dialects of
-Lisp. Since taking the course I've learned that many universities use Scheme or
-Lisp when teaching computer science -- it's tough to get my head around, but I
-find that the functional approach and style of programming is better suited to
-me than the mainstream, imperative approach. If I ever get a brain and
-miraculously become an adequate program developer someday, I'll certainly expand
-into the imperative domain of languages. I like the idea of being raised and
-developed in the functional style/approach, so this is where I plan to stay for
-awhile.
+The main text referred to is "[How to Design Programs, 2nd Edition](http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html)", which I started working through starting on 11/22/2013. However long it takes to get through this book, that's how long it will take me. Learning to design programs and become a programmer is part of my "[5-year plan](http://chrisbeattie.org/)".
 
-All of my course files are located here. You'll see that it's not possible to
-simply view the \*.rkt source files because DrRacket is needed to open them --
-this is a deliberate design decision by the DrRacket development team. DrRacket
-is an IDE with teaching as a focus, and as such, files are encoded when a person
-chooses to use one of the teaching languages. We're using BSL, the beginning
-student language.
+The text authors created DrRacket, an operating system and language set used for teaching via their dialect of Scheme, known as the "[Racket language](http://racket-lang.org/)".
 
-One could choose to simply use the Racket language in DrRacket (without the
-teaching features enabled) and save their files as plain text. I just did this
-for an exercise from a book I'm reading entitled, "The Little Schemer". I saved
-the file using the standard Scheme \*.scm extension (which is why GitHub lists
-my second language as Scheme).
+All of my study files are located here. You'll see that it's not possible to
+simply view the \*.rkt source files because DrRacket is needed to open them -- this is a deliberate design decision by the DrRacket development team. DrRacket's focus is to teach people how to design and develop programs, and as such, files are encoded when a person chooses to use one of the teaching languages. Right now I'm using BSL, the beginning student language.
 
 Here are a couple of other links you may find interesting:
 
@@ -38,5 +20,7 @@ Here are a couple of other links you may find interesting:
 * [The Little Schemer](http://scottn.us/downloads/The_Little_Schemer.pdf)
   (teaches recursion)
 
-Cheers, and if you haven't explored the world of Lisp and Scheme, I'd recommend
-at least giving them a look. It's all pretty fascinating. :-)
+Cheers, and if you haven't explored the world of Lisp and Scheme, I'd  recommend at least giving them a look. It's all pretty fascinating. :-)
+
+
+*<<updated 12/21/2013>>*

@@ -1,5 +1,5 @@
-Introduction to Systematic Program Design
-=========================================
+How to Design Programs, 2nd Edition
+===================================
 
 I recently worked through a massively open online course (MOOC) offered through Coursera entitled "[Introduction to Systematic Program Design, Part
 1](https://www.coursera.org/course/programdesign)". It is a 10-week long course provided by the University of British Columbia. I got through the first three weeks and felt that I hadn't grasped the material, so I went back to day #1 and started over. In a nutshell, I spent 8 weeks doing the first three weeks. When I found myself in week 3 again, I decided I'd stop working on the course and instead start working through the text that inspired the course, page by page. That's what I'm doing now.
@@ -13,6 +13,7 @@ simply view the \*.rkt source files because DrRacket is needed to open them -- t
 
 Here are a couple of other links you may find interesting:
 
+* [Simply Scheme, 2nd Edition, Harvey & Wright](http://www.eecs.berkeley.edu/~bh/ss-toc2.html)
 * [Structure & Interpretation of Computer Programs (SICP), Abelson &
   Sussman](http://sicpebook.wordpress.com/)
 * [The Scheme Programming Language, 4th Edition, R. Kent
@@ -22,5 +23,7 @@ Here are a couple of other links you may find interesting:
 
 Cheers, and if you haven't explored the world of Lisp and Scheme, I'd  recommend at least giving them a look. It's all pretty fascinating. :-)
 
+> *last updated on 12/21/2013*
 
-*<<updated 12/21/2013>>*
+
+

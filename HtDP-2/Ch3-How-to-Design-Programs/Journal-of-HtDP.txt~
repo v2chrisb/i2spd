@@ -1,0 +1,44 @@
+
+
+**===== 12/20 morning; start @ 0455, finish @ 0600** = 65
+
+<== this is where I finished CH2; it's here for reference ==>
+
+"...a rocket launching program uses one kind of function to deal with clock 
+ticks while an oven’s service functions uses a different kind."
+
+So, no matter the system, press a key on a keyboard and you have a key event.
+The OS then runs an event handler. This is a yet another example of abstracting
+away from something to grasp a concept.
+
+"It is the task of an interactive program’s main function to communicate these
+designations to the operating system, that is, the software platform on which
+the program is launched." --big-bang, for instance. The big-bang main function
+is my "means to install event handlers and functions that translate data into
+presentable form."
+
+"A big-bang expression consists of one required subexpression and one required
+clause. The subexpression evaluates to the initial state of the program, and
+the required clause tells DrRacket how to render the current state as a
+program."
+
+Further solidifying the use and purpose of the clause in a big-bang expression:
+
+(require 2htdp/universe)
+(require 2htdp/image)
+
+(define (number->square s)
+  (square s "solid" "red"))
+
+(big-bang 100
+          [to-draw number->square]
+          [on-tick sub1]
+          [stop-when zero?])
+          
+"When the state’s value becomes 0, the evaluation is done. For every other
+state—from 100 to 1—big-bang translates the state into an image, using
+number->square as the to-draw clause tells it to. Hence, the window displays a
+red square that shrinks from 100 x 100 pixels to 1 x 1 pixel over 100 clock
+ticks."
+
+In this case, number->square is the clause being discussed.

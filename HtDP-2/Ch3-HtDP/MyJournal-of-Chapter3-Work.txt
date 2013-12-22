@@ -1,0 +1,90 @@
+**===== 12/22 morning; start @ 0655, finish @ 0750** = 55
+
+Chapter 3! Emacs! New tools, new chapter, new information to learn! :-)
+
+I just created a PDF of this section, i.e. "Section I: Fixed-Size Data", and it
+is 131 pages. Chapter 3 begins on page 32; exercises 30 through 34 appear on
+page 40.
+
+Although this is material that Dr. Kiczales covered in the UBC MOOC, it's
+presented in a different way and with a different pace here. Onward!
+
+Programmers need a language, a notation for communicating what we wish to
+compute. We need to learn the vocabulary of the programming language, to figure
+out its grammar, and to understand that its "phrases" mean. We also need to:
+
++ learn how to get FROM a problem statement TO a program,
++ determine what is relevant in the problem statement and what can be ignored,
++ tease-out what the program consumes,
++ what it produces,
++ and how it relates to inputs to outputs.
+
+Now on 3.1 "Designing Functions".
+
+The purpose of a program is to describe the computational process of working
+through information and producing new information. BSL and DrRacket are used
+so the student does *not* have to worry about the translation of information
+into data.
+
+Footsteps...time to stop for now.
+
+
+**===== 12/21 evening; start @ 2115, finish @ 2200** = 45
+
+<== REFERENCE: end of chapter 2 ==>
+<== this is also found in the chapter 2 notes ==>
+
+Still reading the end of chapter 2. I will definitely finish chapter 2 today and
+move on to chapter 3. You left off at this:  in this case, number->square is the
+clause being discussed. Now we're going to create a new clause for dealing with
+key events and name it 'reset'.
+
+(define (reset s ke)
+  100)
+
+This function is a bit puzzling and the text has to say of it, "this function
+throws away its arguments and returns 100, which is the initial state of the 
+big-bang expression we wish to modify." Why/how does it throw away its argu-
+ments, i.e what it is the technical reason it throws away its agruments?
+
+The 'on-key' function calls 'reset' when a key event occurs. The 'reset'
+function takes the current value of 's' as its first argument and 'ke' as its
+second argument. What is, and where does, the 'ke' variable come from?
+
+OK. So I ran the 'reset' function manually and passed it two arguments. I passed
+in strings, numbers and booleans, and no matter what you give 'reset' as its
+two arguments, it always returns 100. A little less puzzling but I'm still not
+entirely clear on this, but clear enough to move on in the text.
+
+In order to understand the evaluation of big-bang expressions in general, let us
+look at a schematic one: 
+
+(big-bang cw0
+          (on-tick tock)
+          (on-key ke-h)
+          (on-mouse me-h)
+          (to-draw render)
+          (stop-when end?)
+          ...)
+
+Figure 7, How the World Works, is helpful. Look at it again if confused. Now, 
+the first interactive program:
+
+(require 2htdp/universe)
+(require 2htdp/image)
+
+(define (main y)
+  (big-bang y
+            [on-tick sub1]
+            [stop-when zero?]
+            [to-draw place-dot-at]
+            [on-key stop]))
+ 
+(define (place-dot-at y)
+  (place-image (circle 3 "solid" "red") 50 y (empty-scene 100 100)))
+ 
+(define (stop y ke)
+  0)
+  
+End of chapter 2. I know I'll be revisiting these examples again. I'll copy this
+day's work into the week 3, for reference.

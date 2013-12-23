@@ -1,15 +1,14 @@
 How to Design Programs, 2nd Edition
 ===================================
 
-I recently worked through a massively open online course (MOOC) offered through Coursera entitled "[Introduction to Systematic Program Design, Part
-1](https://www.coursera.org/course/programdesign)". It is a 10-week long course provided by the University of British Columbia. I got through the first three weeks and felt that I hadn't grasped the material, so I went back to day #1 and started over. In a nutshell, I spent 8 weeks doing the first three weeks. When I found myself in week 3 again, I decided I'd stop working on the course and instead start working through the text that inspired the course, page by page. That's what I'm doing now.
+I recently worked through a massively open online course (MOOC) offered through Coursera entitled, "[Introduction to Systematic Program Design, Part
+1](https://www.coursera.org/course/programdesign)", a 10-week long course provided by the University of British Columbia. I made it through the first three weeks and felt that I hadn't quite grasped the material, so I went back to day #1 and started over. In a nutshell, I spent 8 weeks doing the first three weeks. At that 8 week mark, I decided to stop working on the course, and instead, work through the text that inspired the course, page by page. That's what I'm doing now.
 
-The main text referred to is "[How to Design Programs, 2nd Edition](http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html)", which I started working through starting on 11/22/2013. However long it takes to get through this book, that's how long it will take me. Learning to design programs and become a programmer is part of my "[5-year plan](http://chrisbeattie.org/)".
+The course was instpired by the textbook "[How to Design Programs, 2nd Edition](http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html)". I started the text from the very beginning on 11/22/2013. However long it takes to get through this book, that's how long it will take me. Learning to design programs and become a programmer is part of my "[5-year plan](http://chrisbeattie.org/)".
 
-The text authors created DrRacket, an operating system and language set used for teaching via their dialect of Scheme, known as the "[Racket language](http://racket-lang.org/)".
+The authors of HtDP-2 also created DrRacket, an operating system and language used to teach prgramming via their dialect of Scheme, known as the "[Racket language](http://racket-lang.org/)".
 
-All of my study files are located here. You'll see that it's not possible to
-simply view the \*.rkt source files because DrRacket is needed to open them -- this is a deliberate design decision by the DrRacket development team. DrRacket's focus is to teach people how to design and develop programs, and as such, files are encoded when a person chooses to use one of the teaching languages. Right now I'm using BSL, the beginning student language.
+All of my study files are located in this GitHub repository: the folder named 'UBC' contains the MOOC course files, and the 'HtDP-2' folder contains my solutions to the exercise files in the textbook.
 
 Here are a couple of other links you may find interesting:
 
@@ -21,7 +20,9 @@ Here are a couple of other links you may find interesting:
 * [The Little Schemer](http://scottn.us/downloads/The_Little_Schemer.pdf)
   (teaches recursion)
 
-Cheers, and if you haven't explored the world of Lisp and Scheme, I'd  recommend at least giving them a look. It's all pretty fascinating. :-)
+I've followed software development for years and made a number of attempts to learn on my own via self study. I never found a text or course that presented the material the way HtDP-2 does. I think I can finally learn this stuff -- it will be a boat-load of work.
+
+Bring it on. :-) 
 
 > *last updated on 12/21/2013*
 

@@ -1,4 +1,7 @@
 **===== 12/22 morning; start @ 0655, finish @ 0750** = 55
+                               1200, finish @ 1400** = 120
+
+*Note: I spent an easy 2 hours today reading the new material and taking notes.
 
 Chapter 3! Emacs! New tools, new chapter, new information to learn! :-)
 
@@ -27,6 +30,39 @@ so the student does *not* have to worry about the translation of information
 into data.
 
 Footsteps...time to stop for now.
+
+<-- START Sunday evening, 12/22 -->
+
+Some of the main points of my readings today: I'll journal these points with
+the hope that they'll "stick" in my old brain a little better.
+
+(+) the purpose of a program is to describe a computational process of working
+through information & producing new information.
+
+(+) the information that comes from a part of the real world is called the
+program's DOMAIN
+
+(+) information plays a central role; think of information as facts about a
+program's DOMAIN
+
+(+) INFO -> PROCESSING -> DATA & VALUES -> PROCESSING -> INFO
+
+(+) MVC = model, view, control: separate data processing from parsing info.
+
+(+) it's critical to learn how to get from a problem statement to a program.
+
+(+) a good program comes with a short write-up that explains
+     -> what it does,
+     -> what inputs it expects
+     -> what it produces
+
+(+) organize your programs around the problem's data
+
+(+) a class is a collection of data, like a mathematical set
+
+(+) a value is an element of a class
+
+<-- END Sunday evening, 12/22 -->
 
 
 **===== 12/21 evening; start @ 2115, finish @ 2200** = 45

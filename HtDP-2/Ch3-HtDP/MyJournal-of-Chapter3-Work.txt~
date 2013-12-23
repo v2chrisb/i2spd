@@ -1,4 +1,4 @@
-**===== 12/22 morning; start @ xxxx, finish @ yyyy** = zz
+**===== 12/22 morning; start @ 0655, finish @ 0750** = 55
 
 Chapter 3! Emacs! New tools, new chapter, new information to learn! :-)
 
@@ -9,6 +9,24 @@ page 40.
 Although this is material that Dr. Kiczales covered in the UBC MOOC, it's
 presented in a different way and with a different pace here. Onward!
 
+Programmers need a language, a notation for communicating what we wish to
+compute. We need to learn the vocabulary of the programming language, to figure
+out its grammar, and to understand that its "phrases" mean. We also need to:
+
++ learn how to get FROM a problem statement TO a program,
++ determine what is relevant in the problem statement and what can be ignored,
++ tease-out what the program consumes,
++ what it produces,
++ and how it relates to inputs to outputs.
+
+Now on 3.1 "Designing Functions".
+
+The purpose of a program is to describe the computational process of working
+through information and producing new information. BSL and DrRacket are used
+so the student does *not* have to worry about the translation of information
+into data.
+
+Footsteps...time to stop for now.
 
 
 **===== 12/21 evening; start @ 2115, finish @ 2200** = 45

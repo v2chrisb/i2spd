@@ -1,0 +1,40 @@
+;; *HtDD*: establish represent/interpret relation btwn info. & data
+;; Structure Definition (Compound Data)
+;; ====================================
+
+
+;; Type Comment
+;; ============
+
+
+;; Interpretation
+;; ==============
+
+
+;; Examples
+;; ========
+
+
+;; Template for a one argument function
+;; ====================================
+
+
+;; Template Rules Used:
+;; ====================
+
+
+;; *HtDF*
+;; Signature
+;; =========
+
+
+;; Purpose
+;; =======
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+
+
+;; Template & Inventory
+;; ====================

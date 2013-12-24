@@ -4,7 +4,7 @@ How to Design Programs, 2nd Edition
 I recently worked through a massively open online course (MOOC) offered through Coursera entitled, "[Introduction to Systematic Program Design, Part
 1](https://www.coursera.org/course/programdesign)", a 10-week long course provided by the University of British Columbia. I made it through the first three weeks and felt that I hadn't quite grasped the material, so I went back to day #1 and started over. In a nutshell, I spent 8 weeks doing the first three weeks. At that 8 week mark, I decided to stop working on the course, and instead, work through the text that inspired the course, page by page. That's what I'm doing now.
 
-The course was instpired by the textbook "[How to Design Programs, 2nd Edition](http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html)". I started the text from the very beginning on 11/22/2013. However long it takes to get through this book, that's how long it will take me. Learning to design programs and become a programmer is part of my "[5-year plan](http://chrisbeattie.org/)".
+The course was inspired by the textbook "[How to Design Programs, 2nd Edition](http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html)". I started the text from the very beginning on 11/22/2013. However long it takes to get through this book, that's how long it will take me. Learning to design programs and become a programmer is part of my "[5-year plan](http://chrisbeattie.org/)".
 
 The authors of HtDP-2 also created DrRacket, an operating system and language used to teach prgramming via their dialect of Scheme, known as the "[Racket language](http://racket-lang.org/)".
 
@@ -24,7 +24,7 @@ I've followed software development for years and made a number of attempts to le
 
 Bring it on. :-) 
 
-> *last updated on 12/21/2013*
+> *last updated on 12/23/2013*
 
 
 

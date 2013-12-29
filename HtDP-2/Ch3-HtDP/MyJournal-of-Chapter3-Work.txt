@@ -1,5 +1,41 @@
-**===== 12/28 morning; start @ 0500, finish @ 0530** = 30
+**===== 12/29 morning; start @ 0720, finish @ 0755** = 35
                        start @ xxxx, finish @ yyyy** = zz
+
+Retrieved data definition steps from Dr. K's class. Looking over my old notes
+proved helpful. The pace of the UBC course is much faster than the book. I think
+the two will complement each other as I move forward.
+
+Here are the steps and points made by Dr. K regarding data definitions, which I 
+referred to as HtDD:
+
+1. Start with information.
+  a. Determine the information's *structure* to know the type of data definition
+     to use:
+   (1). simple atomic
+   (2). interval
+   (3). enumeration
+   (4). itemization
+   (5). compound data
+   (6). self or mutually referential
+  b. Information structure drives template structures and assists determining
+     function examples (a.k.a. check-expects).
+2. Structure definition (used with compound data only).
+3. A type comment that defines the new type & describes how to form data for 
+   this new type.
+4. An interpretation describing the correspondence between information & data.
+5. One or more examples of data.
+6. A template for a one argument function operating on data of this type.
+
+Moving on, the basic Dr. Kiczales/UBC steps for HtDF:
+
+1. Signature.
+2. Purpose.
+3. Stub. Define examples. Wrap each in a check-expect.
+4. Template & inventory.
+
+
+**===== 12/28 morning; start @ 0500, finish @ 0530** = 30
+
 
 Created a new _ExSKEL_Process.txt file that outlines the process shown in the
 text. Also see the link for deriving celsius to fahrenheit below.

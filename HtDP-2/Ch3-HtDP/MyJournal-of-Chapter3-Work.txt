@@ -1,3 +1,10 @@
+**===== 12/28 morning; start @ 0500, finish @ 0530** = 30
+                       start @ xxxx, finish @ yyyy** = zz
+
+Created a new _ExSKEL_Process.txt file that outlines the process shown in the
+text. Also see the link for deriving celsius to fahrenheit below.
+
+
 **===== 12/27 evening; start @ 2220, finish @ 2250** = 30
 
 Spent a good deal of time today putzing-around with ArchLinux, which is great
@@ -33,6 +40,9 @@ The Process (using F to C conversion as an example).
 5. Code; replace the body of the function with an expression that attempts to
    compute from the pieces in the template what the purpose statement promises.
 6. Test the function.
+
+REFERENCE: Deriving the Celsius-to-Fahrenheit Conversion Formula
+http://mathforum.org/library/drmath/view/58472.html
 
 
 **===== 12/25 evening; start @ 2245, finish @ 2300** = 15

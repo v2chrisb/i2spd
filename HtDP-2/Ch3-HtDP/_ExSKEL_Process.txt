@@ -1,0 +1,30 @@
+Exercise X.
+
+
+==DOCUMENTATION LESSONS==
+
+=========================
+
+
+==THOUGHTS==
+
+============
+
+==PROCESS==
+1. Express how info. will represented as data.
+2. Signature: how many inputs the function consumes (e.g Number -> Number).
+3. Purpose: what does the function compute?
+4. Stub: a simplistic function definition, e.g.:
+    (define (f2c f c) 0)
+5. Illustrate with functional examples, e.g.:
+    + Number -> Number
+	+ given F, compute C
+	+ given 32, expect 0
+	+ given 212, expect 100
+6. Take inventory: understand the givens and what's needed to compute.
+7. Code.
+8. Test.
+===========
+
+
+<<=CODE==>> My response:

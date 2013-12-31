@@ -1,5 +1,15 @@
+**===== 12/30 afternoon; start @ 1500, finish @ 1530** = 30
+
+Sick as a dog! I still did a good 1/2 hour of reading today and decided that
+it's a good time to maybe go back and revisit the UBC videos. The text seems to
+be mixing the design of functions and data into one soup yet Dr. K consciously
+separated them. I will attempt to find a process that works for me, and once I
+do, I'll do the text problems using this process. It would probably be good to
+also do the UBC homework files again. I need to spend time coding -- I've been
+doing an awful lot of reading lately.
+
+
 **===== 12/29 morning; start @ 0720, finish @ 0755** = 35
-                       start @ xxxx, finish @ yyyy** = zz
 
 Retrieved data definition steps from Dr. K's class. Looking over my old notes
 proved helpful. The pace of the UBC course is much faster than the book. I think

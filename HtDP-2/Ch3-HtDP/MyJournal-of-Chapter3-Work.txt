@@ -1,3 +1,10 @@
+**===== 12/31 evening; start @ 2030, finish @ 2145** = 75
+
+Watched the week2-1 video (cond expressions); week2-2 (data definitions);
+week2-3 (HtDD, atomic non-distinct); week2-4 (HtDF w/non-primitive data);
+week2-5 (structure of data orthogonality); week1-8 *(function definitions).
+
+
 **===== 12/30 afternoon; start @ 1500, finish @ 1530** = 30
 
 Sick as a dog! I still did a good 1/2 hour of reading today and decided that

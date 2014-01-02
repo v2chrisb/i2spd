@@ -1,3 +1,18 @@
+**===== 01/01 evening; start @ 2130, finish @ 2135** = 05
+
+This is really a cheat. It's a feast day in the Church and I'm zoned-in on Arch
+Linux right now. I'm not going to code today -- I'm taking the day off from
+reading or doing anything with HtDP, however, tomorrow morning I'll be at it
+bright and early. It's time to get back to the regular routing.
+
+I did read about Lambda Calculus for 15 minutes earlier today so this isn't a
+complete cheat entry. :-)
+
+Thanks be to God for this day where we remember Our Lady and the special place
+she holds in heaven as the Mother of God! Holy Mary, Mother of God, pray for us
+now and at the hour of our death.
+
+
 **===== 12/31 evening; start @ 2030, finish @ 2145** = 75
 
 Watched the week2-1 video (cond expressions); week2-2 (data definitions);

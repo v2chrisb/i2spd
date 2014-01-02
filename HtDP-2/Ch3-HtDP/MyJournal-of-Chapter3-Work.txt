@@ -1,3 +1,49 @@
+**===== 01/02 morning; start @ 0515, finish @ 0625** = 70
+
+Note: I also went through the yell-starter video. There are good quiz questions
+at the end!
+
+So, the HtDF-2 text, in section 3.1.1 "The Process", is talking about the UBC
+"how to design functions" (HtDF) recipe. You were trying to align this section of
+the text with the UBC "how to design data" (HtDD) recipe back on 12/29.
+
+I changed the SPD-Template.txt file in my GitHub repository to reflect some
+subtle differences I picked-up while watching the "HtDF, full speed" video this
+morning.  Here's the example, in full:
+
+;; Problem: consume a number and produce twice that number.
+;; Call your function double.
+
+;; *HtDF*
+;; Signature
+;; =========
+;; Number -> Number
+
+
+;; Purpose
+;; =======
+;; produce 2 times a given number
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+#;(define (double n) 0)
+
+(check-expect (double 3) 6)
+(check-expect (double 4.2) 8.4)
+
+
+;; Inventory -- template & constants
+;; =================================
+#;(define (double n)
+  (...n))
+
+;; Code the body; test & debug
+;; ===========================
+(define (double n)
+  (* 2 n))
+
+
 **===== 01/01 evening; start @ 2130, finish @ 2135** = 05
 
 This is really a cheat. It's a feast day in the Church and I'm zoned-in on Arch

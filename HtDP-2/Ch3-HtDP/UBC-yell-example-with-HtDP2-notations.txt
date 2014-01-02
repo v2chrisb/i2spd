@@ -1,0 +1,37 @@
+;; yell-starter.rkt
+;; PROBLEM: DESIGN a function called yell that consumes strings
+;; like "hello" and adds "!" to produce strings like "hello!".
+;; Remember, when we say DESIGN, we mean follow the recipe.
+;; Leave behind commented out versions of the stub and template.
+
+;; *HtDF*
+;; Signature
+;; =========
+;; (HtDP-2: express how info. will be represented as data)
+;; String -> String
+
+
+;; Purpose: (HtDP-2: what does the function compute?)
+;; ==================================================
+;; produce a new string with an exclamation point appended to it.
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+;;(define (yell s) "")                    ;; Stub
+;; given "hello", expect "hello!"         ;; from HtDP-2
+;; given "oy", expect "oy!"               ;; from HtDP-2
+(check-expect (yell "hello") "hello!")
+(check-expect (yell "oy") "oy!")
+
+
+;; Inventory -- template & constants
+;; =================================
+#;(define (yell s)                        ;; Template
+   (... s))                               ;; copy this template for coding
+
+
+;; Code the body; test & debug
+;; ===========================
+(define (yell s)
+   (string-append s "!"))

@@ -28,13 +28,18 @@
 ;; =========
 
 
-;; Purpose
-;; =======
+;; Purpose: what does the function compute?
+;; ========================================
 
 
 ;; Stub; define examples; wrap each in a check-expect
 ;; ==================================================
 
 
-;; Template & Inventory
-;; ====================
+;; Inventory -- template & constants; understand "givens"
+;; and what is needed to compute
+;; ======================================================
+
+
+;; Code the body; test & debug
+;; ===========================

@@ -1,5 +1,21 @@
 Exercise 30: *Design* the function string-first, which extracts the first character from a non-empty string. Don’t worry about empty strings.
 
+;; *HtDF*
+;; Signature
+;; =========
+
+
+;; Purpose
+;; =======
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+
+
+;; Template & Inventory
+;; ====================
+
 
 ==DOCUMENTATION LESSONS==
 string-ith

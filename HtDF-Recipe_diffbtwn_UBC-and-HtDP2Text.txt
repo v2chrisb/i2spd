@@ -1,0 +1,45 @@
+;; *HtDF* --UBC
+;; Signature
+;; =========
+
+
+;; Purpose
+;; =======
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+
+
+;; Inventory -- template & constants
+;; =================================
+
+
+;; Code the body; test & debug
+;; ===========================
+
+
+HtDF from HtDP-2 Text
+=====================
+The Process (using F to C conversion as an example).
+
+1. Express how information will be represented as data.
+      -> e.g. use plain numbers to represent temperatures.
+2. Function signature, purpose statement, and function header.
+    => Signature: how many inputs the function consumes.
+      -> e.g. Number -> Number
+    => Purpose: what does the function compute?
+      -> e.g. calculate C given a number that represents F
+    => Header/stub: a simplistic function definition.
+3. Illustrate the signature & purpose with some functional examples.
+    => pick one piece of data from each input class from the signature and
+       determine what you expect back.
+; Number -> Number
+; compute C given F
+; given 32, expect 0
+; given 212; 100
+(define (f2c f c) 0))
+4. Take inventory; understand the givens and what's needed to compute.
+5. Code; replace the body of the function with an expression that attempts to
+   compute from the pieces in the template what the purpose statement promises.
+6. Test the function.

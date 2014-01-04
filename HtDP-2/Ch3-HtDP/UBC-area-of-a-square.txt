@@ -1,0 +1,38 @@
+;; DESIGN a function called area that consumes the length
+;; of one side of a square and produces the area of the square.
+;; Remember, when we say DESIGN, we mean follow the recipe.
+;; Leave behind commented out versions of the stub and template.
+
+;; *HtDF*
+;; Signature
+;; =========
+;; (HtDP-2: express how info. will be represented as data)
+;; Number -> Number
+
+
+;; Purpose: (HtDP-2: what does the function compute?)
+;; ==================================================
+;; consume the length of a square and produce its area.
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+;;(define (areasq n) 0)                  ;; Stub
+;; given 2, expect 4                     ;; from HtDP-2
+;; given 3, expect 9                     ;; from HtDP-2
+(check-expect (areasq 5) 25)
+
+
+
+;; Inventory -- template & constants
+;; =================================
+#;(define (areasq n)                      ;; Template
+   (... n))                               ;; copy this template for coding
+
+
+;; Code the body; test & debug
+;; ===========================
+(define (areasq n)
+   (* n n))
+   
+;; Ran successfully in DrRacket on 1/3/2014.

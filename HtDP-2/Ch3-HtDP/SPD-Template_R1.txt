@@ -1,0 +1,31 @@
+;; PROBLEM: DESIGN a function called...
+
+;; *HtDF*
+;; Signature
+;; =========
+;; (HtDP-2: express how info. will be represented as data)
+;; String -> String
+
+
+;; Purpose: (HtDP-2: what does the function compute?)
+;; ==================================================
+;; produce a new string with an exclamation point appended to it.
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+;;(define (yada n) 0)                    ;; Stub
+;; given x, expect y                     ;; from HtDP-2
+;; given a, expect b                     ;; from HtDP-2
+(check-expect (yada 5) 6)
+
+
+
+;; Inventory -- template & constants
+;; =================================
+#;(define (yada n)                        ;; Template
+   (... n))                               ;; copy this template for coding
+
+
+;; Code the body; test & debug
+;; ===========================

@@ -1,3 +1,11 @@
+**===== 01/03 evening; start @ 2125, finish @ 2155** = 30
+
+Watched the area-starter video. Completed the 'area of a square' exercise and
+successfully tested and ran it in DrRacket.
+
+Completed the UBC area of an image exercise.
+
+
 **===== 01/02 morning; start @ 0515, finish @ 0625** = 70
 
 Note: I also went through the yell-starter video. There are good quiz questions

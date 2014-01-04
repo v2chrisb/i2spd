@@ -1,0 +1,43 @@
+;; PROBLEM: DESIGN a function called image-area that consumes
+;; an image and produces the area of that image. For the area it
+;; is sufficient to just multiple the image's width by its height.
+;; Follow the HtDF recipe and leave behind commented out versions
+;; of the stub and template.
+
+(require 2htdp/image)
+
+;; *HtDF*
+;; Signature
+;; =========
+;; (HtDP-2: express how info. will be represented as data)
+;; Image -> Number
+
+
+;; Purpose: (HtDP-2: what does the function compute?)
+;; ==================================================
+;; consume an image and produce the area of that image.
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+;;(define (areaimg w h) 0)                 ;; Stub
+;; given 2 3, expect 6                     ;; from HtDP-2
+;; given 9 4, expect 36                    ;; from HtDP-2
+(check-expect (areaimg 9 4) 36)
+
+
+
+;; Inventory -- template & constants
+;; =================================
+#;(define (areaimg w h)                     ;; Template
+   (... w h))                               ;; copy this template for coding
+
+
+;; Code the body; test & debug
+;; ===========================
+;; need image-height and image-width
+
+(define (areaimg w h)
+   (* w h))
+   
+;; Succesfully coded, tested, and ran this in DrRacket on 1/3/14.

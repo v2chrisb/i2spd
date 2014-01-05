@@ -1,0 +1,43 @@
+(require 2htdp/image)
+
+;; PROBLEM: DESIGN a function called *tall* that consumes an image and determines whether the image is tall.
+; Remember, when we say DESIGN, we mean follow the recipe.
+; Leave behind commented out versions of the stub and template.
+
+;; *HtDF*
+;; Signature
+;; =========
+;; (HtDP-2: express how info. will be represented as data)
+;; Image -> Boolean
+
+
+;; Purpose: (HtDP-2: what does the function compute?)
+;; ==================================================
+;; consumes an image and determines whether it's tall, i.e.,
+;; the image height > length.
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+;;(define (tall? img ) false)            ;; Stub
+;;(define tall? (rectangle 2 3 "solid" "red") true))
+;; given 3w 2h, expect false             ;; from HtDP-2
+;; given 2w 3h, expect true              ;; from HtDP-2
+;; given 2w 2h, expect false             ;; from HtDP-2
+(check-expect (tall? (rectangle 2 3 "solid" "red") true))
+
+
+
+;; Inventory -- template & constants
+;; =================================
+;;(define (tall? img)                        ;; Template
+;   (if (... img)                             ;; copy this template for coding
+;  (if (... img)
+;   (if (... img)))
+
+;; Code the body; test & debug
+;; ===========================
+(define (tall? img)
+   (if (> (image-height img) (image-width img)) ; if taller than wide
+     true                                       ; true
+     false))                                    ; else, false

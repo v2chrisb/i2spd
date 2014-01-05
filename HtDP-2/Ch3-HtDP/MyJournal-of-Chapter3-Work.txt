@@ -1,3 +1,77 @@
+**===== 01/04 morning; start @ 0700, finish @ 0745** = 45
+                       start @ 1040, finish @ 1110** = 30
+
+Design is the process of going from a poorly formed problem to a well structured
+solution.  Making the problem more specific is part of the design process.
+
+Code coverage and boundary cases are introduced here.
+
+PROBLEM: design a function that consumes an image and determines whether the
+image is tall.
+
+At your first glance of this problem you didn't even think BOOLEAN.
+
+The proper number of tests for each function is something that will become more
+and more important as the problems increase in difficulty.
+
+There is a case in this problem when an image can be tall or not tall, so Dr. K
+discusses the 'if' statement and structures his starter code thus:
+
+(define (tall? img)
+   (if (... img)      ; condition being checked
+   (if (... img)      ; if true, execute code that's here
+   (if (... img)))    ; else, do this
+   
+Dr. K. says:  we might have to use img in the question and the answers of the
+'if' -- that's why we copy it three times. Example 'if' from UBC:
+
+(if (> (string-length x) 3)
+    "long"
+    "short")
+    
+||-- Then, tweaked and tested as a simple example in Dr. Racket (which runs):
+
+(define (bigger? x)
+  (if (> x 3)
+      "bigger"
+      "smaller"))
+      
+||-- Next, added a little  more & used a constant for readability...
+     The constant will be used when running the function
+
+(require 2htdp/image)
+
+(define IMAGE (rectangle 20 30 "solid" "blue"))
+
+(define (tall? img)
+    (if (< (image-width img) (image-height img))
+        "tall"
+        "short"))
+        
+||--
+
+(require 2htdp/image)
+
+(define IMG (rectangle 20 30 "solid" "purple"))
+
+(define (tall? x)
+  (if (> x (image-height IMG))
+      "taller"
+      "shorter"))
+      
+||-- 
+    
+(if (> (image-height (img)) (image-width (img))
+     "tall"
+     "not tall")
+    
+(if (> (image-height (rectangle 30 "solid" "red"))
+       (image-width (rectangle 20 "solid" "red"))
+
+
+||-- NungPoo is awake. Need to finish the 'tall' exercise. --||
+
+
 **===== 01/03 evening; start @ 2125, finish @ 2155** = 30
 
 Watched the area-starter video. Completed the 'area of a square' exercise and
@@ -12,8 +86,8 @@ Note: I also went through the yell-starter video. There are good quiz questions
 at the end!
 
 So, the HtDF-2 text, in section 3.1.1 "The Process", is talking about the UBC
-"how to design functions" (HtDF) recipe. You were trying to align this section of
-the text with the UBC "how to design data" (HtDD) recipe back on 12/29.
+"how to design functions" (HtDF) recipe. You were trying to align this section
+of the text with the UBC "how to design data" (HtDD) recipe back on 12/29.
 
 I changed the SPD-Template.txt file in my GitHub repository to reflect some
 subtle differences I picked-up while watching the "HtDF, full speed" video this

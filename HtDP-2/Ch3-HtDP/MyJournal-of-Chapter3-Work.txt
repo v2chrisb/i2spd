@@ -1,3 +1,12 @@
+**===== 01/06 morning; start @ 0650, finish @ 0735** = 45
+
+Did the string-last problem from HtDP-2 again. The big re-lesson here is that
+the 'string-ith' function counts from zero.
+
+(define (string-last s)
+    (string-ith s (- (string-length s) 1)))
+
+
 **===== 01/05 morning; start @ 0745, finish @ 0815** = 30
               evening; start @ 2110, finish @ 2140** = 30
 

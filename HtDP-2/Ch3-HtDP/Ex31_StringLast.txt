@@ -1,0 +1,41 @@
+; PROBLEM: DESIGN a function called *string-last* which extracts
+; the last character from a non-empty string.
+; string-length for string size and string-ith extracts the ith
+; 1-letter substring from a string.
+; BECAUSE string-ith counts from ZERO, you'll need to subtract one
+; from the actual string
+
+;; *HtDF*
+;; Signature
+;; =========
+;; (HtDP-2: express how info. will be represented as data)
+;; String -> String
+
+
+;; Purpose: (HtDP-2: what does the function compute?)
+;; ==================================================
+;; produce a new string that represents the last character of any 
+;; string given as input.
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+;(define (string-last s) "")              ;; Stub
+;; given "cat", expect "t"               ;; from HtDP-2
+;; given "round", expect "d"             ;; from HtDP-2
+(check-expect (string-last "12345") "5")
+
+
+
+;; Inventory -- template & constants
+;; =================================
+;(define (string-last s)                 ;; Template
+;   (... s))                             ;; copy this template for coding
+
+
+;; Code the body; test & debug
+;; ===========================
+(define (string-last s)
+    (string-ith s (- (string-length s) 1)))
+	
+; Tested OK in Dr. Racket on 1/6/14. Not setup to handle empty strings.

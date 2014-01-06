@@ -1,0 +1,39 @@
+; PROBLEM: DESIGN a function called string-first, which extracts the
+; first character from a non-empty string. Worry not about empty strings.
+
+;||--THOUGHTS--||
+; use string-ith which extracts the ith 1-letter substring from s.
+; (string-ith s i) where s is a string and i is a natural number
+
+;; *HtDF*
+;; Signature
+;; =========
+;; (HtDP-2: express how info. will be represented as data)
+;; String -> String
+
+
+;; Purpose: (HtDP-2: what does the function compute?)
+;; ==================================================
+;; produce the first character of any string given as input.
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+;;(define (string-first s) "a")          ;; Stub
+;; given "camp", expect "c"              ;; from HtDP-2
+;; given "trade", expect "t"             ;; from HtDP-2
+(check-expect (string-first "golf") "g")
+
+
+;; Inventory -- template & constants
+;; =================================
+;(define (string-first s)                ;; Template
+;   (... s))                               ;; copy this template for coding
+
+
+;; Code the body; test & debug
+;; ===========================
+(define (string-first s)
+   (string-ith s 0))
+   
+; *Tested OK in DrRacket on 1/5/14.

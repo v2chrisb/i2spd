@@ -1,0 +1,42 @@
+; PROBLEM: DESIGN a function called *slt5* that consumes a string
+; and determines whether its length is less than 5.  Follow the
+; HtDF recipe and leave behind commented out versions of the stub
+; and template.
+
+;; *HtDF*
+;; Signature
+;; =========
+;; (HtDP-2: express how info. will be represented as data)
+;; String -> Boolean
+
+
+;; Purpose: (HtDP-2: what does the function compute?)
+;; ==================================================
+;; consume a string and determine its length is less than 5.
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+;(define (slt5? s) "")                   ;; Stub
+;; given "hi", expect true              ;; from HtDP-2
+;; given "sunshine", expect false       ;; from HtDP-2
+(check-expect (slt5? "hi") true)
+(check-expect (slt5? "sunshine") false)
+(check-expect (slt5? "troop") false)
+
+
+;; Inventory -- template & constants
+;; =================================
+;(define (slt5? s)                     ;; Template
+;  (if (... s)                          ;; copy this template for coding
+;  (if (... s)
+;  (if (... s))
+
+;; Code the body; test & debug
+;; ===========================
+(define (slt5? s)
+   (if (< (string-length s) 5)
+           "less than 5"
+	       "5 or more"))
+		   
+; *Code works; tested OK in 1/5/14. Answer is very similar to UCB answer.

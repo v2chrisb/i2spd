@@ -19,25 +19,27 @@
 
 ;; Stub; define examples; wrap each in a check-expect
 ;; ==================================================
-;;(define (tall? img ) false)            ;; Stub
-;;(define tall? (rectangle 2 3 "solid" "red") true))
 ;; given 3w 2h, expect false             ;; from HtDP-2
 ;; given 2w 3h, expect true              ;; from HtDP-2
 ;; given 2w 2h, expect false             ;; from HtDP-2
-(check-expect (tall? (rectangle 2 3 "solid" "red") true))
 
+;(define (tall? img ) false)             ;; Stub
 
+(check-expect (tall? (rectangle 2 3 "solid" "red")) true)
+(check-expect (tall? (rectangle 3 2 "solid" "red")) false)
+(check-expect (tall? (rectangle 3 3 "solid" "red")) false)
 
 ;; Inventory -- template & constants
 ;; =================================
 ;;(define (tall? img)                        ;; Template
-;   (if (... img)                             ;; copy this template for coding
-;  (if (... img)
+;   (if (... img)                            ;; copy this template for coding
+;   (if (... img)
 ;   (if (... img)))
 
 ;; Code the body; test & debug
 ;; ===========================
+;; This function runs in DrRacket.
 (define (tall? img)
-   (if (> (image-height img) (image-width img)) ; if taller than wide
-     true                                       ; true
-     false))                                    ; else, false
+   (if (> (image-height img) (image-width img))   ; if taller than wide
+     "true"                                       ; true
+     "false"))                                    ; else, false

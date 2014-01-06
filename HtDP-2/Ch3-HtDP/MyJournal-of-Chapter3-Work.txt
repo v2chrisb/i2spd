@@ -1,3 +1,15 @@
+**===== 01/05 morning; start @ 0745, finish @ 0815** = 30
+              evening; start @ 2110, finish @ 2140** = 30
+
+It was tricky to get the 'if' statement working properly with image-height and
+image-width. Now that the function is at least working, it's time to revisit the
+DESIGN of this tall function.
+
+UBC-tall.txt is complete; code is tested in Dr. Racket.
+UBC-less-than-5.txt is complete.
+Ex30_StringFirst-R1.txt is complete.
+
+
 **===== 01/04 morning; start @ 0700, finish @ 0745** = 45
                        start @ 1040, finish @ 1110** = 30
 
@@ -23,7 +35,7 @@ discusses the 'if' statement and structures his starter code thus:
    (if (... img)))    ; else, do this
    
 Dr. K. says:  we might have to use img in the question and the answers of the
-'if' -- that's why we copy it three times. Example 'if' from UBC:
+'if' -- that's why we copy it three times. Example 'if' from UBC ref. docs.:
 
 (if (> (string-length x) 3)
     "long"
@@ -36,40 +48,15 @@ Dr. K. says:  we might have to use img in the question and the answers of the
       "bigger"
       "smaller"))
       
-||-- Next, added a little  more & used a constant for readability...
-     The constant will be used when running the function
+||-- This function runs.
 
 (require 2htdp/image)
-
-(define IMAGE (rectangle 20 30 "solid" "blue"))
 
 (define (tall? img)
     (if (< (image-width img) (image-height img))
         "tall"
         "short"))
-        
-||--
 
-(require 2htdp/image)
-
-(define IMG (rectangle 20 30 "solid" "purple"))
-
-(define (tall? x)
-  (if (> x (image-height IMG))
-      "taller"
-      "shorter"))
-      
-||-- 
-    
-(if (> (image-height (img)) (image-width (img))
-     "tall"
-     "not tall")
-    
-(if (> (image-height (rectangle 30 "solid" "red"))
-       (image-width (rectangle 20 "solid" "red"))
-
-
-||-- NungPoo is awake. Need to finish the 'tall' exercise. --||
 
 
 **===== 01/03 evening; start @ 2125, finish @ 2155** = 30

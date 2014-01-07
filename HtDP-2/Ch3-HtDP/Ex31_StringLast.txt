@@ -20,7 +20,7 @@
 
 ;; Stub; define examples; wrap each in a check-expect
 ;; ==================================================
-;(define (string-last s) "")              ;; Stub
+;(define (string-last s) "")             ;; Stub
 ;; given "cat", expect "t"               ;; from HtDP-2
 ;; given "round", expect "d"             ;; from HtDP-2
 (check-expect (string-last "12345") "5")

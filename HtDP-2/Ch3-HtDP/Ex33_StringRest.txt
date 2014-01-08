@@ -1,0 +1,39 @@
+;; PROBLEM: DESIGN a function called *string-rest* which produces
+;; a string with the first character removed.
+
+;; *HtDF*
+;; Signature
+;; =========
+;; (HtDP-2: express how info. will be represented as data)
+;; String -> String
+
+
+;; Purpose: (HtDP-2: what does the function compute?)
+;; ==================================================
+;; consume a string and produce that same string with the first
+;; character removed.
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+;(define (string-rest s) "")             ;; Stub
+;; given "big", expect "ig"              ;; from HtDP-2
+;; given "flat", expect "lat"            ;; from HtDP-2
+(check-expect (string-rest "big") "ig")
+
+
+
+;; Inventory -- template & constants
+;; =================================
+; re: UBC Data Driven Templates,
+; THIS IS ATOMIC NON-DISTINCT DATA
+;(define (yada n)                        ;; Template
+;  (... n))                              ;; copy this template for coding
+
+
+;; Code the body; test & debug
+;; ===========================
+(define (string-rest s)
+  (substring s 1 (string-length s)))
+  
+; *Tested, ran OK, and test passes in Dr. Racket on 1/8/14.

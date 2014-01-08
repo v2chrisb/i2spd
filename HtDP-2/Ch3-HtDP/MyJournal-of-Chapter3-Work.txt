@@ -1,3 +1,43 @@
+**===== 01/08 morning; start @ 0535, finish @ 0615** = 40
+
+It's the day to clear your head after all of the turbulence at work. Learning to
+program should be good for that! :-)
+
+Ah-hah! When you count a string in Scheme you mark the place that you start
+counting PRIOR TO the character, that is, for the word "brat",
+
+0b1r2a3t4
+.^.^.^.^.
+
+Expanded, for readability,
+
+0 b 1 r 2 a 3 t 4
+
+Now, considering the substring command:
+
+(substring s i j) => string
+s : string
+i : natural-number
+j : natural-number
+
+(substring "brat" 1 3) yields "ra"
+(substring "brat" 1 4) yields "rat"
+
+Don't forget to tinker in the REPL to assist when solving problems!
+
+HtDP problem #33 wants the first character removed from a string, so the word
+"brat" would become "rat". The 'string-length' function will return a number and
+I want to use this number as one of the inputs to the 'substring' command. How
+do I do this? Well, using the REPL, this returns the proper result:
+
+(substring "brat" 1 (string-length "brat"))
+
+So, replacing "brat" with a variable, the resulting function is:
+
+(define (string-last s)
+  (substring s 1 (string-length s)))
+
+
 **===== 01/07 morning; start @ 0600, finish @ 0640** = 40
 
 Geoff was fired yesterday. I study with sadness and offer my prayers for him,

@@ -9,7 +9,8 @@
 
 ;; Purpose: (HtDP-2: what does the function compute?)
 ;; ==================================================
-;; produce a new string with an exclamation point appended to it.
+;; consume a ... produce a ...
+
 
 
 ;; Stub; define examples; wrap each in a check-expect

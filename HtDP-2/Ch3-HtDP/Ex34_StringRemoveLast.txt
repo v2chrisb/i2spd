@@ -1,0 +1,37 @@
+;; PROBLEM: DESIGN a function called *string-remove-last-last* that removes the
+;; last character from a string.
+
+;; *HtDF*
+;; Signature
+;; =========
+;; (HtDP-2: express how info. will be represented as data)
+;; String -> String
+
+
+;; Purpose: (HtDP-2: what does the function compute?)
+;; ==================================================
+;; consume a string and produce a the same string MINUS the last character.
+
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+;(define (string-remove-last s) "")          ;; Stub
+;; given "start", expect "star"          ;; from HtDP-2
+;; given "got", expect "go"              ;; from HtDP-2
+(check-expect (string-remove-last "got") "go")
+
+
+
+;; Inventory -- template & constants
+;; =================================
+;(define (string-remove-last s)               ;; Template
+;   (... s))                             ;; copy this template for coding
+
+
+;; Code the body; test & debug
+;; ===========================
+(define (string-remove-last s)
+   (substring s 0 (- (string-length s) 1)))
+   
+; Tested OK in Dr. Racket on 1/8/14.

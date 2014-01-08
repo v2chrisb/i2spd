@@ -1,4 +1,5 @@
 **===== 01/08 morning; start @ 0535, finish @ 0615** = 40
+                       start @ 1700, finish @ 1730** = 30
 
 It's the day to clear your head after all of the turbulence at work. Learning to
 program should be good for that! :-)
@@ -36,6 +37,12 @@ So, replacing "brat" with a variable, the resulting function is:
 
 (define (string-last s)
   (substring s 1 (string-length s)))
+  
+In the afternoon I completed exercise 34, string-remove-last. The function looks
+like this:
+
+(define (string-remove-last s)
+   (substring s 0 (- (string-length s) 1)))
 
 
 **===== 01/07 morning; start @ 0600, finish @ 0640** = 40

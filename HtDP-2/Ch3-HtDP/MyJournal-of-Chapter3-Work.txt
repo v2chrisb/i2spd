@@ -1,3 +1,19 @@
+**===== 01/09 morning; start @ 0550, finish @ 0620** = 30
+
+Jared! Pray for us little buddy! We love and miss you very much.
+
+Start with the UBC "distance between two points" exercise, then start going
+through how to design data exercises.  Here's the distance between two points
+function:
+
+(define (distance x1 y1 x2 y2)
+   (sqrt (+ (sqr (- x2 x1)) (sqr (- y2 y1))))
+
+The check-expect that uses (sqrt 2) for a result to be tested against complains
+thus: check-expect cannot compare inexact numbers. Try (check-within test
+1.4142135623730951 range).
+
+
 **===== 01/08 morning; start @ 0535, finish @ 0615** = 40
                        start @ 1700, finish @ 1730** = 30
 

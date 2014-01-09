@@ -30,3 +30,8 @@
 
 ;; Code the body; test & debug
 ;; ===========================
+
+
+; If a WISH LIST is needed, it should consist of 3 things:
+; (1) a meaningful name for the function, (2) a signature,
+; and (3) a purpose statement. See section 3.4 of HtDP-2.

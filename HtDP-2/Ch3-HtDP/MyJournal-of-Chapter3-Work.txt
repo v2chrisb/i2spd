@@ -1,3 +1,14 @@
+**===== 01/10 evening; start @ 2050, finish @ 2135** = 45
+
+Now, HtDD in UBC.  Doing the 'best city' exercise. You forgot how to test for
+a string result, i.e.
+
+(define (best? cn)
+  (if (string=? "Denver" cn) 
+      true
+      false))
+
+
 **===== 01/09 morning; start @ 0550, finish @ 0620** = 30
 
 Jared! Pray for us little buddy! We love and miss you very much.

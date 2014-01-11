@@ -1,0 +1,68 @@
+;; *HtDD*: establish represent/interpret relation btwn info. & data
+; Imagine that you are designing a program that, among other things, 
+;has information about the names of cities in its problem domain.
+
+;; Structure Definition (for compound data)
+
+
+;; Type Comment, e.g. TLColor is one of: 0, 1, 2
+;; CityName is String
+
+
+;; interp. the name of a city
+
+
+;; Examples
+(define CN1 "Boston")
+(define CN2 "Denver")
+
+;; Template for a one argument function
+;(define (fn-for-cityname cn)
+;  (... cn)
+
+;; Template Rules Used:
+;; atomic non-distinct string
+
+
+
+;; *HtDF*: PROBLEM: DESIGN a function called *best* that 
+;; produces true if the given city is the best in the world.
+;; Signature
+;; =========
+;; (HtDP-2: express how info. will be represented as data)
+;; CityName -> Boolean
+
+
+;; Purpose: (HtDP-2: what does the function compute?)
+;; ==================================================
+;; consume a CityName and produce true or false
+
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+;(define (best? cn) true)                ;; Stub
+;; given "Denver", expect true           ;; from HtDP-2
+;; given "Boston", expect false          ;; from HtDP-2
+(check-expect (best? "Denver") true)
+
+
+
+;; Inventory -- template & constants
+;; =================================
+;(define (best? cn)                      ;; Template
+;  (... n))                              ;; copy this template for coding
+
+
+;; Code the body; test & debug
+;; ===========================
+(define (best? cn)
+  (if (string=? "Denver" cn) 
+      true
+      false))
+
+; Runs OK in Dr. Racket on 1/10/14.
+
+; If a WISH LIST is needed, it should consist of 3 things:
+; (1) a meaningful name for the function, (2) a signature,
+; and (3) a purpose statement. See section 3.4 of HtDP-2.

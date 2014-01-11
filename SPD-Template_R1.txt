@@ -1,6 +1,26 @@
-;; PROBLEM: DESIGN a function called...
+;; *HtDD*: establish represent/interpret relation btwn info. & data
+;; Structure Definition (for compound data)
 
-;; *HtDF*
+
+
+;; Type Comment, e.g. TLColor is one of: 0, 1, 2
+
+
+;; Interpretation, e.g. interp. color of a traffic light
+; - 0 red, 1 yellow, 2 green
+
+
+;; Examples
+
+
+;; Template for a one argument function
+
+
+;; Template Rules Used:
+
+
+
+;; *HtDF*: PROBLEM: DESIGN a function called...
 ;; Signature
 ;; =========
 ;; (HtDP-2: express how info. will be represented as data)

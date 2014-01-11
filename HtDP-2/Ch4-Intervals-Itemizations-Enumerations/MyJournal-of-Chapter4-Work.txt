@@ -1,0 +1,106 @@
+**===== 01/11 morning; start @ 0625, finish @ 0720** = 55
+
+I'm seeing and feeling the differences in approach between UBC and the text
+a little more clearly now.  Dr. K. has us learning about data design and 
+representing data in the second week, making us work with intervals,
+itemizations and enumerations. The text introduces us to HtDW *then* chapter 4
+has us learn about and use intervals, itemizations and enumerations.
+
+I think the best approach will be to create a new folder in HtDP-2 for chapter 4
+and work through data definitions with the UBC and HtDP-2 exercises. I'll
+duplicate a part of these journal entries to start the notes for chapter 4.
+
+Work list for 1/11/14:
+======================
+
+ + HtDD L3 (seat-num data definition) combined with...
+  -> HtDD L6 (seat-num function).
+ + HtDD L4 (letter-grade data definition) combined with...
+  -> HtDD L7 (bump-up letter grade function).
+ + HtDD L5 (countdown data definition) combined with...
+  -> HtDD L8 (countdown-to-display function).
+  
+After these are complete, it may be beneficial to read and work through problems
+in chapter 4 of the text, i.e exercises 46-48. Note that problem 49 starts
+using worlds again in its exercises and examples.
+
+From here it looks like a good approach may be:
+
+ + go back and complete all of the UBC HtDD practice problems,
+ + start and work through UBC HtDW videos and problems,
+ + finish chapter 3 in the HtDP-2 text (HtDW), and finally,
+ + finish chapter 4 in the HtDP-2 text, up to exercise 58.
+ 
+
+**===== 01/10 evening; start @ 2050, finish @ 2135** = 45
+
+Now, HtDD in UBC.  Doing the 'best city' exercise. You forgot how to test for
+a string result, i.e.
+
+(define (best? cn)
+  (if (string=? "Denver" cn) 
+      true
+      false))
+
+
+**===== 01/09 morning; start @ 0550, finish @ 0620** = 30
+
+Jared! Pray for us little buddy! We love and miss you very much.
+
+Start with the UBC "distance between two points" exercise, then start going
+through how to design data exercises.  Here's the distance between two points
+function:
+
+(define (distance x1 y1 x2 y2)
+   (sqrt (+ (sqr (- x2 x1)) (sqr (- y2 y1))))
+
+The check-expect that uses (sqrt 2) for a result to be tested against complains
+thus: check-expect cannot compare inexact numbers. Try (check-within test
+1.4142135623730951 range).
+
+
+**===== 01/08 morning; start @ 0535, finish @ 0615** = 40
+                       start @ 1700, finish @ 1730** = 30
+
+It's the day to clear your head after all of the turbulence at work. Learning to
+program should be good for that! :-)
+
+Ah-hah! When you count a string in Scheme you mark the place that you start
+counting PRIOR TO the character, that is, for the word "brat",
+
+0b1r2a3t4
+.^.^.^.^.
+
+Expanded, for readability,
+
+0 b 1 r 2 a 3 t 4
+
+Now, considering the substring command:
+
+(substring s i j) => string
+s : string
+i : natural-number
+j : natural-number
+
+(substring "brat" 1 3) yields "ra"
+(substring "brat" 1 4) yields "rat"
+
+Don't forget to tinker in the REPL to assist when solving problems!
+
+HtDP problem #33 wants the first character removed from a string, so the word
+"brat" would become "rat". The 'string-length' function will return a number and
+I want to use this number as one of the inputs to the 'substring' command. How
+do I do this? Well, using the REPL, this returns the proper result:
+
+(substring "brat" 1 (string-length "brat"))
+
+So, replacing "brat" with a variable, the resulting function is:
+
+(define (string-last s)
+  (substring s 1 (string-length s)))
+  
+In the afternoon I completed exercise 34, string-remove-last. The function looks
+like this:
+
+(define (string-remove-last s)
+   (substring s 0 (- (string-length s) 1)))

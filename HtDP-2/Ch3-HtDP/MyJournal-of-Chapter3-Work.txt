@@ -1,3 +1,16 @@
+**===== 01/11 morning; start @ 0625, finish @ 0715** = 50
+
+I'm seeing and feeling the differences in approach between UBC and the text
+a little more clearly now.  Dr. K. has us learning about data design and 
+representing data in the second week, making us work with intervals,
+itemizations and enumerations. The text introduces us to HtDW *then* chapter 4
+has us learn about and use intervals, itemizations and enumerations.
+
+I think the best approach will be to create a new folder in HtDP-2 for chapter 4
+and work through data definitions with the UBC and HtDP-2 exercises. I'll
+duplicate a part of these journal entries to start the notes for chapter 4.
+
+
 **===== 01/10 evening; start @ 2050, finish @ 2135** = 45
 
 Now, HtDD in UBC.  Doing the 'best city' exercise. You forgot how to test for

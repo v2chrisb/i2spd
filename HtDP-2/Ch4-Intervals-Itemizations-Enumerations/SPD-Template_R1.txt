@@ -1,0 +1,57 @@
+;; *HtDD*: establish represent/interpret relation btwn info. & data
+;; Structure Definition (for compound data)
+
+
+
+;; Type Comment, e.g. TLColor is one of: 0, 1, 2
+
+
+;; Interpretation, e.g. interp. color of a traffic light
+; - 0 red, 1 yellow, 2 green
+
+
+;; Examples
+
+
+;; Template for a one argument function
+
+
+;; Template Rules Used:
+
+
+
+;; *HtDF*: PROBLEM: DESIGN a function called...
+;; Signature
+;; =========
+;; (HtDP-2: express how info. will be represented as data)
+;; String -> String
+
+
+;; Purpose: (HtDP-2: what does the function compute?)
+;; ==================================================
+;; consume a ... produce a ...
+
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+;;(define (yada n) 0)                    ;; Stub
+;; given x, expect y                     ;; from HtDP-2
+;; given a, expect b                     ;; from HtDP-2
+(check-expect (yada 5) 6)
+
+
+
+;; Inventory -- template & constants
+;; =================================
+#;(define (yada n)                        ;; Template
+   (... n))                               ;; copy this template for coding
+
+
+;; Code the body; test & debug
+;; ===========================
+
+
+; If a WISH LIST is needed, it should consist of 3 things:
+; (1) a meaningful name for the function, (2) a signature,
+; and (3) a purpose statement. See section 3.4 of HtDP-2.

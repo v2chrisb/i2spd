@@ -1,3 +1,18 @@
+**===== 01/13 morning; start @ 0610, finish @ 0xxx** = yy
+
+From the UBC Data Driven Templates page, "in many cases the template for a
+function is determined by the type of data the function consumes."
+
+As my work stands, Dr. Racket is hanging on it. Look into the reaso for this
+next time.
+
+
+**===== 01/12 morning; start @ 0720, finish @ 0750** = 30
+
+I have my work aligned so I'll get started. Worked on UBC HtDD L3 until NungPoo
+awakened at 0750. Continue later...
+
+
 **===== 01/11 morning; start @ 0625, finish @ 0720** = 55
 
 I'm seeing and feeling the differences in approach between UBC and the text

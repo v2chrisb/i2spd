@@ -1,0 +1,81 @@
+; PROBLEM: Imagine that you are designing a program to manage
+; ticket sales for a theatre. (Also imagine that the theatre
+; is perfectly rectangular in shape!) Design a data definition
+; to represent a seat number in a row, where each row has 32
+; seats. (Just the seat number, not the row number.)
+; Using the SeatNum data definition, design a function that
+; produces true if the given seat number is on the aisle.
+
+;; *HtDD*: estab. represent/interpret relation btwn info&data
+;; Structure Definition (for compound data)
+; **N/A**
+
+
+;; Type Comment, e.g. TLColor is one of: 0, 1, 2
+; SeatNum is Integer [1, 32]
+
+
+;; Interpretation, e.g. interp. color of a traffic light
+; - 0 red, 1 yellow, 2 green
+; interp. the seat number in a row; each row has 32 seats
+
+
+;; Examples
+(define SN1   1)        ; aisle
+(define SN16 16)        ; middle
+(define SN32 32)        ; end
+
+
+;; Template for a one argument function
+;(define aisle? sn)
+;   (cond [(aisle? sn) (... sn)]
+;         [else
+;           (...)]))
+
+;; Template Rules Used:
+;   - one of: 
+;   - atomic non-distinct: SeatNum[1, 32]
+;   - atomic distinct: false
+
+
+;; *HtDF*: PROBLEM: DESIGN a function called...
+;; Signature
+;; =========
+;; (HtDP-2: express how info. will be represented as data)
+;; SeatNum -> Boolean
+
+
+;; Purpose: (HtDP-2: what does the function compute?)
+;; ==================================================
+; consume SeatNum and produce a Boolean, i.e produce true
+; if the seat is on the aisle.
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+;;define (aisle? sn) false)             ;; Stub
+;; given 1, expect true                 ;; from HtDP-2
+;; given 16, expect false               ;; from HtDP-2
+(check-expect (aisle?  1) true)
+(check-expect (aisle? 16) false)
+
+
+;; Inventory -- template & constants
+;; =================================
+; (define (aisle? sn)
+;   (cond [(aisle? sn) (... sn)]
+;         [else                         ;; Template
+;           (...)]))                    ;; copy this template for coding
+
+
+;; Code the body; test & debug
+;; ===========================
+(define (aisle? sn)
+  (cond [(aisle?  1) true]
+        [(aisle? 32) true]
+		[else false]))
+
+
+; If a WISH LIST is needed, it should consist of 3 things:
+; (1) a meaningful name for the function, (2) a signature,
+; and (3) a purpose statement. See section 3.4 of HtDP-2.

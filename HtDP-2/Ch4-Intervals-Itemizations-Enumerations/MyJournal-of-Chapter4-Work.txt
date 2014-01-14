@@ -1,10 +1,35 @@
-**===== 01/13 morning; start @ 0610, finish @ 0xxx** = yy
+**===== 01/14 morning; start @ 0615, finish @ 0645 = 30
+
+Template rules were wrong; interp. was off, template was quite different. Here's
+my "template for a one argument function" attempt:
+
+;(define aisle? sn)
+;   (cond [(aisle? sn) (... sn)]
+;         [else
+;           (...)]))
+
+And here's Dr. K's:
+
+(define (fn-for-seat-num sn)
+  (... sn))
+  
+Prof. K. tested 3 cases where I tested two; he tested both TRUE conditions.
+
+The final result was VERY different. I tried using a "cond" -- Prof. K. used an
+"or" statement.
+
+Wow -- lots of differences, and overall I feel like I really botched this one.
+I've gone back a number of times and revisited my approach versus the Prof's.
+Stopping at 30 minutes but back to this later.
+  
+  
+**===== 01/13 morning; start @ 0610, finish @ 0645 = 35
 
 From the UBC Data Driven Templates page, "in many cases the template for a
 function is determined by the type of data the function consumes."
 
-As my work stands, Dr. Racket is hanging on it. Look into the reaso for this
-next time.
+As far as the code I wrote today goes, Dr. Racket is hangs when processing it.
+Look into the reason for this next time.
 
 
 **===== 01/12 morning; start @ 0720, finish @ 0750** = 30

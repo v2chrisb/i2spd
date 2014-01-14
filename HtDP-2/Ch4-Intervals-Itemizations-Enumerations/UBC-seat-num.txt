@@ -12,12 +12,12 @@
 
 
 ;; Type Comment, e.g. TLColor is one of: 0, 1, 2
-; SeatNum is Integer [1, 32]
+; SeatNum is Integer[1, 32]
 
 
 ;; Interpretation, e.g. interp. color of a traffic light
 ; - 0 red, 1 yellow, 2 green
-; interp. the seat number in a row; each row has 32 seats
+; interp. the seat number in a row; 1 and 32 are aisle seats
 
 
 ;; Examples
@@ -27,15 +27,18 @@
 
 
 ;; Template for a one argument function
+; Below was your attempt because you didn't consider an 'or'.
 ;(define aisle? sn)
 ;   (cond [(aisle? sn) (... sn)]
 ;         [else
 ;           (...)]))
+; ...and here's the Prof's answer...
+; (define (fn-for-seat-num sn)
+;   (... sn))
+
 
 ;; Template Rules Used:
-;   - one of: 
 ;   - atomic non-distinct: SeatNum[1, 32]
-;   - atomic distinct: false
 
 
 ;; *HtDF*: PROBLEM: DESIGN a function called...
@@ -58,6 +61,7 @@
 ;; given 16, expect false               ;; from HtDP-2
 (check-expect (aisle?  1) true)
 (check-expect (aisle? 16) false)
+(check-expect (aisle? 32) true)
 
 
 ;; Inventory -- template & constants
@@ -71,10 +75,11 @@
 ;; Code the body; test & debug
 ;; ===========================
 (define (aisle? sn)
-  (cond [(aisle?  1) true]
-        [(aisle? 32) true]
-		[else false]))
-
+  (or (= sn 1)
+      (= sn 32)))
+	  
+	  
+; Tested OK in Dr. Racket on 1/14/14.
 
 ; If a WISH LIST is needed, it should consist of 3 things:
 ; (1) a meaningful name for the function, (2) a signature,

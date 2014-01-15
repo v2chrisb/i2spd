@@ -1,0 +1,82 @@
+; PROBLEM: As part of designing a system to keep track of student
+; grades, you are asked to design a data definition to represent
+; the letter grade in a course, which is one of A, B or C.
+; *this is HtDD problem L4*
+;; *HtDD*: establish represent/interpret relation btwn info. & data
+;
+;; Structure Definition (for compound data)
+; **N/A**
+
+;; Type Comment, e.g. TLColor is one of: 0, 1, 2
+;; LetterGrade is one of:
+;;   - "A"
+;;   - "B"
+;;   - "C"
+;;   - "D"
+;;   - "F"
+
+
+;; Interpretation, e.g. interp. color of a traffic light
+; interp. the letter grade of a student
+
+
+;; Examples
+;; Data examples are redundant for enumerations.
+
+
+;; Template for a one argument function
+;(define (fn-for-lgrade lg)
+;  (cond [(string=? "A" lg) (...)]
+;        [(string=? "B" lg) (...)]
+;        [(string=? "C" lg) (...)]
+;        [(string=? "D" lg) (...)]
+;        [(string=? "F" lg) (...)])) 
+
+;; Template Rules Used:
+;;  - one of: 5 cases
+;;  - atomic distinct: "A"
+;;  - atomic distinct: "B"
+;;  - atomic distinct: "C"
+;;  - atomic distinct: "D"
+;;  - atomic distinct: "F"
+
+
+;; *HtDF*: PROBLEM: DESIGN a function called LetterGrade using
+; the LetterGrade data definition. consume a letter grade and
+; produce the next highest letter grade. 
+; Call your function bump-up.  *this is HtDD problem L7*
+;; Signature
+;; =========
+;; (HtDP-2: express how info. will be represented as data)
+;; LetterGrade -> LetterGrade
+
+
+;; Purpose: (HtDP-2: what does the function compute?)
+;; ==================================================
+;; consume a letter grade and produce the next highest grade
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+(define (bump-up lgrade) "A")            ;; Stub
+;; given "F", expect "D"
+;; given "D", expect "C"
+;; given "C", expect "B"                 ;; from HtDP-2
+;; given "B", expect "A"                 ;; from HtDP-2
+;; given "A", expect "A"
+(check-expect (bump-up "B") "A")
+
+
+;; Inventory -- template & constants
+;; =================================
+#;(define (yada n)                        ;; Template
+   (... n))                               ;; copy this template for coding
+
+
+;; Code the body; test & debug
+;; ===========================
+
+
+; If a WISH LIST is needed, it should consist of 3 things:
+; (1) a meaningful name for the function, (2) a signature,
+; and (3) a purpose statement. See section 3.4 of HtDP-2.

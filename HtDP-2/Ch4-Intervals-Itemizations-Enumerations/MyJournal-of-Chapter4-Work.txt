@@ -1,3 +1,15 @@
+**===== 01/15 morning; start @ 0558, finish @ 0633 = 35
+
+It is permissible to use else for the last question for itemizations and large
+enumerations. *Normal* enumerations should not use else. Hmmm.
+
+Also, the point about "guarding" the cond question with an appropriate type
+predicate (on the data driven templates page) is more relevant to me now and 
+should be considered with this problem.
+
+I have to stop at the examples/check-expects. Dr. Racket is OK with my stub
+and examples.
+
 **===== 01/14 morning; start @ 0615, finish @ 0645 = 30
 
 Template rules were wrong; interp. was off, template was quite different. Here's
@@ -20,8 +32,7 @@ The final result was VERY different. I tried using a "cond" -- Prof. K. used an
 
 Wow -- lots of differences, and overall I feel like I really botched this one.
 I've gone back a number of times and revisited my approach versus the Prof's.
-Stopping at 30 minutes but back to this later.
-  
+
   
 **===== 01/13 morning; start @ 0610, finish @ 0645 = 35
 

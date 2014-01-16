@@ -58,23 +58,32 @@
 
 ;; Stub; define examples; wrap each in a check-expect
 ;; ==================================================
-(define (bump-up lgrade) "A")            ;; Stub
+;(define (bump-up lgrade) "A")            ;; Stub
 ;; given "F", expect "D"
 ;; given "D", expect "C"
 ;; given "C", expect "B"                 ;; from HtDP-2
 ;; given "B", expect "A"                 ;; from HtDP-2
 ;; given "A", expect "A"
+(check-expect (bump-up "A") "A")
 (check-expect (bump-up "B") "A")
-
+(check-expect (bump-up "C") "B")
+(check-expect (bump-up "D") "C")
+(check-expect (bump-up "F") "D")
 
 ;; Inventory -- template & constants
 ;; =================================
-#;(define (yada n)                        ;; Template
-   (... n))                               ;; copy this template for coding
+;(define (yada n)                        ;; Template
+;   (... n))                             ;; copy this template
 
 
 ;; Code the body; test & debug
 ;; ===========================
+(define (bump-up lg)
+  (cond [(string=? "A" lg) "A"]
+        [(string=? "B" lg) "A"]
+        [(string=? "C" lg) "B"]
+        [(string=? "D" lg) "C"]
+        [(string=? "F" lg) "D"]))
 
 
 ; If a WISH LIST is needed, it should consist of 3 things:

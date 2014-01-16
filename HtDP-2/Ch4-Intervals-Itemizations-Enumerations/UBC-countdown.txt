@@ -1,0 +1,82 @@
+(require 2htdp/image)
+; PROBLEM: design a system for controlling a New Year's Eve
+; display. Design a data definition to represent the current state 
+; of the countdown, which falls into one of three categories: 
+; - not yet started
+; - from 10 to 1 seconds before midnight
+; - complete (Happy New Year!)
+
+
+;; Type Comment
+;; CountDown is one of:
+;;  - false
+;;  - Number[1, 10]
+;;  - Image
+
+
+;; Interpretation
+;; interp. the current state of a new yrs. eve countdown
+
+
+;; Examples
+(define CDNOT false)
+(define CD10 10)
+(define CDHNY (text "Happy New Year" 20 "red"))
+
+
+;; Template for a one argument function
+;(define (fn-for-countdown cd)
+;   (cond [(false? cd) (... cd)]
+;         [(and (< 0 cd) (< cd 10)]
+;		  [(image? cd) (... cd)])))
+
+
+;;; Template Rules Used:
+;;  - one of: 3 cases
+;;  - atomic distinct: false
+;;  - atomic non-distinct: interval[1, 10]
+;;  - atomic non-distinct: image
+
+
+; *HtDF*: PROBLEM: DESIGN a function called countdown->image
+; that consumes a Countdown and produces an image showing the
+; current status of the countdown.
+;; Signature
+;; =========
+;; (HtDP-2: express how info. will be represented as data)
+;; CountDown -> Image
+
+
+;; Purpose: (HtDP-2: what does the function compute?)
+;; ==================================================
+;; consume a Countdown produce an image showing the state of
+;; the countdown process
+
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+(define (countdown->image cd) (text "not" 12 "red"))
+;; given CDNOT, expect false
+;; given CD10, expect (text "not" 12 "red")
+;; given CDHNY, expect (text "Happy New Year" 20 "red")
+(check-expect (countdown->image CDNOT) false)
+
+
+;; Inventory -- template & constants
+;; =================================
+
+
+
+
+;; Code the body; test & debug
+;; ===========================
+(define (countdown->image cd)
+  (cond [(false? cd) (text "not" 12 "red")]
+        [(and (< 0 cd) (< cd 10)) cd]
+        [(= cd 0) (text "HNY" 16 "red")]))
+
+
+; If a WISH LIST is needed, it should consist of 3 things:
+; (1) a meaningful name for the function, (2) a signature,
+; and (3) a purpose statement. See section 3.4 of HtDP-2.

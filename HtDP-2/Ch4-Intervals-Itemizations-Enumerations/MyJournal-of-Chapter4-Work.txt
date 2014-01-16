@@ -1,6 +1,25 @@
-**===== 01/15 morning; start @ 0558, finish @ 0633 = 35
+**===== 01/16 morning; start @ 0535, finish @ 0630 = 55
 
-It is permissible to use else for the last question for itemizations and large
+I think I learned that the abbreviation C.f -- used by Dr. K. -- means "see
+also".
+
+Hmmm -- things are sort of working. I found myself evaluating each section of 
+the 'cond' using the REPL, which, I think, should be a good thing. I have
+some working code, but I seem to have skipped the inventory of templates and
+constants section of the HtDF recipe. Back at it later (or tomorrow).
+
+Here are things as they stand now, and it works:
+
+(define (countdown->image cd)
+  (cond [(false? cd) (text "not" 12 "red")]
+        [(and (< 0 cd) (< cd 10)) cd]
+        [(= cd 0) (text "HNY" 16 "red")]))
+
+
+**===== 01/15 morning; start @ 0558, finish @ 0633 = 35
+              evening; start @ 1930, finish @ 2000 = 30
+
+It is permissible to use 'else' for the last question for itemizations and large
 enumerations. *Normal* enumerations should not use else. Hmmm.
 
 Also, the point about "guarding" the cond question with an appropriate type
@@ -9,6 +28,14 @@ should be considered with this problem.
 
 I have to stop at the examples/check-expects. Dr. Racket is OK with my stub
 and examples.
+
+Evening: this letter grade problem finished-up nicely and quickly. If they could
+all go so smoothly! :-)
+
+Started on countdown, which is going to be more difficult. Looked into the
+itemization data definition type. Ran the solution file. Be mindful of the
+'text' primitive.
+
 
 **===== 01/14 morning; start @ 0615, finish @ 0645 = 30
 

@@ -56,7 +56,7 @@
 
 ;; Stub; define examples; wrap each in a check-expect
 ;; ==================================================
-(define (countdown->image cd) (text "not" 12 "red"))
+;(define (countdown->image cd) (text "not" 12 "red"))
 ;; given CDNOT, expect false
 ;; given CD10, expect (text "not" 12 "red")
 ;; given CDHNY, expect (text "Happy New Year" 20 "red")
@@ -75,7 +75,8 @@
   (cond [(false? cd) (text "not" 12 "red")]
         [(and (< 0 cd) (< cd 10)) cd]
         [(= cd 0) (text "HNY" 16 "red")]))
-
+		
+* Tests OK in Dr. Racket on 1/17/14.
 
 ; If a WISH LIST is needed, it should consist of 3 things:
 ; (1) a meaningful name for the function, (2) a signature,

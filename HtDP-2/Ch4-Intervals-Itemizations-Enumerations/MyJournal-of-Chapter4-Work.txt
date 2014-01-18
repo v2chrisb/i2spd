@@ -1,3 +1,22 @@
+**===== 01/17 morning; start @ 2215, finish @ 2235 = 20
+
+Start back at 5:00 minutes in the video for review. Going now to spend time with
+my wife. :-)
+
+I have something that "works". It doesn't consider boundary cases and it's
+only sketched-in, really. Let's revisit the problem statement carefully before
+looking at the Professor's answer in detail (i.e., watch the videos)...
+
+Recall the HtDD PROBLEM: design a system for controlling a New Year's Eve 
+display. Design a data definition to represent the current state of the 
+countdown, which falls into one of three categories: 
+ - not yet started
+ - from 10 to 1 seconds before midnight
+ - complete (Happy New Year!)
+
+Recall the HtDF PROBLEM: DESIGN a function called countdown->image that consumes
+a Countdown and produces an image showing the current status of the countdown.
+
 **===== 01/16 morning; start @ 0535, finish @ 0630 = 55
 
 I think I learned that the abbreviation C.f -- used by Dr. K. -- means "see

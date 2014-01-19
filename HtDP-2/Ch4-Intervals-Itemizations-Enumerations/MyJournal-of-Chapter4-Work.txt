@@ -1,3 +1,52 @@
+**===== 01/19 morning; start @ 0620, finish @ 0655 = 35
+
+Oh well, it seems yesterday slipped away *but* I did spend 15 minutes looking at
+my study plan and reading more carefully chapter 4 in HtDP -- I didn't neglect
+making some progress toward my 5-year plan.
+
+"Differentiating among the different classes of inputs is the purpose of the
+cond expression."
+
+(define (reward s)
+  (cond
+    [(<= 0 s 10) "bronze"]
+    [(and (< 10 s) (<= s 20)) "silver"]
+    [else "gold"]))
+    
+The first line of the 'cond' confuses me; it seems my confusion arises from my
+misunderstanding of how to form a '<=' or '>=' statment. Because of this, I ran
+the following and received the following results in the REPL:
+
+> (<= 0 3 10)
+true
+> (>= 0 3 10)
+false
+> (< 3 10)
+true
+> (> 3 10)
+false
+> (<= 5 6 7)
+true
+> (>= 2 1 0)
+true
+
+So the form/syntax used for '<=' or '>=' requires three (3) parameters. OK, get
+that to sink-in to your thick skull.
+
+Exercise 46 says to use the stepper but to do so you must do so by entering the
+your function call into the Definitions area of Dr. Racket, like so:
+
+(define (reward s)
+  (cond
+    [(<= 0 s 10) "bronze"]
+    [(and (< 10 s) (<= s 20)) "silver"]
+    [else "gold"]))
+
+(reward 18)
+
+...then, step through it.
+
+
 **===== 01/17 morning; start @ 2215, finish @ 2235 = 20
 
 Start back at 5:00 minutes in the video for review. Going now to spend time with

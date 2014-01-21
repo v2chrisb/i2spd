@@ -1,0 +1,24 @@
+Exercise 46: Enter the definition of reward and the application (reward 18) into the Definitions area of DrRacket and use the stepper to find out how DrRacket evaluates applications of the function. *DONE*, 1/21/14.
+
+
+Exercise 47: A cond expression is really just an expression and may therefore show up in the middle of another expression:
+(- 200 (cond
+         [(> y 200) 0]
+         [else y]))
+		 
+Use the stepper to evaluate the expression for two distinct values of y: 100 and 210.
+
+Nesting cond expressions can eliminate common expressions. Recall the following function definition from Prologue: How to Program:
+
+(define (create-rocket-scene.v5 h)
+  (cond
+    [(<= h ROCKET-CENTER-TO-BOTTOM)
+     (place-image ROCKET 50 h MTSCN)]
+    [(> h ROCKET-CENTER-TO-BOTTOM)
+     (place-image ROCKET 50 ROCKET-CENTER-TO-BOTTOM MTSCN)]))
+	 
+As you can see, both branches of the cond expression have the following shape:
+
+(place-image ROCKET X ... MTSCN)
+
+with ... indicating where they differ. Reformulate create-rocket-scene.v5 so that it uses this common shape with a cond expression in place of ... in lieu of the cond expression.

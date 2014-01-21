@@ -1,8 +1,45 @@
+**===== 01/21 morning; start @ 0200, finish @ 0250 = 50
+
+And what happened to the 20th? I fell asleep at 2030 while putting the kids to
+bed, hence the reason I'm doing this at 0200! :-)
+
+I'm still puzzled over *why* the authors chose to use three arguments for the
+first evaluation in the 'reward' function, i.e.:
+
+[(<= 0 s 10) "bronze"]
+
+Why is the zero there? I take it out and get the same answer, and by taking it
+out it certainly makes more sense to me and is easier to read/understand. The
+Racket documentation says only:
+
+procedure
+(<= x y z ...) => boolean?
+  x : real
+  y : real
+  z : real
+Compares (real) numbers for less-than or equality.
+
+Stepped through exercises 46 and 47; skipped reformulating exercise 47.
+
+Completed UBC practice problem #1, ski lodge payroll. I thought that examples
+weren't needed but the Prof. uses three with three check-expects!
+
+(define E1 11)
+(define E2 40)
+(define E3 50)
+
+(check-expect (calculate-payroll  E1) 16500)
+(check-expect (calculate-payroll  E2) 60000)
+(check-expect (calculate-payroll  E3) 75000)
+
+
 **===== 01/19 morning; start @ 0620, finish @ 0655 = 35
 
 Oh well, it seems yesterday slipped away *but* I did spend 15 minutes looking at
 my study plan and reading more carefully chapter 4 in HtDP -- I didn't neglect
 making some progress toward my 5-year plan.
+
+Reading chapter 4 in the HtDP text...
 
 "Differentiating among the different classes of inputs is the purpose of the
 cond expression."
@@ -33,8 +70,8 @@ true
 So the form/syntax used for '<=' or '>=' requires three (3) parameters. OK, get
 that to sink-in to your thick skull.
 
-Exercise 46 says to use the stepper but to do so you must do so by entering the
-your function call into the Definitions area of Dr. Racket, like so:
+Exercise 46 says to use the stepper but to do so you must enter your function
+call -- *all* into the Definitions area of Dr. Racket -- like so:
 
 (define (reward s)
   (cond
@@ -134,8 +171,8 @@ I've gone back a number of times and revisited my approach versus the Prof's.
 From the UBC Data Driven Templates page, "in many cases the template for a
 function is determined by the type of data the function consumes."
 
-As far as the code I wrote today goes, Dr. Racket is hangs when processing it.
-Look into the reason for this next time.
+As far as the code I wrote today goes, Dr. Racket hangs when processing it. Look
+into the reason for this next time.
 
 
 **===== 01/12 morning; start @ 0720, finish @ 0750** = 30

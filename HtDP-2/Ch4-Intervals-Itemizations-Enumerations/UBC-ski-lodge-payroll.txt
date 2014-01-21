@@ -1,0 +1,73 @@
+;; *HtDD*: establish represent/interpret relation btwn info. & data
+;; Structure Definition (for compound data)
+; PROBLEM A: You work in the Human Resources department at a ski 
+; lodge. Because the lodge is busier at certain times of year, the
+; number of employees fluctuates. There are always more than 10,
+; but the maximum is 50. Design a data definition to represent the
+; number of ski lodge employees. Call it Employees.
+
+
+;; Type Comment -- this is an interval data type
+; Employees is Integer[11, 50]
+
+;; Interpretation
+; interp. the number of current ski lodge employees
+
+
+;; Examples -- this step seems unnecessary, but isn't!
+(define E1 11)
+(define E2 40)
+(define E3 50)
+
+
+;; Template for a one argument function
+; (define fn-for-employees emp)
+;   (... emp)
+
+
+;; Template Rules Used:
+;  - atomic non-distinct: Integer[11, 50]
+
+
+; *HtDF*: PROBLEM B: Now design a function that will calculate the
+; total payroll for the quarter. Each employee is paid $1,500 per
+; quarter. Call it calculate-payroll.
+;; Signature
+;; =========
+;; (HtDP-2: express how info. will be represented as data)
+;; Employees -> Natural
+
+
+;; Purpose: (HtDP-2: what does the function compute?)
+;; ==================================================
+; consume an Employees and produce a number representing the
+; payroll amount for the quarter.
+
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+;(define (calculate-payroll pr) 0)       ;; Stub
+;; given x, expect y                     ;; from HtDP-2
+;; given a, expect b                     ;; from HtDP-2
+(check-expect (calculate-payroll 5) 7500)
+(check-expect (calculate-payroll  E1) 16500)
+(check-expect (calculate-payroll  E2) 60000)
+(check-expect (calculate-payroll  E3) 75000)
+
+
+;; Inventory -- template & constants
+;; =================================
+;(define (calculate-payroll pr)          ;; Template
+;  (... pr))                             ;; copy this template for coding
+
+
+;; Code the body; test & debug
+;; ===========================
+(define (calculate-payroll pr)
+  (* 1500 pr))
+
+
+; If a WISH LIST is needed, it should consist of 3 things:
+; (1) a meaningful name for the function, (2) a signature,
+; and (3) a purpose statement. See section 3.4 of HtDP-2.

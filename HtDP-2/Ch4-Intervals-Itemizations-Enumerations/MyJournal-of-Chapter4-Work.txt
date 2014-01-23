@@ -1,3 +1,12 @@
+**===== 01/22 evening; start @ 2050, finish @ 2230 = 100
+
+I got to tinkering with Mia's "Divisibility Riddles" homework assignment and
+looking for an equation that would solve it. I think it's the Chinese Remainder
+Theorem...
+
+Learned about DrRacket's 'remainder' primitive.
+
+
 **===== 01/21 morning; start @ 0200, finish @ 0250 = 50
 
 And what happened to the 20th? I fell asleep at 2030 while putting the kids to

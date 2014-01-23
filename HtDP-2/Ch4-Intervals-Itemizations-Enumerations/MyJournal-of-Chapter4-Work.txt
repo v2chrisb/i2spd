@@ -1,3 +1,44 @@
+**===== 01/23 morning; start @ 0625, finish @ 0700 = 35
+
+A note on pragmatics: Contrast 'cond' expressions with 'if' expressions from 
+"Mixing It Up With Booleans". The latter distinguish one situation from all 
+others. As such, if expressions are much less suited for multi-situation
+contexts; they are best used when all we wish to say is “one or the other.” We
+therefore always use 'cond' for situations when we wish to remind the reader of
+our code that some distinct situations come directly from data definitions. For
+other pieces of code, we use whatever construct is most convenient.
+
+When the conditions get too complex in a 'cond' expression, you occasionally
+wish to say something like "in all other cases." For these kinds of problems,
+'cond' expressions permit the use of the 'else' keyword for the very last 'cond'
+line.
+
+I'll write this again because I think it's a key concept:
+
+"We therefore always use 'cond' for situations when we wish to remind the reader
+of our code that some distinct situations come directly from *data definitions*.
+For other pieces of code, we use whatever construct is most convenient."
+
+So, back to my original point of confusion, i.e. why do this?
+
+[(<= 0 s 10) "bronze"]
+
+I think the answer is to ensure the vairiable 's' in *positive*. I believe this
+even more strongly because of what is said directly above, i.e. we use 'cond'
+to remind of distinct situations come directly from *data definitions*. In this
+particular example, the data definition is:
+
+; PositiveNumber is a Number greater or equal to 0.
+; PositiveNumber -> String
+
+So, stepping through [(<= 0 s 10) "bronze"], I think we have:
+
++ 's' is greater than or equal to 0
++ 's' is less than or equal to 10
+
+Yes, I think I have it now; a good & worthwhile use of time to grasp a concept.
+
+
 **===== 01/22 evening; start @ 2050, finish @ 2230 = 100
 
 I got to tinkering with Mia's "Divisibility Riddles" homework assignment and

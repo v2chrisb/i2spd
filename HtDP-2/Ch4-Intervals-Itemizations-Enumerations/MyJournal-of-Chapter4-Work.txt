@@ -1,3 +1,20 @@
+**===== 01/24 morning; start @ 0600, finish @ 0630 = 30
+
+Start with UBC and finish the data definition exercises. From there, move on to
+UBC "How to Design Worlds".
+
+A good point to remember from the UBC HtDD "Tips for Success":
+
+Remember that data definitions (or data designs) and function designs are
+different. So, for example, while both have examples, function examples are
+wrapped in check-expect and show how the function is supposed to run. Data
+examples are defined as constants using define and show how the data definition
+represents domain information. Try not to confuse the two.
+
+Completed UBC-classify-buildings.txt and ran "OK" in Dr. Racket. When you start
+again, check your solution against the Professor's.
+
+
 **===== 01/23 morning; start @ 0625, finish @ 0700 = 35
 
 A note on pragmatics: Contrast 'cond' expressions with 'if' expressions from 
@@ -23,7 +40,7 @@ So, back to my original point of confusion, i.e. why do this?
 
 [(<= 0 s 10) "bronze"]
 
-I think the answer is to ensure the vairiable 's' in *positive*. I believe this
+I think the answer is to ensure the vairiable 's' is *positive*. I believe this
 even more strongly because of what is said directly above, i.e. we use 'cond'
 to remind of distinct situations come directly from *data definitions*. In this
 particular example, the data definition is:

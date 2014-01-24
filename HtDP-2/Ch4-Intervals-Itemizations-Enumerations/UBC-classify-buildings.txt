@@ -1,0 +1,68 @@
+; *HtDD*: PROBLEM: You are assigned to develop a system that will
+; classify buildings in downtown Vancouver based on how old they
+; are. According to city guidelines, there are three different
+; classification levels: new, old, and heritage. Design a data
+; definition to represent these classification levels. Call it
+; BuildingStatus.
+
+
+;; Type Comment, e.g. TLColor is one of: 0, 1, 2
+;; BuidlingStatus is one of:
+;;  - new
+;;  - old
+;;  - heritage
+;; interp. the current listed city status of a building
+
+
+;; Examples -- don't seem necessary
+
+
+;; Template for a one argument function
+; (define (fn-for-building-status bs)
+; (cond [Q1 A1]
+;       [Q2 A2]
+;       [Q3 A3]))
+
+
+;; Template rules used:
+;;  - one of: 3 cases
+;;  - atomic distinct: "new"
+;;  - atomic distinct: "old"
+;;  - atomic distinct: "heritage"
+
+
+; *HtDF*: PROBLEM: The city wants to demolish all buildings
+; classified as "old". You are hired to design a function called
+; demolish? that determines whether a building should be torn down
+; or not.
+
+
+;; Signature
+;; =========
+;; (HtDP-2: express how info. will be represented as data)
+;; BuildingStatus -> String
+
+
+;; Purpose: (HtDP-2: what does the function compute?)
+;; ==================================================
+;; consume BuildingStatus and produce "demolish" if building has
+;; been classified as "old" & "preserve" for any other status.
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+;(define (bstatus bs) "demolish")         ;; Stub
+;; given x, expect y                     ;; from HtDP-2
+;; given a, expect b                     ;; from HtDP-2
+(check-expect (bstatus "old") "demolish")
+(check-expect (bstatus "new") "preserve")
+(check-expect (bstatus "heritage") "preserve")
+
+
+;; Code the body; test & debug
+;; ===========================
+(define (bstatus bs)
+   (cond [(string=? "old" bs) "demolish"]
+         [else "preserve"]))
+		 
+; Ran OK in Dr. Racket on 1/24/14.

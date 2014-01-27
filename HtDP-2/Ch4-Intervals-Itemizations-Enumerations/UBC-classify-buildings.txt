@@ -46,14 +46,15 @@
 ;; Purpose: (HtDP-2: what does the function compute?)
 ;; ==================================================
 ;; consume BuildingStatus and produce "demolish" if building has
-;; been classified as "old" & "preserve" for any other status.
+;; been classified as "old" -- classify as  "preserve" for any
+;; other building status.
 
 
 ;; Stub; define examples; wrap each in a check-expect
 ;; ==================================================
-;(define (bstatus bs) "demolish")         ;; Stub
-;; given x, expect y                     ;; from HtDP-2
-;; given a, expect b                     ;; from HtDP-2
+;(define (bstatus bs) "demolish")               ;; Stub
+;; given x, expect y                            ;; from HtDP-2
+;; given a, expect b                            ;; from HtDP-2
 (check-expect (bstatus "old") "demolish")
 (check-expect (bstatus "new") "preserve")
 (check-expect (bstatus "heritage") "preserve")

@@ -1,3 +1,18 @@
+**===== 01/26 evening; start @ 2225, finish @ 22xx = yy
+
+Got a start on the steepness problem. Will finish tomorrow.
+
+
+**===== 01/25 afternoon; start @ 1445, finish @ 1500 = 15
+
+Had a thought about Peter's "Clac" project, so I cloned it today. I like that
+"Clac" is a calculator and will most likely help me with thinking mathematically
+and computationally.
+
+I *did* take a look at the steepness problem but was distracted by the sleepover
+for Mella.
+
+
 **===== 01/24 morning; start @ 0600, finish @ 0630 = 30
 
 Start with UBC and finish the data definition exercises. From there, move on to

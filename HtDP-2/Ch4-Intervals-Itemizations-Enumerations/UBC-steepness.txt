@@ -1,0 +1,80 @@
+; PROBLEM: consider how steep hills might be in planning bike
+; routes. Consider the following classification of steepness
+; based on the grade of a hill:
+;
+; +---------------+-------------------+
+; | Steepness     | Grade             |
+; +---------------+-------------------+
+; | Flat          | 0 to 2 percent    | 
+; | Moderate      | 3 to 6 percent    |
+; | Steep         | 7 to 10 percent   |
+; +---------------+-------------------+
+;
+; a) Use HtDD to design a data definition for steepness 
+; (call it Steepness).
+;
+; b) Use HtDD to design a data definition for hill grade 
+; (call it HillGrade). Use an itemization of intervals for
+; this data definition.
+
+
+;; Type Comment, e.g. TLColor is one of: 0, 1, 2
+;; HillGrade is one of:
+;;  - [0, 2]
+;;  - [3, 6]
+;;  - [7, 10]
+
+
+;; Interpretation, e.g. interp. color of a traffic light
+; - [0, 2] flat, [3, 6] moderate, [7, 10] steep
+
+
+;; Examples
+
+
+;; Template for a one argument function
+
+
+;; Template Rules Used:
+
+
+
+;; *HtDF*: PROBLEM:
+; c) Design a function called 'steepness' that takes a hill
+; grade and produces the corresponding steepness rating
+; according to our table.
+;
+;; Signature
+;; =========
+;; (HtDP-2: express how info. will be represented as data)
+;; String -> String
+
+
+;; Purpose: (HtDP-2: what does the function compute?)
+;; ==================================================
+;; consume a ... produce a ...
+
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+;;(define (yada n) 0)                    ;; Stub
+;; given x, expect y                     ;; from HtDP-2
+;; given a, expect b                     ;; from HtDP-2
+(check-expect (yada 5) 6)
+
+
+
+;; Inventory -- template & constants
+;; =================================
+#;(define (yada n)                        ;; Template
+   (... n))                               ;; copy this template for coding
+
+
+;; Code the body; test & debug
+;; ===========================
+
+
+; If a WISH LIST is needed, it should consist of 3 things:
+; (1) a meaningful name for the function, (2) a signature,
+; and (3) a purpose statement. See section 3.4 of HtDP-2.

@@ -1,3 +1,10 @@
+**===== 01/27 evening; start @ 0645, finish @ 0700 = 15
+
+Running low on time this morning but got a little further in the steepness
+problem (almost done, really). Write the function and tests later today and get
+this one completed.
+
+
 **===== 01/26 evening; start @ 2225, finish @ 22xx = yy
 
 Got a start on the steepness problem. Will finish tomorrow.

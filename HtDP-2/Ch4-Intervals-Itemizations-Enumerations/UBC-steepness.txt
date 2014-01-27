@@ -20,23 +20,35 @@
 
 ;; Type Comment, e.g. TLColor is one of: 0, 1, 2
 ;; HillGrade is one of:
-;;  - [0, 2]
-;;  - [3, 6]
-;;  - [7, 10]
+;;  - Number[0, 2]
+;;  - Number[3, 6]
+;;  - Number[7, 10]
 
 
-;; Interpretation, e.g. interp. color of a traffic light
-; - [0, 2] flat, [3, 6] moderate, [7, 10] steep
+;; interp. steepness of a hill
+; - Number[0, 2]  is considered flat
+; - Number[3, 6]  is considered moderate
+; - Number[7, 10] is considered steep
 
 
 ;; Examples
+(define S1 1)
+(define S5 5)
+(define S8 8)
 
 
 ;; Template for a one argument function
+;(define (fn-for-steepness s)
+;  (cond [(<= 0 2 s) (... s)]
+;        [(and (< 3 s) (<= 6 s) (... s)]
+;        [(and (< 6 s) (<= 10 s) (... s)]))
 
 
 ;; Template Rules Used:
-
+;;  one-of: 3 cases
+;;  atomic non-distinct:  Number[0, 2]
+;;  atomic non-distinct:  Number(3, 6]
+;;  atomic non-distinct:  Number[7, 10]
 
 
 ;; *HtDF*: PROBLEM:
@@ -47,7 +59,7 @@
 ;; Signature
 ;; =========
 ;; (HtDP-2: express how info. will be represented as data)
-;; String -> String
+;; Steepness -> String
 
 
 ;; Purpose: (HtDP-2: what does the function compute?)

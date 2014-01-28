@@ -39,9 +39,9 @@
 
 ;; Template for a one argument function
 ;(define (fn-for-steepness s)
-;  (cond [(<= 0 2 s) (... s)]
-;        [(and (< 3 s) (<= 6 s) (... s)]
-;        [(and (< 6 s) (<= 10 s) (... s)]))
+;  (cond [(<= 0 s 2) (... s)]
+;        [(and (< 3 s) (<= s 6) (... s)]
+;        [(and (< 6 s) (<= s 10) (... s)]))
 
 
 ;; Template Rules Used:
@@ -64,27 +64,35 @@
 
 ;; Purpose: (HtDP-2: what does the function compute?)
 ;; ==================================================
-;; consume a ... produce a ...
-
+;; consume a Steepness and produce a hill grade label.
 
 
 ;; Stub; define examples; wrap each in a check-expect
 ;; ==================================================
-;;(define (yada n) 0)                    ;; Stub
+;(define (steepness sn) "")               ;; Stub
 ;; given x, expect y                     ;; from HtDP-2
 ;; given a, expect b                     ;; from HtDP-2
-(check-expect (yada 5) 6)
-
+(check-expect (steepness S1) "flat")
+(check-expect (steepness S5) "moderate")
+(check-expect (steepness S8) "steep")
 
 
 ;; Inventory -- template & constants
 ;; =================================
-#;(define (yada n)                        ;; Template
-   (... n))                               ;; copy this template for coding
+;(define (fn-for-steepness s)
+;  (cond [(<= 0 s 2) (... s)]
+;        [(and (< 3 s) (<= s 6) (... s)]
+;        [(and (< 6 s) (<= s 10) (... s)]))
 
 
 ;; Code the body; test & debug
 ;; ===========================
+(define (steepness sn)
+  (cond [(<= 0 sn 2) "flat"]
+        [(and (<= 3 sn) (<= sn 6)) "moderate"]
+        [(and (<= 6 sn) (<= sn 10)) "steep"]))
+		
+; Runs OK in DrRacket on 1/28/14.
 
 
 ; If a WISH LIST is needed, it should consist of 3 things:

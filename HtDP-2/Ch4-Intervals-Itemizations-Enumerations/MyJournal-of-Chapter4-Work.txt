@@ -1,11 +1,71 @@
-**===== 01/27 evening; start @ 0645, finish @ 0700 = 15
+**===== 01/28 morning; start @ 0550, finish @ 0625 = 35
+
+Reminder about 'and' 'or" clauses:
+
+(and true true) = true; (and true false) = false; (or true false) = true
+(or false false) = false
+
+When writing 'and' 'or' statements, consider what makes the clause true or
+false.
+
+**ALSO**, it seems the placement of your variable in your function template was
+missplaced but this needs to be verified with Dr. Racket to be sure.  **YES**,
+it was wrong:
+
+**OLD and WRONG**
+
+(define (fn-for-steepness s)
+  (cond [(<= 0 2 s) (... s)]
+        [(and (< 3 s) (<= 6 s) (... s)]
+        [(and (< 6 s) (<= 10 s) (... s)]))
+        
+*notice the placement of the integer '2' in the first part of the 'cond', the
+placement of '6' and 's', and the placement of '10' and 's'. Also notice that
+you didn't use parenthesis to close the 'and' statements! Also notice that you
+didn't use <= for the 'and' clauses, and because of this, if the user entered
+the number '3', it was an error!
+
+
+**CORRECTED and RUNS OK**
+
+(define (steepness sn)
+  (cond [(<= 0 sn 2) "flat"]
+        [(and (<= 3 sn) (<= sn 6)) "moderate"]
+        [(and (<= 6 sn) (<= sn 10)) "steep"]))
+
+
+And again, so that it "sinks in":
+
+"We therefore always use 'cond' for situations when we wish to remind the reader
+of our code that some distinct situations come directly from *data definitions*.
+For other pieces of code, we use whatever construct is most convenient."
+
+So, back to my original point of confusion, i.e. why do this?
+
+[(<= 0 s 10) "bronze"]
+
+I think the answer is to ensure the vairiable 's' is *positive*. I believe this
+even more strongly because of what is said directly above, i.e. we use 'cond'
+to remind of distinct situations come directly from *data definitions*. In this
+particular example, the data definition is:
+
+; PositiveNumber is a Number greater or equal to 0.
+; PositiveNumber -> String
+
+So, stepping through [(<= 0 s 10) "bronze"], I think we have:
+
++ 's' is greater than or equal to 0
++ 's' is less than or equal to 10
+
+
+**===== 01/27 morning; start @ 0645, finish @ 0700 = 15
 
 Running low on time this morning but got a little further in the steepness
 problem (almost done, really). Write the function and tests later today and get
 this one completed.
 
 
-**===== 01/26 evening; start @ 2225, finish @ 22xx = yy
+**===== 01/26 evening; start @ 2225, finish @ 2240 = 15
 
 Got a start on the steepness problem. Will finish tomorrow.
 

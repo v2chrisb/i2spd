@@ -1,3 +1,16 @@
+**===== 01/29 morning; start @ 0625, finish @ 0650 = 25
+
+First a quick scan/review of HtDP-2 exercises 30-34. I'm thinking that I'll do
+one more UBC problem (oatmeal). 
+
+Soon I'll be back to HtDW subject matter again. Section 3.6 in the text which
+explicity expects the reader to "understand the rudimentary workings of big-
+bang" as a prerequisite to focus on the problem of designing world programs.
+
+So, after "oatmeal", it's on to HtDW. Maybe I can finally conquer that blade of
+grass. :-)
+
+
 **===== 01/28 morning; start @ 0550, finish @ 0625 = 35
 
 Reminder about 'and' 'or" clauses:

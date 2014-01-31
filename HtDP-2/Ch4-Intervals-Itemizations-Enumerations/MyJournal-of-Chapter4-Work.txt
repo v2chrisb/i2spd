@@ -1,3 +1,11 @@
+**===== 01/30 evening; start @ 2200, finish @ 2230 = 30
+
+Whew! What a day! Got a Raspberry Pi up and running with ArchLinux with both
+Jeremy and Matt today -- very geeky and very cool!
+
+Worked part way through oatmeal problem. Pick it back up tomorrow. Tired.
+
+
 **===== 01/29 morning; start @ 0625, finish @ 0650 = 25
 
 First a quick scan/review of HtDP-2 exercises 30-34. I'm thinking that I'll do

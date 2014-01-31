@@ -1,0 +1,89 @@
+;; *HtDD*: establish represent/interpret relation btwn info. & data
+;
+; PROBLEM (A): develop a system that will perfectly heat your breakfast
+; oatmeal. You have a thermometer that you can stick into the oatmeal.
+; It reads the temperature in whole degrees Celsius. You are very 
+; particular about your oatmeal, and you consider 71 degrees to be "just
+; right". Anything less is "too cold" and anything more is "too hot".
+; Design a data definition to represent the possible oatmeal temperatures.
+; Call it OatmealTemp.
+
+;;; OatmealTemp is one of:
+;; - Number[0, 71]
+;; - "just right"
+;; - Number[71, 100]
+
+; interp. the temperature of oatmeal
+;;  Number[> 71] is too hot
+;;  Number[= 71] is just right
+;;  Number[< 71] is too cold
+(define TC 0)
+(define JR 71)
+(define TH 80)
+
+;
+; PROBLEM (B): When you check the temperature of the oatmeal you can
+; adjust the burner on the stove. You can either turn it up, turn it down,
+; or leave it the same. Design a data definition to represent a stove
+; adjustment. Call it Adjustment
+
+;;; Adjustment is one of:
+;; - "turn down"
+;; - "leave same"
+;; - "turn up"
+
+; interp. the adjustment of the burner
+;;  Number[> 71] turn down
+;;  Number[= 71] leave same
+;;  Number[< 71] turn up
+(define TD 72)
+(define JR 71)
+(define TU 70)
+
+
+;; Template for a one argument function
+
+
+;; Template Rules Used:
+
+
+
+; *HtDF*: PROBLEM (C): Design a function that will consumes an oatmeal
+; temperature and produces the proper stove adjustment based on that
+; temperature. Call it oatmeal-temp-to-adjustment.
+
+
+;; Signature
+;; =========
+;; (HtDP-2: express how info. will be represented as data)
+;; String -> String
+
+
+;; Purpose: (HtDP-2: what does the function compute?)
+;; ==================================================
+;; consume a ... produce a ...
+
+
+
+;; Stub; define examples; wrap each in a check-expect
+;; ==================================================
+;;(define (yada n) 0)                    ;; Stub
+;; given x, expect y                     ;; from HtDP-2
+;; given a, expect b                     ;; from HtDP-2
+(check-expect (yada 5) 6)
+
+
+
+;; Inventory -- template & constants
+;; =================================
+#;(define (yada n)                        ;; Template
+   (... n))                               ;; copy this template for coding
+
+
+;; Code the body; test & debug
+;; ===========================
+
+
+; If a WISH LIST is needed, it should consist of 3 things:
+; (1) a meaningful name for the function, (2) a signature,
+; and (3) a purpose statement. See section 3.4 of HtDP-2.

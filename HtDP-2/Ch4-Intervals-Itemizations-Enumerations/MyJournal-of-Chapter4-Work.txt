@@ -1,3 +1,22 @@
+**===== 01/31 evening; start @ 0610, finish @ 0635 = 25
+
+OatmealTemp is a mixed data itemization and therefore 'cond' questions written
+for it must be guarded with an appropriate type predicate, such as 'number?'.
+
+For example (from the data driven templates page):
+
+;; Measurement is one of:
+;; - Number[-10, 0)
+;; - true
+;; - Number(0, 10]
+
+(and (number? m)
+     (<= -10 m)
+     (< m 0))
+     
+ Note the call to 'number?' guards the calls to <= and <. This will protect <=
+ and < from ever recieving 'true' as an argument.
+
 **===== 01/30 evening; start @ 2200, finish @ 2230 = 30
 
 Whew! What a day! Got a Raspberry Pi up and running with ArchLinux with both

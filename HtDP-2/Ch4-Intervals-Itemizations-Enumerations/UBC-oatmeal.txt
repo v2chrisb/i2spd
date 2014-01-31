@@ -12,16 +12,14 @@
 ;; - Number[0, 71]
 ;; - "just right"
 ;; - Number[71, 100]
+; this is a mixed data itemization
 
 ; interp. the temperature of oatmeal
-;;  Number[> 71] is too hot
-;;  Number[= 71] is just right
-;;  Number[< 71] is too cold
-(define TC 0)
-(define JR 71)
-(define TH 80)
+;;  Number[0, 71]   is too hot
+;;  "just right"    is proper temp
+;;  Number[71, 100] is too cold
 
-;
+
 ; PROBLEM (B): When you check the temperature of the oatmeal you can
 ; adjust the burner on the stove. You can either turn it up, turn it down,
 ; or leave it the same. Design a data definition to represent a stove
@@ -33,19 +31,17 @@
 ;; - "turn up"
 
 ; interp. the adjustment of the burner
-;;  Number[> 71] turn down
-;;  Number[= 71] leave same
-;;  Number[< 71] turn up
-(define TD 72)
-(define JR 71)
-(define TU 70)
+;;  Number[0, 71]   turn down
+;;  Number[71]      leave same
+;;  Number[71, 100] turn up
 
 
 ;; Template for a one argument function
+(define (fn-for-oatmeal-temp ot)
+   (cond [(number? ot) (...)]
 
 
 ;; Template Rules Used:
-
 
 
 ; *HtDF*: PROBLEM (C): Design a function that will consumes an oatmeal

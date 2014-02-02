@@ -9,15 +9,15 @@
 ; Call it OatmealTemp.
 
 ;;; OatmealTemp is one of:
-;; - Number[0, 71]
-;; - "just right"
-;; - Number[71, 100]
+;; - Number[0, 70]
+;; - Number[71]
+;; - Number[72, 100]
 ; this is a mixed data itemization
 
 ; interp. the temperature of oatmeal
-;;  Number[0, 71]   is too hot
-;;  "just right"    is proper temp
-;;  Number[71, 100] is too cold
+;;  Number[0, 70]   is too cold
+;;  Number[71]      is proper temp
+;;  Number[72, 100] is too hot
 
 
 ; PROBLEM (B): When you check the temperature of the oatmeal you can
@@ -26,22 +26,34 @@
 ; adjustment. Call it Adjustment
 
 ;;; Adjustment is one of:
-;; - "turn down"
-;; - "leave same"
 ;; - "turn up"
+;; - "leave same"
+;; - "turn down"
 
 ; interp. the adjustment of the burner
-;;  Number[0, 71]   turn down
-;;  Number[71]      leave same
-;;  Number[71, 100] turn up
+;;  Number[0, 70]   "turn up"
+;;  Number[71]      "leave same"
+;;  Number[72, 100] "turn down"
 
 
 ;; Template for a one argument function
-(define (fn-for-oatmeal-temp ot)
-   (cond [(number? ot) (...)]
+;(define (fn-for-oatmeal-temp ot)
+;  (cond [Q1 A1]
+;        [Q2 A2]
+;        [Q3 A3]))
+
+; This passes muster in Dr. Racket
+;(define (oat ot)
+;  (cond [(and (number? ot) (<= 0 ot) (< ot 71)) (... ot)]
+;        [(and (number? ot) (<= 72 ot)) (... ot)]
+;        [else  (... ot)]))
 
 
-;; Template Rules Used:
+;; Template rules used:
+;;  - one of: 3 cases
+;;  - atomic non-distinct: [0, 70]
+;;  - atomic non-distinct: [71];
+;;  - atomic non-distinct: [72, 100]
 
 
 ; *HtDF*: PROBLEM (C): Design a function that will consumes an oatmeal
@@ -52,21 +64,20 @@
 ;; Signature
 ;; =========
 ;; (HtDP-2: express how info. will be represented as data)
-;; String -> String
+;; OatmealTemp -> Adjustment
 
 
 ;; Purpose: (HtDP-2: what does the function compute?)
 ;; ==================================================
-;; consume a ... produce a ...
-
+;; consume an OatmealTemp and produce an Adjustment
 
 
 ;; Stub; define examples; wrap each in a check-expect
 ;; ==================================================
-;;(define (yada n) 0)                    ;; Stub
+(define (oat ot) "leave same")           ;; Stub
 ;; given x, expect y                     ;; from HtDP-2
 ;; given a, expect b                     ;; from HtDP-2
-(check-expect (yada 5) 6)
+(check-expect (oat 71) "leave same")
 
 
 

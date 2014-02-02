@@ -1,3 +1,59 @@
+**===== 02/02 morning; start @ 0525, finish @ xxxx = yy
+
+Lots of outdoor activity (skating) yesterday; lots of Raspberry Pi and ELTS
+setup attempt. Back to HtDP today.
+
+I have to be honest and say that I'm a bit disappointed with myself in that
+these programming concepts really don't take hold with me very easily.  For
+example, my view versus the Prof's view of approaching the oatmeal problem are
+quite different.  And still, I can't draft-up templates like this:
+
+(define (fn-for-oatmeal-temp ot)
+  (cond [(and (number? ot) (<= 0 ot) (< ot 71)) (... ot)]
+        [(string? ot) (...)]
+        [else  (... ot)]))
+        
+Right now I feel like I'm slogging-through this problem. It's a sheer act of
+will to continue forward, which I'll do. I will get through this course and I
+will learn to program as best I can. I must.
+
+Study this oatmeal problem. It has two functions. I can't really see the need,
+except for academic purposes, for the oatmeal-temp-to-adjustment function.
+
+Hmmm. Here I am getting a little down, but I run the Professor's code expecting
+one result and getting something peculiar. Here's the essence of the problem
+definition:  71 degrees is just right. Anything less is too cold and anything
+more it too hot. Yet, look what I get when I run the Prof's code with 71 as
+the input temperature:
+
+> (oatmeal-temp-to-adjustment 71)
+"turn down"
+
+The way he coded it, here's how it works when the perfect temp. is reached:
+
+> (oatmeal-temp-to-adjustment "perfect")
+"leave same"
+
+OK. The data definition for OatmealTemp is:
+
+;; OatmealTemp is one of:
+;;  - Number[0, 71)
+;;  - "just right"
+;;  - Number(71, 100]
+;; interp. possible temperatures of your oatmeal, in °C, with 71°C being the
+;; perfect temperature.
+
+So I can see using a string to get the "leave same" response. I can also see the
+value of going through the exercise. What I can't see is why I couldn't just
+work with integers for temperatures and allow the actual temperature recorded
+and handled by OatmealTemp drive the string response by Adjustment. Having that
+string in the OatmealTemp data definition appears whacky to me.
+
+OK. Went through and have made the code the way I want it (~80% complete). Next
+time finish this problem, but re-read what you've done and remember the approach
+you're taking is different from the Prof's.
+
+
 **===== 01/31 evening; start @ 0610, finish @ 0635 = 25
 
 OatmealTemp is a mixed data itemization and therefore 'cond' questions written

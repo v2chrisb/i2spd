@@ -1,4 +1,17 @@
-**===== 02/02 morning; start @ 0525, finish @ xxxx = yy
+**===== 02/03 morning; start @ 0640, finish @ 0655 = 15
+
+Remember, this problem uses a mixed data itemization for OatmealTemp.
+
+I had only the coding of the body to complete this morning, and in nine (9)
+minutes, I had it working the way *I* wanted.
+
+Thinking back to the Professor's solution, I think he also wanted to teach us
+about guarding inputs (as is mentioned in my 1/31/14 notes, below).
+
+So...oatmeal is done. Now it's time to move on to HtDW. Put together a study
+plan for at least a general outline (like you did before). Signing-off now.
+
+**===== 02/02 morning; start @ 0525, finish @ 0625 = 60
 
 Lots of outdoor activity (skating) yesterday; lots of Raspberry Pi and ELTS
 setup attempt. Back to HtDP today.
@@ -29,7 +42,9 @@ the input temperature:
 > (oatmeal-temp-to-adjustment 71)
 "turn down"
 
-The way he coded it, here's how it works when the perfect temp. is reached:
+The way he coded it, here's how it works when the perfect temp. is reached. But
+also remember that this assignment was given for academic reasons to, that is,
+there are times you'll have to deal with mixed data itemizations and such.
 
 > (oatmeal-temp-to-adjustment "perfect")
 "leave same"
@@ -49,7 +64,7 @@ work with integers for temperatures and allow the actual temperature recorded
 and handled by OatmealTemp drive the string response by Adjustment. Having that
 string in the OatmealTemp data definition appears whacky to me.
 
-OK. Went through and have made the code the way I want it (~80% complete). Next
+OK. Went through and made the code the way I want it (~80% complete). Next
 time finish this problem, but re-read what you've done and remember the approach
 you're taking is different from the Prof's.
 

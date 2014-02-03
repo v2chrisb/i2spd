@@ -38,6 +38,7 @@
 
 ;; Template for a one argument function
 ;(define (fn-for-oatmeal-temp ot)
+; basic form
 ;  (cond [Q1 A1]
 ;        [Q2 A2]
 ;        [Q3 A3]))
@@ -74,7 +75,7 @@
 
 ;; Stub; define examples; wrap each in a check-expect
 ;; ==================================================
-(define (oat ot) "leave same")           ;; Stub
+;(define (oat ot) "leave same")           ;; Stub
 ;; given x, expect y                     ;; from HtDP-2
 ;; given a, expect b                     ;; from HtDP-2
 (check-expect (oat 71) "leave same")
@@ -83,13 +84,16 @@
 
 ;; Inventory -- template & constants
 ;; =================================
-#;(define (yada n)                        ;; Template
-   (... n))                               ;; copy this template for coding
 
 
 ;; Code the body; test & debug
 ;; ===========================
-
+(define (oat ot)
+  (cond [(and (number? ot) (<= 0 ot) (< ot 71)) ("turn up")]
+        [(and (number? ot) (<= 72 ot)) ("turn down")]
+        [else  ("leave same")]))
+	
+; Runs OK in Dr. Racket on 2/3/14	
 
 ; If a WISH LIST is needed, it should consist of 3 things:
 ; (1) a meaningful name for the function, (2) a signature,

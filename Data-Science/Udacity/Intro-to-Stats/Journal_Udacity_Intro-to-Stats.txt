@@ -1,6 +1,16 @@
-**===== 02/10 morning; start @ 0530, finish @ 0630 = 60
+**===== 02/11 morning; start @ 0455, finish @ 0625 = 90
 
-Probability.
+A tough probabilty question with involving a loaded coin, but after a struggle,
+I got it.  Now it's on to a new probability problem involving dice. It seems
+the truth table will be really big, so I took a look at a Khan Academy video
+about probability and combinatorics. Fun, but it's getting harder. :-)
+
+
+**===== 02/10 morning; start @ 0530, finish @ 0630 = 60
+                       start @ 2200, finish @ 2230 = 30
+
+Probability. Also watched 15 minutes of Sal Khan talking about probability. Then
+spent 15 minutes glancing at Carnegie-Mellon's prob/stats course on OLI.
 
 
 **===== 02/09 morning; start @ 0530, finish @ 0700 = 90

@@ -1,3 +1,20 @@
+**===== 02/13 morning; start @ 0605, finish @ 0630 = 25
+
+Sebastian's section 8 summary -- we learned:
+
++ probability of an event P
++ probability of an opposite event 1-P
++ probability of a composite event, a.k.a independence, P*P*P...P
+
+In the example given in chapter 9, conditional probability, the outcome of the
+test *depends* on whether the patient has cancer or not.
+
+P(CANCER)  = 0.1
+P(nCANCER) = 0.9
+P(POSITIVE | CANCER) = 0.9 
+P(NEGATIVE | CANCER) = 0.1
+
+
 **===== 02/12 morning; start @ 0555, finish @ 0620 = 25
 
 Finished section 8, probability. Watch the last solution again.

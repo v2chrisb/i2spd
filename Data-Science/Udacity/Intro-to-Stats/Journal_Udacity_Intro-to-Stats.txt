@@ -1,3 +1,9 @@
+**===== 02/14 morning; start @ 0545, finish @ 0705 = 80
+
+Left off at the "two coins in a bag" problem. I'll think about that one, but I
+know the development of truth tables is key here.
+
+
 **===== 02/13 morning; start @ 0605, finish @ 0630 = 25
 
 Sebastian's section 8 summary -- we learned:
@@ -13,6 +19,8 @@ P(CANCER)  = 0.1
 P(nCANCER) = 0.9
 P(POSITIVE | CANCER) = 0.9 
 P(NEGATIVE | CANCER) = 0.1
+P(POSITIVE | nCANCER) = 0.2
+P(NEGATIVE | nCANCER) = 0.8
 
 
 **===== 02/12 morning; start @ 0555, finish @ 0620 = 25
@@ -22,9 +30,9 @@ Finished section 8, probability. Watch the last solution again.
 
 **===== 02/11 morning; start @ 0455, finish @ 0625 = 90
 
-A tough probabilty question with involving a loaded coin, but after a struggle,
-I got it.  Now it's on to a new probability problem involving dice. It seems
-the truth table will be really big, so I took a look at a Khan Academy video
+A tough probabilty question involving a loaded coin, but after a struggle, I
+got it.  Now it's on to a new probability problem involving dice. It seems the
+truth table will be really big, so I took a look at a Khan Academy video
 about probability and combinatorics. Fun, but it's getting harder. :-)
 
 

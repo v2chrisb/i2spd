@@ -1,3 +1,13 @@
+**===== 02/17 evening; start @ 2040, finish @ 2050 = 10
+
+I've been sick as a dog for two days; eyes watered so much I couldn't even look
+at the monitor.  Back now, eyes still watering a bit but I'm going to give stats
+a go here.
+
+Read about Bayes' Theorem at http://betterexplained.com/articles/
+an-intuitive-and-short-explanation-of-bayes-theorem/
+
+
 **===== 02/14 morning; start @ 0545, finish @ 0705 = 80
 
 Left off at the "two coins in a bag" problem. I'll think about that one, but I

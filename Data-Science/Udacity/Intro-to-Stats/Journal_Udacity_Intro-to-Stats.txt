@@ -1,3 +1,15 @@
+**===== 02/21 evening; start @ 2055, finish @ 2105 = 10
+
+Oy! That conditional probability problem from Udacity, that is, the two coins in
+a bag (one loaded 0.9H 0.1T; one fair; pull a coin, flip, what's the probability
+of heads?). Jeremy looked at it in 5 seconds and had the right answer without
+the truth tables. Discouraging to me. Today I'm just discouraged about many
+things. I'll move on and get over it, but it's pretty frustrating that almost
+every concept seems to come to me in pieces, very slowly.
+
+Move on. Tomorrow is another day.
+
+
 **===== 02/20 morning; start @ 0625, finish @ 0635 = 10
 
 This is the biggest gap in my study efforts that I can recall for quite some

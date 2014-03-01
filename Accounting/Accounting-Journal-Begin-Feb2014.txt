@@ -1,6 +1,12 @@
-**===== 02/27 evening; start @ 2100, finish @ 2115 = 15
+**===== 03/01 morning; start @ 0530, finish @ 0715 = 75
 
-Starting the book, "Financial Statements", by Ittleson.
+Focused on the parts of each of the parts of financial statements:  balance
+sheet, income statement, statement of the change in OE, statement of cash flows.
+Used the MMV textbook to recreate a diagram of these financial statement comp-
+onents.
+
+Also kept referring to Bart's income statement for VFA, trying to make sense of
+it.
 
 
 **===== 02/28 morning; start @ 0605, finish @ 0630 = 25
@@ -24,3 +30,8 @@ boring at all. It is the essence of business and the generation of wealth.
  => periodicity
  => substance over form
  => accrual base of presentation
+ 
+
+**===== 02/27 evening; start @ 2100, finish @ 2115 = 15
+
+Starting the book, "Financial Statements", by Ittleson.
